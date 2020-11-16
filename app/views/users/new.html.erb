@@ -9,6 +9,12 @@
       <%= f.label :email %>
       <%= f.email_field :email %>
 
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.label :passowrd_confirmation,"Confirmation" %>
+      <%= f.password_field :password_confirmation %>
+
       <%= f.submit "Create my account", class: "btn btn-primary" %>
     <% end %>
   </div>

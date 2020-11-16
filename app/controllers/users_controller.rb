@@ -5,8 +5,12 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.create(user_params)
-    redirect_to user
+    @user = User.new(user_params)
+    if @user.save
+      redirect_to @user
+    else
+      render 'new'
+    end
   end
 
   def show
@@ -15,6 +19,6 @@ class UsersController < ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:nickname,:email)
+      params.permit(:nickname,:email,:password,:password_confirmation)
     end
 end
