@@ -3,8 +3,8 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_with(model: @user, local: true) do |f| %>
-      <%= render 'shared/error_messages' %>
-      
+      <%= render 'shared/errors_messages' %>
+
       <%= f.label :nickname %>
       <%= f.text_field :nickname %>
 
@@ -14,7 +14,7 @@
       <%= f.label :password %>
       <%= f.password_field :password %>
 
-      <%= f.label :passowrd_confirmation,"Confirmation" %>
+      <%= f.label :password_confirmation,"Confirmation" %>
       <%= f.password_field :password_confirmation %>
 
       <%= f.submit "Create my account", class: "btn btn-primary" %>
