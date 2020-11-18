@@ -1,4 +1,9 @@
 class User < ApplicationRecord
+  attr_accessor :remember_token
+  # remember_tokenというメソッドを作成
+  # password,password_comfirmationみたいな
+  # 変数のように扱える
+  # u.remember_token的なことができる
   before_save  { self.email = email.downcase }
   has_secure_password
   validates :nickname,  presence: true, length: { maximum: 50 }
@@ -9,9 +14,45 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6 }
   
 
+  # 渡された文字列のハッシュ値を返す
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
                                                   BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
+  end
+
+  # ランダムなトークンを返す
+  def User.new_token
+    SecureRandom.urlsafe_base64
+  end
+
+  # 永続的にログインするためにトークンをDBに保存
+  def remember
+    self.remember_token = User.new_token
+    # 何のトークンか分かりやすいから
+    # remember_tokenって名前を作った
+    update_attribute(:remember_digest,User.digest(remember_token))
+    # ハッシュ化したトークンをremember_digestに保存
+  end
+
+  # 渡されたトークンがダイジェストと一致したらtrue
+  # を返す
+  def authenticated?(remember_token)
+    return false if remember_digest.nil?
+    # 二種類のブラウザを使用してログアウトした場合
+    # cookiesのremember_tokenはあるけど、
+    # サーバー側でremember_digestをnilにしてるから
+    # nilに対して.is_password?とかやるとfor nil classエラーが起きちゃう
+    # remember_digestがnilの場合はfalseを返して、処理を止める
+
+    # 後置if文に当てはまる条件があれば処理を止めて！
+    # って場合はreturnとかで明示的に書くとif ~ else ~ end 
+    # とか書かなくて済む
+    BCrypt::Password.new(remember_digest).is_password?(remember_token)
+  end
+
+  # ユーザーのログイン情報を破棄する
+  def forget
+    update_attribute(:remember_digest,nil)
   end
 end
