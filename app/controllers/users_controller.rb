@@ -1,8 +1,12 @@
 class UsersController < ApplicationController
   include SessionsHelper
   before_action :set_user, only: [:show,:edit,:update,:correct_user]
-  before_action :logged_in_user, only: [:edit,:update]
+  before_action :logged_in_user, only: [:index,:edit,:update]
   before_action :correct_user, only: [:edit, :update]
+
+  def index
+    @users = User.all
+  end
 
   def new
     @user = User.new
@@ -43,12 +47,14 @@ class UsersController < ApplicationController
 
     def logged_in_user
       unless logged_in?
+        store_location
+        # ユーザーがいきたがってたページを記憶
         flash[:danger] = "Please log in"
         redirect_to login_url
       end
     end
 
     def correct_user
-      redirect_to(root_url) unless @user == current_user
+      redirect_to(root_url) unless current_user?(@user)
     end
 end
