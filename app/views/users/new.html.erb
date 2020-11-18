@@ -1,18 +1,21 @@
-<% if logged_in?%>
-  <%= link_to "ログイン", login_path%>
+<% if current_user %>
+  <h1>sign up</h1>
 <% else %>
-  <h1>Sign up</h1>
+  <%= link_to "ログイン", login_path%>
 <% end %>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= render 'shared/form' %>
   </div>
 
-  <% if logged_in? %>
+  <% if current_user %>
     <p>ログインしてます</p>
+    <%= link_to @current_user.nickname, user_path(@current_user) %>
+    <%= link_to "ログアウト",logout_path,method: :delete %>
   <% else %>
     <strong>ログインしてません</strong>
   <% end %>
 
-  <%=  link_to @current_user.nickname, user_path(@current_user) %>
+
+  
 </div>

@@ -11,7 +11,10 @@ class User < ApplicationRecord
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
-  validates :password, presence: true, length: { minimum: 6 }
+  validates :password, presence: true, length: { minimum: 6 },allow_nil: true
+  # ユーザー更新時に空のパスワードでも大丈夫
+  # has_secure_passwordの方でpasswordの存在性を検証するから大丈夫
+  
   
 
   # 渡された文字列のハッシュ値を返す
