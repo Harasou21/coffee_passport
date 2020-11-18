@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   include SessionsHelper
+  before_action :set_user, only: [:show,:edit]
+
   def new
     @user = User.new
   end
@@ -15,11 +17,17 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+  end
+
+  def edit
   end
 
   private
     def user_params
       params.require(:user).permit(:nickname,:email,:password,:password_confirmation)
+    end
+
+    def set_user
+      @user = User.find(params[:id])
     end
 end
