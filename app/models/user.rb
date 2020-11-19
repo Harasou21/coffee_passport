@@ -4,6 +4,7 @@ class User < ApplicationRecord
   # password,password_comfirmationみたいな
   # 変数のように扱える
   # u.remember_token的なことができる
+  has_many :drinks
   before_save  { self.email = email.downcase }
   has_secure_password
   validates :nickname,  presence: true, length: { maximum: 50 }
