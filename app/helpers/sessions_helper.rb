@@ -110,7 +110,7 @@ module SessionsHelper
   # フレンドリーフォワーディングの処理
 
   # 記憶したURL(もしくはデフォルト値にリダイレクト)
-  def redirect_back_or(dafault)
+  def redirect_back_or(default)
     # これはいい命名！！
     redirect_to(session[:forwarding_url] || default)
     # store_locationでsession[:forwarding_url]を定義
