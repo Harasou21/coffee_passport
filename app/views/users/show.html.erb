@@ -2,7 +2,7 @@
 <%= link_to "toppage", root_path %>
 <%= link_to "setting", edit_user_path(current_user)%>
 
-  <p><%= @nickname %>さんの投稿一覧</p>
+  <p><%= current_user.nickname %>さんの投稿一覧</p>
   <% @drinks.each do |drink| %>
       <%= drink.price%>
       <span class="name"><%= drink.name %></span>
