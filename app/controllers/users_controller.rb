@@ -23,6 +23,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @drinks = current_user.drinks
   end
 
   def edit
