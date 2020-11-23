@@ -1,0 +1,7 @@
+<%= form_with model: @drink,local: true do |f| %>
+  <%= render 'shared/error_messages', model: f.object %>
+      <%= f.text_field :name, placeholder: "商品名" %>
+      <%= f.text_field :price, placeholder: "値段" %>
+      <%= f.text_area :explain, placeholder: "商品の説明", rows: "10" %>
+      <%= f.submit "SEND" %>
+<% end %>
