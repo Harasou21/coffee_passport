@@ -23,7 +23,7 @@ class DrinksController < ApplicationController
   end
 
   def destroy
-
+    Drink.find(params[:id]).destroy
   end
 
   private
