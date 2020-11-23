@@ -1,5 +1,7 @@
 <% @drinks.each do |drink| %>
-  <%= drink.name%>
-  <%= drink.price%>
-  <%= drink.explain%>
+  <%= drink.name %>
+  <%= drink.price %>
+  <%= drink.explain %>
+  <%= drink.user.nickname %>
 <% end %>
+<%= link_to "投稿する", new_drink_path %>
