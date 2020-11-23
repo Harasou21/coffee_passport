@@ -1,14 +1,18 @@
 <% if current_user %>
-  <h1>sign up</h1>
+  <h1>welcome to my app</h1>
 <% else %>
   <%= link_to "ログイン", login_path%>
 <% end %>
 
+
 <h2><%= link_to "ユーザー一覧",users_path %></h2>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
+<% unless  logged_in? %>
+    <div class="col-md-6 col-md-offset-3">
     <%= render 'shared/form' %>
   </div>
+<% end %>
+
+
 
   <% if current_user %>
     <p>ログインしてます</p>
@@ -19,4 +23,3 @@
     <strong>ログインしてません</strong>
   <% end %>
 
-</div>
