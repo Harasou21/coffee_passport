@@ -6,6 +6,7 @@
 
 
 <h2><%= link_to "ユーザー一覧",users_path %></h2>
+<h2><%= link_to "投稿一覧", drinks_path %></h2>
 <% unless  logged_in? %>
     <div class="col-md-6 col-md-offset-3">
     <%= render 'shared/form' %>
