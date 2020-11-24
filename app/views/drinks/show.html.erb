@@ -1,0 +1,6 @@
+<%= @drink.user.nickname%>
+  <% @drinks.each do |drink| %>
+      <%= drink.price%>
+      <span class="name"><%= drink.name %></span>
+      <p><%= drink.explain %></p>
+  <% end %>
