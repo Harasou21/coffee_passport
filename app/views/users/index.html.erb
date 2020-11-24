@@ -1,6 +1,6 @@
 
 <% @users.each  do |user| %>
-  <%= user.nickname %>
+  <%= link_to user.nickname,user_path(user) %>
   <%= user.email %>
 <% end %>
 
