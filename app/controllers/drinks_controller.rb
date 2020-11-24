@@ -31,7 +31,7 @@ class DrinksController < ApplicationController
 
   private
   def drink_params
-    params.require(:drink).permit(:name,:price,:explain).merge(user_id: current_user.id)
+    params.require(:drink).permit(:name,:price,:explain,:image).merge(user_id: current_user.id)
   end
 end
 
