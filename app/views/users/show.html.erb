@@ -1,8 +1,8 @@
-<h1><%= current_user.nickname%></h1>
+<h1><%= @user.nickname%></h1>
 <%= link_to "toppage", root_path %>
-<%= link_to "setting", edit_user_path(current_user)%>
+<%= link_to "setting", edit_user_path(@user)%>
 
-  <p><%= current_user.nickname %>さんの投稿一覧</p>
+  <p><%= @user.nickname %>さんの投稿一覧</p>
   <% @drinks.each do |drink| %>
       <%= drink.price%>
       <span class="name"><%= drink.name %></span>

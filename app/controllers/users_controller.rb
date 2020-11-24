@@ -23,7 +23,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @drinks = current_user.drinks
+    @user = User.find(params[:id])
+    @drinks = @user.drinks
   end
 
   def edit
@@ -39,8 +40,8 @@ class UsersController < ApplicationController
 
   def destroy
     user = User.find(params[:id])
-    #binding.pry
-    user.destroy
+    binding.pry
+    user.destroy!
     redirect_to root_url
   end
 
