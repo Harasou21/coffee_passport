@@ -79,6 +79,11 @@ module SessionsHelper
     end
   end
 
+  def current_user?(user)
+    user && user == current_user
+    # nilガード
+  end
+
   # ユーザーがログインしていればtrueを返す、
   # その他ならfalse
   def logged_in?
@@ -100,5 +105,32 @@ module SessionsHelper
     # セッションも破棄
     @current_user = nil
     # インスタンス変数の値を更新
+  end
+
+  # フレンドリーフォワーディングの処理
+
+  # 記憶したURL(もしくはデフォルト値にリダイレクト)
+  def redirect_back_or(default)
+    # これはいい命名！！
+    redirect_to(session[:forwarding_url] || default)
+    # store_locationでsession[:forwarding_url]を定義
+    session.delete(:forwarding_url)
+    # redirectできたらforwarding_urlって情報はいらないので
+    # 破棄しましょう
+    # セッション情報を保持したままにしておくと、次のログインの
+    # 時もこれを読み込んでおかしくなる
+  end
+
+  # アクセスしようとしたURLを覚えとく
+  def store_location 
+    session[:forwarding_url] = request.original_url if request.get?
+    # request.original_url はリクエストされたurl
+    # それをセッションに保存
+
+    # if request.getでなぜGETリクエストだけ対応してるかと
+    # いうと、before_actionのlogged_in_userで
+    # updateに制限かかってるけど,PATCH users/:idを
+    # 保存する意味はない
+    # なぜならユーザーが元々いきたいのはeditとかだから
   end
 end
