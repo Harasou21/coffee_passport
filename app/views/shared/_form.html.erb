@@ -8,12 +8,18 @@
   <%= f.label :email %>
   <%= f.email_field :email, class: 'form-control' %>
 
+  <h3>プロフィール写真を選択(任意)</h3>
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+
+
   <%unless @current_user%>
     <%= f.label :password %>
     <%= f.password_field :password, class: 'form-control' %>
 
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, class: 'form-control' %>
+
   <% end %>
   <%= f.submit "submit"%>
 <% end %>
