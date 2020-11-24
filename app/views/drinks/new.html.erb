@@ -3,5 +3,8 @@
       <%= f.text_field :name, placeholder: "商品名" %>
       <%= f.text_field :price, placeholder: "値段" %>
       <%= f.text_area :explain, placeholder: "商品の説明", rows: "10" %>
+      <h3>コーヒーの写真を投稿してください</h3>
+      <%= f.label :image %>
+      <%= f.file_field :image %>
       <%= f.submit "SEND" %>
 <% end %>

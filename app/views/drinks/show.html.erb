@@ -3,5 +3,6 @@
       <%= drink.price%>
       <span class="name"><%= drink.name %></span>
       <p><%= drink.explain %></p>
+      <%= image_tag drink.image.variant(resize: '500x250') if drink.image.attached? %>
       <%= link_to "削除",drink_path(drink.id),method: :delete %>
   <% end %>
