@@ -1,4 +1,5 @@
 <% if current_user %>
+  <%= image_tag current_user.image.variant(resize: '500x250') if current_user.image.attached? %>
   <h1>welcome to my app</h1>
 <% else %>
   <%= link_to "ログイン", login_path%>
