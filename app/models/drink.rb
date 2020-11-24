@@ -1,5 +1,5 @@
 class Drink < ApplicationRecord
-  belongs_to :user, dependent: :destroy
+  belongs_to :user
   with_options presence: true do
     validates :name
     validates :explain
