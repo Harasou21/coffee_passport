@@ -1,1 +1,3 @@
-<h1><%= current_user.nickname%>がログインしてます</h1>
+<% if current_user%>
+  <h1><%= current_user.nickname%>がログインしてます</h1>
+<% end %>

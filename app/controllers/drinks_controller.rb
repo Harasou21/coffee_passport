@@ -1,5 +1,6 @@
 class DrinksController < ApplicationController
   include SessionsHelper
+  before_action :logged_in_user, only: [:index,:destroy]
   def index
     @drinks = Drink.includes(:user).order("created_at DESC")
   end
@@ -16,7 +17,6 @@ class DrinksController < ApplicationController
 
   def create
     @drink = current_user.drinks.build(drink_params)
-
     if @drink.save
       redirect_to drinks_path
     else
@@ -26,6 +26,7 @@ class DrinksController < ApplicationController
 
   def destroy
     Drink.find(params[:id]).destroy
+    redirect_to root_path
   end
 
   private
