@@ -5,6 +5,7 @@ class User < ApplicationRecord
   # 変数のように扱える
   # u.remember_token的なことができる
   has_many :drinks, dependent: :destroy
+  has_one_attached :image
   before_save  { self.email = email.downcase }
   has_secure_password
   validates :nickname,  presence: true, length: { maximum: 50 }
