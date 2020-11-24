@@ -1,6 +1,6 @@
-
 <% @drinks.each do |drink| %>
   <%= drink.name %>
+  <%= image_tag drink.image.variant(resize: '500x250') if drink.image.attached? %>
   <%= drink.price %>
   <%= drink.explain %>
   <%= link_to drink.user.nickname ,drink_path(drink) %>
