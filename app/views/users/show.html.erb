@@ -1,10 +1,11 @@
 <h1><%= @user.nickname%></h1>
 <%= link_to "toppage", root_path %>
 <%= link_to "setting", edit_user_path(@user)%>
-
+<%= link_to "退会する", user_path(@user.id),method: :delete %>
   <p><%= @user.nickname %>さんの投稿一覧</p>
   <% @drinks.each do |drink| %>
       <%= drink.price%>
       <span class="name"><%= drink.name %></span>
       <p><%= drink.explain %></p>
+      <%= link_to "削除", drink_path(drink.id),method: :delete %>
   <% end %>

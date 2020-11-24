@@ -3,4 +3,5 @@
       <%= drink.price%>
       <span class="name"><%= drink.name %></span>
       <p><%= drink.explain %></p>
+      <%= link_to "削除",drink_path(drink.id),method: :delete %>
   <% end %>

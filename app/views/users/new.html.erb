@@ -20,7 +20,6 @@
     <%= link_to @current_user.nickname, user_path(@current_user) %>
     <%= link_to "ログアウト",logout_path,method: :delete %>
     <%= link_to "投稿する", new_drink_path %>
-    <%= link_to "退会する", user_path(current_user),method: :delete %>
   <% else %>
     <strong>ログインしてません</strong>
   <% end %>
