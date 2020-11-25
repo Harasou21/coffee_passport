@@ -6,3 +6,5 @@
       <%= image_tag drink.image.variant(resize: '500x250') if drink.image.attached? %>
       <%= link_to "削除",drink_path(drink.id),method: :delete %>
   <% end %>
+
+<%= link_to "toppage",root_path %>
