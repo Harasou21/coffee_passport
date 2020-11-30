@@ -1,8 +1,34 @@
 
-<% @users.each  do |user| %>
-  <%= link_to user.nickname,user_path(user) %>
-  <%= user.email %>
-<% end %>
+<div class='main'>
+
+  <%# 商品一覧 %>
+  <div class='item-contents'>
+    <h2 class='title'>フォローしてるユーザー</h2>
+    <%# link_to '新規投稿商品', "#", class: "subtitle" %>
+    <ul class='item-lists'>
+
+      <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
+      <%if @users%>
+          <% @users.each do |user|%>
+          <li class='list'>
+            <%= link_to user_path(user.id) do %>
+            <div class='item-img-content'>
+              <%= image_tag user.image , class: "item-img" if user.image.attached? %>
+            </div>
+            <div class='item-info'>
+              <h3 class='item-name'>
+                <%= user.nickname %>
+              </h3>
+            </div>
+            <% end %>
+          </li>
+          <% end %>
+      <%end%>
+     
+    </ul>
+  </div>
+  <%#end%>
+</div>
 
 <%= link_to "トップページ", root_path %>
 

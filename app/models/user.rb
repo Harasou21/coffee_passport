@@ -4,7 +4,7 @@ class User < ApplicationRecord
   # password,password_comfirmationみたいな
   # 変数のように扱える
   # u.remember_token的なことができる
-  has_many :drinks, dependent: :destroy
+  has_many :drinks, dependent: :delete_all
   has_one_attached :image
   before_save  { self.email = email.downcase }
   has_secure_password

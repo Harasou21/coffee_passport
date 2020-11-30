@@ -8,7 +8,6 @@ class DrinksController < ApplicationController
   def show
     @drink = Drink.find(params[:id])
     @user = @drink.user
-    @drinks = @user.drinks
   end
 
   def new
@@ -20,7 +19,7 @@ class DrinksController < ApplicationController
     if @drink.save
       redirect_to drinks_path
     else
-      redirect_to 'new'
+      render 'new'
     end
   end
 

@@ -17,3 +17,22 @@
 body{
   background-color: maroon;
 }
+
+a:hover { color:burlywood;}
+
+a{
+  text-decoration:none;
+  color:green;
+}
+
+a:visited{
+  color: green;
+}
+
+li {
+  list-style: none;
+}
+
+.user-img{
+  border-radius: 50%;
+}
