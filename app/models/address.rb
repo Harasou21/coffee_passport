@@ -1,5 +1,8 @@
 class Address < ApplicationRecord
   belongs_to :trade
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :prefecture
+  validates :genre_id, numericality: { other_than: 1 } 
   with_options presence: true do
 
     with_options format: { with: /\A[ぁ-んァ-ン一-龥]/, message: 'は全角で入力してください。' } do
