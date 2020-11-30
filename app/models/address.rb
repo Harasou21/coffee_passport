@@ -17,7 +17,6 @@ class Address < ApplicationRecord
     validates :prefecture_id
     validates :city
     validates :house_num
-    validates :building_name
     validates :phone_num
     validates :trade_id
   end

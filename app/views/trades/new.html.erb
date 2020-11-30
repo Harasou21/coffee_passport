@@ -1,0 +1,34 @@
+<%= form_with　model: @trade ,local: true do |f|%>
+  <p>苗字</p>
+  <%= f.textarea :fam_name %>
+  <p>名前</p>
+  <%= f.textarea :first_name %>
+  <p>苗字カナ</p>
+  <%= f.textarea :fam_name_kana %>
+  <p>名前カナ</p>
+  <%= f.textarea :first_name_kana %>
+  <p>誕生日</p>
+        <%= raw sprintf(
+                  f.date_select(
+                    :birthday,
+                    class:'select-birth',
+                    id:"birth-date",
+                    use_month_numbers: true,
+                    prompt:'--',
+                    start_year: 1930,
+                    end_year: (Time.now.year - 5),
+                    date_separator: '%s'),
+                  "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+  <p>郵便番号</p>
+  <%= f.text_field :postal_code %>
+  <p>都道府県</p>
+  <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %>
+  <p>市</p>
+  <%= f.text_field :city %>
+  <p>番地</p>
+  <%= f.text_field :house_num %>
+  <p>建物名</p>
+  <%= f.text_field :building_name%>
+  <p>電話番号</p>
+  <%= f.text_field :phone_num%>
+<% end%>

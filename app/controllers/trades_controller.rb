@@ -8,7 +8,7 @@ class TradesController < ApplicationController
   end
 
   def create
-    @order = TradeAddress.new(trade_params)
+    @order = Address.new(trade_params)
     if @order.valid?
       @order.save
       redirect_to root_path
