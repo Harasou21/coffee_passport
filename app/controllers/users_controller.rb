@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
   include SessionsHelper
   before_action :set_user, only: [:show,:edit,:update,:correct_user]
-  before_action :logged_in_user, only: [:index,:edit,:update,:destroy]
-  before_action :correct_user, only: [:edit, :update,:destroy]
+  before_action :logged_in_user, only: [:index,:edit,:update]
+  before_action :correct_user, only: [:edit, :update]
 
   def index
     @users = User.all
@@ -34,14 +34,14 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to @user
     else
-      render
+      render 'edit'
     end
   end
 
   def destroy
     user = User.find(params[:id])
-    binding.pry
-    user.destroy!
+    #binding.pry
+    user.destroy
     redirect_to root_url
   end
 

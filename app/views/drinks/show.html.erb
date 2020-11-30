@@ -1,10 +1,50 @@
-<%= @drink.user.nickname%>
-  <% @drinks.each do |drink| %>
-      <%= drink.price%>
-      <span class="name"><%= drink.name %></span>
-      <p><%= drink.explain %></p>
-      <%= image_tag drink.image.variant(resize: '500x250') if drink.image.attached? %>
-      <%= link_to "削除",drink_path(drink.id),method: :delete %>
-  <% end %>
+<div class='main'>
 
-<%= link_to "toppage",root_path %>
+  <%# 商品一覧 %>
+  <div class='item-contents'>
+    <h2 class='title'></h2>
+    <ul class='item-lists'>
+
+      <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
+      <%if @drink%>
+      <li class='list'>
+        <%= link_to drink_path(@drink.id) do %>
+        <div class='item-img-content'>
+          <%= image_tag @drink.image , class: "item-img" if @drink.image.attached? %>
+          
+          <%# if drink.trade%>
+          
+   
+          
+          <%# end %>
+        </div>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= @drink.name %>
+          </h3>
+          <div class='item-price'>
+            <span><%= @drink.price %>円<br>(税込み)</span>
+            <div class='star-btn'>
+              <%# image_tag "star.png", class:"star-icon" %>
+              <span class='star-count'>0</span>
+            </div>
+          </div>
+          <div class='item-explain'>
+            <%= @drink.explain%>
+          </div>
+        </div>
+        <% if logged_in? && current_user.id == @drink.user_id %>
+        <div class="item-delete">
+          <%= link_to "削除する",drink_path(@drink),method: :delete %>
+        </div>
+        <% end %>
+      </li>
+      <%end%>
+     
+        
+      
+
+    </ul>
+  </div>
+  <%end%>
+</div>

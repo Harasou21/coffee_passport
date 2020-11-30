@@ -1,0 +1,15 @@
+.user-profile{
+  border: 1px solid green;
+  margin-top: 50px;
+  padding-left: 40px;
+  border-radius: 5px;
+} 
+
+.user-edit{
+  font-size: 40px;
+  background-color: ivory;
+  width: 60%;
+  text-align: center;
+  margin: auto;
+  border-radius: 5px;
+}

@@ -3,11 +3,31 @@
   <%= link_to root_path  do %> 
     <%= image_tag 'logo.png',class: "logo" %> 
   <% end %>
-  
-  <div class = "header_user_name">
-    <% if current_user  %>
-    <%= current_user.nickname%>
-    <% end %>
+  <% if current_user%>
+  <%= link_to user_path(current_user) do%>
+    <%= image_tag current_user.image.variant(resize: '100x100'),class: 'user-img' if current_user.image.attached?%>
+  <% end %>
+  <div class="header-nav">
+    <div class = "header-user-name">
+      <a class = "h-user-name"><%= link_to current_user.nickname,user_path(current_user) %></a>
+    </div>
+  <% end %>  
+    <div class="user-menu">
+      <% unless current_user %>
+        <div class = "login">
+          <%= link_to "新規登録",new_user_path %>
+        </div>
+      <% end %>
+      <% if current_user  %>
+        <div class="post">
+          <%= link_to "投稿する", new_drink_path %>
+        </div>
+        <div class="logout">
+          <%= link_to "ログアウト",logout_path,method: :delete %>
+        </div>
+      <% end %>
+    </div>
   </div>
+  
 
 </div>

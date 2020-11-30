@@ -1,10 +1,53 @@
-<%= form_with model: @drink,local: true do |f| %>
-  <%= render 'shared/error_messages', object: f.object %>
-      <%= f.text_field :name, placeholder: "商品名" %>
-      <%= f.text_field :price, placeholder: "値段" %>
-      <%= f.text_area :explain, placeholder: "商品の説明", rows: "10" %>
-      <h3>コーヒーの写真を投稿してください</h3>
-      <%= f.label :image %>
-      <%= f.file_field :image %>
-      <%= f.submit "SEND" %>
-<% end %>
+<div class="items-sell-contents">
+
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">商品の情報を入力</h2>
+    <%= form_with model: @drink, local: true do |f| %>
+
+
+    <%= render 'shared/error_messages', object: f.object %>
+    
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        出品画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+    
+    <div class="new-items">
+      <div class="weight-bold-text">
+        商品名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          商品の説明
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :explain, class:"items-text", id:"item-info", placeholder:"コーヒーの感想（必須 1,000文字まで）",rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+
+    <div class="price-content">
+      <div class="price-text">
+        <span>価格</span>
+        <span class="indispensable">必須</span>
+      </div>
+        <span class="sell-yen">¥</span>
+      <%= f.text_field :price, class:"price-input", id:"item-price", placeholder:"例） 1000" %>
+    </div>
+
+    <div class="sell-btn-contents">
+      <%= f.submit "投稿する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+
+  </div>
+  <% end %>

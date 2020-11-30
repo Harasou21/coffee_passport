@@ -1,3 +1,109 @@
-// Place all the styles related to the drinks controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+a {
+  text-decoration: none;
+}
+
+.main {
+  background: burlywood;
+}
+
+/* 画面上部の「人生を変えるフリマアプリ」帯部分 */
+
+
+/* 商品一覧 */
+
+.item-contents {
+  background-color: burlywood;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+
+}
+
+.item-contents>.title {
+  font-size: 5vh;
+  line-height: 1.4;
+  font-weight: bold;
+
+}
+
+.item-contents>.subtitle {
+  font-size: 3vh;
+  margin: 1vh 0;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.item-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: burlywood;
+}
+
+
+.item-img-content {
+  position: relative;
+}
+
+.item-img {
+  width: 37vh;
+  height: 33vh;
+}
+
+// .sold-out {
+//   position: absolute;
+//   top: 40%;
+//   width: 100%;
+//   text-align: center;
+//   background-color: crimson;
+//   transform: skewY(-10deg);
+// }
+
+// .sold-out>span {
+//   color: #FFF;
+//   font-size: 45px;
+//   font: bold;
+// }
+
+
+.item-info {
+  background-color: white;
+  color: black;
+
+}
+
+.item-name {
+  // font-size: 2.5vh;
+}
+
+.item-price {
+  font-size: 1.5vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.star-btn {
+  display: flex;
+  align-items: center;
+}
+
+.star-icon {
+  height: 2vh;
+  width: 2vh;
+  margin-right: 0.5vw;
+}
+
+.star-count {
+  font-size: 2vh;
+}
+
+/* //商品一覧 */

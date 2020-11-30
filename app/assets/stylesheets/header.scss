@@ -1,17 +1,38 @@
+
 .header{
    display: flex;
    justify-content: space-between;
    background-image: url("coffee_beans.jpeg");
-  
 }
 
 .logo{
   width: 100px;
 }
 
-.header_user_name{
+.header-nav {
+  width: 65vw;
   font-size: 30px;
   margin-top: auto;
   margin-bottom: auto;
   color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.user-menu{
+  width: 42vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.h-user-name:visited a{
+  color: red !important;
+
+}
+
+.login{
+  font-size: 30px;
+  background-color: black;
+  margin-top: auto;
+  margin-bottom: auto;
 }
