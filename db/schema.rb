@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_24_193855) do
+ActiveRecord::Schema.define(version: 2020_11_30_044016) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name", null: false
@@ -43,6 +43,15 @@ ActiveRecord::Schema.define(version: 2020_11_24_193855) do
     t.index ["user_id"], name: "index_drinks_on_user_id"
   end
 
+  create_table "trades", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "drink_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["drink_id"], name: "index_trades_on_drink_id"
+    t.index ["user_id"], name: "index_trades_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "nickname", limit: 255
     t.string "email", limit: 255
@@ -54,4 +63,6 @@ ActiveRecord::Schema.define(version: 2020_11_24_193855) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "drinks", "users"
+  add_foreign_key "trades", "drinks"
+  add_foreign_key "trades", "users"
 end
