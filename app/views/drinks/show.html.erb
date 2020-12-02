@@ -37,6 +37,7 @@
         <div class="item-delete">
           <%= link_to "削除する",drink_path(@drink),method: :delete %>
         </div>
+        <%= link_to "商品を購入する", drink_trades_path(@drink) %>
         <% end %>
       </li>
       <%end%>
