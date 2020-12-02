@@ -1,12 +1,13 @@
-<%= form_with　model: @trade ,local: true do |f|%>
+<%= form_with model: @order,url: drink_trades_path,method: :post, local: true do |f|%>
+  <%= render 'shared/error_messages',object: f.object%>
   <p>苗字</p>
-  <%= f.textarea :fam_name %>
+  <%= f.text_field :fam_name %>
   <p>名前</p>
-  <%= f.textarea :first_name %>
+  <%= f.text_field :first_name %>
   <p>苗字カナ</p>
-  <%= f.textarea :fam_name_kana %>
+  <%= f.text_field :fam_name_kana %>
   <p>名前カナ</p>
-  <%= f.textarea :first_name_kana %>
+  <%= f.text_field :first_name_kana %>
   <p>誕生日</p>
         <%= raw sprintf(
                   f.date_select(
@@ -31,4 +32,6 @@
   <%= f.text_field :building_name%>
   <p>電話番号</p>
   <%= f.text_field :phone_num%>
+  <p>登録</p>
+  <%= f.submit "確定"%>
 <% end%>
