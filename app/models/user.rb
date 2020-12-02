@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :drinks, dependent: :delete_all
   has_many :trades
   has_one_attached :image
+
   before_save  { self.email = email.downcase }
   has_secure_password
   validates :nickname,  presence: true, length: { maximum: 50 }
