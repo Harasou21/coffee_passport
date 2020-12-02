@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :drinks, only: [:index,:new,:show,:create,:destroy] do
     resources :trades,only: [:index,:new,:create]
   end
+  post '/drinks/:id/trades/new', to: 'trades#create'
 end
