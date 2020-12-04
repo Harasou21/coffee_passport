@@ -2,7 +2,7 @@ class TradesController < ApplicationController
   include SessionsHelper
   def index
     # 商品を表示
-
+    
     @item = Drink.find(params[:drink_id])
     @order = TradeAddress.new
     #redirect_to root_path if @drink.trade
@@ -16,12 +16,10 @@ class TradesController < ApplicationController
   end
 
   def create
-    
     @item = Drink.find(params[:drink_id])
     @order = TradeAddress.new(trade_params)
-    
-   # binding.pry
     if @order.valid?
+      pay_item
       @order.save
       redirect_to root_path
     else
@@ -31,6 +29,17 @@ class TradesController < ApplicationController
 
   private
     def trade_params
-      params.permit(:drink_id,:user_id,:fam_name,:first_name,:fam_name_kana,:first_name_kana,:birthday, :postal_code, :prefecture_id, :city, :house_num, :building_name, :phone_num, :trade_id).merge(user_id: current_user.id,price: @item.price)
+      params.permit(:drink_id,:user_id,:fam_name,:first_name,:fam_name_kana,:first_name_kana,:birthday, :postal_code, :prefecture_id, :city, :house_num, :building_name, :phone_num, :trade_id,:authenticity_token, :number, :exp_month, :exp_year, :cvc, :commit).merge(user_id: current_user.id,price: @item.price,token: params[:token])
+    end
+
+    def pay_item
+      Payjp.api_key = ENV['PAYJP_SECRET_KEY']
+      # 秘密鍵をpayjpで
+      Payjp::Charge.create(
+        # 受け取った値を送信
+        amount: trade_params[:price],
+        card: trade_params[:token],
+        currency: 'jpy'
+      )
     end
 end
