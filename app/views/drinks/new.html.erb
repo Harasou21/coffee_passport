@@ -2,11 +2,15 @@
 
   <div class="items-sell-main">
     <h2 class="items-sell-title">商品の情報を入力</h2>
-    <%= form_with model: @drink, local: true do |f| %>
+    <%= form_with model: @drink,url: drinks_path, local: true do |f| %>
 
 
     <%= render 'shared/error_messages', object: f.object %>
     
+    <div class="tag-field">
+        <%= f.label :tag_name %>
+        <%= f.text_field :tag_name %>
+    </div>
     <div class="img-upload">
       <div class="weight-bold-text">
         出品画像
@@ -43,6 +47,10 @@
         <span class="sell-yen">¥</span>
       <%= f.text_field :price, class:"price-input", id:"item-price", placeholder:"例） 1000" %>
     </div>
+
+    
+
+
 
     <div class="sell-btn-contents">
       <%= f.submit "投稿する" ,class:"sell-btn" %>

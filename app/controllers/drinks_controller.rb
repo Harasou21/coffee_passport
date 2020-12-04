@@ -1,9 +1,10 @@
 class DrinksController < ApplicationController
   include SessionsHelper
+  
   before_action :logged_in_user, only: [:index,:destroy]
   def index
     @user = current_user
-    @drinks = Drink.includes(:user).order("created_at DESC")
+    @drinks = Drink.all.order("created_at DESC")
   end
 
   def show
@@ -12,11 +13,12 @@ class DrinksController < ApplicationController
   end
 
   def new
-    @drink = Drink.new
+    @drink = DrinkTag.new
   end
 
   def create
-    @drink = current_user.drinks.build(drink_params)
+    @drink = DrinkTag.new(drink_params)
+    
     if @drink.save
       redirect_to drinks_path
     else
@@ -33,7 +35,7 @@ class DrinksController < ApplicationController
 
   private
   def drink_params
-    params.require(:drink).permit(:name,:price,:explain,:image).merge(user_id: current_user.id)
+    params.require(:drink_tag).permit(:name,:price,:explain,:image,:tag_name).merge(user_id: current_user.id)
   end
 end
 
