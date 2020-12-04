@@ -29,6 +29,8 @@ class DrinksController < ApplicationController
     redirect_to root_path
   end
 
+
+
   private
   def drink_params
     params.require(:drink).permit(:name,:price,:explain,:image).merge(user_id: current_user.id)
