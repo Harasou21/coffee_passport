@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_30_045733) do
+ActiveRecord::Schema.define(version: 2020_12_04_014905) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name", null: false
@@ -51,6 +51,15 @@ ActiveRecord::Schema.define(version: 2020_11_30_045733) do
     t.index ["trade_id"], name: "index_addresses_on_trade_id"
   end
 
+  create_table "drink_tag_relations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "drink_id"
+    t.bigint "tag_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["drink_id"], name: "index_drink_tag_relations_on_drink_id"
+    t.index ["tag_id"], name: "index_drink_tag_relations_on_tag_id"
+  end
+
   create_table "drinks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name", limit: 255
     t.integer "price"
@@ -59,6 +68,12 @@ ActiveRecord::Schema.define(version: 2020_11_30_045733) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_drinks_on_user_id"
+  end
+
+  create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "trades", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -81,6 +96,8 @@ ActiveRecord::Schema.define(version: 2020_11_30_045733) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "addresses", "trades"
+  add_foreign_key "drink_tag_relations", "drinks"
+  add_foreign_key "drink_tag_relations", "tags"
   add_foreign_key "drinks", "users"
   add_foreign_key "trades", "drinks"
   add_foreign_key "trades", "users"
