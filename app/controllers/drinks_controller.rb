@@ -2,6 +2,7 @@ class DrinksController < ApplicationController
   include SessionsHelper
   before_action :logged_in_user, only: [:index,:destroy]
   def index
+    @user = current_user
     @drinks = Drink.includes(:user).order("created_at DESC")
   end
 
@@ -27,6 +28,8 @@ class DrinksController < ApplicationController
     Drink.find(params[:id]).destroy
     redirect_to root_path
   end
+
+
 
   private
   def drink_params
