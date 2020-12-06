@@ -6,6 +6,21 @@ class User < ApplicationRecord
   # u.remember_token的なことができる
   has_many :drinks, dependent: :delete_all
   has_many :trades
+
+  has_many :active_relationships,class_name: "Relationship",
+                                 foreign_key: "follower_id",
+  # active_relationshipってクラスも、外部キーもないので
+  # 明示的に書く必要がある
+  
+  # フォローしてるユーザーをfollower_idという外部キーを
+  # 使って特定しなくてはなりません
+                                 dependent: :destroy
+                              
+  has_many :following,throught: :active_relationships,
+                                source: :followed
+  # followedsとかだと英語として不適切
+  # souurce: で「following配列の元はfollowed id の集合」
+  # ってことを明示的にrailsに伝えます
   has_one_attached :image
 
   before_save  { self.email = email.downcase }
@@ -62,4 +77,6 @@ class User < ApplicationRecord
   def forget
     update_attribute(:remember_digest,nil)
   end
+
+  
 end
