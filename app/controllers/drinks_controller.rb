@@ -18,7 +18,6 @@ class DrinksController < ApplicationController
 
   def create
     @drink = DrinkTag.new(drink_params)
-    
     if @drink.save
       redirect_to drinks_path
     else
@@ -31,7 +30,19 @@ class DrinksController < ApplicationController
     redirect_to root_path
   end
 
+  # GET search
+  def search
+    return nil if params[:keyword] == ""
+    # 何も入れず検索したらエラーが起こるので、
+    # 明示的にnilを返す
+    tag = Tag.where(['tag_name LIKE ?',"%#{params[:keyword]}%"])
+    # 第二引数が第一引数の?に入っていく,検索した
+    # タグがデータベースにあれば返す
+    render json:{ keyword: tag}
+    # const tagName = XHR.response.keyword
+    # の.keywordが使えてる
 
+  end
 
   private
   def drink_params

@@ -7,9 +7,11 @@
 
     <%= render 'shared/error_messages', object: f.object %>
     
-    <div class="tag-field">
+    <div class="tag-field" , id='tag-field'>
         <%= f.label :tag_name %>
         <%= f.text_field :tag_name %>
+    </div>
+    <div id="search-result">
     </div>
     <div class="img-upload">
       <div class="weight-bold-text">
