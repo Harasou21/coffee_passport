@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
   resources :users
   resources :drinks, only: [:index,:new,:show,:create,:destroy] do
+    collection do
+      get 'search'
+    end
+    
     resources :trades,only: [:index,:new,:create]
   end
   post '/drinks/:id/trades/new', to: 'trades#create'
