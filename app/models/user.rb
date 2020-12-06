@@ -15,12 +15,20 @@ class User < ApplicationRecord
   # フォローしてるユーザーをfollower_idという外部キーを
   # 使って特定しなくてはなりません
                                  dependent: :destroy
+  has_many :passive_relationships,class_name: "Relationship",
+                                  foreign_key: "followed_id",
+                                  dependent: :destroy
+  
                               
   has_many :following,throught: :active_relationships,
                                 source: :followed
   # followedsとかだと英語として不適切
   # souurce: で「following配列の元はfollowed id の集合」
   # ってことを明示的にrailsに伝えます
+  has_many :followers,throught: :passive_relationships,source: :follower
+  # sourceは省略してもいい、
+  # rails が自動的に単数系にして、外部キーfollower_id
+  # を探してくれるから
   has_one_attached :image
 
   before_save  { self.email = email.downcase }
@@ -78,5 +86,19 @@ class User < ApplicationRecord
     update_attribute(:remember_digest,nil)
   end
 
+    # selfを省略してる
+    # ユーザーをフォローする
+    def follow(other_user)
+      following << other_user
+    end
   
+    # ユーザーをフォロー解除する
+    def unfollow(other_user)
+      active_relationships.find_by(followed_id: other_user.id).destroy
+    end
+  
+    # 現在のユーザーがフォローしてたらtrueを返す
+    def following?(other_user)
+      following.include?(other_user)
+    end
 end
