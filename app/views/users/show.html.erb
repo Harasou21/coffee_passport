@@ -1,12 +1,14 @@
 
-<div class="user-profile">
-  <h2 class="user-profile-name"><%= current_user.nickname %></h2>
-  <h2><%= image_tag @user.image.variant(resize: '100x100'),class: 'user-img' if @user.image.attached? %></h2>
-  <div class="user-edit">
-    <%= link_to "プロフィールを編集",edit_user_path(@user)%>  
-  </div>
+<% if current_user?(@user) %>
+  <div class="user-profile">
+    <h2 class="user-profile-name"><%= current_user.nickname %></h2>
+    <h2><%= image_tag @user.image.variant(resize: '100x100'),class: 'user-img' if @user.image.attached? %></h2>
+    <div class="user-edit">
+      <%= link_to "プロフィールを編集",edit_user_path(@user)%>  
+    </div>
+  </div> 
+<% end %>
 
-</div>
 
 <% unless current_user?(@user) %>
   <div id="follow_form">
@@ -74,9 +76,6 @@
       </li>
       <%end%>
      
-        
-      
-
     </ul>
   </div>
   <%end%>
