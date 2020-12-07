@@ -25,13 +25,13 @@ class User < ApplicationRecord
                                   dependent: :destroy
   
                               
-  has_many :following,throught: :active_relationships,
+  has_many :following,through: :active_relationships,
                                 source: :followed
   # followedsとかだと英語として不適切
   # souurce: で「following配列の元はfollowed id の集合」
   # ってことを明示的にrailsに伝えます
   # 「自分が」フォローしてる人
-  has_many :followers,throught: :passive_relationships,
+  has_many :followers,through: :passive_relationships,
                                   source: :follower
   # sourceは省略してもいい、
   # rails が自動的に単数系にして、外部キーfollower_id
