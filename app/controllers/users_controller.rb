@@ -45,6 +45,20 @@ class UsersController < ApplicationController
     redirect_to root_url
   end
 
+  def following
+    # フォローしてるユーザーの表示
+    @user = User.find(params[:id])
+    @users = @user.following
+    render 'show_follow'
+  end
+
+  def followers
+    # フォロワーの表示
+    @user = User.find(params[:id])
+    @users = @user.followers
+    render 'show_follow'
+  end
+
   private
     def user_params
       params.require(:user).permit(:nickname,:email,:password,:password_confirmation,:image)
