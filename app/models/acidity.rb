@@ -1,0 +1,2 @@
+class Acidity < ApplicationRecord
+end
