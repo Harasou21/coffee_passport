@@ -1,11 +1,39 @@
 
-<div class="user-profile">
-<h2 class="user-profile-name"><%= current_user.nickname %></h2>
-<h2><%= image_tag @user.image.variant(resize: '100x100'),class: 'user-img' if @user.image.attached? %></h2>
-<div class="user-edit">
-  <%= link_to "プロフィールを編集",edit_user_path(@user)%>  
-</div>
+<% if current_user?(@user) %>
+  <div class="user-profile">
+    <h2 class="user-profile-name"><%= current_user.nickname %></h2>
+    <h2><%= image_tag @user.image.variant(resize: '100x100'),class: 'user-img' if @user.image.attached? %></h2>
+    <div class="user-edit">
+      <%= link_to "プロフィールを編集",edit_user_path(@user)%>  
+    </div>
+  </div> 
+<% end %>
 
+
+<% unless current_user?(@user) %>
+  <div id="follow_form">
+  <% if current_user.following?(@user) %>
+    <%= render 'unfollow' %>
+  <% else %>
+    <%= render 'follow' %>
+  <% end %>
+  </div>
+<% end %>
+
+<% @user ||= current_user %>
+<div class="stats">
+  <a href="<%= following_user_path(@user) %>">
+    <strong id="following" class="stat">
+      <%= @user.following.count %>
+    </strong>
+    following
+  </a>
+  <a href="<%= followers_user_path(@user) %>">
+    <strong id="followers" class="stat">
+      <%= @user.followers.count %>
+    </strong>
+    followers
+  </a>
 </div>
 
 <div class='main'>
@@ -48,9 +76,6 @@
       </li>
       <%end%>
      
-        
-      
-
     </ul>
   </div>
   <%end%>

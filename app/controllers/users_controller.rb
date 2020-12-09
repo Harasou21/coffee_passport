@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   include SessionsHelper
   before_action :set_user, only: [:show,:edit,:update,:correct_user]
-  before_action :logged_in_user, only: [:index,:edit,:update]
+  before_action :logged_in_user, only: [:index,:edit,:update,:following,:followers]
   before_action :correct_user, only: [:edit, :update]
 
   def index
@@ -43,6 +43,20 @@ class UsersController < ApplicationController
     #binding.pry
     user.destroy
     redirect_to root_url
+  end
+
+  def following
+    # フォローしてるユーザーの表示
+    @user = User.find(params[:id])
+    @users = @user.following
+    render 'show_follow'
+  end
+
+  def followers
+    # フォロワーの表示
+    @user = User.find(params[:id])
+    @users = @user.followers
+    render 'show_follow'
   end
 
   private
