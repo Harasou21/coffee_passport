@@ -18,7 +18,8 @@ class DrinksController < ApplicationController
 
   def create
     @drink = DrinkTag.new(drink_params)
-    if @drink.save
+    if @drink.valid?
+      @drink.save
       redirect_to drinks_path
     else
       render 'new'
