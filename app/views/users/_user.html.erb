@@ -1,5 +1,5 @@
 
 <li>
-  <%= user.image  if user.image.attached? %>
+  <%=image_tag user.image  if user.image.attached? %>
   <%= link_to user.nickname, user %>
 </li>
