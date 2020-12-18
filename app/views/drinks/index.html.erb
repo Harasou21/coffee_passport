@@ -1,5 +1,27 @@
 
 <%= link_to "ユーザー一覧", users_path%>
+
+<h1>
+  商品検索
+</h1>
+<%= search_form_for @p, url: drinks_searchdrink_path do |f| %>
+  
+  <%= f.search_field :name_cont%>
+  <p>カテゴリー検索</p>
+  <%= f.label '地域' %>
+  <%= f.collection_select :region_id_eq, Region.all ,:id, :name,  include_blank: '指定なし' %>
+  <%# ベースはドリンククラスで、第二引数で%>
+  <br>
+  <%= f.label 'コク'%>
+  <%= f.collection_select :body_id_eq,Body.all,:id,:name,include_blank: '指定なし' %>
+  <br>
+  <%= f.label '酸味'%>
+  <%= f.collection_select :acidity_id_eq,Acidity.all,:id,:name,include_blank: '指定なし' %>
+  <br>
+  <%= f.label '加工法'%>
+  <%= f.collection_select :processing_id_eq,Processing.all,:id,:name,include_blank: '指定なし' %>
+  <%= f.submit '検索' %>
+<% end %>
 <div class='main'>
 
   <%# 商品一覧 %>

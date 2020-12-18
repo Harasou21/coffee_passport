@@ -32,6 +32,26 @@
           <div class='item-explain'>
             <%= @drink.explain%>
           </div>
+          <div>
+            <% if @drink.region %>
+            産地 <%= @drink.region.name%>              
+            <% end %>
+          </div>
+          <div>
+            <% if @drink.body%>
+            コク <%= @drink.body.name %>
+            <% end %>
+          </div>
+          <div>
+            <% if @drink.acidity %>
+              酸味 <%= @drink.acidity.name%>
+            <% end %>
+          </div>
+          <div>
+            <% if @drink.processing%>
+              加工法 <%= @drink.processing.name%>
+            <% end %>
+          </div>
         </div>
         <% if logged_in? && current_user.id == @drink.user_id %>
         <div class="item-delete">

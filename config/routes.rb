@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       # ユーザーidが含まれてるURlを扱うようになる
     end
   end
+  get '/drinks/searchdrink',  to: 'drinks#search_drink'
   resources :drinks, only: [:index,:new,:show,:create,:destroy] do
     collection do
       get 'search'
