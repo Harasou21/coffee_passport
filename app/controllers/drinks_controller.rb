@@ -5,7 +5,8 @@ class DrinksController < ApplicationController
   before_action :create_searching_object,only: [:index,:search_drink]
   def index
     @user = current_user
-    @drinks = Drink.all.order("created_at DESC")
+    @drinks = Drink.paginate(page: params[:page],per_page: 10)
+    
   end
 
   def show
