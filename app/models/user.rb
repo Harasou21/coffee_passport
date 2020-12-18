@@ -6,7 +6,7 @@ class User < ApplicationRecord
   # u.remember_token的なことができる
   has_many :drinks, dependent: :delete_all
   has_many :trades
-
+  has_many :comments
   # followerがフォローする
   # followedがフォローされるって大原則
   has_many :active_relationships,class_name: "Relationship",
