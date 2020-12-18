@@ -11,6 +11,8 @@ class DrinksController < ApplicationController
   def show
     @drink = Drink.find(params[:id])
     @user = @drink.user
+    @comment = Comment.new
+    @comments = @drink.comments.includes(:user)
   end
 
   def new
