@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   include SessionsHelper
   def create
-    Comments.create(comment_params)
+    comment = Comment.create(comment_params)
     redirect_to "/drinks/#{comment.drink.id}"
   end
 
