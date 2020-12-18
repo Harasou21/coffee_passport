@@ -2,6 +2,7 @@ class DrinksController < ApplicationController
   include SessionsHelper
   
   before_action :logged_in_user, only: [:index,:destroy]
+  before_action :create_searching_object,only: [:index,:search_drink]
   def index
     @user = current_user
     @drinks = Drink.all.order("created_at DESC")
@@ -45,9 +46,20 @@ class DrinksController < ApplicationController
 
   end
 
+  def search_drink
+
+    @results = @p.result
+  
+#binding.pry
+  end
+
   private
   def drink_params
     params.require(:drink_tag).permit(:name,:price,:explain,:image,:tag_name,:region_id,:body_id,:acidity_id,:processing_id).merge(user_id: current_user.id)
+  end
+
+  def create_searching_object
+    @p = Drink.ransack(params[:q]) 
   end
 end
 
