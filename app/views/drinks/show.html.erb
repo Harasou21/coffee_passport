@@ -65,9 +65,36 @@
       <%end%>
      
         
-      
 
     </ul>
+    <div class="container">
+      <% if logged_in? %>
+        <%= form_with(model: [@drink, @comment], local: true) do |form| %>
+          <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
+          <br>
+          <%= form.submit "SEND" %>
+        <% end %>
+      <% else %>
+        <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+      <% end %>
+    <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+            <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+            <%= comment.text %>
+          </p>
+        <% end %>
+      <% else%>
+        <h4>まだコメントがありません<br>
+        コメントしましょう
+        </h4>
+      <% end %>
+    </div>
+
   </div>
   <%end%>
+
+  </div>
 </div>
