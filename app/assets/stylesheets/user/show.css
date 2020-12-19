@@ -6,10 +6,19 @@
 } 
 
 .user-edit{
-  font-size: 40px;
-  background-color: ivory;
-  width: 60%;
+  font-size: 20px;
+  background-color:white;
+  
+  width: 40%;
   text-align: center;
   margin: auto;
   border-radius: 5px;
+}
+
+.user-edit a{
+  color: black !important;
+}
+
+.user-edit a:hover{
+  color: green !important;
 }
