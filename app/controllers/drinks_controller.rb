@@ -5,7 +5,7 @@ class DrinksController < ApplicationController
   before_action :create_searching_object,only: [:index,:search_drink]
   def index
     @user = current_user
-    @drinks = Drink.paginate(page: params[:page],per_page: 10)
+    @drinks = Drink.all.paginate(page: params[:page],per_page: 10).order("created_at DESC")
     
   end
 
@@ -24,6 +24,7 @@ class DrinksController < ApplicationController
     @drink = DrinkTag.new(drink_params)
     if @drink.valid?
       @drink.save
+      binding.pry
       redirect_to drinks_path
     else
       render 'new'
