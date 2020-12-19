@@ -8,8 +8,9 @@
     <%= render 'shared/error_messages', object: f.object %>
     
     <div class="tag-field" , id='tag-field'>
-        <%= f.label :tag_name %>
-        <%= f.text_field :tag_name %>
+      <div class="weight-bold-text">
+        タグ付け <%= f.text_field :tag_name,class: "post-tag" %>
+      </div>
     </div>
     <div id="search-result">
     </div>
@@ -50,25 +51,28 @@
       <%= f.text_field :price, class:"price-input", id:"item-price", placeholder:"例） 1000" %>
     </div>
 
-    (分かる場合はできるだけ書きましょう)
-    <div>
-      <p> 地域</p>
-      <%= f.collection_select(:region_id,Region.all,:id,:name,{},{class: "こんな感じでクラスを設定できます"})%>
+    <div class="post-category">
+      (分かる場合はできるだけ書きましょう)
+      <div class="post-region">
+        <p> 地域</p>
+        <%= f.collection_select(:region_id,Region.all,:id,:name,{},{class: "select-box"})%>
+      </div>
+      <div class="post-body">
+        <p>コク</p>
+        <%= f.collection_select(:body,Body.all,:id,:name,{},{class: "select-box"})%>
+      </div>
+      <div class="post-acidity">
+        <p>酸味</p>
+        <%= f.collection_select(:acidity_id,Acidity.all,:id,:name,{},{class: "select-box"})%>
+      </div>
+      <div class="post-processing">
+        <p>加工法</p>
+        <%= f.collection_select(:processing_id,Processing.all,:id,:name,{},{class: "select-box"})%>
+        <br>
+        <%= link_to "加工法についてもっと詳しく","#"%>
+      </div>
     </div>
-    <div>
-      <p>コク</p>
-      <%= f.collection_select(:body,Body.all,:id,:name,{},{class: "こんな感じでクラスを設定できます"})%>
-    </div>
-    <div>
-      <p>酸味</p>
-      <%= f.collection_select(:acidity_id,Acidity.all,:id,:name,{},{class: "こんな感じでクラスを設定できます"})%>
-    </div>
-    <div>
-      <p>加工法</p>
-      <%= link_to "加工法について","#"%>
-      <%= f.collection_select(:processing_id,Processing.all,:id,:name,{},{class: "こんな感じでクラスを設定できます"})%>
-    </div>
-    
+
     <div class="sell-btn-contents">
       <%= f.submit "投稿する" ,class:"sell-btn" %>
       <%=link_to 'もどる', root_path, class:"back-btn" %>
