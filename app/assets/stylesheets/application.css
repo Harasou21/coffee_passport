@@ -52,3 +52,9 @@ ul.pagination li{
   margin-left:15px ;
  
 }
+
+.pagination>.active>a{
+  color: green;
+}
+
+
