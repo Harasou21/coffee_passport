@@ -1,27 +1,41 @@
 
-<%= link_to "ユーザー一覧", users_path%>
+<div class="searching-form">
 
-<h1>
-  商品検索
-</h1>
-<%= search_form_for @p, url: drinks_searchdrink_path do |f| %>
-  
-  <%= f.search_field :name_cont%>
-  <p>カテゴリー検索</p>
-  <%= f.label '地域' %>
-  <%= f.collection_select :region_id_eq, Region.all ,:id, :name,  include_blank: '指定なし' %>
-  <%# ベースはドリンククラスで、第二引数で%>
-  <br>
-  <%= f.label 'コク'%>
-  <%= f.collection_select :body_id_eq,Body.all,:id,:name,include_blank: '指定なし' %>
-  <br>
-  <%= f.label '酸味'%>
-  <%= f.collection_select :acidity_id_eq,Acidity.all,:id,:name,include_blank: '指定なし' %>
-  <br>
-  <%= f.label '加工法'%>
-  <%= f.collection_select :processing_id_eq,Processing.all,:id,:name,include_blank: '指定なし' %>
-  <%= f.submit '検索' %>
-<% end %>
+        
+
+  <%= search_form_for @p, url: drinks_searchdrink_path do |f| %>
+    <div class="searching-by-name">
+      <h3 class="name-label"><i class="fas fa-search"></i>名前で検索</h3>
+      <%= f.search_field :name_cont,placeholder: "検索"%>
+    </div>
+
+
+      <h3 class="category-font">カテゴリー検索</h3>
+      <div class="region">
+        <%= f.label '地域' ,class: "select-label"%>
+        <%= f.collection_select :region_id_eq, Region.all ,:id, :name ,{include_blank: '地域を選択' },{class: "select-box"} %>
+      </div>
+
+      <%# ベースはドリンククラスで、第二引数で%>
+      <br>
+      <div class="body">
+        <%= f.label 'コク',class: "select-label"%>
+        <%= f.collection_select :body_id_eq,Body.all,:id,:name,{include_blank: 'コクを選択'} ,{class: "select-box"}%>
+      </div>
+      <br>
+      <div class="acidity">
+        <%= f.label '酸味',class: "select-label"%>
+        <%= f.collection_select :acidity_id_eq,Acidity.all,:id,:name,{include_blank: '酸味を選択'},{class: "select-box"} %>
+      </div>
+      <br>
+      <div class="processing">
+        <%= f.label '加工法',class: "select-label"%>
+        <%= f.collection_select :processing_id_eq,Processing.all,:id,:name,{include_blank: '加工法を選択'},{class: "select-box-processing"} %>
+      </div>
+        <%= f.submit '検索' ,class: "searching-submit-btn"%>
+  <% end %>
+
+</div>
 <div class='main'>
 
   <%# 商品一覧 %>
