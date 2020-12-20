@@ -22,10 +22,14 @@ a:hover { color:burlywood;}
 
 a{
   text-decoration:none;
-  color:green;
+  color:white;
 }
 
 a:visited{
+  color: white;
+}
+
+a:hover{
   color: green;
 }
 
@@ -36,3 +40,21 @@ li {
 .user-img{
   border-radius: 50%;
 }
+
+ul.pagination{
+  display: flex;
+  /* justify-content:center; */
+  width: 100%;
+  padding-right: 50px;
+}
+
+ul.pagination li{
+  margin-left:15px ;
+ 
+}
+
+.pagination>.active>a{
+  color: green;
+}
+
+

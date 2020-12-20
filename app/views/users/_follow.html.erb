@@ -1,6 +1,8 @@
+<div class="follow-btn">
 <%= form_with(model: current_user.active_relationships.build, local: true) do |f| %>
   <div><%= hidden_field_tag :followed_id, @user.id %></div>
   <%# active_relationの外部キーはfollowerなので.buildをやればいいが、
   followed_idに自分のidを含めて、カラムを埋めてく %>
-  <%= f.submit "Follow", class: "btn btn-primary" %>
+  <i class="fas fa-user-plus"></i><%= f.submit "Follow",class: "follow-submit" %>
 <% end %>
+</div>
