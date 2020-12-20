@@ -1,28 +1,9 @@
-
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <%=image_tag @user.image if @user.image.attached? %>
-      <h1><%= @user.nickname %></h1>
-      <span><%= link_to "view my profile", @user %></span>
-      <span><b>投稿数:</b> <%= @user.drinks.count %></span>
-    </section>
-    <section class="stats">
-      <%= render 'shared/stats' %>
-      <% if @users.any? %>
-        <div class="user_avatars">
-          <% @users.each do |user| %>
-            <%=image_tag  user.image if user.image.attached? %>
-          <% end %>
-        </div>
-      <% end %>
-    </section>
-  </aside>
-  <div class="col-md-8">
-    <% if @users.any? %>
-      <ul class="users follow">
-        <%= render @users %>
-      </ul>
-    <% end %>
+<% @users.each do |user|%>
+  <div class="user-follow">
+    <%=image_tag user.image.variant(resize: '60x60') ,class: "user-follow-img"if user.image.attached? %>
+    <div class="nickname-follow">
+       <%=link_to user.nickname,user_path(user.id)%>
+    </div>
   </div>
-</div>
+
+<% end %>

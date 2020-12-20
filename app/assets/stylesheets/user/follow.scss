@@ -1,0 +1,32 @@
+.user-follow{
+  display: flex;
+  background-color: black;
+  width: 40%;
+  margin: 0 auto 0 auto;
+  border: 1px solid white;
+}
+
+
+.user-follow-img{
+  border-radius: 50%;
+}
+
+.nickname-follow{
+  margin:auto  0 auto 10px;
+}
+
+.follow-btn{
+  // margin: 0 auto 0 auto;
+  text-align: center;
+  
+}
+
+.follow-submit{
+  padding: 15px;
+  font-size: 40px;
+}
+
+.fa-user-plus{
+  font-size: 40px;
+  margin-right: 5px;
+}

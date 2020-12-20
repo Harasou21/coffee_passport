@@ -19,6 +19,9 @@
   width: 40vw;
   min-width: 350px;
   //padding: 10vh 15vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .items-sell-title {
@@ -46,6 +49,21 @@
 
 
 /* /共通 */
+
+// タグ付け
+
+@media screen and (min-width:500px){
+  .post-tag{
+    margin-left: 40px;
+  }
+}
+
+@media screen and (min-width:1000px){
+  .post-tag{
+    margin-left: 77px;
+  }
+  
+}
 
 /* 出品画像 */
 .img-upload {
@@ -86,16 +104,11 @@
 
 /* /商品名と商品説明 */
 
-/* 商品の詳細など */
-
-
-/* /商品の詳細など */
-
 
 
 .price-content {
   width: 300px;
-  border-bottom: 1px solid #ccc;
+
   padding: 10px;
   display: flex;
   align-items: center;
@@ -117,6 +130,12 @@
   padding-right: 10px;
 }
 
+// カテゴリー選択欄
+
+.post-category{
+  margin-left: 50px;
+}
+
 /* 下部ボタン */
 .sell-btn-contents {
   width: 100%;
@@ -131,12 +150,16 @@
   height: 50px;
   font-size: 14px;
   margin-bottom: 4vh;
+  margin-top: 20px;
 }
 
 .back-btn {
-  background: #fff;
+  background: black;
   border: 1px solid #aaa;
   padding: 15px 35%;
   text-decoration: none;
 }
+
+
+
 

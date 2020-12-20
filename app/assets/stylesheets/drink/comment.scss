@@ -1,0 +1,21 @@
+.comment-container{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 40px;
+
+}
+
+.comment-field{
+  margin-right: auto;
+  margin-left: auto;
+  width: 335px;
+}
+
+.submit-comment{
+  margin-top:20px ;
+  margin-left: 120px;
+  height: 50px;
+  width: 100px;
+}
