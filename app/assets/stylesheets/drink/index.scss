@@ -45,3 +45,24 @@
   font-size: large;
   font-weight: bold;
 }
+
+// タイムラインについてのCSS
+
+
+
+.user-info-timeline {
+  background-color: black;
+  display: flex;
+  justify-content: start;
+  height: 50px;
+
+}
+
+.user-img-timeline{
+  border-radius: 50%;
+ 
+}
+
+.username-timeline{
+  margin: auto 0 auto 0;
+}
