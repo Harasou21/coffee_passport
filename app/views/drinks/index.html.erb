@@ -49,6 +49,14 @@
       <% @drinks.each do |drink|%>
       <li class='list'>
         <%= link_to drink_path(drink.id) do %>
+          <%= link_to user_path(drink.user.id) do%>
+            <div class="user-info-timeline">
+                <%=image_tag drink.user.image.variant(resize: '60x60'),class: "user-img-timeline"  if drink.user.image.attached?%> 
+                <div class="username-timeline">
+                  <%= drink.user.nickname %>
+                </div>
+            </div>
+          <% end %>
         <div class='item-img-content'>
           <%= image_tag drink.image , class: "item-img" if drink.image.attached? %>
           
