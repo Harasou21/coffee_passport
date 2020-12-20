@@ -1,7 +1,7 @@
 class DrinksController < ApplicationController
   include SessionsHelper
   
-  before_action :logged_in_user, only: [:index,:destroy]
+  before_action :logged_in_user, only: [:index,:new,:destroy]
   before_action :create_searching_object,only: [:index,:search_drink]
   def index
     @user = current_user
@@ -24,7 +24,7 @@ class DrinksController < ApplicationController
     @drink = DrinkTag.new(drink_params)
     if @drink.valid?
       @drink.save
-      binding.pry
+      #binding.pry
       redirect_to drinks_path
     else
       render 'new'
