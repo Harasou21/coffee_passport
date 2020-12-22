@@ -37,6 +37,7 @@ class User < ApplicationRecord
   # rails が自動的に単数系にして、外部キーfollower_id
   # を探してくれるから
   # 「自分を」フォローしてる人
+  has_many :likes
   has_one_attached :image
 
   before_save  { self.email = email.downcase }
