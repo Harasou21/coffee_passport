@@ -81,11 +81,11 @@
             <%= drink.explain%>
           </div>
           <div class='item-tag'>
-            <%drink.tags.each do |tag| %>
+            <% drink.tags.each do |tag| %>
               #<%=tag.tag_name%>
             <%end%>
           </div>
-          <%= link_to 'いいね', create_like_path(drink.id), method: :post %>
+          <%= render 'shared/like',drink: drink%>
         </div>
        
         <% end %>
