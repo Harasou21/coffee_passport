@@ -1,0 +1,7 @@
+ <% if current_user.liked_by?(drink.id) %>
+  <%= link_to 'いいねを外す', destroy_like_path(drink.id), method: :delete,class: "like" %>    
+<% else %>
+  <%= link_to 'いいね', create_like_path(drink.id), method: :post ,class: "like"%>
+<% end %>
+<%= drink.likes.count%>
+
