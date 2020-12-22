@@ -85,6 +85,7 @@
               #<%=tag.tag_name%>
             <%end%>
           </div>
+          <%= link_to 'いいね', create_like_path(drink.id), method: :post %>
         </div>
        
         <% end %>
