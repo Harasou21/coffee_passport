@@ -1,7 +1,9 @@
  <% if current_user.liked_by?(drink.id) %>
-  <%= link_to 'いいねを外す', destroy_like_path(drink.id), method: :delete,class: "like" %>    
+  <%= link_to 'いいねを外す', destroy_like_path(drink.id), method: :delete,remote: true,class: "like" %>   
+  <%#remote: trueにすることにより、js形式のリクエストになり
+   create.js.erbが呼び出される %>
 <% else %>
-  <%= link_to 'いいね', create_like_path(drink.id), method: :post ,class: "like"%>
+  <%= link_to 'いいね', create_like_path(drink.id), method: :post ,remote: true,class: "like"%>
 <% end %>
 <%= drink.likes.count%>
 
