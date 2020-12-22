@@ -110,4 +110,9 @@ class User < ApplicationRecord
     def following?(other_user)
       following.include?(other_user)
     end
+
+    # いいねしてるかどうか確かめるメソッド
+    def liked_by?(drink_id)
+      likes.where(drink_id: drink_id).exists?
+    end
 end
