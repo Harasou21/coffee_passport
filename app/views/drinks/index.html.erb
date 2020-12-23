@@ -81,10 +81,12 @@
             <%= drink.explain%>
           </div>
           <div class='item-tag'>
-            <%drink.tags.each do |tag| %>
+            <% drink.tags.each do |tag| %>
               #<%=tag.tag_name%>
             <%end%>
           </div>
+          <%= render "likes/like",drink: drink%>
+    
         </div>
        
         <% end %>
