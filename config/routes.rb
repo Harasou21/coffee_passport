@@ -26,6 +26,6 @@ Rails.application.routes.draw do
   end
   post '/drinks/:id/trades/new', to: 'trades#create'
   resources :relationships, only: [:create,:destroy]
-  post 'like/:id' ,to: 'likes#create', as: 'create_like'
-  delete 'like/:id',to: 'likes#destroy', as: 'destroy_like'
+  post 'like/:drink_id' ,to: 'likes#like', as: 'like'
+  delete 'like/:drink_id',to: 'likes#unlike', as: 'unlike'
 end

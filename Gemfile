@@ -66,3 +66,4 @@ gem 'payjp'
 gem 'ransack'
 gem 'will_paginate',           '3.1.8'
 gem 'bootstrap-will_paginate', '1.0.0'
+gem "jquery-rails"

@@ -1,22 +1,25 @@
 class LikesController < ApplicationController
   include SessionsHelper
 
-  before_action :drink_params
-  def create
-    Like.create(user_id: current_user.id, drink_id: params[:id])
+  before_action :set_variables
+  def like  
+    like = current_user.likes.new(drink_id: @drink.id)
     #redirect_to drinks_path
     # jsを用いるので画面遷移は行わない
+    #binding.pry
+    like.save
   end
 
-  def destroy
-    Like.find_by(user_id: current_user.id, drink_id: params[:id]).destroy
-
+  def unlike
+    like = current_user.likes.find_by(drink_id: @drink.id)
+    #binding.pry
   end
 
   private
 
-    def drink_params
-      @drink = Drink.find(params[:id])
+    def set_variables
+      @drink = Drink.find(params[:drink_id])
+      @id_name = "#like-link-#{@drink.id}"
     end
 
 end

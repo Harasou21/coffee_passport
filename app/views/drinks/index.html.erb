@@ -85,7 +85,8 @@
               #<%=tag.tag_name%>
             <%end%>
           </div>
-          <%= render 'shared/like',drink: drink%>
+          <%= render partial: "likes/like",locals:{drink: drink}%>
+    
         </div>
        
         <% end %>

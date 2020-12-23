@@ -59,6 +59,12 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
+  # def likes
+  #   @user = current_user
+  #   @drinks = @user.likes
+  #   render 'show'
+  # end
+
   private
     def user_params
       params.require(:user).permit(:nickname,:email,:password,:password_confirmation,:image)
