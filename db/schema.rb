@@ -69,7 +69,7 @@ ActiveRecord::Schema.define(version: 2020_12_22_082723) do
   end
 
   create_table "drinks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "name", limit: 255
+    t.string "name"
     t.integer "price"
     t.text "explain"
     t.bigint "user_id", null: false
@@ -116,12 +116,12 @@ ActiveRecord::Schema.define(version: 2020_12_22_082723) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "nickname", limit: 255
-    t.string "email", limit: 255
+    t.string "nickname"
+    t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "password_digest", limit: 255
-    t.string "remember_digest", limit: 255
+    t.string "password_digest"
+    t.string "remember_digest"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
