@@ -37,6 +37,8 @@ class User < ApplicationRecord
   # rails が自動的に単数系にして、外部キーfollower_id
   # を探してくれるから
   # 「自分を」フォローしてる人
+  has_many :likes
+  has_many :like_drinks, through: :likes, source: :drink
   has_one_attached :image
 
   before_save  { self.email = email.downcase }
@@ -108,5 +110,10 @@ class User < ApplicationRecord
     # 現在のユーザーがフォローしてたらtrueを返す
     def following?(other_user)
       following.include?(other_user)
+    end
+
+    # いいねしてるかどうか確かめるメソッド
+    def liked_by?(drink_id)
+      likes.where(drink_id: drink_id).exists?
     end
 end
