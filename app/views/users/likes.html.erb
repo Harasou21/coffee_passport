@@ -1,52 +1,8 @@
-
-
-  <div class="user-profile">
-    <h2 class="user-profile-name"><%= current_user.nickname %></h2>
-    <h2><%= image_tag @user.image.variant(resize: '100x100'),class: 'user-img' if @user.image.attached? %></h2>
-    <div class="user-like-post">
-      <%= link_to "#{@user.nickname}がいいねした投稿",user_likes_path(@user.id)%>
-    </div>
-    <div class="user-edit">
-      <% if current_user?(@user) %>
-      <%= link_to "プロフィールを編集",edit_user_path(@user)%>  
-      <% end %>
-    </div>
-      <% unless current_user?(@user) %>
-        <div id="follow_form">
-        <% if current_user.following?(@user) %>
-          <%= render 'unfollow' %>
-        <% else %>
-          <%= render 'follow' %>
-        <% end %>
-        </div>
-      <% end %>
-  </div> 
-
-
-
-
-
-<% @user ||= current_user %>
-<div class="stats">
-  <a href="<%= following_user_path(@user) %>">
-    <strong id="following" class="stat">
-      <%= @user.following.count %>
-    </strong>
-    following
-  </a>
-  <a href="<%= followers_user_path(@user) %>">
-    <strong id="followers" class="stat">
-      <%= @user.followers.count %>
-    </strong>
-    followers
-  </a>
-</div>
-
 <div class='main'>
 
   <%# 商品一覧 %>
   <div class='item-contents'>
-    <h2 class='title'><%= @user.nickname%>の投稿</h2>
+    <h2 class='title'><%= @user.nickname%>がいいねした投稿</h2>
     <%= will_paginate @drinks%>
     <ul class='item-lists'>
       

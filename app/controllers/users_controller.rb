@@ -59,11 +59,11 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
-  # def likes
-  #   @user = current_user
-  #   @drinks = @user.likes
-  #   render 'show'
-  # end
+   def likes
+    @user = User.find(params[:id])
+    @drinks = @user.like_drinks.paginate(page: params[:page],per_page: 10).order("created_at DESC")
+     
+   end
 
   private
     def user_params
