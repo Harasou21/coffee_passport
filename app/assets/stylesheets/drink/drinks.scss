@@ -77,10 +77,15 @@ a {
 
 
 .item-info {
-  background-color:black;
-  color: white;
+  background-color:white ;
+  color: black ;
 
 }
+
+.item-info a{
+  color: black !important;
+}
+
 
 .item-name {
   // font-size: 2.5vh;
