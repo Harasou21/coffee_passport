@@ -12,7 +12,7 @@ class LikesController < ApplicationController
   end
 
   def unlike
-    like = current_user.likes.find_by(drink_id: @drink.id)
+    like = current_user.likes.find_by(drink_id: @drink.id).destroy
     #binding.pry
   end
 
