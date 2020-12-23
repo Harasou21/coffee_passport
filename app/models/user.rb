@@ -38,6 +38,7 @@ class User < ApplicationRecord
   # を探してくれるから
   # 「自分を」フォローしてる人
   has_many :likes
+  has_many :like_drinks, through: :likes, source: :drink
   has_one_attached :image
 
   before_save  { self.email = email.downcase }
