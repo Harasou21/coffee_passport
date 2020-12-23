@@ -2,6 +2,7 @@ class LikesController < ApplicationController
   include SessionsHelper
 
   before_action :set_variables
+  
   def like  
     like = current_user.likes.new(drink_id: @drink.id)
     #redirect_to drinks_path
