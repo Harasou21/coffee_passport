@@ -52,7 +52,10 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6 },allow_nil: true
   # ユーザー更新時に空のパスワードでも大丈夫
   # has_secure_passwordの方でpasswordの存在性を検証するから大丈夫
-  
+  validates :username, presence: true, unless: :uid? #他省略
+validates :email, presence: true, unless: :uid?
+has_secure_password validations: false
+validates :password, presence: true, unless: :uid?
   
 
   # 渡された文字列のハッシュ値を返す
@@ -120,6 +123,7 @@ class User < ApplicationRecord
 
     # 外部APIからのユーザー情報を取得
     def self.find_or_create_from_auth(auth)
+      # binding.pry
       provider = auth[:provider]
       uid = auth[:uid]
  
