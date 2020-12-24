@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: 'drinks#index'
   get    '/login',   to: 'sessions#new'
+  get 'auth/:provider/callback', to: 'sessions#create' 
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   get 'user/likes/:id',  to: 'users#likes',as: 'user_likes'
