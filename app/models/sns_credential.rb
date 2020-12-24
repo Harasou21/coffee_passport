@@ -1,0 +1,2 @@
+class SnsCredential < ApplicationRecord
+end
