@@ -39,6 +39,7 @@ class User < ApplicationRecord
   # 「自分を」フォローしてる人
   has_many :likes
   has_many :like_drinks, through: :likes, source: :drink
+  has_many :sns_credentials
   has_one_attached :image
 
   before_save  { self.email = email.downcase }
@@ -115,5 +116,19 @@ class User < ApplicationRecord
     # いいねしてるかどうか確かめるメソッド
     def liked_by?(drink_id)
       likes.where(drink_id: drink_id).exists?
+    end
+
+    # 外部APIからのユーザー情報を取得
+    def self.find_or_create_from_auth(auth)
+      provider = auth[:provider]
+      uid = auth[:uid]
+ 
+      #必要に応じて情報追加してください
+    
+      #ユーザはSNSで登録情報を変更するかもしれので、毎回データベースの情報も更新する
+      self.find_or_create_by(provider: provider, uid: uid) do |user|
+        user.username = name
+        user.image_path = image
+      end
     end
 end
