@@ -29,4 +29,6 @@ Rails.application.routes.draw do
   resources :relationships, only: [:create,:destroy]
   post 'like/:drink_id' ,to: 'likes#like', as: 'like'
   delete 'like/:drink_id',to: 'likes#unlike', as: 'unlike'
+  resources :account_activations, only: [:edit]
+
 end
