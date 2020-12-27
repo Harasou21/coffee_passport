@@ -126,12 +126,13 @@ validates :password, presence: true, unless: :uid?
       # binding.pry
       provider = auth[:provider]
       uid = auth[:uid]
- 
+      nickname = auth[:info][:name]
+      image = auth[:info][:image]
       #必要に応じて情報追加してください
     
       #ユーザはSNSで登録情報を変更するかもしれので、毎回データベースの情報も更新する
       self.find_or_create_by(provider: provider, uid: uid) do |user|
-        user.username = name
+        user.nickname = name
         user.image_path = image
       end
     end
