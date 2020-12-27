@@ -39,6 +39,7 @@ class User < ApplicationRecord
   # 「自分を」フォローしてる人
   has_many :likes
   has_many :like_drinks, through: :likes, source: :drink
+  has_many :sns_credentials
   has_one_attached :image
 
   before_save  { self.email = email.downcase }
@@ -51,7 +52,10 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6 },allow_nil: true
   # ユーザー更新時に空のパスワードでも大丈夫
   # has_secure_passwordの方でpasswordの存在性を検証するから大丈夫
-  
+  validates :username, presence: true, unless: :uid? #他省略
+validates :email, presence: true, unless: :uid?
+has_secure_password validations: false
+validates :password, presence: true, unless: :uid?
   
 
   # 渡された文字列のハッシュ値を返す
@@ -115,5 +119,21 @@ class User < ApplicationRecord
     # いいねしてるかどうか確かめるメソッド
     def liked_by?(drink_id)
       likes.where(drink_id: drink_id).exists?
+    end
+
+    # 外部APIからのユーザー情報を取得
+    def self.find_or_create_from_auth(auth)
+      # binding.pry
+      provider = auth[:provider]
+      uid = auth[:uid]
+      nickname = auth[:info][:name]
+      image = auth[:info][:image]
+      #必要に応じて情報追加してください
+    
+      #ユーザはSNSで登録情報を変更するかもしれので、毎回データベースの情報も更新する
+      self.find_or_create_by(provider: provider, uid: uid) do |user|
+        user.nickname = name
+        user.image_path = image
+      end
     end
 end
