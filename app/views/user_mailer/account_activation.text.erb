@@ -1,3 +1,6 @@
-User#account_activation
+ ようこそ！ <%= @user.nickname %>様
 
-<%= @greeting %>, find me in app/views/user_mailer/account_activation.text.erb
+以下のURLをクリックして、あらゆるコーヒーの世界を覗いてみましょう！
+
+Here,Only your Coffee Passport!  Bon Voyage!!
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
