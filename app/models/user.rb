@@ -41,7 +41,7 @@ class User < ApplicationRecord
   # 「自分を」フォローしてる人
   has_many :likes
   has_many :like_drinks, through: :likes, source: :drink
-  has_many :sns_credentials
+  #has_many :sns_credentials
   has_one_attached :image
 
   before_save  { self.email = email.downcase }
@@ -54,10 +54,10 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6 },allow_nil: true
   # ユーザー更新時に空のパスワードでも大丈夫
   # has_secure_passwordの方でpasswordの存在性を検証するから大丈夫
-  validates :username, presence: true, unless: :uid? #他省略
-validates :email, presence: true, unless: :uid?
-has_secure_password validations: false
-validates :password, presence: true, unless: :uid?
+#   validates :username, presence: true, unless: :uid? #他省略
+# validates :email, presence: true, unless: :uid?
+# has_secure_password validations: false
+# validates :password, presence: true, unless: :uid?
   
 
   # 渡された文字列のハッシュ値を返す
@@ -83,8 +83,9 @@ validates :password, presence: true, unless: :uid?
 
   # 渡されたトークンがダイジェストと一致したらtrue
   # を返す
-  def authenticated?(remember_token)
-    return false if remember_digest.nil?
+  def authenticated?(attribute,token)
+    digest = send("#{attribute}_digest")
+    return false if digest.nil?
     # 二種類のブラウザを使用してログアウトした場合
     # cookiesのremember_tokenはあるけど、
     # サーバー側でremember_digestをnilにしてるから
@@ -94,7 +95,7 @@ validates :password, presence: true, unless: :uid?
     # 後置if文に当てはまる条件があれば処理を止めて！
     # って場合はreturnとかで明示的に書くとif ~ else ~ end 
     # とか書かなくて済む
-    BCrypt::Password.new(remember_digest).is_password?(remember_token)
+    BCrypt::Password.new(digest).is_password?(token)
   end
 
   # ユーザーのログイン情報を破棄する
@@ -148,4 +149,15 @@ validates :password, presence: true, unless: :uid?
       self.activation_token  = User.new_token
       self.activation_digest = User.digest(activation_token)
     end
+
+    def activate
+      update_attribute(:activated,    true)
+      update_attribute(:activated_at, Time.zone.now)
+    end
+  
+    # 有効化用のメールを送信する
+    def send_activation_email
+      UserMailer.account_activation(self).deliver_now
+    end
+  
 end
