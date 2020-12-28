@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   def new
     message  = "Emailによるアカウントの有効化がされてません. "
     message += "Emailに有効化のリンクがあるか確認してください"
-    flash[:warning] = message
+    flash.now[:warning] = message
   end
 
   def create
@@ -33,7 +33,7 @@ class SessionsController < ApplicationController
           else
             message  = "Emailによるアカウントの有効化がされてません. "
             message += "Emailに有効化のリンクがあるか確認してください"
-            flash[:warning] = message
+            flash.now[:warning] = message
             redirect_to root_url
     
           end
