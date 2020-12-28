@@ -5,7 +5,6 @@ Rails.application.configure do
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
-
   # Do not eager load code on boot.
   config.eager_load = false
 
@@ -32,7 +31,17 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  
+   # config.action_mailer.raise_delivery_errors = true
+  # コメントアウトすることでdelelop環境からもメールを送信する設定に
+  
+  #host = 'b9c7c936bba34db686385a83af09e0a0.vfs.cloud9.ap-northeast-1.amazonaws.com' # ここをコピペすると失敗します。自分の環境のホストに変えてください。
+  # クラウドIDEの場合は以下をお使いください
+  #config.action_mailer.default_url_options = { host: host, protocol: 'https' }
+  # localhostで開発している場合は以下をお使いください
+ 
+  #host = 'localhost:3000'       
+ # config.action_mailer.default_url_options = { host: host, protocol: 'http' }
 
   config.action_mailer.perform_caching = false
 
@@ -59,4 +68,25 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  config.hosts.clear
+  
+  #config.action_mailer.asset_host = 'b9c7c936bba34db686385a83af09e0a0.vfs.cloud9.ap-northeast-1.amazonaws.com/'
+
+  config.action_mailer.default_url_options = { host: 'localhost:3000', protocol: 'http' }
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    #enable: true,
+    address: 'smtp.gmail.com',
+    port: 587,
+    domain: 'gmail.com',
+    authentication: :login,
+    user_name: ENV["GOOGLE_USER_NAME"],
+    password: ENV["GOOGLE_PASSWORD"],
+    enable_starttls_auto:  true,
+    #openssl_verify_mode: 'peer',
+    ssl:  false,
+    tls: false
+
+  }
 end
