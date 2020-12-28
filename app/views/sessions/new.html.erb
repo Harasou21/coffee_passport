@@ -8,12 +8,12 @@
     </h1>
   </div>
    <% flash.each do |message_type, message| %>
-      <div class="alert-<%= message_type %>"><%= message %></div>
-    <% end %>
-  <div class='login-flash-message'>
-    <%= flash[:notice] %>
-    <%= flash[:alert] %>
-  </div>
+    <div class="alert-<%= message_type %>">
+      <%= message%>
+    </div>
+  <% end %>
+
+ 
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">メールアドレス</label>

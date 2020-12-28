@@ -1,6 +1,9 @@
 class SessionsController < ApplicationController
   include SessionsHelper
   def new
+    message  = "Emailによるアカウントの有効化がされてません. "
+    message += "Emailに有効化のリンクがあるか確認してください"
+    flash[:warning] = message
   end
 
   def create
@@ -35,7 +38,7 @@ class SessionsController < ApplicationController
     
           end
       else
-        flash.now[:danger] = 'invalid email/password combination'
+        flash.now[:danger] = 'パスワードとメールアドレスが一致しません'
         render 'new'
       end
     
