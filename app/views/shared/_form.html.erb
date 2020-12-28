@@ -7,7 +7,9 @@
       会員情報入力
     </h1>
   </div>
-  
+    <% flash.each do |message_type, message| %>
+      <div class="alert-<%= message_type %>"><%= message %></div>
+    <% end %>
   <%= render 'shared/error_messages', object: f.object %>
  
   <div class="form-groups">

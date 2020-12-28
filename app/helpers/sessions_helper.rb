@@ -70,7 +70,7 @@ module SessionsHelper
     elsif  (user_id = cookies.signed[:user_id])
       # sessionが張られてなかったらcookiesにあるかも
       user = User.find_by(id: user_id)
-      if user && user.authenticated?(cookies[:remember_token])
+      if user && user.authenticated?(:remember,cookies[:remember_token])
         # nilガード
         # クッキーのuser_idとremember_tokenが一致してる
         log_in user
@@ -88,6 +88,7 @@ module SessionsHelper
   # その他ならfalse
   def logged_in?
     !current_user.nil?
+
     # nilじゃなかったら
     # すなわちログインしてたらfalseが
     # 返ってくるけど、それだとif文とか

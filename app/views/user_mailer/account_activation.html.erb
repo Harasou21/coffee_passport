@@ -1,0 +1,10 @@
+<h1>Coffee Passport</h1>
+
+<p>ようこそ！ <%= @user.nickname %>様</p>
+
+<p>
+以下のURLをクリックして、あらゆるコーヒーの世界を覗いてみましょう！
+</p>
+
+<%= link_to "クリックしてアカウントを有効化してください！/Activate! Bon Voyage!", edit_account_activation_url(@user.activation_token,
+                                                    email: @user.email) %>
