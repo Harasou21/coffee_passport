@@ -1,5 +1,5 @@
 
-
+<% provide(:title,"My page")%>
   <div class="user-profile">
     <h2 class="user-profile-name"><%= current_user.nickname %></h2>
     <h2><%= image_tag @user.image.variant(resize: '100x100'),class: 'user-img' if @user.image.attached? %></h2>
