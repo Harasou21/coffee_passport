@@ -30,5 +30,5 @@ Rails.application.routes.draw do
   post 'like/:drink_id' ,to: 'likes#like', as: 'like'
   delete 'like/:drink_id',to: 'likes#unlike', as: 'unlike'
   resources :account_activations, only: [:edit]
-
+  get '/buy', to: 'sold_drinks#index'
 end

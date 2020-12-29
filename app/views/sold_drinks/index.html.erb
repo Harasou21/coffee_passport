@@ -2,8 +2,8 @@
 
   <%# 商品一覧 %>
   <div class='item-contents'>
-    <h2 class='title'>タイムライン</h2>
-    <%= will_paginate%>
+    <h2 class='title'>商品を購入</h2>
+
     <ul class='item-lists'>
 
       <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
@@ -11,14 +11,6 @@
       <% @drinks.each do |drink|%>
       <li class='list'>
         
-          <%= link_to user_path(drink.user.id) do%>
-            <div class="user-info-timeline">
-                <%=image_tag drink.user.image.variant(resize: '60x60'),class: "user-img-timeline"  if drink.user.image.attached?%> 
-                <div class="username-timeline">
-                  <%= drink.user.nickname %>
-                </div>
-            </div>
-          <% end %>
      
           <div class='item-img-content'>
          <%= link_to drink_path(drink.id) do %>
@@ -49,7 +41,6 @@
           <% end %>
           </div>
 
-
             <%= link_to "商品を購入する", drink_trades_path(drink.id)%>
 
       </li>
@@ -58,7 +49,7 @@
       
 
         </ul>
-        <%= will_paginate%>
+
       </div>
     <%end%>
 </div>
