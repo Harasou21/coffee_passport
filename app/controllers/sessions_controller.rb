@@ -1,9 +1,6 @@
 class SessionsController < ApplicationController
   include SessionsHelper
   def new
-    message  = "Emailによるアカウントの有効化がされてません. "
-    message += "Emailに有効化のリンクがあるか確認してください"
-    flash.now[:warning] = message
   end
 
   def create
@@ -31,7 +28,7 @@ class SessionsController < ApplicationController
           # redirect_back_or メソッド呼び出し
           # 引数にuser_url(user)を渡す
           else
-            message  = "Emailによるアカウントの有効化がされてません. "
+            message  = "Emailによるアカウントの有効化がされてない場合は "
             message += "Emailに有効化のリンクがあるか確認してください"
             flash.now[:warning] = message
             redirect_to root_url
