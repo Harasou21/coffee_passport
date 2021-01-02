@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   get 'user/likes/:id',  to: 'users#likes',as: 'user_likes'
+  get 'user/purchase_record',to: 'users#purchase_record'
   resources :users do
     member do
       get :following,:followers
