@@ -1,8 +1,11 @@
 
 <% provide(:title,"Home")%>
-<div class="searching-form">
 
-        
+<div class="buy-form">
+  <%= link_to "商品を購入",'/buy'%>
+</div>
+
+<div class="searching-form">
 
   <%= search_form_for @p, url: drinks_searchdrink_path do |f| %>
     <div class="searching-by-name">
@@ -46,7 +49,8 @@
     <ul class='item-lists'>
 
       <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
-    <%if @drinks%>
+    <%if @drinks %>
+    
       <% @drinks.each do |drink|%>
       <li class='list'>
         
@@ -87,7 +91,7 @@
             <%= render "likes/like",drink: drink%>
           <% end %>
           </div>
-       
+
 
       </li>
       <%end%>

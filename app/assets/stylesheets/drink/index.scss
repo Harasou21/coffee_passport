@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   color: burlywood;
+  margin-right: 50px;
 }
 
 .searching-by-name{
@@ -66,4 +67,22 @@
 
 .username-timeline{
   margin: auto 0 auto 0;
+}
+
+// 商品購入ボタンのCSS
+
+.buy-form{
+  margin: 10px auto 0 auto;
+  background-color: black;  
+  width: 25%;
+  height: 50px;
+  position: relative;
+}
+
+.buy-form a{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform : translate(-50%,-50%);
+  transform : translate(-50%,-50%);
 }

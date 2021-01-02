@@ -6,6 +6,9 @@
     <div class="user-like-post">
       <%= link_to "#{@user.nickname}がいいねした投稿",user_likes_path(@user.id)%>
     </div>
+    <div class="purchase-record">
+      <%= link_to  "#{@user.nickname}の購入履歴", "/user/purchase_record" %>
+    </div>
     <div class="user-edit">
       <% if current_user?(@user) %>
       <%= link_to "プロフィールを編集",edit_user_path(@user)%>  
