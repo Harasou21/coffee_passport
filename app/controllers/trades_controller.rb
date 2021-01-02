@@ -2,7 +2,6 @@ class TradesController < ApplicationController
   include SessionsHelper
   def index
     # 商品を表示
-    
     @item = Drink.find(params[:drink_id])
     @order = TradeAddress.new
     #redirect_to root_path if @drink.trade
@@ -21,7 +20,6 @@ class TradesController < ApplicationController
     if @order.valid?
       pay_item
       @order.save
-      redirect_to root_path
     else
       render 'index'
     end

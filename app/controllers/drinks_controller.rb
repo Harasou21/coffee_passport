@@ -3,9 +3,10 @@ class DrinksController < ApplicationController
   
   before_action :logged_in_user, only: [:index,:new,:destroy]
   before_action :create_searching_object,only: [:index,:search_drink]
+
   def index
     @user = current_user
-    @drinks = Drink.all.paginate(page: params[:page],per_page: 10).order("created_at DESC")
+    @drinks = Drink.where.not(user_id: 6).paginate(page: params[:page],per_page: 10).order("created_at DESC")
   end
 
   def show

@@ -64,10 +64,27 @@ class UsersController < ApplicationController
    def likes
     @user = User.find(params[:id])
     @drinks = @user.like_drinks.paginate(page: params[:page],per_page: 10).order("created_at DESC")
-     
+
+   end
+
+   def purchase_record
+    trades = Trade.where(user_id: current_user.id).select(:drink_id)
+    # ユーザーが購入してればtradeにそのuser_idがある
+    # まずはそれを取得
+    # そこから、drink_idを取得
+
+    # この時点では同じ商品も取得できてる
+    
+    #binding.pry
+  
+    @drinks = Drink.where(id: trades).order("created_at DESC")
+    # この書き方だと同じ商品を購入できても、一つしか表示されない
+    #.orderもdrinksのidを降順にしただけで、購入した順番ではない
+    #binding.pry
    end
 
   private
+
     def user_params
       params.require(:user).permit(:nickname,:email,:password,:password_confirmation,:image)
     end
