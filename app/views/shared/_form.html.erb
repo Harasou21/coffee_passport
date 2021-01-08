@@ -1,4 +1,6 @@
+<div id="slideshow">
 <div class="registration-main">
+
 <%= form_with model: @user, local: true do |f| %>
 
 <div class='form-wrap'>
@@ -60,9 +62,18 @@
        <%= f.submit "会員登録" ,class:"register-red-btn" %>
     <% end %>
   </div>
+
+  <% unless current_user?(@user) %>
+    <div class="signin">
+      <p>アカウントをお持ちですか？</p>
+      <%=link_to "ログインする",login_path, class: "signin-path"%>
+    </div>
+  <% end %>
+
   <p class='register-info'>本人情報の登録について</p>
 
 </div>
 
 <% end %>
+</div>
 </div>

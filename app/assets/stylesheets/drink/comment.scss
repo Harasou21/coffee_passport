@@ -19,3 +19,31 @@
   height: 50px;
   width: 100px;
 }
+
+div#comments-area.comments a:visited{
+  color: green;
+
+}
+
+div#comments-area.comments a:hover{
+  color: white;
+}
+
+.comments{
+  margin-top: 40px;
+}
+
+.comment{
+  display: flex;
+
+}
+
+.fa-trash-alt{
+  margin-left: 20px;
+  color: black;
+}
+
+.fa-trash-alt:visited{
+  color: black;
+}
+

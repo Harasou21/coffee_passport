@@ -1,0 +1,22 @@
+.user-config{ 
+  margin: 40px auto 0  auto;
+  font-weight: bold;
+  text-align: center;
+  background-color: white;
+  width: 25%;
+  
+}
+
+.user-config a:visited{
+  color: gray;
+}
+
+.user-config a:hover{
+  color: red;
+}
+
+.user-config-child{
+  padding: 5px 0 5px 0;
+  border: 1px solid black;
+}
+

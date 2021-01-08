@@ -108,7 +108,6 @@
 
 .price-content {
   width: 300px;
-
   padding: 10px;
   display: flex;
   align-items: center;
@@ -118,6 +117,7 @@
 .price-text {
   display: flex;
   align-items: center;
+  font-weight: bold;
 }
 
 .sell-yen {
@@ -136,6 +136,13 @@
   margin-left: 50px;
 }
 
+.post-region, 
+.post-body, 
+.post-acidity, 
+.post-processing{
+  font-weight: bold;
+}
+
 /* 下部ボタン */
 .sell-btn-contents {
   width: 100%;
@@ -151,6 +158,7 @@
   font-size: 14px;
   margin-bottom: 4vh;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .back-btn {
@@ -160,6 +168,8 @@
   text-decoration: none;
 }
 
-
+.back-btn:visited{
+  color: #fff;
+}
 
 

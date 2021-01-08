@@ -80,7 +80,13 @@
 <% end %>
 
 <% else %>
-  該当する商品はありません
+
+  <div class="not-found">
+  <p>Sorry：(</p>
+  <i class="far fa-sad-tear"></i>
+    <p>該当する商品はありません</p>
+    <%= link_to 'トップページへ戻る', root_path %>
+  </div>
+
 <% end %>
-<br>
-<%= link_to 'トップページへ戻る', root_path %>
+

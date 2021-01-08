@@ -2,7 +2,7 @@ class DrinksController < ApplicationController
   include SessionsHelper
   
   before_action :logged_in_user, only: [:index,:new,:destroy]
-  before_action :create_searching_object,only: [:index,:search_drink]
+  before_action :create_searching_object,only: [:show_searching_form,:search_drink]
 
   def index
     @user = current_user
@@ -13,7 +13,7 @@ class DrinksController < ApplicationController
     @drink = Drink.find(params[:id])
     @user = @drink.user
     @comment = Comment.new
-    @comments = @drink.comments.includes(:user)
+    @comments = @drink.comments.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -55,6 +55,10 @@ class DrinksController < ApplicationController
     @results = @p.result
   
 #binding.pry
+  end
+
+  def show_searching_form
+
   end
 
   private

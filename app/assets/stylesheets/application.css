@@ -15,23 +15,20 @@
  */
 
 body{
-  background-color: maroon;
+  background-color: #E0C8B1; 
+  margin: 0;
 }
 
-a:hover { color:burlywood;}
+
 
 a{
   text-decoration:none;
-  color:white;
+
 }
 
-a:visited{
-  color: white;
-}
 
-a:hover{
-  color: green;
-}
+
+
 
 li {
   list-style: none;

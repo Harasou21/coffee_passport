@@ -1,0 +1,4 @@
+
+document.getElementById("comments-index").innerHTML = '<%= escape_javascript(render partial: 'comments/index', locals: {  drink: @drink,comments: @comments }) %>';
+
+document.getElementById("comments-create").innerHTML = '<%= escape_javascript(render partial: 'comments/create', locals: { drink: @drink, comment: @comment }) %>';

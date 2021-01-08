@@ -1,19 +1,8 @@
 
 <% provide(:title,"My page")%>
   <div class="user-profile">
-    <h2 class="user-profile-name"><%= current_user.nickname %></h2>
-    <h2><%= image_tag @user.image.variant(resize: '100x100'),class: 'user-img' if @user.image.attached? %></h2>
-    <div class="user-like-post">
-      <%= link_to "#{@user.nickname}がいいねした投稿",user_likes_path(@user.id)%>
-    </div>
-    <div class="purchase-record">
-      <%= link_to  "#{@user.nickname}の購入履歴", "/user/purchase_record" %>
-    </div>
-    <div class="user-edit">
-      <% if current_user?(@user) %>
-      <%= link_to "プロフィールを編集",edit_user_path(@user)%>  
-      <% end %>
-    </div>
+    <div class="follow-user">
+      <h2 class="user-profile-name"><%= @user.nickname %></h2>
       <% unless current_user?(@user) %>
         <div id="follow_form">
         <% if current_user.following?(@user) %>
@@ -23,27 +12,60 @@
         <% end %>
         </div>
       <% end %>
+
+      <% if current_user == @user%>
+        <div class="user-account-config">
+          <%= link_to user_config_path do%>
+            <i class="fas fa-cog"></i>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+
+
+
+    <h2><%= image_tag @user.image.variant(resize: '100x100'),class: 'user-profile-img' if @user.image.attached? %></h2>
+
   </div> 
 
+      <div class="user-edit">
+      <% if current_user?(@user) %>
+      <i class="fas fa-user-edit"></i><%= link_to "プロフィールを編集",edit_user_path(@user)%>  
+      <% end %>
+    </div>
 
 
 
 
-<% @user ||= current_user %>
+<div class="user-info">
+  <div class="user-like-post">
+    <%= link_to "#{@user.nickname}がいいねした投稿",user_likes_path(@user.id)%>
+  </div>
+  <div class="purchase-record">
+    <%= link_to  "#{@user.nickname}の購入履歴", "/user/purchase_record" %>
+  </div>
+  <% @user ||= current_user %>
 <div class="stats">
   <a href="<%= following_user_path(@user) %>">
     <strong id="following" class="stat">
       <%= @user.following.count %>
     </strong>
-    following
+    フォロー
   </a>
   <a href="<%= followers_user_path(@user) %>">
     <strong id="followers" class="stat">
       <%= @user.followers.count %>
     </strong>
-    followers
+    フォロワー
   </a>
 </div>
+
+</div>
+
+
+
+
+
 
 <div class='main'>
 
@@ -78,12 +100,18 @@
             <span><%= drink.price %>円<br>(税込み)</span>
             <div class='star-btn'>
               <%# image_tag "star.png", class:"star-icon" %>
-              <span class='star-count'>0</span>
+              
             </div>
           </div>
           <div class="item-explain">
             <%= drink.explain%>
           </div>
+           <div class='item-tag'>
+              <% drink.tags.each do |tag| %>
+                #<%=tag.tag_name%>
+              <%end%>
+            </div>
+            <%= render "likes/like",drink: drink%>
         </div>
         <% end %>
       

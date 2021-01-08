@@ -5,10 +5,12 @@
     <title><%=full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <link rel="icon" type="image/x-con" href="images/logo.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"> 
     <meta name=”viewport” content=”width=device-width, initial-scale=1”>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://js.pay.jp/v1/"></script>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
