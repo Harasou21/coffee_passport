@@ -1,33 +1,81 @@
 
+
 .header{
    display: flex;
-   justify-content: space-between;
-   background-image: url("coffee_beans.jpeg");
+
+  
+   
+   height: 80px;
+   width: 100%;
+   //position: fixed;
+   background-color: white;
+  
 }
 
-.logo{
-  width: 100px;
+
+
+img.logo{
+  width: 60px;
+  height: 60px;
+  padding: 14%;
+  display:block;
+}
+
+ .user-img{
+  height: 50px;
+  margin-left: 40px;
+  padding-top:15%;
+}
+
+.user-img:hover{
+  opacity: 50%;
 }
 
 .header-nav {
-  width: 65vw;
-  font-size: 30px;
+  width: 70vw;
+  font-size: 20px;
   margin-top: auto;
   margin-bottom: auto;
-  color: white;
+  color: black;
   display: flex;
-  justify-content: space-around;
+  margin-left: 10%;
+}
+
+
+
+.header-nav a:visited{
+  color: black;
 }
 
 .user-menu{
-  width: 42vw;
+  width: 50vw;
   display: flex;
-  justify-content: space-around;
+  margin-left:5% ;
 }
 
-.h-user-name:visited a{
-  color: red !important;
+.header-user-name, .post, .buy-form,.searching-link{
+  //background-color:gray ;
+}
 
+
+@media screen and (min-width:500px){
+
+  .header-user-name, .post, .buy-form,.searching-link{
+    margin-left:3% ;
+  }
+}
+
+@media screen and (min-width:1000px){
+
+  .header-user-name, .post, .buy-form,.searching-link{
+    margin-left:15% ;
+  }
+  
+}
+
+.header-user-name a:hover, .post a:hover , .buy-form a:hover, .searching-link a:hover{
+  color: gray;
+  //background-color: gray;
 }
 
 .login{
@@ -36,3 +84,5 @@
   margin-top: auto;
   margin-bottom: auto;
 }
+
+

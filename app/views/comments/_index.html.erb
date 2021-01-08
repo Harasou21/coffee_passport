@@ -1,0 +1,20 @@
+
+      <div class="comments" id="comments-area">
+        <% if comments %>
+          <% comments.each do |comment| %>
+            <div class="comment" , id="comment-<%= comment.id%>">
+              <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+              <div class="comment-text">
+                <%= comment.text %>
+              </div>
+              <%= link_to  drink_comment_path(drink_id: drink.id, id: comment.id),method: :delete ,remote: true,data: { confirm: '本当に削除してよろしいですか？' } do%>
+              <i class="far fa-trash-alt"></i>
+              <%  end %>
+            </div>
+          <% end %>
+        <% else%>
+          <h4>まだコメントがありません<br>
+          コメントしましょう
+          </h4>
+        <% end %>
+      </div>

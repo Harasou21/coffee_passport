@@ -83,6 +83,10 @@ class UsersController < ApplicationController
     #binding.pry
    end
 
+    def user_config
+      redirect_to 'config'
+    end
+
   private
 
     def user_params

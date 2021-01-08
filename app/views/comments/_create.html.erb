@@ -1,0 +1,10 @@
+
+      <% if logged_in? %>
+        <%= form_with(model: [drink, comment], local: false) do |f| %>
+          <%= f.text_area :text, placeholder: "コメントする", rows: "5",class: "comment-field" %>
+          <br>
+          <%= f.submit "SEND",class: "submit-comment" %>
+        <% end %>
+      <% else %>
+        <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+      <% end %>
