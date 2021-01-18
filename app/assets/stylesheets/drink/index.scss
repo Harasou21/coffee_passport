@@ -12,12 +12,12 @@
 }
 
 .user-info-timeline:hover{
-  color:green;
+  color:maroon;
 }
 
 .user-img-timeline{
   border-radius: 50%;
-  
+  width: 50px;
 }
 
 .user-img-timeline:hover{
@@ -27,6 +27,8 @@
 .username-timeline{
   margin: auto 0 auto 0;
 }
+
+
 
 // 商品購入ボタンのCSS
 

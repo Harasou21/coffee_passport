@@ -7,6 +7,8 @@
 
 .user-profile-img{
   border-radius: 50%;
+  width: 15%;
+  height: 15%;
 }
 
 .follow-user{
@@ -38,10 +40,10 @@ margin-left: 10px;
 }
 
 .user-edit{
-  font-size: 20px;
+  font-size: 15px;
   background-color:white;
   
-  width: 37%;
+  width: 160px;
   text-align: center;
   margin-left: 10px;
   margin-bottom:10px;
@@ -50,14 +52,17 @@ margin-left: 10px;
 }
 
 .user-edit:hover{
-  background-color: goldenrod;
+  background-color: maroon;
+  color: aliceblue;
 }
 
 .user-edit a{
-  color: black !important;
- 
+  color: black ;
 }
 
+.user-edit a:hover{
+  color: white;
+}
 
 
 .user-info{
@@ -68,6 +73,7 @@ margin-left: 10px;
 
 }
 
+
 .user-like-post{
   border-right: 1px solid black;
   border-left:1px solid black ;
@@ -75,9 +81,13 @@ margin-left: 10px;
 }
 
 .user-like-post:hover{
-  background-color: goldenrod;
+  background-color:maroon;
+  color: aliceblue;
 }
 
+.user-like-post a:hover{
+  color: white;
+}
 
 .purchase-record{
   border-right: 1px solid black;
@@ -86,7 +96,12 @@ margin-left: 10px;
 }
 
 .purchase-record:hover{
-  background-color: goldenrod;
+  background-color: maroon;
+  color: aliceblue;
+}
+
+.purchase-record a:hover{
+  color: white;
 }
 
 
@@ -97,7 +112,7 @@ margin-left: 10px;
 }
 
 .stats:hover{
-  background-color: goldenrod;
+  background-color: maroon;
 }
 
 .stats a:hover{
