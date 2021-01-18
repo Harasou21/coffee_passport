@@ -1,33 +1,44 @@
-<div class = "header">
 
-  <%= link_to root_path  do %> 
-    <%= image_tag 'logo.png',class: "logo" %> 
-  <% end %>
-  <% if current_user%>
-  <%= link_to user_path(current_user) do%>
-    <%= image_tag current_user.image.variant(resize: '100x100'),class: 'user-img' if current_user.image.attached?%>
-  <% end %>
-  <div class="header-nav">
-    <div class = "header-user-name">
-      <a class = "h-user-name"><%= link_to current_user.nickname,user_path(current_user) %></a>
-    </div>
-  <% end %>  
-    <div class="user-menu">
-      <% unless current_user %>
-        <div class = "login">
-          <%= link_to "新規登録",new_user_path %>
-        </div>
+  <div class = "header",id="slideshow">
+
+      <%= link_to root_path  do %> 
+        <%= image_tag 'logo.png',class: "logo" %> 
       <% end %>
-      <% if current_user  %>
-        <div class="post">
-          <%= link_to "投稿する", new_drink_path %>
-        </div>
-        <div class="logout">
-          <%= link_to "ログアウト",logout_path,method: :delete %>
-        </div>
+
+    <% unless logged_in? %>
+      <h3 class="header-text">Here your Coffee Passport is.</h3>
+    <% end %>
+
+    <% if current_user%>
+      <%= link_to user_path(current_user) do%>
+      <% if current_user.image.attached?%>
+        <%= image_tag current_user.image.variant(resize: '100x100'),class: 'user-img' %>
+      <% else %>
+        <img src="https://instagram.fdel2-2.fna.fbcdn.net/v/t51.2885-19/44884218_345707102882519_2446069589734326272_n.jpg?_nc_ht=instagram.fdel2-2.fna.fbcdn.net&_nc_ohc=s0l7r_rFmQYAX9IB4c9&oh=4d9b567520c4a9e98172a986afa3859b&oe=6028878F&ig_cache_key=YW5vbnltb3VzX3Byb2ZpbGVfcGlj.2" class= 'user-img'>
       <% end %>
+    <% end %>
+
+    <div class="header-nav">
+        <div class = "header-user-name">
+          <i class="fas fa-user"></i><a class = "h-user-name"><%= link_to current_user.nickname,user_path(current_user) %></a>
+        </div>
+    <% end %>  
+
+
+        <% if current_user  %>
+          <div class="post">
+            <i class="fas fa-pen-alt"></i><%= link_to "投稿する", new_drink_path %>
+          </div>
+          <div class="buy-form">
+            <i class="fas fa-mug-hot"></i><%= link_to "商品を購入",'/buy'%>
+          </div>
+          <div class="searching-link">
+            <i class="fas fa-search"></i><%= link_to "検索" , drinks_searchingform_path%>
+          </div>
+
+        <% end %>
+
     </div>
   </div>
-  
 
-</div>
+

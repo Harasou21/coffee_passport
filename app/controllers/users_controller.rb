@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show,:edit,:update,:correct_user]
   before_action :logged_in_user, only: [:index,:edit,:update,:following,:followers]
   before_action :correct_user, only: [:edit, :update]
+  before_action :check_guest,only: :destroy
 
   def index
     @users = User.all
@@ -64,7 +65,7 @@ class UsersController < ApplicationController
    def likes
     @user = User.find(params[:id])
     @drinks = @user.like_drinks.paginate(page: params[:page],per_page: 10).order("created_at DESC")
-
+    @title = "#{@user.nickname}がいいねした投稿"
    end
 
    def purchase_record
@@ -83,6 +84,20 @@ class UsersController < ApplicationController
     #binding.pry
    end
 
+    def user_config
+      redirect_to 'config'
+    end
+
+    def new_guest
+      user = User.find_or_create_by!(nickname: "ゲスト様",email: 'guest@example.com') do |user|
+        user.password = SecureRandom.urlsafe_base64
+        # user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
+        user.image = file:'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29mZmVlfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=60'
+      end
+      log_in user
+      redirect_to user
+    end
+
   private
 
     def user_params
@@ -95,5 +110,11 @@ class UsersController < ApplicationController
 
     def correct_user
       redirect_to(root_url) unless current_user?(@user)
+    end
+
+    def check_guest
+      if current_user.email == 'guest@example.com'
+        redirect_to root_path
+      end
     end
 end

@@ -1,0 +1,31 @@
+      <div class="comments" id="comments-area">
+        <% if comments %>
+          <% comments.each do |comment| %>
+ 
+             <div class="comment" , id="comment-<%= comment.id%>">
+              <div class="comment-user-nav">
+                  <%= link_to  "/users/#{comment.user_id}" do %>
+                  <% if comment.user.image.attached? %>
+                    <%= image_tag comment.user.image,class: "comment-user-img"%>
+                  <% else %>
+                     <img src="https://instagram.fdel2-2.fna.fbcdn.net/v/t51.2885-19/44884218_345707102882519_2446069589734326272_n.jpg?_nc_ht=instagram.fdel2-2.fna.fbcdn.net&_nc_ohc=s0l7r_rFmQYAX9IB4c9&oh=4d9b567520c4a9e98172a986afa3859b&oe=6028878F&ig_cache_key=YW5vbnltb3VzX3Byb2ZpbGVfcGlj.2" class= 'comment-user-img'>
+                  <% end %>
+                    <strong class="comment-user-nickname"><%= comment.user.nickname%></strong>
+                  <% end %>
+              </div>
+              <div class="comment-text-and-trash">
+                <div class="comment-text">
+                  <%= comment.text %>
+                </div>
+                <%= link_to  drink_comment_path(drink_id: drink.id, id: comment.id),method: :delete ,remote: true,data: { confirm: '本当に削除してよろしいですか？' } do%>
+                <i class="far fa-trash-alt"></i>
+                <%  end %>
+              </div>
+            </div>
+          <% end %>
+        <% else%>
+          <h4>まだコメントがありません<br>
+          コメントしましょう
+          </h4>
+        <% end %>
+      </div>

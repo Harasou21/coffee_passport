@@ -1,32 +1,47 @@
-.user-follow{
-  display: flex;
-  background-color: black;
-  width: 40%;
-  margin: 0 auto 0 auto;
-  border: 1px solid white;
+.follow-btn{
+
+  margin-left:10px ;
 }
 
+input.follow-submit{
+  background-color: maroon;
+  width: 60px;
+  height: 40px;
+  color: white;
+  padding: 2px;
+}
+
+input.unfollow-submit{
+  background-color: gray;
+  width: 60px;
+  height: 40px;
+  color: black;
+  padding: 2px;
+}
+
+.user-follow{
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+  justify-content: space-around;
+  margin:40px auto 0 auto;
+  background-color: white;
+  width: 25%;
+  padding: 10px 0 10px 0;
+  border: 1px solid;
+}
 
 .user-follow-img{
   border-radius: 50%;
+  display: flex;
+  width: 50px;
+  height: 50px;
 }
 
-.nickname-follow{
-  margin:auto  0 auto 10px;
+.nickname-follow {
+  font-weight: bold;
 }
 
-.follow-btn{
-  // margin: 0 auto 0 auto;
-  text-align: center;
-  
-}
-
-.follow-submit{
-  padding: 15px;
-  font-size: 40px;
-}
-
-.fa-user-plus{
-  font-size: 40px;
-  margin-right: 5px;
+.nickname-follow a:visited{
+  color: green;
 }

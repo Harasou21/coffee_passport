@@ -1,3 +1,225 @@
 // Place all the styles related to the trades controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.transaction-contents {
+  width: 100vw;
+  background-color: #E0C8B1;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.transaction-main {
+  background-color:#E0C8B1;
+  width: 70vw;
+  min-width: 450px;
+  padding: 10vh 10vw;
+}
+
+.transaction-title-text {
+  text-align: center;
+  border-bottom: 2px solid #f5f5f5;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* 購入内容の表示 */
+.buy-item-info {
+  height: 150px;
+  border-bottom: 2px solid #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buy-item-img {
+  margin-right: 20px;
+  height: 130px;
+  width: 250px;
+  object-fit: contain;
+}
+
+.buy-item-right-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.buy-item-text {
+  font-size: 20px;
+}
+
+.buy-item-price {
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.item-price-text {
+  font-size: 15px;
+  border-bottom: maroon;
+}
+
+.item-price-sub-text {
+  font-size: 12px;
+}
+
+/* /購入内容の表示 */
+
+/* 支払額の表示 */
+.item-payment {
+  height: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid #f5f5f5;
+  font-weight: bold;
+}
+
+.item-payment-title {
+  font-size: 20px;
+}
+
+.item-payment-price {
+  font-size: 25px;
+ 
+}
+
+/* /支払額の表示 */
+
+/* カード情報の入力 */
+.credit-card-form {
+  border-bottom: 2px solid #f5f5f5;
+  margin-top: 15px;
+  padding-bottom: 30px;
+}
+
+.info-input-haedline {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.available-card {
+  display: flex;
+  height: 35px;
+}
+
+.card-logo {
+  width: 40px;
+  margin: 5px 5px;
+}
+
+.input-expiration-date-wrap {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  line-height: 55px;
+}
+
+.input-expiration-date {
+  width: 20%;
+  margin-top: 5px;
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+  line-height: 45px;
+  text-align: center;
+}
+
+/* /カード情報の入力 */
+
+// ユーザーの情報の入力
+
+.user-address{
+  
+  margin-bottom: 10px;
+  border-bottom: 2px solid #f5f5f5;
+  font-size: 16px;
+  font-weight: bold;
+
+}
+
+#first_name , #fam_name ,
+#first_name_kana, #fam_name_kana{
+  width: 70%;
+  height: 40px;
+ }
+
+select#_birthday_1i, 
+select#_birthday_2i,
+select#_birthday_3i{
+  margin-top: 50px;
+  width: 70%;
+
+}
+
+ 
+
+// ユーザー情報の入力
+
+/* 配送先の入力 */
+.shipping-address-form {
+  margin-top: 15px;
+
+}
+
+.form-any {
+  background: #ccc;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 4px;
+}
+
+.buy-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.buy-red-btn {
+  width: 100%;
+  background:black;
+  border: 1px solid maroon;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.buy-red-btn:hover{
+  background:maroon;
+}
+
+// 購入後の画面のCSS
+
+.after-buying{
+margin-top: 10px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.fa-plane-departure{
+  font-size: 150px;
+  color: green;
+}
+
+.ridirect-root-after-buying{
+  margin-top: 20px;
+  background-color: white;
+  padding: 10px;
+}
+
+.ridirect-root-after-buying a:visited{
+  color: black;
+}
+
+.ridirect-root-after-buying:hover{
+  background-color: grey;
+}
+
