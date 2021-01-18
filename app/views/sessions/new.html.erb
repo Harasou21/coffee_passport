@@ -1,7 +1,7 @@
 <% provide(:title,"Login")%>
-<div id="slideshow">
+<div class="slideshow">
 <%= form_with(url: login_path, scope: :session,class: 'registration-main', local: true) do |f| %>
-<div id></div>
+
 <div class='form-wrap'>
   <div class='form-header'>
     <p class='form-header-text'>
@@ -37,7 +37,9 @@
   <div class='login-btn'>
     <%= f.submit "ログイン" ,class:"login-red-btn" %>
   </div>
+  
   <div class="signin">
+    <%= link_to "ゲストログイン", users_guest_sign_in_path, method: :post,class: "guest_login"%>
     <p>アカウントをお持ちでないですか？</p>
     <%=link_to "登録する",new_user_path, class: "signin-path"%>
   </div>

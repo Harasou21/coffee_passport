@@ -7,6 +7,7 @@ class DrinksController < ApplicationController
   def index
     @user = current_user
     @drinks = Drink.where.not(user_id: 6).paginate(page: params[:page],per_page: 10).order("created_at DESC")
+    @title = "Timeline"
   end
 
   def show
@@ -17,11 +18,11 @@ class DrinksController < ApplicationController
   end
 
   def new
-    @drink = DrinkTag.new
+    @drink = Drink.new
   end
 
   def create
-    @drink = DrinkTag.new(drink_params)
+    @drink = Drink.new(drink_params)
     if @drink.valid?
       @drink.save
       #binding.pry
@@ -32,8 +33,8 @@ class DrinksController < ApplicationController
   end
 
   def destroy
-    Drink.find(params[:id]).destroy
-    redirect_to root_path
+   Drink.find(params[:id]).destroy
+    redirect_to current_user
   end
 
   # GET search
@@ -61,9 +62,19 @@ class DrinksController < ApplicationController
 
   end
 
+  def  hashtag
+    @user = current_user
+    if @tag = Tag.find_by(tag_name: params[:name])
+      @drinks = @tag.drinks.paginate(page: params[:page],per_page: 10).order("created_at DESC")
+      @title = "##{@tag.tag_name}"
+    else
+      render 'drinks/_not_found'
+    end
+  end
+
   private
   def drink_params
-    params.require(:drink_tag).permit(:name,:price,:explain,:image,:tag_name,:region_id,:body_id,:acidity_id,:processing_id).merge(user_id: current_user.id)
+    params.require(:drink).permit(:name,:price,:explain,:image,:tag_name,:region_id,:body_id,:body,:acidity_id,:processing_id).merge(user_id: current_user.id)
   end
 
   def create_searching_object

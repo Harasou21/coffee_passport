@@ -1,9 +1,13 @@
+<% provide(:title,"検索")%>
+
 <div class="searching-form">
 
   <%= search_form_for @p, url: drinks_searchdrink_path do |f| %>
     <div class="searching-by-name">
       <h3 class="name-label"><i class="fas fa-search"></i>名前で検索</h3>
       <%= f.search_field :name_cont,placeholder: "検索"%>
+      <div id="search-result">
+      </div>
     </div>
 
 

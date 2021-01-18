@@ -7,9 +7,11 @@ require("@rails/ujs").start()
 // require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("../bgswitcher")
 require("../card")
 require("./tag")
 require("../slide")
+require('./preview') 
 //= require rails-ujs
 //= require jquery_ujs
 

@@ -1,4 +1,5 @@
 <% provide(:title,"Post")%>
+<div class="slideshow">
 <div class="items-sell-contents">
 
   <div class="items-sell-main">
@@ -9,9 +10,9 @@
     <%= render 'shared/error_messages', object: f.object %>
     
     <div class="tag-field" , id='tag-field'>
-      <div class="weight-bold-text">
-        タグ付け <%= f.text_field :tag_name,class: "post-tag" %>
-      </div>
+      <%# <div class="weight-bold-text">
+        #タグ付け <%#= f.text_field :tag_name,class: "post-tag" %>
+  
     </div>
     <div id="search-result">
     </div>
@@ -24,7 +25,8 @@
         <p>
           クリックしてファイルをアップロード
         </p>
-        <%= f.file_field :image, id:"item-image" %>
+        <%= f.file_field :image %>
+        <div id="image-list"></div>
       </div>
     </div>
     
@@ -39,7 +41,7 @@
           商品の説明
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :explain, class:"items-text", id:"item-info", placeholder:"コーヒーの感想（必須 1,000文字まで）",rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :explain, class:"items-text", id:"item-info", placeholder:"コーヒーの感想（ハッシュタグ(#)をつけて投稿できます）",rows:"7" ,maxlength:"1000" %>
       </div>
     </div>
 
@@ -60,7 +62,7 @@
       </div>
       <div class="post-body">
         <p>コク</p>
-        <%= f.collection_select(:body,Body.all,:id,:name,{},{class: "select-box"})%>
+        <%= f.collection_select(:body_id,Body.all,:id,:name,{},{class: "select-box"})%>
       </div>
       <div class="post-acidity">
         <p>酸味</p>
@@ -81,3 +83,4 @@
 
   </div>
   <% end %>
+</div>

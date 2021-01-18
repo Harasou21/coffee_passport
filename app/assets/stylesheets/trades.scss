@@ -57,6 +57,7 @@
 
 .item-price-text {
   font-size: 15px;
+  border-bottom: maroon;
 }
 
 .item-price-sub-text {
@@ -81,6 +82,7 @@
 
 .item-payment-price {
   font-size: 25px;
+ 
 }
 
 /* /支払額の表示 */
@@ -181,12 +183,16 @@ select#_birthday_3i{
 
 .buy-red-btn {
   width: 100%;
-  background: #ea352d;
-  border: 1px solid #ea352d;
+  background:black;
+  border: 1px solid maroon;
   color: #fff;
   line-height: 48px;
   font-size: 14px;
   cursor: pointer;
+}
+
+.buy-red-btn:hover{
+  background:maroon;
 }
 
 // 購入後の画面のCSS

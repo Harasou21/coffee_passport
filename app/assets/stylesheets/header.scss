@@ -2,14 +2,19 @@
 
 .header{
    display: flex;
-
-  
-   
    height: 80px;
    width: 100%;
    //position: fixed;
    background-color: white;
   
+}
+
+.header-text{
+  margin-top: 15px;
+  margin-left: 10px;
+  padding: auto 0;
+  font-size:30px ;
+  font-family: cursive;
 }
 
 
@@ -39,6 +44,7 @@ img.logo{
   color: black;
   display: flex;
   margin-left: 10%;
+ 
 }
 
 
@@ -56,6 +62,23 @@ img.logo{
 .header-user-name, .post, .buy-form,.searching-link{
   //background-color:gray ;
 }
+
+.post a{
+  display: inline-block;
+  transition: 0.5s;
+  font-size: 20px;
+  font-family: arial;
+  font-weight: bold;
+
+
+}
+
+.post a:hover{
+
+  transform: scale(1.4);
+}
+
+
 
 
 @media screen and (min-width:500px){

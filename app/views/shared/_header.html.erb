@@ -1,14 +1,22 @@
 
   <div class = "header",id="slideshow">
 
-    <%= link_to root_path  do %> 
-      <%= image_tag 'logo.png',class: "logo" %> 
+      <%= link_to root_path  do %> 
+        <%= image_tag 'logo.png',class: "logo" %> 
+      <% end %>
+
+    <% unless logged_in? %>
+      <h3 class="header-text">Here your Coffee Passport is.</h3>
     <% end %>
 
     <% if current_user%>
       <%= link_to user_path(current_user) do%>
-        <%= image_tag current_user.image.variant(resize: '100x100'),class: 'user-img' if current_user.image.attached?%>
+      <% if current_user.image.attached?%>
+        <%= image_tag current_user.image.variant(resize: '100x100'),class: 'user-img' %>
+      <% else %>
+        <img src="https://instagram.fdel2-2.fna.fbcdn.net/v/t51.2885-19/44884218_345707102882519_2446069589734326272_n.jpg?_nc_ht=instagram.fdel2-2.fna.fbcdn.net&_nc_ohc=s0l7r_rFmQYAX9IB4c9&oh=4d9b567520c4a9e98172a986afa3859b&oe=6028878F&ig_cache_key=YW5vbnltb3VzX3Byb2ZpbGVfcGlj.2" class= 'user-img'>
       <% end %>
+    <% end %>
 
     <div class="header-nav">
         <div class = "header-user-name">

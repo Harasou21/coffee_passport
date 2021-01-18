@@ -26,7 +26,7 @@
             <span><%= @drink.price %>円<br>(税込み)</span>
           </div>
           <div class='item-explain'>
-            <%= @drink.explain%>
+             <%= render_with_hashtags(@drink.explain) %>
           </div>
 
           <%# ここから%>
@@ -59,6 +59,7 @@
               
             </tbody>
           </table>
+           <%= render "likes/like",drink: @drink%>
         </div>
         <% if logged_in? && current_user.id == @drink.user_id %>
         <div class="item-delete">
@@ -75,10 +76,11 @@
       <div id="comments-create">
         <%= render partial: 'comments/create', locals: {comment: @comment, drink: @drink} %>
       </div>
-     <div id="comments-index">
-       <%= render partial: 'comments/index', locals: {comments: @comments,drink: @drink} %>
-     </div>  
     </div>
+
+    <div id="comments-index">
+       <%= render partial: 'comments/index', locals: {comments: @comments,drink: @drink} %>
+    </div>  
 
   </div>
   

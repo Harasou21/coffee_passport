@@ -6,11 +6,13 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <link rel="icon" type="image/x-con" href="images/logo.png">
+    <link rel="icon" type="image/x-con" href="/public/favivon.ico">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"> 
     <meta name=”viewport” content=”width=device-width, initial-scale=1”>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jquery.bgswitcher.js"></script>
+
     <script type="text/javascript" src="https://js.pay.jp/v1/"></script>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
@@ -19,6 +21,6 @@
   <body>
     <%= render 'shared/header'%>
     <%= yield %>
-        <%= debug(params) if Rails.env.development? %>
+        <%#= debug(params) if Rails.env.development? %>
   </body>
 </html>

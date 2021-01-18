@@ -20,6 +20,10 @@
   width: 100px;
 }
 
+.comment-index{
+  width: 100vh;
+}
+
 div#comments-area.comments a:visited{
   color: green;
 
@@ -31,16 +35,59 @@ div#comments-area.comments a:hover{
 
 .comments{
   margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: 7%;
+
+  width: 400px;
 }
 
 .comment{
-  display: flex;
+
+ margin-top: 20px;
+ background-color: white;
+ width: 100%;
+ margin-left: auto;
+ margin-right: auto;
 
 }
 
+.comment-text{
+  width: 80%;
+}
+
+.comment-user-nav{
+  width: 100px;
+}
+
+.comment-user-nav a{
+  width: 100px;
+display: flex;
+align-items: center;
+margin-bottom: 10px;
+}
+
+
+
+
+.comment-user-img{
+  width: 30px;
+  height:30px ;
+  border-radius: 50%;
+}
+
+.comment-user-nickname:hover{
+color: gray;
+}
+
 .fa-trash-alt{
-  margin-left: 20px;
+  //margin-left: 20px;
   color: black;
+ 
+}
+
+.comment-text-and-trash{
+  display: flex;
+  justify-content: space-around;
 }
 
 .fa-trash-alt:visited{

@@ -38,20 +38,57 @@ li {
   border-radius: 50%;
 }
 
-ul.pagination{
-  display: flex;
-  /* justify-content:center; */
-  width: 100%;
-  padding-right: 50px;
-}
-
-ul.pagination li{
-  margin-left:15px ;
- 
-}
 
 .pagination>.active>a{
-  color: green;
+  color: maroon;
+}
+
+.pagination>.active>a:hover{
+  color: #E0C8B1;
+}
+
+.pagination {
+  height: 50px;
+  align-items: center;
+  display: flex;
+}
+
+.pagination a {
+  background-color:white;
+  text-decoration: none;
+ background-color: white;
+color: black;
+}
+
+.pagination * {
+  color: white;
+  text-decoration: none;
+  padding: 10px 10px;
+  font-family: 'Nunito', sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul .pagination{
+
+
+}
+
+.current {
+  font-style: normal;
+  color: white;
+  background: white;
+
+  font-family: 'Nunito', sans-serif;
+}
+
+.pagination a:hover {
+  background: maroon;
+}
+
+.pagination .disabled {
+  color: #666666;
+  font-family: 'Nunito', sans-serif;
 }
 
 
