@@ -3,7 +3,7 @@ a {
 }
 
 .main {
-  background: burlywood;
+  //background: burlywood;
 }
 
 /* 画面上部の「人生を変えるフリマアプリ」帯部分 */
@@ -12,22 +12,24 @@ a {
 /* 商品一覧 */
 
 .item-contents {
-  background-color: burlywood;
+ // background-color: burlywood;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10vh 0;
+  
+  padding-right:5%;
   
 }
 
-
-
-.item-contents>.title {
-  font-size: 5vh;
-  line-height: 1.4;
-  font-weight: bold;
-
-}
+  .title {
+    font-size: 3vh;
+    //line-height: 1.4;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 6%;
+    font-family:"游教科書体";
+    border-bottom: 1px solid maroon;
+  }
 
 .item-contents>.subtitle {
   font-size: 3vh;
@@ -42,12 +44,15 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  
 }
 
 .item-lists>.list {
   width: 37vh;
   padding: 1vw;
-  background-color: burlywood;
+ // background-color: burlywood;
+ //height: 50px;
+ margin-bottom: 50px;
 }
 
 
@@ -55,9 +60,14 @@ a {
   position: relative;
 }
 
+.item-img-content:hover{
+  opacity: 50%;
+}
+
 .item-img {
   width: 37vh;
   height: 33vh;
+  border-radius: 2px;
 }
 
 // .sold-out {
@@ -79,23 +89,49 @@ a {
 .item-info {
   background-color:white ;
   color: black ;
+  border-radius: 3px;
 
 }
 
 .item-info a{
-  color: black !important;
+  color: black ;
+  
 }
 
 
-.item-name {
-  // font-size: 2.5vh;
+.item-name{
+  font-size: 2.5vh;
+  font-family: Georgia, serif;
+  padding: 5px;
+  border-bottom:1px solid maroon ;
+  width:  90%;
+  margin-left: 5px;
 }
 
 .item-price {
   font-size: 1.5vh;
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid black;
+  width: 20%;
+  padding-bottom: 10px;
 }
+
+.item-explain{
+  min-height: 50px;
+  overflow-x: scroll;
+}
+
+.item-explain a{
+  border-bottom:1px solid skyblue ;
+  width: 20%;
+  color: skyblue;
+}
+
+.item-explain a:hover{
+  color:maroon;
+}
+
 
 
 .star-btn {
@@ -111,6 +147,18 @@ a {
 
 .star-count {
   font-size: 2vh;
+}
+
+.buy-link {
+color: maroon;
+}
+
+.buy-link:visited{
+  color: maroon;
+}
+
+.buy-link:hover{
+color: gray;
 }
 
 /* //商品一覧 */

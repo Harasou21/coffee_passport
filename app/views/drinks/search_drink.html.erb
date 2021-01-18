@@ -29,13 +29,9 @@
           </h3>
           <div class='item-price'>
             <span><%= drink.price %>円<br>(税込み)</span>
-            <div class='star-btn'>
-              <%# image_tag "star.png", class:"star-icon" %>
-              <span class='star-count'>0</span>
-            </div>
           </div>
           <div class='item-explain'>
-            <%= drink.explain%>
+            <%= drink.explain.truncate(24, separator: /\s/) %>
           </div>
           <div>
             <% if drink.region %>
@@ -80,7 +76,8 @@
 <% end %>
 
 <% else %>
-  該当する商品はありません
+
+<%= render 'not_found'%>
+
 <% end %>
-<br>
-<%= link_to 'トップページへ戻る', root_path %>
+

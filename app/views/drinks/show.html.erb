@@ -1,5 +1,5 @@
 <% provide(:title,"Details")%>
-<div class='main'>
+<div class='show-main'>
 
   <%# 商品一覧 %>
   <div class='item-contents'>
@@ -26,28 +26,40 @@
             <span><%= @drink.price %>円<br>(税込み)</span>
           </div>
           <div class='item-explain'>
-            <%= @drink.explain%>
+             <%= render_with_hashtags(@drink.explain) %>
           </div>
-          <div>
-            <% if @drink.region %>
-            産地 <%= @drink.region.name%>              
-            <% end %>
-          </div>
-          <div>
-            <% if @drink.body%>
-            コク <%= @drink.body.name %>
-            <% end %>
-          </div>
-          <div>
-            <% if @drink.acidity %>
-              酸味 <%= @drink.acidity.name%>
-            <% end %>
-          </div>
-          <div>
-            <% if @drink.processing%>
-              加工法 <%= @drink.processing.name%>
-            <% end %>
-          </div>
+
+          <%# ここから%>
+          <table class="item-category">
+            <tbody>
+              <tr class="item-region">
+                <% if @drink.region %>
+                  <th class="region-title">産地 </th>
+                   <td class="region-name"><%= @drink.region.name%> </td>             
+                <% end %>
+              </tr>
+                <tr class="item-body">
+                  <% if @drink.body%>
+                  <th class="body-title">コク</th> 
+                  <td class="body-name"><%= @drink.body.name %></td>
+                  <% end %>
+                </tr>
+                <tr class="item-acidity">
+                  <% if @drink.acidity %>
+                    <th class="acidity-title">酸味</th> 
+                    <td class="acidity-name"><%= @drink.acidity.name%></td>
+                  <% end %>
+                </tr>
+                <tr class="item-processing">
+                  <% if @drink.processing%>
+                    <th class="processing-title">加工法</th>
+                     <td class="processing-name"><%= @drink.processing.name%></td>
+                  <% end %>
+                </tr>
+              
+            </tbody>
+          </table>
+           <%= render "likes/like",drink: @drink%>
         </div>
         <% if logged_in? && current_user.id == @drink.user_id %>
         <div class="item-delete">
@@ -58,35 +70,17 @@
 
       </li>
       <%end%>
-     
-        
-
     </ul>
+
     <div class="comment-container">
-      <% if logged_in? %>
-        <%= form_with(model: [@drink, @comment], local: true) do |form| %>
-          <%= form.text_area :text, placeholder: "コメントする", rows: "5",class: "comment-field" %>
-          <br>
-          <%= form.submit "SEND",class: "submit-comment" %>
-        <% end %>
-      <% else %>
-        <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
-      <% end %>
-      <div class="comments">
-        <h4>＜コメント一覧＞</h4>
-        <% if @comments %>
-          <% @comments.each do |comment| %>
-            <p>
-              <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
-              <%= comment.text %>
-            </p>
-          <% end %>
-        <% else%>
-          <h4>まだコメントがありません<br>
-          コメントしましょう
-          </h4>
-        <% end %>
+      <div id="comments-create">
+        <%= render partial: 'comments/create', locals: {comment: @comment, drink: @drink} %>
+      </div>
     </div>
+
+    <div id="comments-index">
+       <%= render partial: 'comments/index', locals: {comments: @comments,drink: @drink} %>
+    </div>  
 
   </div>
   

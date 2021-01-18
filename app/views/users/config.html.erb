@@ -1,0 +1,11 @@
+<% provide(:title,"Config")%>
+<div class="user-config">
+  <div class="user-config-child">
+    <%= link_to "ログアウト", "/logout",method: :delete,data: {confirm: "本当にログアウトしますか？"} %>
+  </div>
+  <div class="user-config-child">
+    <%= link_to "アカウントを削除", user_path(current_user),method: :delete ,data: {confirm: "本当にアカウントを削除しますか？"}%>
+  </div>
+
+ 
+</div>

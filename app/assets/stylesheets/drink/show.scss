@@ -1,0 +1,24 @@
+
+
+.item-explain{
+  padding: 10px ;
+  word-wrap: break-word
+}
+
+ #text{
+  width: 30px;
+}
+
+.region-title,.body-title,.acidity-title,.processing-title{
+ font-weight: 100;
+ 
+ color: rgb(173, 169, 169);
+ 
+}
+
+.region-name,.body-name,.acidity-name,.processing-name{
+  border-bottom:1px solid black;
+  margin-left: 10px;
+  padding-left: 20px;
+}
+

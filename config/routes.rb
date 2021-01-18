@@ -4,8 +4,11 @@ Rails.application.routes.draw do
   post    '/users/auth/:provider/callback',to: 'sessions#create'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
+  
+  get 'user/config', to: 'users#config'   ,as: 'user_config'
   get 'user/likes/:id',  to: 'users#likes',as: 'user_likes'
   get 'user/purchase_record',to: 'users#purchase_record'
+  post 'users/guest_sign_in',to: 'users#new_guest'
   resources :users do
     member do
       get :following,:followers
@@ -13,13 +16,15 @@ Rails.application.routes.draw do
       # ユーザーidが含まれてるURlを扱うようになる
     end
   end
+  get 'drinks/searchingform', to: 'drinks#show_searching_form'
   get '/drinks/searchdrink',  to: 'drinks#search_drink'
+  get '/drink/hashtag/:name', to: "drinks#hashtag"
   resources :drinks, only: [:index,:new,:show,:create,:destroy] do
     collection do
       get 'search'
     end
 
-    resources :comments,only: :create
+    resources :comments,only: [:create,:destroy]
     # あるツイートに対してのコメントと言う
     # 親子関係を表現したパスが、コメント投稿に必要なリクエストの
     # パスになります
@@ -32,4 +37,5 @@ Rails.application.routes.draw do
   delete 'like/:drink_id',to: 'likes#unlike', as: 'unlike'
   resources :account_activations, only: [:edit]
   get '/buy', to: 'sold_drinks#index'
+ 
 end
