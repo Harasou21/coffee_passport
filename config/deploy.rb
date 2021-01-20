@@ -1,5 +1,5 @@
 # config valid for current version and patch releases of Capistrano
-lock "3.1"
+lock "3.15.0"
 
 set :application, "coffee_passport"
 set :repo_url, "git@github.com:Harasou21/coffee_passport.git"
