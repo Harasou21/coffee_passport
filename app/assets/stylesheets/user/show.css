@@ -23,6 +23,11 @@
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 20px;
+  
+}
+
+.user-account-config a{
+  color: black;
 }
 
 .user-account-config:hover{

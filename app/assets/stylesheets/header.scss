@@ -6,7 +6,7 @@
    width: 100%;
    //position: fixed;
    background-color: white;
-  
+   
 }
 
 .header-text{
@@ -61,6 +61,7 @@ img.logo{
 
 .header-user-name, .post, .buy-form,.searching-link{
   //background-color:gray ;
+  color: black;
 }
 
 .post a{
@@ -69,8 +70,16 @@ img.logo{
   font-size: 20px;
   font-family: arial;
   font-weight: bold;
+  color: black;
 
+}
 
+.buy-form a{
+  color: black;
+}
+
+.searching-link a{
+  color: black;
 }
 
 .post a:hover{
