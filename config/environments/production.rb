@@ -14,9 +14,9 @@ Rails.application.configure do
     password: ENV["GOOGLE_PASSWORD"],
     enable_starttls_auto:  true,
     #openssl_verify_mode: 'peer',
-    ssl:  false,
-    tls: false,
-    openssl_verify_mode: 'none'
+    ssl:  465,
+    tls: 587,
+
   }
   # Code is not reloaded between requests.
   config.cache_classes = true
