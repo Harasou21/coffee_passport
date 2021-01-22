@@ -1,6 +1,8 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   host = 'http://54.178.31.60'
+  user_email =  ENV["GOOGLE_USER_NAME"]
+  password =  ENV["GOOGLE_PASSWORD"]
   Rails.application.routes.default_url_options[:host] = host
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
@@ -10,8 +12,8 @@ Rails.application.configure do
     port: 587,
     domain: 'gmail.com',
     authentication: :login,
-    user_name: ENV["GOOGLE_USER_NAME"],
-    password: ENV["GOOGLE_PASSWORD"],
+    user_name: user_email,
+    password: password,
     enable_starttls_auto:  true,
     #openssl_verify_mode: 'peer',
     ssl:  465,
