@@ -6,6 +6,4 @@ class SoldDrinksController < ApplicationController
     @title = "商品を購入する"
   end
 
-
-
 end
