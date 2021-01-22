@@ -1,24 +1,14 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Coffee Passport
 
-Things you may want to cover:
+# アプリケーション概要
+「コーヒーの旅へ出かけよう！」
+コーヒー好きに向けた、コーヒーの感想を投稿できたり、コーヒーを実際に購入できたりするアプリです。
 
-* Ruby version
+# URL 
 
-* System dependencies
+http://54.178.31.60/
 
-* Configuration
+# 利用方法
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
