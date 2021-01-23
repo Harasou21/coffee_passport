@@ -7,7 +7,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    #enable: true,
+    enable: true,
     address: 'smtp.gmail.com',
     port: 587,
     domain: 'gmail.com',
@@ -15,10 +15,9 @@ Rails.application.configure do
     user_name: user_email,
     password: password,
     enable_starttls_auto:  true,
-    #openssl_verify_mode: 'peer',
+    openssl_verify_mode: 'peer',
     ssl:  465,
-    tls: 587,
-
+    tls: false
   }
   # Code is not reloaded between requests.
   config.cache_classes = true
