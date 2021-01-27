@@ -1,23 +1,18 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   host = 'http://54.178.31.60'
-  user_email =  ENV["GOOGLE_USER_NAME"]
-  password =  ENV["GOOGLE_PASSWORD"]
+
   Rails.application.routes.default_url_options[:host] = host
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    enable: true,
-    address: 'smtp.gmail.com',
+    address: 'smtp.sendgrid.net',
     port: 587,
     domain: 'gmail.com',
-    authentication: :login,
-    user_name: user_email,
-    password: password,
-    enable_starttls_auto:  true,
-    openssl_verify_mode: 'peer',
-    ssl:  465,
-    tls: false
+    authentication: :plain,
+    user_name: ENV["SENDGRID_USER_NAME"],
+    password:ENV["SENDGRID_PASSWORD"],
+    enable_starttls_auto:  true
   }
   # Code is not reloaded between requests.
   config.cache_classes = true
