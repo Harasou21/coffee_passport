@@ -5,18 +5,18 @@ Rails.application.configure do
   Rails.application.routes.default_url_options[:host] = host
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    emable: true,
-    address: 'smtp.gmail.com',
+  ActionMailer::Base.smtp_settings = {
+    #enable: true,
+    address: 'smtp.sendgrid.com',
     port: 587,
     domain: 'gmail.com',
-    authentication: :login,
-    user_name: ENV['GOOGLE_USER_NAME'],
-    password: ENV['GOOGLE_PASSWORD'],
-    enable_starttls_auto:  true,
-    openssl_verify_mode: 'peer',
-    ssl: 465,
-    tls: false
+    authentication: :plain,
+    user_name: ENV['SENDGRID_USER_NAME'],
+    password: ENV['SENDGRID_PASSWORD'],
+    enable_starttls_auto:  true
+    #openssl_verify_mode: 'peer',
+    #ssl: 465,
+    #tls: false
   }
   # Code is not reloaded between requests.
   config.cache_classes = true
