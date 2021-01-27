@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   root to: 'drinks#index'
-  get '/sendgrid', to: 'users#sendgrid'
   get    '/login',   to: 'sessions#new'
   post    '/users/auth/:provider/callback',to: 'sessions#create'
   post   '/login',   to: 'sessions#create'
