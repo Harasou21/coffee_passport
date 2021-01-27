@@ -97,9 +97,6 @@ class UsersController < ApplicationController
       redirect_to user
     end
 
-    def sendgrid
-      
-    end
 
   private
 

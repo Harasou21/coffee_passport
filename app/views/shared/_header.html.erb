@@ -8,9 +8,7 @@
     <% unless logged_in? %>
       <h3 class="header-text">Here your Coffee Passport is.</h3>
     <% end %>
-    SendGrid
-    <h1><%= link_to "SendGrid" , '/sendgrid'%></h1>
-
+    
     <% if current_user%>
       <%= link_to user_path(current_user) do%>
       <% if current_user.image.attached?%>
