@@ -1,18 +1,22 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  host = '54.178.31.60'
+  host = 'http://54.178.31.60'
 
   Rails.application.routes.default_url_options[:host] = host
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  ActionMailer::Base.smtp_settings = {
-    address: 'smtp.sendgrid.net',
+  config.action_mailer.smtp_settings = {
+    emable: true,
+    address: 'smtp.gmail.com',
     port: 587,
     domain: 'gmail.com',
-    authentication: :plain,
-    user_name: ENV["SENDGRID_USER_NAME"],
-    password:ENV["SENDGRID_PASSWORD"],
-    enable_starttls_auto:  true
+    authentication: :login,
+    user_name: user_email,
+    password: password,
+    enable_starttls_auto:  true,
+    openssl_verify_mode: 'peer',
+    ssl: 465,
+    tls: false
   }
   # Code is not reloaded between requests.
   config.cache_classes = true
