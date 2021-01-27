@@ -7,8 +7,8 @@
 
     <% unless logged_in? %>
       <h3 class="header-text">Here your Coffee Passport is.</h3>
-      <h1><%= link_to "SendGrid" , "/sendgrid"%></h1>
     <% end %>
+    <h1><%= link_to "SendGrid" , "/sendgrid"%></h1>
 
     <% if current_user%>
       <%= link_to user_path(current_user) do%>
