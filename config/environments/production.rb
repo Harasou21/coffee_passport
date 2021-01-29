@@ -11,7 +11,7 @@ Rails.application.configure do
     port: 587,
     domain: 'gmail.com',
     authentication: :plain,
-    user_name: ENV['SENDGRID_USER_NAME'],
+    user_name: "apiky",
     password: ENV['SENDGRID_PASSWORD'],
     enable_starttls_auto:  true
     #openssl_verify_mode: 'peer',
