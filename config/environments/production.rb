@@ -2,17 +2,17 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   host = 'http://54.178.31.60'
 
-  Rails.application.routes.default_url_options[:host] = host
+  Rails.application.routes.default_url_options = {host: host,protocol: 'http'}
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  ActionMailer::Base.smtp_settings = {
+  config.action_mailer.smtp_settings = {
     #enable: true,
-    address: 'smtp.sendgrid.net',
+    address: 'smtp.gmail.com',
     port: 587,
     domain: 'gmail.com',
     authentication: :plain,
-    user_name: "apikey",
-    password: ENV['SENDGRID_PASSWORD'],
+    user_name: ENV['GOOGLE_USER_NAME'],
+    password: ENV['GOOGLE_PASSWORD'],
     enable_starttls_auto:  true
     #openssl_verify_mode: 'peer',
     #ssl: 465,
