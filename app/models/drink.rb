@@ -17,6 +17,7 @@ class Drink < ApplicationRecord
     validates :name
     validates :explain
     validates :image
+    validates :price
   end
 
   after_create do
