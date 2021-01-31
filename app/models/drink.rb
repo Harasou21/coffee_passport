@@ -16,6 +16,7 @@ class Drink < ApplicationRecord
   with_options presence: true do
     validates :name
     validates :explain
+    validates :image
   end
 
   after_create do
