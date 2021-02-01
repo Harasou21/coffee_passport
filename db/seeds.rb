@@ -7,15 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # 出品ユーザーを定義
-User.create!(
-  id: 6,
-  nickname: "出品ユーザー",
-  email: "harasou21soccer@gmail.com",
-  password: ENV['ADMIN_USER_PASSWORD'],
-  password_confirmation: ENV['ADMIN_USER_PASSWORD'],
-  activated: true,
-  activated_at: "Time.zone.now"
-)
+# User.create!(
+#   id: 6,
+#   nickname: "出品ユーザー",
+#   email: "harasou21soccer@gmail.com",
+#   password: ENV['ADMIN_USER_PASSWORD'],
+#   password_confirmation: ENV['ADMIN_USER_PASSWORD'],
+#   activated: true,
+#   activated_at: "Time.zone.now"
+# )
 
 houseblend = Drink.create!(
   name: "ハウスブレンド",
