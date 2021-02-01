@@ -16,6 +16,7 @@
 #   activated: true,
 #   activated_at: "Time.zone.now"
 # )
+#ユーザーは差し込めたので一旦コメントアウト
 
 houseblend = Drink.create!(
   name: "ハウスブレンド",
