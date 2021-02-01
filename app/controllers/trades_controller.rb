@@ -31,7 +31,7 @@ class TradesController < ApplicationController
     end
 
     def pay_item
-      Payjp.api_key = Rails.application.credentials.payjp[:PAYJP_SECRET_KEY]
+      Payjp.api_key = Rails.application.credentials.dig(:payjp, :PAYJP_SECRET_KEY)
       # 秘密鍵をpayjpで
       Payjp::Charge.create(
         # 受け取った値を送信
