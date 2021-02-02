@@ -78,7 +78,7 @@ class UsersController < ApplicationController
     
     #binding.pry
   
-    @drinks = Drink.where(id: trades).order("created_at DESC")
+    @drinks = Drink.where(id: trades).paginate(page: params[:page],per_page: 10).order("created_at DESC")
     # この書き方だと同じ商品を購入できても、一つしか表示されない
     #.orderもdrinksのidを降順にしただけで、購入した順番ではない
     #binding.pry
