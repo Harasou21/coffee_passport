@@ -49,7 +49,12 @@
                 <%#end%> 
 
               </div>
-              <%= render "likes/like",drink: drink%>
+              <div class="like-and-comment">
+                 <%= render "likes/like",drink: drink%>
+                 <%= link_to drink_path(drink.id) do%>
+                 <i class="far fa-comment fa-lg"></i>
+                 <% end %>
+              </div>
             <% end %>
             </div>
             <%if drink.user.id == 6%>

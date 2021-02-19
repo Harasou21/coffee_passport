@@ -132,7 +132,13 @@ a {
   color: gray;
 }
 
+.like-and-comment{
+display: flex;
+}
 
+.fa-comment{
+  padding-top: 8px;
+}
 
 .star-btn {
   display: flex;

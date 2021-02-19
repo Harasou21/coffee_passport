@@ -3,7 +3,7 @@
 <div class="items-sell-contents">
 
   <div class="items-sell-main">
-    <h2 class="items-sell-title">商品の情報を入力</h2>
+    <h2 class="items-sell-title">コーヒーの記録</h2>
     <%= form_with model: @drink,url: drinks_path, local: true do |f| %>
 
 
@@ -18,7 +18,7 @@
     </div>
     <div class="img-upload">
       <div class="weight-bold-text">
-        出品画像
+        写真
         <span class="indispensable">必須</span>
       </div>
       <div class="click-upload">
@@ -32,13 +32,13 @@
     
     <div class="new-items">
       <div class="weight-bold-text">
-        商品名
+        コーヒー名
         <span class="indispensable">必須</span>
       </div>
       <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
       <div class="items-explain">
         <div class="weight-bold-text">
-          商品の説明
+          感想
           <span class="indispensable">必須</span>
         </div>
         <%= f.text_area :explain, class:"items-text", id:"item-info", placeholder:"コーヒーの感想（ハッシュタグ(#)をつけて投稿できます）",rows:"7" ,maxlength:"1000" %>

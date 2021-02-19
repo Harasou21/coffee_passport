@@ -1,0 +1,52 @@
+.top-explain{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+
+.app-concept{
+  border-bottom: 1px solid black;
+  font-size: 17px;
+  font-weight: bold;
+   font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.top-explain-title{
+  font-family: cursive;
+  font-size: 30px;
+}
+
+.explain-post-img{
+  width: 250px;
+  height: 400px;
+}
+
+.explain-wrapper{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+.explain-wrapper-title{
+  color: maroon;
+  border-bottom: 1px solid black;
+}
+
+.explain-wrapper-title-en{
+  text-align: left;
+  font-size: 15px;
+  font-family: cursive;
+  
+}
+
+.explain-wrapper-info{
+  width: 50vh;
+  margin: 0 auto 0 auto;
+  margin-bottom: 10px;
+}

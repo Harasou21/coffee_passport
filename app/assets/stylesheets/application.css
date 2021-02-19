@@ -91,4 +91,13 @@ ul .pagination{
   font-family: 'Nunito', sans-serif;
 }
 
+textarea{
 
+  outline: none;
+}
+
+input{
+  
+  outline: none;
+}
+}
