@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "3.15.0"
 
-set :application, "coffee_passport"
+set :application, "coffee-passport"
 set :repo_url, "git@github.com:Harasou21/coffee_passport.git"
 
 # バージョンが変わっても共通で参照するディレクトリを指定
