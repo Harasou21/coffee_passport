@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "3.15.0"
 
-set :application, "coffee-passport"
+set :application, "coffee_passport"
 set :repo_url, "git@github.com:Harasou21/coffee_passport.git"
 
 # バージョンが変わっても共通で参照するディレクトリを指定
@@ -12,7 +12,7 @@ set :rbenv_ruby, '2.6.5' #カリキュラム通りに進めた場合、’2.6.5�
 
 # どの公開鍵を利用してデプロイするか
 set :ssh_options, auth_methods: ['publickey'],
-                                  keys: ['~/.ssh/coffee-passport-ssh-key.pem'] 
+                                  keys: ['~/.ssh/coffee_passport-ssh-key.pem'] 
 
 # プロセス番号を記載したファイルの場所
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
