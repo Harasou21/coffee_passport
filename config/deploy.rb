@@ -12,7 +12,7 @@ set :rbenv_ruby, '2.6.5' #カリキュラム通りに進めた場合、’2.6.5�
 
 # どの公開鍵を利用してデプロイするか
 set :ssh_options, auth_methods: ['publickey'],
-                                  keys: ['~/.ssh/Vigore41.pem'] 
+                                  keys: ['~/.ssh/coffee-passport-ssh-key.pem'] 
 
 # プロセス番号を記載したファイルの場所
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
