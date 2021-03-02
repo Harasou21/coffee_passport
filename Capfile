@@ -9,6 +9,7 @@ require 'capistrano3/unicorn'
 require 'capistrano/scm/git'
 
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
+install_plugin Capistrano::SCM::Git
 # Load DSL and set up stages
 #require "capistrano/setup"
 
@@ -24,7 +25,7 @@ Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
 # install_plugin Capistrano::SCM::Svn
 # or
 #require "capistrano/scm/git"
-install_plugin Capistrano::SCM::Git
+
 
 # Include tasks from other gems included in your Gemfile
 #
