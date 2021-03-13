@@ -157,7 +157,6 @@ class User < ApplicationRecord
   
     # 有効化用のメールを送信する
     def send_activation_email
-      Rails.logger.debug { Rails.application.config.action_mailer.smtp_settings }
       UserMailer.account_activation(self).deliver_now
     end
   
