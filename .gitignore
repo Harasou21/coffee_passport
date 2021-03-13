@@ -32,3 +32,4 @@ yarn-debug.log*
 
 docker-compose.yml
 /config/database.yml
+.env
