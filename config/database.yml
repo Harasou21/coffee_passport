@@ -11,20 +11,17 @@
 #
 default: &default
   adapter: mysql2
-  encoding: utf8mb4
+  encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  password: Vigore41
   socket: /tmp/mysql.sock
   host: db
 
 development:
   <<: *default
   database: coffee_passport_development
-  username: root
-  host: db
-  username: 
-  password: password
+
 
 
 # Warning: The database defined as "test" will be erased and
@@ -33,6 +30,7 @@ development:
 test:
   <<: *default
   database: coffee_passport_test
+  
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -57,5 +55,5 @@ production:
   <<: *default
   database: coffee_passport_production
   username: root
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  password: Vigore41
   socket: /var/lib/mysql/mysql.sock

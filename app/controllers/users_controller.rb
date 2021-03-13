@@ -97,6 +97,11 @@ class UsersController < ApplicationController
       redirect_to user
     end
 
+    def thanks_for_contacting
+      @user = current_user
+      redirect_to 'thanks.html.erb'
+    end
+
 
   private
 

@@ -1,0 +1,29 @@
+.contact-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.contact-submit{
+  margin-top: 20px;
+  width: 100px;
+  height: 40px;
+  background-color: maroon;
+  color: white;
+}
+
+.contact-submit:hover{
+  background-color: gray;
+}
+
+.contact-form label{
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 5px;
+}
+
+.contact-form input{
+  margin-bottom: 10px;
+}
