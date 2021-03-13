@@ -1,0 +1,29 @@
+.footer{
+  display: flex;
+  height: 50px;
+  width: 100%;
+  //position: fixed;
+  background-color: white;
+  justify-content: space-around;
+}
+
+
+.footer div{
+  margin-top: 15px;
+  margin-left: 10px;
+  padding: auto 0;
+  font-size:15px ;
+  font-family: cursive;
+}
+
+.footer a{
+  color: black;
+}
+
+.footer a:visited{
+  color: black;
+}
+
+.footer a:hover{
+  color: maroon;
+}

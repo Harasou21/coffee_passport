@@ -19,8 +19,14 @@
   </head>
 
   <body>
-    <%= render 'shared/header'%>
-    <%= yield %>
+
+    <%= render  'shared/header'%>
+    <div class="main-wrapper">
+       <%= yield %>
+    </div>
         <%#= debug(params) if Rails.env.development? %>
+    <footer>
+      <%= render 'shared/footer'%>
+    </footer>
   </body>
 </html>
