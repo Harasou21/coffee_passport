@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   post    '/users/auth/:provider/callback',to: 'sessions#create'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
+
+  # static_pagesのルーティング
+  get    '/contact',   to: 'static_pages#contact'
+  get    '/about_coffee_passport', to: 'static_pages#about_coffee_passport'
   
   get 'user/config', to: 'users#config'   ,as: 'user_config'
   get 'user/likes/:id',  to: 'users#likes',as: 'user_likes'
