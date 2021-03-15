@@ -69,6 +69,68 @@
       </div>
     <%end%>
 
+
      <%= will_paginate drinks, previous_label: '<', next_label: '>', inner_window: 1%>
+
+     <h1>ピックアップ投稿</h1>
+     <% if @random_drinks%>
+     <% @random_drinks.each do |drink| %>
+     <div class='item-contents'>
+     <ul class='item-lists'>
+       <li class='list'>
+          
+          <%unless drink.user.id == 6%>
+            <%= link_to user_path(drink.user.id) do%>
+              <div class="user-info-timeline">
+                  <% if drink.user.image.attached?%>
+                    <%=image_tag drink.user.image.variant(resize: '60x60'),class: "user-img-timeline"  %> 
+                  <% else %>
+                   <img src="https://instagram.fdel2-2.fna.fbcdn.net/v/t51.2885-19/44884218_345707102882519_2446069589734326272_n.jpg?_nc_ht=instagram.fdel2-2.fna.fbcdn.net&_nc_ohc=s0l7r_rFmQYAX9IB4c9&oh=4d9b567520c4a9e98172a986afa3859b&oe=6028878F&ig_cache_key=YW5vbnltb3VzX3Byb2ZpbGVfcGlj.2" class= 'user-img-timeline'>
+                  <% end %>
+                  <div class="username-timeline">
+                    <%= drink.user.nickname %>
+                  </div>
+              </div>
+            <% end %>
+          <%end%>
+
+            <div class='item-img-content'>
+              <%= link_to drink_path(drink.id) do %>
+              <%= image_tag drink.image , class: "item-img" if drink.image.attached? %>
+              
+            </div>
+            <div class='item-info'>
+              <h3 class="item-name"> 
+                <%= drink.name %>
+              </h3>
+              <div class='item-price'>
+                <span><%= drink.price %>円<br>(税込み)</span>
+              </div>
+              <div class='item-explain'>
+              <%= render_with_hashtags(drink.explain.truncate(24, separator: /\s/)) %>
+                <%#= drink.explain .truncate(24, separator: /\s/) %>
+              </div>
+              <div class='item-tag'>
+              <%# drink.tags.each do |tag| %>
+                  
+                <%#end%> 
+
+              </div>
+              <div class="like-and-comment">
+                 <%= render "likes/like",drink: drink%>
+                 <%= link_to drink_path(drink.id) do%>
+                 <i class="far fa-comment fa-lg"></i>
+                 <% end %>
+              </div>
+            <% end %>
+            </div>
+            <%if drink.user.id == 6%>
+            <%= link_to "商品を購入する",drink_trades_path(drink.id),class: "buy-link"%>
+            <%end%>
+        </li>
+      </ul>
+     <% end %>
+    </div>
+    <%end%>
 </div>
 
