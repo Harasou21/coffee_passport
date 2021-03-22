@@ -68,16 +68,28 @@
       </ul> 
       </div>
     <%end%>
-
+</div>
 
      <%= will_paginate drinks, previous_label: '<', next_label: '>', inner_window: 1%>
 
-     <h1>ピックアップ投稿</h1>
-     <% if @random_drinks%>
-     <% @random_drinks.each do |drink| %>
-     <div class='item-contents'>
-     <ul class='item-lists'>
-       <li class='list'>
+
+
+<%# ピックアップ投稿 %>
+    
+
+<div class='main'>
+
+  <%# 商品一覧 %>
+  <div class='item-contents'>
+   
+        <h2 class="title">Selected</h2>
+    <ul class='item-lists'>
+
+      <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
+      <%if @random_drinks %>
+      
+        <% @random_drinks.each do |drink|%>
+        <li class='list'>
           
           <%unless drink.user.id == 6%>
             <%= link_to user_path(drink.user.id) do%>
@@ -128,9 +140,11 @@
             <%= link_to "商品を購入する",drink_trades_path(drink.id),class: "buy-link"%>
             <%end%>
         </li>
-      </ul>
-     <% end %>
-    </div>
+      
+ 
+      <%end%>
+
+      </ul> 
+      </div>
     <%end%>
 </div>
-
