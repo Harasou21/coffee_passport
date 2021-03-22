@@ -6,8 +6,16 @@ class DrinksController < ApplicationController
 
   def index
     @user = current_user
-    @drinks = Drink.where.not(user_id: 6).paginate(page: params[:page],per_page: 10).order("created_at DESC")
+
+    following_ids = "SELECT followed_id FROM relationships WHERE follower_id = :user_id"
+
+    @drinks = Drink.where.not(user_id: 6).where("user_id IN (#{following_ids}) OR user_id = :user_id", user_id: @user.id).paginate(page: params[:page],per_page: 10).order("created_at DESC")
+
     @title = "Timeline"
+
+
+    # @user.following_ids _idsメソッドはidの集合をとってこれる
+    @random_drinks = Drink.order("RAND()").limit(5)
   end
 
   def show

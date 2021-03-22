@@ -7,15 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # 出品ユーザーを定義
-# User.create!(
-#   id: 6,
-#   nickname: "出品ユーザー",
-#   email: "harasou21soccer@gmail.com",
-#   password: ENV['ADMIN_USER_PASSWORD'],
-#   password_confirmation: ENV['ADMIN_USER_PASSWORD'],
-#   activated: true,
-#   activated_at: "Time.zone.now"
-# )
+User.create!(
+  id: 6,
+  nickname: "出品ユーザー",
+  email: "harasou21soccer@gmail.com",
+  password: ENV['ADMIN_USER_PASSWORD'],
+  password_confirmation: ENV['ADMIN_USER_PASSWORD'],
+  activated: true,
+  activated_at: "Time.zone.now"
+)
 #ユーザーは差し込めたので一旦コメントアウト
 
 houseblend = Drink.create!(
@@ -37,25 +37,69 @@ houseblend = Drink.create!(
 
 # 複数の書き方はこんな感じ
 
-# Note.create!(
-#   [
-#     {
-#        title: "OS",
-#        user_id: 1,
-#        category_id: 1,
-#        explanation:
-#         "OSとはOperation System（オペレーティング・システム）の略で、アプリやデバイスを動作させるための基本となるソフトウェアのことです。 具体的には、キーボードやマウス・タッチパッドなどのデバイスから入力した情報をアプリケーションに伝え、またソフトウェアとハードウェアの連携を司る中枢的な役割を果たします。 パソコンやスマートフォンにはゲームやワープロ・表計算などさまざまな仕事をするアプリケーションがありますが、それらはOSごとに開発されるのが通常です。\r\n\r\n\r\n```\r\n例）\r\n・Mac OS\r\n・Window OS\r\n・Linux\r\n```\r\n\r\n",
-#        rate: 3,
-#     },
-#     {
-#        title: "UI(ユーザーインターフェース)",
-#        user_id: 1,
-#        category_id: 1,
-#        explanation:
-#         "UIとは、ユーザーインターフェイス（User Interface）の略称で、一般的にユーザー（利用者）と製品やサービスとのインターフェース（接点）すべてのことを意味します。\r\n\r\nユーザーとは、主にWebサービス（サイト）・アプリケーション・ソフトウェアを利用する人を言います。\r\nインターフェースとは、直訳で接点やつながりを意味し、何か2つのものの間での伝達方法や接続の仕方のことを言います。\r\n\r\nWebサイトでいうところのUIは、サイトの見た目や、使いやすさのことを指します。よくUI＝見た目、と勘違いをしている方もいるかと思いますが、レイアウトや使用されている画像はもちろん、文字のフォント、メニューやボタンの操作性などユーザーが目にするもの・操作するものすべてが含まれています\r\n\r\n```\r\n・ 画面\r\n・ 見た目\r\n・ 使い勝手\r\n```",
-#        rate: 3,
-#     }
+Drink.create!(
+  [
+
+    {
+       name: "ブレックファーストブレンド",
+       price: 1050,
+       explain: " #BRIGHT(鮮やかな) #TANGY(はじけるような) やや浅めに焙煎された、軽めながらほどよいコクのブレンド。鮮やかでシトラス感とさわやかな後味が特徴。一日の始まりにふさわしい、いきいきとしたコーヒーです。",
+       user_id: 6,
+       region_id: 3,
+       body_id: 2,
+       acidity_id: 3,
+       processing_id: 2,
+       image: ActiveStorage::Blob.create_and_upload!(io: File.open("app/assets/images/break_first.jpg"),filename: "breake_first.jpg")
+ 
+    },
+    {
+       name: "パイクプレイス® ロースト",
+       price: 1140,
+       explain: " #SMOOTH(なめらかな) #BALANCED(バランスの良い) ココアや煎ったナッツのようなほのかな香ばしさに、バランスのとれたなめらかな口あたりが特徴のコーヒー。一日を通して、また毎日でもお楽しみいただけます。",
+       user_id: 6,
+       region_id: 3,
+       body_id: 3 ,
+       acidity_id: 3,
+       processing_id: 2,
+       image: ActiveStorage::Blob.create_and_upload!(io: File.open("app/assets/images/pike_place.jpg"),filename: "pike_place.jpg")
+ 
+    },
+    {
+       name: "グアテマラ アンティグア",
+       price: 1240,
+       explain: " #COCOA(ココアのような) #SUBTLE_SPICE(微かなスパイス感) チョコレートやかすかなスパイス、レモンを感じる上品な酸味が幾重にも重なる複雑ながらもエレガントで洗練されたコーヒー。火山に囲まれた100年もの歴史を誇るグアテマラ アンティグア地方の農園は、すばらしいコーヒーを栽培する生産地としてよく知られています。",
+       user_id: 6,
+       region_id: 3,
+       body_id: 3 ,
+       acidity_id: 3,
+       processing_id: 2,
+       image: ActiveStorage::Blob.create_and_upload!(io: File.open("app/assets/images/guatemala.jpg"),filename: "guatemala.jpg")
+    },
+    {
+       name: "エチオピア",
+       price: 1330,
+       explain: " #CITRUS(シトラス) #DARK_COCOA(ダークココア) ダークチョコレート、ペッパーのようなスパイス、そしてスイートシトラスの風味が特徴の、やわらかでベルベットのような口あたりのコーヒーです。",
+       user_id: 6,
+       region_id: 4,
+       body_id: 3 ,
+       acidity_id: 4,
+       processing_id: 2,
+       image: ActiveStorage::Blob.create_and_upload!(io: File.open("app/assets/images/ethiopia.jpg"),filename: "ethiopia.jpg")
+
+    },
+    {
+      name: "TOKYOロースト",
+      price: 1240,
+      explain: " #Hearty(心温まる) #Well-Rounded(まろやかな) スターバックス リザーブ® ロースタリー 東京のロースターが焙煎した、なめらかで深みのあるスマトラ産コーヒーにラテンアメリカ産コーヒーをブレンドした、まろやかで心温まるコーヒーです。",
+      user_id: 6,
+      region_id: 2,
+      body_id: 4 ,
+      acidity_id: 3,
+      processing_id: 5,
+      image: ActiveStorage::Blob.create_and_upload!(io: File.open("app/assets/images/tokyo_roast.jpg"),filename: "tokyo_roast.jpg")
+
+    }
 
 
-#   ]
-# )
+  ]
+)
