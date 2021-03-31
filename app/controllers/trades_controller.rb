@@ -2,9 +2,11 @@ class TradesController < ApplicationController
   include SessionsHelper
   def index
     # 購入ページ
+
     @item = Drink.find(params[:drink_id])
     @order = TradeAddress.new
-    #redirect_to root_path if @drink.trade
+    @user_address = current_user.address 
+  
   end
 
   def new
@@ -15,6 +17,7 @@ class TradesController < ApplicationController
   end
 
   def create
+
     @item = Drink.find(params[:drink_id])
     @order = TradeAddress.new(trade_params)
     if @order.valid?

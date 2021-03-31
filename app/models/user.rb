@@ -43,6 +43,7 @@ class User < ApplicationRecord
   has_many :like_drinks, through: :likes, source: :drink
   #has_many :sns_credentials
   has_one_attached :image
+  has_one :address
 
   before_save  { self.email = email.downcase }
   has_secure_password
