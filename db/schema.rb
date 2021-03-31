@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_27_093034) do
+ActiveRecord::Schema.define(version: 2021_03_22_070459) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -48,7 +48,9 @@ ActiveRecord::Schema.define(version: 2020_12_27_093034) do
     t.bigint "trade_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
     t.index ["trade_id"], name: "index_addresses_on_trade_id"
+    t.index ["user_id"], name: "index_addresses_on_user_id"
   end
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -138,6 +140,7 @@ ActiveRecord::Schema.define(version: 2020_12_27_093034) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "addresses", "trades"
+  add_foreign_key "addresses", "users"
   add_foreign_key "drink_tag_relations", "drinks"
   add_foreign_key "drink_tag_relations", "tags"
   add_foreign_key "drinks", "users"
