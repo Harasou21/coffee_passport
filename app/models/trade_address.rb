@@ -1,6 +1,7 @@
 class TradeAddress
   include ActiveModel::Model
   include ActiveRecord::AttributeAssignment
+  include SessionsHelper
   # form_withやrender等の色々な機能が使える
   attr_accessor :fam_name,:first_name,:fam_name_kana,:first_name_kana,:birthday,:postal_code, :city, :house_num, :building_name, :phone_num, :drink_id, :prefecture_id,:trade_id, :user_id, :price,:token,:authenticity_token,:number,:exp_month,:exp_year,:cvc,:commit
 
@@ -27,7 +28,9 @@ class TradeAddress
 
 
   def save
+    
     trade = Trade.create(user_id: user_id, drink_id: drink_id)
-    Address.create(fam_name: fam_name,first_name: first_name,fam_name_kana: fam_name_kana,first_name_kana: first_name_kana,postal_code: postal_code, prefecture_id: prefecture_id, birthday: birthday,city: city, house_num: house_num, building_name: building_name, phone_num: phone_num, trade_id: trade.id)
+
+    Address.create(fam_name: fam_name,first_name: first_name,fam_name_kana: fam_name_kana,first_name_kana: first_name_kana,postal_code: postal_code, prefecture_id: prefecture_id, birthday: birthday,city: city, house_num: house_num, building_name: building_name, phone_num: phone_num, trade_id: trade.id,user_id: user_id)
   end
 end
