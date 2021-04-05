@@ -8,10 +8,10 @@
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
 
 .app-concept{
-  border-bottom: 1px solid black;
-  font-size: 17px;
+  border-bottom: 2px solid black;
+  font-size: 20px;
   font-weight: bold;
-   font-family: 'M PLUS Rounded 1c', sans-serif;
+  padding-bottom: 10px;
 }
 
 .top-explain-title{
@@ -25,10 +25,12 @@
 }
 
 .explain-wrapper{
-  margin-top: 30px;
+  margin-top: 50px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 
 
@@ -37,11 +39,12 @@
 .explain-wrapper-title{
   color: maroon;
   border-bottom: 1px solid black;
+  font-family:"游教科書体";
 }
 
 .explain-wrapper-title-en{
   text-align: left;
-  font-size: 15px;
+  font-size: 20px;
   font-family: cursive;
   
 }

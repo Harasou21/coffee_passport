@@ -2,17 +2,17 @@
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
-# This file is the source Rails uses to define your schema when running `rails
-# db:schema:load`. When creating a new database, `rails db:schema:load` tends to
+# This file is the source Rails uses to define your schema when running `bin/rails
+# db:schema:load`. When creating a new database, `bin/rails db:schema:load` tends to
 # be faster and is potentially less error prone than running all of your
 # migrations from scratch. Old migrations may fail to apply correctly if those
 # migrations use external dependencies or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_22_070459) do
+ActiveRecord::Schema.define(version: 2021_04_02_083418) do
 
-  create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "active_storage_attachments", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
     t.bigint "record_id", null: false
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2021_03_22_070459) do
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
 
-  create_table "active_storage_blobs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "active_storage_blobs", charset: "utf8", force: :cascade do |t|
     t.string "key", null: false
     t.string "filename", null: false
     t.string "content_type"
@@ -30,10 +30,17 @@ ActiveRecord::Schema.define(version: 2021_03_22_070459) do
     t.bigint "byte_size", null: false
     t.string "checksum", null: false
     t.datetime "created_at", null: false
+    t.string "service_name", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "active_storage_variant_records", charset: "utf8", force: :cascade do |t|
+    t.bigint "blob_id", null: false
+    t.string "variation_digest", null: false
+    t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "addresses", charset: "utf8", force: :cascade do |t|
     t.string "fam_name", null: false
     t.string "first_name", null: false
     t.string "fam_name_kana", null: false
@@ -53,7 +60,7 @@ ActiveRecord::Schema.define(version: 2021_03_22_070459) do
     t.index ["user_id"], name: "index_addresses_on_user_id"
   end
 
-  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "comments", charset: "utf8", force: :cascade do |t|
     t.integer "user_id"
     t.integer "drink_id"
     t.text "text"
@@ -61,7 +68,7 @@ ActiveRecord::Schema.define(version: 2021_03_22_070459) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "drink_tag_relations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "drink_tag_relations", charset: "utf8", force: :cascade do |t|
     t.bigint "drink_id"
     t.bigint "tag_id"
     t.datetime "created_at", precision: 6, null: false
@@ -70,7 +77,7 @@ ActiveRecord::Schema.define(version: 2021_03_22_070459) do
     t.index ["tag_id"], name: "index_drink_tag_relations_on_tag_id"
   end
 
-  create_table "drinks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "drinks", charset: "utf8", force: :cascade do |t|
     t.string "name"
     t.integer "price"
     t.text "explain"
@@ -85,14 +92,14 @@ ActiveRecord::Schema.define(version: 2021_03_22_070459) do
     t.index ["user_id"], name: "index_drinks_on_user_id"
   end
 
-  create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "likes", charset: "utf8", force: :cascade do |t|
     t.integer "user_id"
     t.integer "drink_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "relationships", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "relationships", charset: "utf8", force: :cascade do |t|
     t.integer "follower_id"
     t.integer "followed_id"
     t.datetime "created_at", precision: 6, null: false
@@ -102,7 +109,7 @@ ActiveRecord::Schema.define(version: 2021_03_22_070459) do
     t.index ["follower_id"], name: "index_relationships_on_follower_id"
   end
 
-  create_table "sns_credentials", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "sns_credentials", charset: "utf8", force: :cascade do |t|
     t.string "provider"
     t.string "uid"
     t.bigint "user_id"
@@ -111,13 +118,13 @@ ActiveRecord::Schema.define(version: 2021_03_22_070459) do
     t.index ["user_id"], name: "index_sns_credentials_on_user_id"
   end
 
-  create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "tags", charset: "utf8", force: :cascade do |t|
     t.string "tag_name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "trades", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "trades", charset: "utf8", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "drink_id"
     t.datetime "created_at", precision: 6, null: false
@@ -126,7 +133,7 @@ ActiveRecord::Schema.define(version: 2021_03_22_070459) do
     t.index ["user_id"], name: "index_trades_on_user_id"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "users", charset: "utf8", force: :cascade do |t|
     t.string "nickname"
     t.string "email"
     t.datetime "created_at", precision: 6, null: false
@@ -139,6 +146,7 @@ ActiveRecord::Schema.define(version: 2021_03_22_070459) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "addresses", "trades"
   add_foreign_key "addresses", "users"
   add_foreign_key "drink_tag_relations", "drinks"

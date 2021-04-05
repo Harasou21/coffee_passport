@@ -9,7 +9,7 @@ class DrinksController < ApplicationController
 
     following_ids = "SELECT followed_id FROM relationships WHERE follower_id = :user_id"
 
-    @drinks = Drink.where.not(user_id: 6).where("user_id IN (#{following_ids}) OR user_id = :user_id", user_id: @user.id).paginate(page: params[:page],per_page: 10).order("created_at DESC")
+    @drinks = Drink.where.not(user_id: 6).where("user_id IN (#{following_ids}) OR user_id = :user_id", user_id: @user.id).paginate(page: params[:page],per_page: 10).order("created_at DESC").includes(:user)
 
     @title = "Timeline"
 
