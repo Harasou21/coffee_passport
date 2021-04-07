@@ -20,7 +20,10 @@ COPY Gemfile /coffee_passport/Gemfile
 COPY Gemfile.lock /coffee_passport/Gemfile.lock
 RUN bundle update rails
 RUN bundle update
+RUN bundle update mimemagic
+RUN bundle update nokogiri marcel mimemagic
 RUN bundle install
+
 COPY . /coffee_passport
 
 RUN yarn install --check-files
