@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <p>{{ message }}</p>
+    <router-link to="contact"></router-link>
   </div>
 </template>
 

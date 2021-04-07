@@ -19,18 +19,19 @@
   </head>
 
   <body>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-  
 
     <%= render  'shared/header'%>
     <div class="main-wrapper">
        <%= yield %>
     </div>
         <%#= debug(params) if Rails.env.development? %>
-    <footer>
+    <footer id="footer">
+
+
+     <%# vue.js側でこのタグとコンポーネントを紐付ける %>
       <%= render 'shared/footer'%>
     </footer>
+<%=javascript_pack_tag 'components/footer'%>
   </body>
 </html>
 
