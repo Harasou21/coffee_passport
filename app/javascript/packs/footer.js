@@ -1,6 +1,7 @@
-import Vue from 'vue/dist/vue/vue.esm.js'
+import Vue from 'vue/dist/vue.esm.js'
 import Router from './router/router'
 import footer from './components/footer.vue'
+
 
 
 

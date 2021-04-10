@@ -8,7 +8,7 @@
       <input name="Email" id="email" type="email" placeholder="coffee@gmail.com" required>
 
       <label for="name">お名前</label>
-      <input type="name" type="name" placeholder="珈琲太郎" required>
+      <input type="name"  placeholder="珈琲太郎" required>
       
       <label for="context"> お問合わせ内容</label>
       <textarea name="context" id="" cols="30" rows="10"></textarea>

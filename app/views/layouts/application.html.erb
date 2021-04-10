@@ -16,22 +16,27 @@
     <script type="text/javascript" src="https://js.pay.jp/v1/"></script>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
+
   </head>
 
-  <body>
+  <body id="app">
+      
 
     <%= render  'shared/header'%>
     <div class="main-wrapper">
        <%= yield %>
+ 
     </div>
         <%#= debug(params) if Rails.env.development? %>
     <footer id="footer">
-
-
+     <router-view></router-view>
+     <navbar></navbar>
      <%# vue.js側でこのタグとコンポーネントを紐付ける %>
-      <%= render 'shared/footer'%>
+      <%#= render 'shared/footer'%>
     </footer>
-<%=javascript_pack_tag 'components/footer'%>
+
+ <%= javascript_pack_tag 'footer' %>
+   
   </body>
 </html>
 
