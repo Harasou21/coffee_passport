@@ -5,18 +5,39 @@
   
 }
 
+.coffee-gif{
+  width: 100%;
+
+}
+
+.app-title {/*親div*/
+  position: relative;/*相対配置*/
+  width: 100%;
+  }
+
+.app-text{
+  position: absolute;/*絶対配置*/
+  top: 25%;
+  left: 10%;
+
+}
+
+
+
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
 
 .app-concept{
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid white;
   font-size: 20px;
   font-weight: bold;
   padding-bottom: 10px;
+  color: white;
 }
 
 .top-explain-title{
   font-family: cursive;
   font-size: 30px;
+  color: white;
 }
 
 .explain-post-img{
