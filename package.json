@@ -6,10 +6,15 @@
     "@rails/activestorage": "^6.0.0-alpha",
     "@rails/ujs": "^6.0.0-alpha",
     "@rails/webpacker": "4.3.0",
+    "axios": "^0.21.1",
     "turbolinks": "^5.2.0",
     "vue": "^2.6.12",
+    "vue-axios": "^3.2.4",
+    "vue-eslint-parser": "^7.6.0",
     "vue-loader": "^15.9.6",
-    "vue-template-compiler": "^2.6.12"
+    "vue-router": "^3.5.1",
+    "vue-template-compiler": "^2.6.12",
+    "vuex": "^3.6.2"
   },
   "version": "0.1.0",
   "devDependencies": {

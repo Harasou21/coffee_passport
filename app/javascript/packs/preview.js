@@ -1,6 +1,7 @@
 if (document.URL.match( /drinks/ ) ) {
 document.addEventListener('DOMContentLoaded', function(){
 
+
 // input要素の値に変更があった場合、関数が発火すること
 // 値の変更があった要素から、画像の情報を取得すること
 // 取得した画像情報のURLを生成すること
@@ -46,6 +47,9 @@ document.addEventListener('DOMContentLoaded', function(){
         // 生成したHTMLの要素をブラウザに表示させる
         imageElement.appendChild(blobImage);
         ImageList.appendChild(imageElement);
+
+        
+
   });
 });
  }else if(document.URL.match( /users/ ) || document.URL.match( /edit/ )){

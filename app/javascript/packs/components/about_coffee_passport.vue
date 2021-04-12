@@ -1,8 +1,5 @@
 <template>
-
-
-
-<div class="top-explain">
+  <div class="top-explain">
   <h3 class="top-explain-title">Von Voyage!</h3>
   <p class="app-concept">Coffee Passportとはあなたが出会ったコーヒーの記録を共有できるサービスです</p>
 
@@ -17,6 +14,7 @@
       出会ったコーヒーの感想を記録して共有しましょう。
       その投稿が、素敵なコーヒーを求めてる誰かのヒントになるでしょう。
       </p>
+      <!-- <%= image_tag 'post.png',class: "explain-post-img"%> -->
       
     </div>
     <div class="explain-wrapper">
@@ -57,11 +55,3 @@
 </div>
 
 </template>
-
-<script>
-export default {
-  setup() {
-    
-  },
-}
-</script>
