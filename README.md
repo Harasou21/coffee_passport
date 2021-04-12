@@ -119,4 +119,4 @@
 - 注文確認メールの送信
 - 購入取り消し機能
 - 削除アラートをもっとカッコよく
-- https化![coffee_passport](https://user-images.githubusercontent.com/67535886/114352497-e1cb3700-9ba6-11eb-838e-f24661ff81b1.gif)
+- https化
