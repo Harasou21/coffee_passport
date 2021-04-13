@@ -22,7 +22,7 @@ class TradeAddress
     validates :prefecture_id, numericality: { other_than: 1 } 
     validates :city
     validates :house_num
-    validates :phone_num
+    validates :phone_num, format: {with: /\A\d{10,11}\z/}
     validates :token
   end
 
