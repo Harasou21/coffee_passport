@@ -14,10 +14,10 @@ class Drink < ApplicationRecord
   belongs_to_active_hash :acidity
   belongs_to_active_hash :processing
   with_options presence: true do
-    validates :name
-    validates :explain
+    validates :name, length: { maximum: 1000 }
+    validates :explain, length: { maximum: 1000 }
     validates :image
-    validates :price
+    validates :price, format: { with: /\A[0-9]+\z/i }
   end
 
   after_create do
