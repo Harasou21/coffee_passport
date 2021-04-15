@@ -4,7 +4,19 @@ require 'rails_helper'
 RSpec.describe "Drinks", type: :request do
   before do
     @user = FactoryBot.create(:user)
-    @drink = FactoryBot.create(:drink)
+    region_id = Region.find_by(name: 'マルチリージョン').id
+    body_id = Body.find_by(name: "LIGHT(軽い)").id
+    acidity_id = Acidity.find_by(name: "LOW(少ない)").id
+    processing_id = Processing.find_by(name: "WASHED(水洗式)").id
+    @drink = FactoryBot.create(:drink,
+                                name: "TOKYOロースト",
+                                price: 350,
+                                explain: "これはコーヒーの説明です",
+                                region_id: region_id,
+                                body_id: body_id,
+                                acidity_id: acidity_id,
+                                processing_id: processing_id)
+  
     # 投稿済みの投稿や、テキストが存在するか確かめる必要が、
     # あるので、createでテスト用のDBに値を保存
     post login_path, params: { session: { email: @user.email,
@@ -39,7 +51,7 @@ RSpec.describe "Drinks", type: :request do
     it 'indexアクションにリクエストするとレスポンスに投稿済みの投稿にいいねボタンが存在する' do
       get root_path
       #binding.pry
-      expect(response.body).to have_selector ".iine__button"
+      expect(response.body).to include('<i class="far fa-heart"></i>')
     end
   end
 

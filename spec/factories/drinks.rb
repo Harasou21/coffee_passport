@@ -3,7 +3,7 @@ FactoryBot.define do
     name                {"TOKYOロースト"}
     price               {350}
     explain             {"これはコーヒーの説明です"}
-    region_id           {Region.all.sample}
+    region_id           {2}
     body_id             {Body.all.sample}
     acidity_id          {Acidity.all.sample}
     processing_id       {Processing.all.sample}
