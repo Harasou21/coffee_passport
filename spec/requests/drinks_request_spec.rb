@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe "Drinks", type: :request do
+RSpec.describe DrinksController, type: :request do
 
 end

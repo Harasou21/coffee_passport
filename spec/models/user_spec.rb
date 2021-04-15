@@ -76,6 +76,6 @@ RSpec.describe User, type: :model do
     expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
   end
 
-  it "アカウント"
+  
 
 end

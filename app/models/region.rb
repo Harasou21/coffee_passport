@@ -6,4 +6,5 @@ class Region < ActiveHash::Base
     { id: 4, name: 'アフリカ' },
     { id: 5, name: 'アジア、太平洋' }
   ]
+
 end

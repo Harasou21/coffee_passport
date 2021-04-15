@@ -6,4 +6,5 @@ class Processing < ActiveHash::Base
     { id: 4, name: 'NATURAL(乾燥式)' },
     { id: 5, name: 'WASHED(水洗式),SEMI-WASHED(半水栓式)'}
   ]
+
 end

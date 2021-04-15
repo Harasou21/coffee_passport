@@ -84,3 +84,5 @@ gem 'oauth2'
 gem "aws-sdk-s3", require: false
 gem 'faker'
 gem 'dotenv-rails'
+gem 'rack', '~> 2.0.8'
+# rack のアップデートのバグで画像が上手く開いてくれない見たいなので、グレードダウン(近々修正くるらしい)
