@@ -97,6 +97,7 @@
   - Formspree
   - 検索（ransack）、カテゴリー（Active Hash）
   - ページネーション (will_paginate)
+  - メイラー(SendGrid)
   
   
 - 開発環境
