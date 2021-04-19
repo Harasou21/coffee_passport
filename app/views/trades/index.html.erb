@@ -84,7 +84,7 @@
           <label class="form-text">苗字</label>
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_field :fam_name, class:"input-default", id:"postal-code",placeholder:"例) 原",value: @user_address.fam_name %>
+        <%= f.text_field :fam_name, class:"input-default", id:"fam_name",placeholder:"例) 原",value: @user_address.fam_name %>
       </div>
 
       <div class="form-group">
@@ -92,7 +92,7 @@
           <label class="form-text">名前</label>
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_field :first_name, class:"input-default", id:"postal-code" ,placeholder:"例) 奏一郎",value: @user_address.first_name %>
+        <%= f.text_field :first_name, class:"input-default", id:"first_name" ,placeholder:"例) 奏一郎",value: @user_address.first_name %>
       </div>
 
       <div class="form-group">
@@ -100,7 +100,7 @@
           <label class="form-text">苗字カナ</label>
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_field :fam_name_kana, class:"input-default", id:"postal-code" ,placeholder:"例) ハラ",value: @user_address.fam_name_kana %>
+        <%= f.text_field :fam_name_kana, class:"input-default", id: "fam_name_kana" ,placeholder:"例) ハラ",value: @user_address.fam_name_kana %>
       </div>
 
       <div class="form-group">
@@ -108,7 +108,7 @@
           <label class="form-text">名前カナ</label>
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_field :first_name_kana, class:"input-default", id:"postal-code",placeholder:"例) ソウイチロウ",value: @user_address.first_name_kana %>
+        <%= f.text_field :first_name_kana, class:"input-default", id:"first_name_kana",placeholder:"例) ソウイチロウ",value: @user_address.first_name_kana %>
       </div>
 
       <div class="form-group">
@@ -279,7 +279,7 @@
           <label class="form-text">苗字</label>
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_field :fam_name, class:"input-default", id:"postal-code",placeholder:"例) 原"%>
+        <%= f.text_field :fam_name, class:"input-default", id:"fam_name",placeholder:"例) 原"%>
       </div>
 
       <div class="form-group">
@@ -287,7 +287,7 @@
           <label class="form-text">名前</label>
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_field :first_name, class:"input-default", id:"postal-code" ,placeholder:"例) 奏一郎"%>
+        <%= f.text_field :first_name, class:"input-default", id:"first_name" ,placeholder:"例) 奏一郎"%>
       </div>
 
       <div class="form-group">
@@ -295,7 +295,7 @@
           <label class="form-text">苗字カナ</label>
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_field :fam_name_kana, class:"input-default", id:"postal-code" ,placeholder:"例) ハラ"%>
+        <%= f.text_field :fam_name_kana, class:"input-default", id:"fam_name_kana" ,placeholder:"例) ハラ"%>
       </div>
 
       <div class="form-group">
@@ -303,7 +303,7 @@
           <label class="form-text">名前カナ</label>
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_field :first_name_kana, class:"input-default", id:"postal-code",placeholder:"例) ソウイチロウ"%>
+        <%= f.text_field :first_name_kana, class:"input-default", id:"first_name_kana",placeholder:"例) ソウイチロウ"%>
       </div>
 
       <div class="form-group">
