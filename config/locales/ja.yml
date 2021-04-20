@@ -1,0 +1,27 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード(確認)
+      drink:
+        name: コーヒーの名前
+        image: 画像
+        explain: コーヒーを飲んだ感想
+        price: 値段
+  activemodel:
+    attributes: 
+      trade_address:
+        fam_name: 姓
+        first_name: 名
+        fam_name_kana: 姓(カタカナ)
+        first_name_kana: 名(カタカナ)
+        token: カード情報
+        birthday: 生年月日
+        postal_code: 郵便番号
+        prefecture_id: 都道府県
+        city: 市区町村
+        house_num: 番地
+        phone_num: 電話番号
