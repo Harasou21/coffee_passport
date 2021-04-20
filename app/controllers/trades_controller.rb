@@ -1,5 +1,6 @@
 class TradesController < ApplicationController
   include SessionsHelper
+  before_action :logged_in_user, only: [:index,:new]
   def index
     # 購入ページ
 
