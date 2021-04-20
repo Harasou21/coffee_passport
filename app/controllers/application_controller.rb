@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
     unless logged_in?
       store_location
       # ユーザーがいきたがってたページを記憶
-      flash[:danger] = "Please log in"
+      flash[:danger] = 'Please log in'
       redirect_to login_url
     end
   end

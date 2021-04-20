@@ -11,34 +11,33 @@ class SessionsController < ApplicationController
     #   session[:user_id] = user.id
     #   redirect_back_or user
     # else
-      user = User.find_by(email: params[:session][:email].downcase)
-      # 受け取ったemailからfind_byでデータベースに
-      # 問い合わせてユーザー取得
-      if user && user.authenticate(params[:session][:password])
-          if user.activated?
-            log_in user
-          # まずそのユーザーがいるかnilガード
-          # いたらpasswordとauthenticateかける
-          
-          params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-          # check boxがonの時は1になるので1の時は
-          # ? 以降がtrueの処理
-          # : 以降がfalseの処理
-          redirect_back_or user
-          # redirect_back_or メソッド呼び出し
-          # 引数にuser_url(user)を渡す
-          else
-            message  = "Emailによるアカウントの有効化がされてない場合は "
-            message += "Emailに有効化のリンクがあるか確認してください"
-            flash.now[:warning] = message
-            redirect_to root_url
-    
-          end
+    user = User.find_by(email: params[:session][:email].downcase)
+    # 受け取ったemailからfind_byでデータベースに
+    # 問い合わせてユーザー取得
+    if user&.authenticate(params[:session][:password])
+      if user.activated?
+        log_in user
+        # まずそのユーザーがいるかnilガード
+        # いたらpasswordとauthenticateかける
+
+        params[:session][:remember_me] == '1' ? remember(user) : forget(user)
+        # check boxがonの時は1になるので1の時は
+        # ? 以降がtrueの処理
+        # : 以降がfalseの処理
+        redirect_back_or user
+      # redirect_back_or メソッド呼び出し
+      # 引数にuser_url(user)を渡す
       else
-        flash.now[:danger] = 'パスワードとメールアドレスが一致しません'
-        render 'new'
+        message  = 'Emailによるアカウントの有効化がされてない場合は '
+        message += 'Emailに有効化のリンクがあるか確認してください'
+        flash.now[:warning] = message
+        redirect_to root_url
+
       end
-    
+    else
+      flash.now[:danger] = 'パスワードとメールアドレスが一致しません'
+      render 'new'
+    end
   end
 
   def destroy

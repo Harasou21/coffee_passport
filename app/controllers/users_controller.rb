@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
   include SessionsHelper
-  before_action :set_user, only: [:show,:edit,:update,:correct_user]
-  before_action :logged_in_user, only: [:index,:edit,:update,:following,:followers]
+  before_action :set_user, only: [:show, :edit, :update, :correct_user]
+  before_action :logged_in_user, only: [:index, :edit, :update, :following, :followers]
   before_action :correct_user, only: [:edit, :update]
-  before_action :check_guest,only: :destroy
+  before_action :check_guest, only: :destroy
 
   def index
     @users = User.all
@@ -17,8 +17,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       @user.send_activation_email
-      flash[:info] = "メールをチェックしてアカウントを有効化してください."
-      
+      flash[:info] = 'メールをチェックしてアカウントを有効化してください.'
+
       redirect_to root_url
     else
       render 'new'
@@ -27,7 +27,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @drinks = @user.drinks.paginate(page: params[:page],per_page: 10).order("created_at DESC")
+    @drinks = @user.drinks.paginate(page: params[:page], per_page: 10).order('created_at DESC')
   end
 
   def edit
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
 
   def destroy
     user = User.find(params[:id])
-    #binding.pry
+    # binding.pry
     user.destroy
     redirect_to root_url
   end
@@ -62,64 +62,61 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
-   def likes
+  def likes
     @user = User.find(params[:id])
-    @drinks = @user.like_drinks.paginate(page: params[:page],per_page: 10).order("created_at DESC")
+    @drinks = @user.like_drinks.paginate(page: params[:page], per_page: 10).order('created_at DESC')
     @title = "#{@user.nickname}がいいねした投稿"
-   end
+  end
 
-   def purchase_record
+  def purchase_record
     trades = Trade.where(user_id: current_user.id).select(:drink_id)
     # ユーザーが購入してればtradeにそのuser_idがある
     # まずはそれを取得
     # そこから、drink_idを取得
 
     # この時点では同じ商品も取得できてる
-    
-    #binding.pry
-  
-    @drinks = Drink.where(id: trades).paginate(page: params[:page],per_page: 10).order("created_at DESC")
+
+    # binding.pry
+
+    @drinks = Drink.where(id: trades).paginate(page: params[:page], per_page: 10).order('created_at DESC')
     # この書き方だと同じ商品を購入できても、一つしか表示されない
-    #.orderもdrinksのidを降順にしただけで、購入した順番ではない
-    #binding.pry
-   end
+    # .orderもdrinksのidを降順にしただけで、購入した順番ではない
+    # binding.pry
+  end
 
-    def user_config
-      redirect_to 'config'
+  def user_config
+    redirect_to 'config'
+  end
+
+  def new_guest
+    user = User.find_or_create_by!(nickname: 'ゲスト様', email: 'guest@example.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+      # user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
     end
+    log_in user
+    redirect_to user
+  end
 
-    def new_guest
-      user = User.find_or_create_by!(nickname: "ゲスト様",email: 'guest@example.com') do |user|
-        user.password = SecureRandom.urlsafe_base64
-        # user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
-      end
-      log_in user
-      redirect_to user
-    end
-
-    def thanks_for_contacting
-      @user = current_user
-      redirect_to 'thanks.html.erb'
-    end
-
+  def thanks_for_contacting
+    @user = current_user
+    redirect_to 'thanks.html.erb'
+  end
 
   private
 
-    def user_params
-      params.require(:user).permit(:nickname,:email,:password,:password_confirmation,:image)
-    end
+  def user_params
+    params.require(:user).permit(:nickname, :email, :password, :password_confirmation, :image)
+  end
 
-    def set_user
-      @user = User.find(params[:id])
-    end
+  def set_user
+    @user = User.find(params[:id])
+  end
 
-    def correct_user
-      redirect_to(root_url) unless current_user?(@user)
-    end
+  def correct_user
+    redirect_to(root_url) unless current_user?(@user)
+  end
 
-    def check_guest
-      if current_user.email == 'guest@example.com'
-        redirect_to root_path
-      end
-    end
+  def check_guest
+    redirect_to root_path if current_user.email == 'guest@example.com'
+  end
 end

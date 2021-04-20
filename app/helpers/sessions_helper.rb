@@ -1,18 +1,17 @@
 module SessionsHelper
-
   # 渡されたユーザーでログインする
   def log_in(user)
     session[:user_id] = user.id
-      # このコードを実行すると、ユーザーのブラウザ内
-      # の一時cokkiesに暗号化済みのユーザーidが自動で
-      # 作成されます
-      # この後のページでsession[:user_id]を使って
-      # 元通りにIDを取り出すことができる
+    # このコードを実行すると、ユーザーのブラウザ内
+    # の一時cokkiesに暗号化済みのユーザーidが自動で
+    # 作成されます
+    # この後のページでsession[:user_id]を使って
+    # 元通りにIDを取り出すことができる
   end
-  
+
   def log_out
     session.delete(:user_id)
-     @current_user = nil
+    @current_user = nil
   end
 
   # ユーザーのセッションを永続的にする
@@ -30,14 +29,14 @@ module SessionsHelper
     # ランダムな文字列のトークンをクッキーに保存
   end
 
-    # 永続セッションを破棄する
-    def forget(user)
-      user.forget
-      #DBのremember_digestからデータ破棄
-      cookies.delete(:user_id)
-      cookies.delete(:remember_token)
-      # クッキーからもユーザーの情報削除
-    end
+  # 永続セッションを破棄する
+  def forget(user)
+    user.forget
+    # DBのremember_digestからデータ破棄
+    cookies.delete(:user_id)
+    cookies.delete(:remember_token)
+    # クッキーからもユーザーの情報削除
+  end
 
   # 現在ログインしているユーザーの情報を取得
   def current_user
@@ -56,21 +55,21 @@ module SessionsHelper
 
       # find_byの実行結果をインスタンス変数に保存する
       # ことで、1リクエスト内におけるデータベースへの
-      # 問い合わせは最初の一回だけになり、 
+      # 問い合わせは最初の一回だけになり、
       # 以後の呼び出しではインスタンス変数の結果を
       # 再利用する
 
       # すでに@current_userが存在する場合って何？
       # 一回current_userを実行したら、
       # @current_userがあるのでそれを使ってね
-      
+
       # sessionのuser＿idがあるということは
       # 既にログインしてるといてDBにユーザーの情報があるはず。
       # だからsessionのuser_idをDBでfind_byかければいい
     elsif  (user_id = cookies.signed[:user_id])
       # sessionが張られてなかったらcookiesにあるかも
       user = User.find_by(id: user_id)
-      if user && user.authenticated?(:remember,cookies[:remember_token])
+      if user&.authenticated?(:remember, cookies[:remember_token])
         # nilガード
         # クッキーのuser_idとremember_tokenが一致してる
         log_in user
@@ -98,7 +97,7 @@ module SessionsHelper
   end
 
   # 現在のユーザーをログアウトする
-  def log_out 
+  def log_out
     forget(current_user)
     # カレントユーザーのremember_digestを破棄
     # トークン、user_idを破棄
@@ -123,7 +122,7 @@ module SessionsHelper
   end
 
   # アクセスしようとしたURLを覚えとく
-  def store_location 
+  def store_location
     session[:forwarding_url] = request.original_url if request.get?
     # request.original_url はリクエストされたurl
     # それをセッションに保存

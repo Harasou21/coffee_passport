@@ -1,10 +1,9 @@
 class Drink < ApplicationRecord
-  
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :user
   has_one :trade
   has_many :drink_tag_relations, dependent: :delete_all
-  has_many :tags,through: :drink_tag_relations
+  has_many :tags, through: :drink_tag_relations
   has_many :comments
   has_many :likes
   has_many :liking_users, through: :likes, source: :user
@@ -21,13 +20,13 @@ class Drink < ApplicationRecord
   end
 
   after_create do
-    drink = Drink.find_by(id: self.id)
+    drink = Drink.find_by(id: id)
     # 作成した投稿を探させます
-    #binding.pry
-    hashtags = self.explain.scan(/[#＃][\w\p{Han}ぁ-ヶｦ-ﾟー]+/)
-       # 先頭に#がつく入力値を,drinkのexplainから
-       # 探し抽出します
-       drink.tags = []
+    # binding.pry
+    hashtags = explain.scan(/[#＃][\w\p{Han}ぁ-ヶｦ-ﾟー]+/)
+    # 先頭に#がつく入力値を,drinkのexplainから
+    # 探し抽出します
+    drink.tags = []
     hashtags.uniq.map do |hashtag|
       # ハッシュタグは先頭の#を外した上で保存
       tag = Tag.find_or_create_by(tag_name: hashtag.downcase.delete('#'))
@@ -36,12 +35,12 @@ class Drink < ApplicationRecord
     end
   end
 
-  #更新アクション
+  # 更新アクション
 
   before_update do
-    drink = Drink.find_by(id: self.id)
+    drink = Drink.find_by(id: id)
     # hashbodyに打ち込まれたハッシュタグを検出
-    hashtags = self.explain.scan(/[#＃][\w\p{Han}ぁ-ヶｦ-ﾟー]+/)
+    hashtags = explain.scan(/[#＃][\w\p{Han}ぁ-ヶｦ-ﾟー]+/)
     drink.tags = []
     hashtags.uniq.map do |hashtag|
       # ハッシュタグは先頭の#を外した上で保存
@@ -49,5 +48,4 @@ class Drink < ApplicationRecord
       drink.tags << tag
     end
   end
-
 end

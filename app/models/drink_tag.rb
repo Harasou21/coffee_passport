@@ -1,14 +1,13 @@
 class DrinkTag
-
   include ActiveModel::Model
 
-  attr_accessor :name,:price,:explain,:image,:user_id,:tag_name,:region_id,:body_id,:acidity_id,:processing_id
+  attr_accessor :name, :price, :explain, :image, :user_id, :tag_name, :region_id, :body_id, :acidity_id, :processing_id
 
   with_options presence: true do
     validates :explain
     validates :price
     validates :name
-    validates :image 
+    validates :image
     validates :tag_name
     # tagとdrinkでnameってカラム名かかってるけど
     # どっちも今のところpresense: trueでいいけど
@@ -19,7 +18,8 @@ class DrinkTag
   end
 
   def save
-    drink = Drink.create(name: name,price: price,explain: explain,image: image,user_id: user_id,region_id: region_id,body_id: body_id,acidity_id: acidity_id,processing_id: processing_id)
+    drink = Drink.create(name: name, price: price, explain: explain, image: image, user_id: user_id, region_id: region_id,
+                         body_id: body_id, acidity_id: acidity_id, processing_id: processing_id)
     tag = Tag.where(tag_name: tag_name).first_or_initialize
     # .first_or_initializeはwhereで検索した条件の
     # レコードがあれば、そのレコードのインスタンスを返し、
@@ -32,5 +32,4 @@ class DrinkTag
     tag.save
     DrinkTagRelation.create(drink_id: drink.id, tag_id: tag.id)
   end
-
 end

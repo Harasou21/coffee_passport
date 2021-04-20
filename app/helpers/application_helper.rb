@@ -1,11 +1,10 @@
 module ApplicationHelper
   def full_title(page_title = '')
-    base_title = "Coffee Passport"
+    base_title = 'Coffee Passport'
     if page_title.empty?
       base_title
     else
-      page_title + " | " + base_title
+      "#{page_title} | #{base_title}"
     end
   end
 end
-
