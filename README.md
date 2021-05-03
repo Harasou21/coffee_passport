@@ -106,7 +106,7 @@
 # ER図
 <img width="686" alt="スクリーンショット 2021-04-12 4 46 44" src="https://user-images.githubusercontent.com/67535886/114318954-35f3fe00-9b4a-11eb-869c-7d2ce49cf98f.png">
 
-
+# 工夫した場所
 
 # 今後実装したい内容
 
