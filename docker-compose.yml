@@ -1,0 +1,38 @@
+version: '3'
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./tmp/db:/var/lib/mysql
+  web:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/coffee_passport
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      RAILS_MASTER_KEY: ${RAILS_MASTER_KEY}
+      SENDGRID_API_KEY: ${SENDGRID_API_KEY}
+      ADMIN_USER_PASSWORD: ${ADMIN_USER_PASSWORD}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      GOOGLE_USER_NAME: ${GOOGLE_USER_NAME}
+      GOOGLE_PASSWORD: ${GOOGLE_PASSWORD}
+      SENDGRID_USER_NAME: ${SENDGRID_USER_NAME}
+      SENDGRID_PASSWORD: ${SENDGRID_PASSWORD}
+      PAYJP_SECRET_KEY: ${PAYJP_SECRET_KEY}
+      PAYJP_PUBLIC_KEY: ${PAYJP_PUBLIC_KEY}
+# selenium_chrome を使うために以下の行を追加
+      SELENIUM_DRIVER_URL: http://selenium_chrome:4444/wd/hub"
+  selenium_chrome:
+    image: selenium/standalone-chrome-debug
+    logging:
+      driver: none

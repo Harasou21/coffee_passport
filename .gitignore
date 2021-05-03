@@ -30,6 +30,6 @@
 yarn-debug.log*
 .yarn-integrity
 
-docker-compose.yml
+
 /config/database.yml
 .env
