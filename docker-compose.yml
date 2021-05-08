@@ -4,6 +4,7 @@ services:
     image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_HOST: db
     ports:
       - '3306:3306'
     volumes:
@@ -30,6 +31,7 @@ services:
       SENDGRID_PASSWORD: ${SENDGRID_PASSWORD}
       PAYJP_SECRET_KEY: ${PAYJP_SECRET_KEY}
       PAYJP_PUBLIC_KEY: ${PAYJP_PUBLIC_KEY}
+      MYSQL_HOST: db
 # selenium_chrome を使うために以下の行を追加
       SELENIUM_DRIVER_URL: http://selenium_chrome:4444/wd/hub"
   selenium_chrome:
