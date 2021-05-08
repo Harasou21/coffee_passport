@@ -98,7 +98,7 @@
   - 検索（ransack）、カテゴリー（Active Hash）
   - ページネーション (will_paginate)
   - メイラー(SendGrid)
-  - rubocop
+  - RuboCop
   
 - 開発環境
   - Docker/Docker Compose
