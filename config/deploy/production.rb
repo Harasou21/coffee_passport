@@ -50,13 +50,13 @@ server '18.179.97.156', user: 'ec2-user', roles: %w{app db web}
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
-# server "example.com",
-#   user: "user_name",
-#   roles: %w{web app},
-#   ssh_options: {
-#     user: "user_name", # overrides user setting above
-#     keys: %w(/home/user_name/.ssh/id_rsa),
-#     forward_agent: false,
-#     auth_methods: %w(publickey password)
-#     # password: "please use keys"
-#   }
+server '18.179.97.156',
+  user: "ec2-user",
+  roles: %w{web app},
+  ssh_options: {
+    user: "ec2-user", # overrides user setting above
+    keys: %w(~/.ssh/coffee-passport-ssh-key.pem),
+    forward_agent: true,
+    # auth_methods: %w(publickey password)
+    # password: "please use keys"
+  }
