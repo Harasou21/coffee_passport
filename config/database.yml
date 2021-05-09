@@ -56,4 +56,5 @@ production:
   database: coffee_passport_production
   username: root
   password: <%= ENV['MYSQL_ROOT_PASSWORD'] %>
-  socket: /var/lib/mysql
+  host: localhost
+  socket: /tmp/mysql.sock
