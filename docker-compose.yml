@@ -1,7 +1,7 @@
 version: '3'
 services:
   db:
-    image: mysql:5.7
+    image: mysql:8.0.21
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_HOST: db
@@ -9,6 +9,7 @@ services:
       - '3306:3306'
     volumes:
       - ./tmp/db:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password # 認証方式を8系以前のものにする
   web:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
