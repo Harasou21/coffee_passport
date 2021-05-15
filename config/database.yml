@@ -56,4 +56,5 @@ production:
   database: coffee_passport_production
   username: root
   password: <%= ENV['MYSQL_ROOT_PASSWORD'] %>
-  # host: cp-mysql.c3sv1rwobfad.ap-northeast-1.rds.amazonaws.com
+  host: cp-mysql.c3sv1rwobfad.ap-northeast-1.rds.amazonaws.com
+  socket: /var/lib/mysql/mysql.sock
