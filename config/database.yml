@@ -54,7 +54,7 @@ test:
 production:
   <<: *default
   database: coffee_passport_production
-  username:  rdsadmin
+  username:  root #RDSのマスターユーザー名
   password: <%= ENV['MYSQL_ROOT_PASSWORD'] %>
   host: cp-mysql.c3sv1rwobfad.ap-northeast-1.rds.amazonaws.com
   #socket: /var/lib/mysql/mysql.sock
