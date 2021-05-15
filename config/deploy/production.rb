@@ -52,7 +52,7 @@ server '18.179.97.156', user: 'ec2-user', roles: %w{app db web}
 # ------------------------------------
 # server '18.179.97.156',
 
-  ssh_options: {
+set  :ssh_options, {
     keys: %w(~/.ssh/coffee-passport-ssh-key.pem),
     forward_agent: true,
     # auth_methods: %w(publickey password)
