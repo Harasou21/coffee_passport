@@ -2,6 +2,10 @@
 
 # Coffee Passport
 
+※現在ドメインを変更したことにより、SendGridがうまく動いていない状況です！
+ドメイン変更前はうまく動いていました。
+今はSendGrid様に申請を出している状況です。
+
 # アプリケーション概要
 
 <img src="https://user-images.githubusercontent.com/67535886/114352475-dd068300-9ba6-11eb-918e-813aaa56a682.gif" width="500">
@@ -106,6 +110,22 @@
 <img width="686" alt="スクリーンショット 2021-04-12 4 46 44" src="https://user-images.githubusercontent.com/67535886/114318954-35f3fe00-9b4a-11eb-869c-7d2ce49cf98f.png">
 
 # 工夫した場所
+
+![contact-vue](https://user-images.githubusercontent.com/67535886/118401403-86f29700-b6a0-11eb-9f9f-10941a9a0da1.gif)
+
+Vue.jsを用いてコンタクトページを部分SPA化
+
+![hashtag](https://user-images.githubusercontent.com/67535886/118401406-8a861e00-b6a0-11eb-938b-e460a7ecf1eb.gif)
+
+ハッシュタグをリンクにして、モダンなハッシュタグ機能の実装
+
+
+次から購入する時の住所の自動入力は、一度購入をしたら、次から自動的に住所が入力されてる仕組みになっています。
+何も参考にせず自分で一からコードを書いていきました。
+それゆえに汚いコードですが、思い入れが非常にあります。
+
+
+
 
 # 今後実装したい内容
 
