@@ -27,7 +27,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @drinks = @user.drinks.paginate(page: params[:page], per_page: 10).order('created_at DESC')
+    @pagy,@drinks = pagy(@user.drinks.order('created_at DESC'))
   end
 
   def edit
@@ -64,7 +64,7 @@ class UsersController < ApplicationController
 
   def likes
     @user = User.find(params[:id])
-    @drinks = @user.like_drinks.paginate(page: params[:page], per_page: 10).order('created_at DESC')
+    @pagy,@drinks = pagy(@user.like_drinks.order('created_at DESC'))
     @title = "#{@user.nickname}がいいねした投稿"
   end
 
@@ -78,7 +78,7 @@ class UsersController < ApplicationController
 
     # binding.pry
 
-    @drinks = Drink.where(id: trades).paginate(page: params[:page], per_page: 10).order('created_at DESC')
+    @pagy,@drinks = pagy(Drink.where(id: trades).order('created_at DESC'))
     # この書き方だと同じ商品を購入できても、一つしか表示されない
     # .orderもdrinksのidを降順にしただけで、購入した順番ではない
     # binding.pry

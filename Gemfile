@@ -75,8 +75,6 @@ gem 'image_processing', '~> 1.2'
 gem 'active_hash'
 gem 'payjp'
 gem 'ransack'
-gem 'will_paginate',           '3.1.8'
-gem 'bootstrap-will_paginate', '1.0.0'
 gem "jquery-rails"
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
@@ -88,3 +86,4 @@ gem 'faker'
 gem 'dotenv-rails'
 # rack のアップデートのバグで画像が上手く開いてくれない見たいなので、グレードダウン(近々修正くるらしい)
 gem 'rails-i18n'
+gem 'pagy'
