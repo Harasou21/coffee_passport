@@ -1,5 +1,6 @@
 class DrinksController < ApplicationController
   include SessionsHelper
+  include Pagy::Backend
 
   before_action :logged_in_user, only: [:index, :new, :destroy]
   before_action :create_searching_object, only: [:show_searching_form, :search_drink]
