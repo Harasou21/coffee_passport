@@ -2,6 +2,7 @@ class DrinksController < ApplicationController
   include SessionsHelper
   include Pagy::Backend
 
+
   before_action :logged_in_user, only: [:index, :new, :destroy]
   before_action :create_searching_object, only: [:show_searching_form, :search_drink]
 
@@ -10,9 +11,10 @@ class DrinksController < ApplicationController
 
     following_ids = 'SELECT followed_id FROM relationships WHERE follower_id = :user_id'
 
-    @drinks = Drink.where.not(user_id: 6).where("user_id IN (#{following_ids}) OR user_id = :user_id", user_id: @user.id).paginate(
-      page: params[:page], per_page: 10
-    ).order('created_at DESC').includes(:user)
+    @pagy,@drinks = pagy(Drink.where.not(user_id: 6)
+                   .where("user_id IN (#{following_ids}) OR user_id = :user_id", user_id: @user.id)
+                   .order('created_at DESC')
+                   .includes(:user))
 
     @title = 'Timeline'
 

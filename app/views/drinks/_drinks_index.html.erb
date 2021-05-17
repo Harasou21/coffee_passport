@@ -1,5 +1,5 @@
 <div class='main'>
- <%= will_paginate drinks, previous_label: '<', next_label: '>', inner_window: 1%>
+ 
   <%# 商品一覧 %>
   <div class='item-contents'>
    
@@ -70,7 +70,8 @@
     <%end%>
 </div>
 
-     <%= will_paginate drinks, previous_label: '<', next_label: '>', inner_window: 1%>
+<%== pagy_nav(@pagy) %>
+
 
 
 
