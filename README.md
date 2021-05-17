@@ -99,7 +99,7 @@
 - その他
   - Formspree
   - 検索（ransack）、カテゴリー（Active Hash）
-  - ページネーション (will_paginate)
+  - ページネーション (pagy)
   - メイラー(SendGrid)
   - RuboCop
   
@@ -131,6 +131,9 @@ ransackは検索ができるgemでActive Hashはカテゴリーを簡単に作�
 カテゴリー検索できないだろうか。と試行錯誤して機能を実装しました。
 https://qiita.com/divclass123/items/479d1f3ac79a579039dd
 これは1300近く閲覧されてる自分が書いた記事で、gemを組み合わせてカテゴリー検索をしようとした際に他に情報が全くなかったので、この二つのgemを組み合わせてカテゴリー検索したのは自分が初めてのような気がします。
+
+
+最近(5/17)will_paginateからpagyにパフォーマンス向上のためにgemを取り替えました。
 
 
 
