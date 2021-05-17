@@ -17,7 +17,6 @@ class DrinksController < ApplicationController
 
     @selected = 'Selected'
 
-    # @user.following_ids _idsメソッドはidの集合をとってこれる
     @random_drinks = Drink.order('RAND()').limit(5)
   end
 
