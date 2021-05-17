@@ -61,13 +61,8 @@ li {
 }
 
 
-.pagination>.active>a{
-  color: maroon;
-}
 
-.pagination>.active>a:hover{
-  color: #E0C8B1;
-}
+
 
 .pagination {
   height: 50px;
@@ -75,12 +70,7 @@ li {
   display: flex;
 }
 
-.pagination a {
-  background-color:white;
-  text-decoration: none;
- background-color: white;
-color: black;
-}
+
 
 .pagination * {
   color: white;
@@ -91,26 +81,14 @@ color: black;
   margin-right: auto;
 }
 
-ul .pagination{
 
-
+.active{
+  background-color: maroon;
 }
 
-.current {
-  font-style: normal;
-  color: white;
-  background: white;
-
-  font-family: 'Nunito', sans-serif;
-}
-
-.pagination a:hover {
-  background: maroon;
-}
-
-.pagination .disabled {
-  color: #666666;
-  font-family: 'Nunito', sans-serif;
+.page a , .disabled{
+  color: black;
+  background-color: white;
 }
 
 textarea{

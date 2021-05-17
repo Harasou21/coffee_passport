@@ -76,7 +76,7 @@ class DrinksController < ApplicationController
   def hashtag
     @user = current_user
     if @tag = Tag.find_by(tag_name: params[:name])
-      @drinks = @tag.drinks.paginate(page: params[:page], per_page: 10).order('created_at DESC')
+      @pagy,@drinks = pagy(@tag.drinks.order('created_at DESC'))
       @title = "##{@tag.tag_name}"
     else
       render 'drinks/_not_found'
