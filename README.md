@@ -19,6 +19,15 @@
 
 *アプリGitHub：https://github.com/Harasou21/coffee_passport
 
+*購入機能の
+カード情報は、4242424242424242
+有効期間は 12月24日
+セキュリティコードは、123
+です。
+
+<img width="808" alt="スクリーンショット 2021-05-18 20 48 36" src="https://user-images.githubusercontent.com/67535886/118645897-7c5c0d00-b81a-11eb-89a2-830be16a5534.png">
+
+
 # ☕️制作背景
 
 ### Coffee was what I need.
