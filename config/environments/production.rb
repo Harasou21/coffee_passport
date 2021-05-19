@@ -1,6 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  host = 'http://54.178.31.60'
+  host = 'http://18.179.97.156'
 
   Rails.application.routes.default_url_options = {host: host,protocol: 'http'}
   config.action_mailer.raise_delivery_errors = true
