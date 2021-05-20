@@ -91,7 +91,7 @@
   - Rails 6.1.3.1
 
 - インフラ
-  - AWS（EC2/S3/ALB/Route53）
+  - AWS（VPC/EC2/S3/ALB/Route53）
   - Nginx/Unicorn
 
 - テスト
