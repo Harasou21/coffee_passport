@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
       #flash[:info] = 'メールをチェックしてアカウントを有効化してください.'
       @user.activate
-      redirect_to root_url
+      redirect_to user_path(@user)
     else
       render 'new'
     end
