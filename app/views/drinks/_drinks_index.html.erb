@@ -27,6 +27,7 @@
             <% end %>
           <%end%>
 
+          
             <div class='item-img-content'>
               <%= link_to drink_path(drink.id) do %>
               <%= image_tag drink.image , class: "item-img" if drink.image.attached? %>
@@ -57,6 +58,8 @@
               </div>
             <% end %>
             </div>
+            <%#ここにラベルを追加%>
+
             <%if drink.user.id == 6%>
             <%= link_to "商品を購入する",drink_trades_path(drink.id),class: "buy-link"%>
             <%end%>
