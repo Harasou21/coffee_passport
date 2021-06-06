@@ -82,7 +82,6 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection'
 gem 'oauth2'
 gem "aws-sdk-s3", require: false
-gem 'faker'
 gem 'dotenv-rails'
 # rack のアップデートのバグで画像が上手く開いてくれない見たいなので、グレードダウン(近々修正くるらしい)
 gem 'rails-i18n'
