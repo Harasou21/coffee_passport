@@ -6,8 +6,6 @@ a {
   //background: burlywood;
 }
 
-/* 画面上部の「人生を変えるフリマアプリ」帯部分 */
-
 
 /* 商品一覧 */
 
@@ -169,4 +167,55 @@ color: gray;
 
 /* //商品一覧 */
 
-// 商品詳細
+
+// タイムラインのユーザーのラベルについてのCSS
+
+
+
+.user-info-timeline {
+  background-color: #3c1900;
+  display: flex;
+  justify-content: start;
+  height: 50px;
+  color: aliceblue;
+}
+
+.user-info-timeline:hover{
+  color:maroon;
+}
+
+.user-img-timeline{
+  border-radius: 50%;
+  width: 50px;
+}
+
+.user-img-timeline:hover{
+  opacity: 50%;
+}
+
+.username-timeline{
+  margin: auto 0 auto 0;
+}
+
+// タイムラインのユーザーのラベルについてのCSS
+
+
+
+// コーヒーラベルのCSS
+.body-light{
+  background-color: #3c1900;
+  height: 10px;
+
+}
+
+.body-medium{
+  background-color: #3c1900;
+  height: 10px;
+}
+
+.body-full{
+  background-color: #3c1900;
+  height: 10px;
+}
+
+// コーヒーラベルのCSS
