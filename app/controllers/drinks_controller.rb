@@ -21,6 +21,9 @@ class DrinksController < ApplicationController
     @selected = 'Selected'
 
     @random_drinks = Drink.order('RAND()').limit(5)
+
+  
+    
   end
 
   def show
