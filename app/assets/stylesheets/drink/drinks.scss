@@ -203,18 +203,33 @@ color: gray;
 
 // コーヒーラベルのCSS
 .body-light{
-  background-color: #3c1900;
+  background-color:#E48B63	;
   height: 10px;
 
 }
 
 .body-medium{
-  background-color: #3c1900;
+  background-color:#B36D4D;
   height: 10px;
 }
 
 .body-full{
-  background-color: #3c1900;
+  background-color:#3c1900;
+  height: 10px;
+}
+
+.acidity-low{
+  background-color:lightyellow;
+  height: 10px;
+}
+
+.acidity-medium{
+  background-color:#FFD700;
+  height: 10px;
+}
+
+.acidity-high{
+  background-color:yellow;
   height: 10px;
 }
 
