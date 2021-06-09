@@ -60,6 +60,37 @@
             </div>
             <%#ここにラベルを追加%>
 
+            
+            <%case drink.body.id
+              when 2%>
+            <%# コーヒーのコクが軽い場合%>
+            <div class="body-light"></div>
+            <%when 3%>
+            <%# コーヒーのコクが程よい場合%>
+            <div class="body-medium"></div>
+            <%when 4%>
+            <%# コーヒーのコクがしっかりしてる場合%>
+            <div class="body-full"></div>
+            <% else %>
+            <%# コーヒーのコクが登録されてない場合%>
+            <div class="body-nothing"></div>
+            <% end %>
+
+            <%case drink.acidity.id
+             when 2%>
+            <%# コーヒーの酸味が場合%>
+            <div class="acidity-low"></div>
+            <%when 3%>
+            <%# コーヒーの酸味が程よい場合%>
+            <div class="acidity-medium"></div>
+            <%when 4%>
+            <%# コーヒーの酸味が強い場合%>
+            <div class="acidity-high"></div>
+            <% else %>
+            <div class="acidity-nothing"></div>
+            <% end %>
+            
+
             <%if drink.user.id == 6%>
             <%= link_to "商品を購入する",drink_trades_path(drink.id),class: "buy-link"%>
             <%end%>
