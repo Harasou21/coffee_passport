@@ -3,7 +3,7 @@
   <div class="user-profile">
     <div class="follow-user">
       <h2 class="user-profile-name"><%= @user.nickname %></h2>
-      <% unless current_user?(@user) %>
+      <% if current_user != @user %>
         <div id="follow_form">
         <% if current_user.following?(@user) %>
           <%= render 'unfollow' %>

@@ -40,4 +40,9 @@ plugin :tmp_restart
 app_root = File.expand_path("../..", __FILE__)
 bind "unix://#{app_root}/tmp/sockets/puma.sock"
 
-stdout_redirect "#{app_root}/log/puma.stdout.log", "#{app_root}/log/puma.stderr.log", true
+# stdout_redirect "#{app_root}/log/puma.stdout.log", "#{app_root}/log/puma.stderr.log", true
+unless ENV.fetch("RAILS_ENV", "development") == "development"
+  stdout_redirect "#{app_root}/log/puma.stdout.log", "#{app_root}/log/puma.stderr.log", true
+end
+# puma.rbで、標準出力が log/puma.stdout.log にリダイレクトされていたのが原因だった。
+# 開発環境ではファイルにリダイレクトしない形にしたらコンソールが表示されるようになった。

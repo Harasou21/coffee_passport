@@ -22,7 +22,7 @@ class DrinksController < ApplicationController
 
     @random_drinks = Drink.order('RAND()').limit(5)
 
-  
+   # binding.pry
     
   end
 
