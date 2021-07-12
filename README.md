@@ -120,7 +120,7 @@
 
 # インフラ構成図
 <img width="565" alt="スクリーンショット 2021-07-11 19 25 04" src="https://user-images.githubusercontent.com/67535886/125191509-c80cbf00-e27d-11eb-9d4c-28657e9a7666.png">
-
+*develoverではなく、developer
 
 # 工夫した場所
 
