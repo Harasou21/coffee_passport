@@ -118,6 +118,10 @@
 # ER図
 <img width="686" alt="スクリーンショット 2021-04-12 4 46 44" src="https://user-images.githubusercontent.com/67535886/114318954-35f3fe00-9b4a-11eb-869c-7d2ce49cf98f.png">
 
+# インフラ構成図
+<img width="565" alt="スクリーンショット 2021-07-11 19 25 04" src="https://user-images.githubusercontent.com/67535886/125191509-c80cbf00-e27d-11eb-9d4c-28657e9a7666.png">
+*develoverではなく、developer
+
 # 工夫した場所
 
 ![contact-vue](https://user-images.githubusercontent.com/67535886/118401403-86f29700-b6a0-11eb-9f9f-10941a9a0da1.gif)
