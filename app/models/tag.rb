@@ -5,4 +5,6 @@ class Tag < ApplicationRecord
   validates :tag_name, uniqueness: true
   # 存在性の制約はformsで設けて大丈夫だけど
   # 一意性はモデル単位で設ける必要がある
+
+  
 end
