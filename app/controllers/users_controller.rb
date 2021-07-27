@@ -29,7 +29,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @pagy,@drinks = pagy(@user.drinks.order('created_at DESC'))
+    @pagy,@drinks = pagy(@user.drinks.order('created_at DESC').includes(image_attachment: :blob))
   end
 
   def edit
@@ -66,7 +66,7 @@ class UsersController < ApplicationController
 
   def likes
     @user = User.find(params[:id])
-    @pagy,@drinks = pagy(@user.like_drinks.order('created_at DESC'))
+    @pagy,@drinks = pagy(@user.like_drinks.order('created_at DESC').includes(:user,{image_attachment: :blob}))
     @title = "#{@user.nickname}がいいねした投稿"
   end
 
