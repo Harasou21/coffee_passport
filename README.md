@@ -126,23 +126,23 @@
 
 ![contact-vue](https://user-images.githubusercontent.com/67535886/118401403-86f29700-b6a0-11eb-9f9f-10941a9a0da1.gif)
 
-Vue.jsを用いてコンタクトページを部分SPA化
+↑Vue.jsを用いてコンタクトページを部分SPA化
 
 ![hashtag](https://user-images.githubusercontent.com/67535886/118401406-8a861e00-b6a0-11eb-938b-e460a7ecf1eb.gif)
 
-ハッシュタグをリンクにして、モダンなハッシュタグ機能の実装
+↑ハッシュタグをリンクにして、モダンなハッシュタグ機能の実装
 
 
-次から購入する時の住所の自動入力は、一度購入をしたら、次から自動的に住所が入力されてる仕組みになっています。
+- 次から購入する時の住所の自動入力は、一度購入をしたら、次から自動的に住所が入力されてる仕組みになっています。
 何も参考にせず自分で一からコードを書いていきました。
 それゆえに汚いコードですが、思い入れが非常にあります。
 
-開発環境にgem 'bullet'を導入し、効率的にN+1問題の解決をしました。
+- 開発環境にgem 'bullet'を導入し、効率的にN+1問題の解決をしました。
 
 
 ![search](https://user-images.githubusercontent.com/67535886/118401995-dfc32f00-b6a2-11eb-8af2-387c561629cd.gif)
 
-これはransackとActive Hashという異なるgemを組み合わせてカテゴリー検索できるようにしました。
+↑これはransackとActive Hashという異なるgemを組み合わせてカテゴリー検索できるようにしました。
 ransackは検索ができるgemでActive Hashはカテゴリーを簡単に作れるgemなので組み合わせて
 カテゴリー検索できないだろうか。と試行錯誤して機能を実装しました。
 https://qiita.com/divclass123/items/479d1f3ac79a579039dd
