@@ -1,3 +1,4 @@
+
 # MySQL. Versions 5.5.8 and up are supported.
 #
 # Install the MySQL driver
@@ -15,10 +16,8 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password: <%= ENV['MYSQL_ROOT_PASSWORD'] %>
-  socket: /tmp/mysql.sock  
-
- # host: <%= ENV['MYSQL_HOST'] || 'localhost' %> 
-
+  socket: /tmp/mysql.sock
+  host: <%= ENV['MYSQL_HOST'] || 'localhost' %>
 
 development:
   <<: *default
@@ -59,4 +58,4 @@ production:
   username:  root #RDSのマスターユーザー名
   password: <%= ENV['MYSQL_ROOT_PASSWORD'] %>
   host: cp-mysql.c3sv1rwobfad.ap-northeast-1.rds.amazonaws.com
-  socket: /var/lib/mysql/mysql.sock
+  #socket: /var/lib/mysql/mysql.sock
