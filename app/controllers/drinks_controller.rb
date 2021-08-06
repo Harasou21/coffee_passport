@@ -27,7 +27,7 @@ class DrinksController < ApplicationController
   end
 
   def show
-    @drink = Drink.find(params[:id]).includes(:likes)
+    @drink = Drink.find(params[:id])
     @user = @drink.user
     @comment = Comment.new
     @comments = @drink.comments.includes(:user).order('created_at DESC')
