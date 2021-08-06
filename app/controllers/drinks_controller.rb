@@ -11,23 +11,23 @@ class DrinksController < ApplicationController
 
     following_ids = 'SELECT followed_id FROM relationships WHERE follower_id = :user_id'
 
-    @pagy,@drinks = pagy(Drink.where.not(user_id: 6)
-                   .where("user_id IN (#{following_ids}) OR user_id = :user_id", user_id: @user.id)
-                   .order('created_at DESC')
-                   .includes(:user))
+    @pagy,@drinks = pagy(Drink.includes(:user ,{image_attachment: :blob})
+                    .where.not(user_id: 6)
+                    .where("user_id IN (#{following_ids}) OR user_id = :user_id", user_id: @user.id)
+                    .order('drinks.created_at DESC'))
 
     @title = 'Timeline'
 
     @selected = 'Selected'
 
-    @random_drinks = Drink.order('RAND()').limit(5)
+   @random_drinks = Drink.includes(:user, {image_attachment: :blob}).order('RAND()').limit(5)
 
    # binding.pry
     
   end
 
   def show
-    @drink = Drink.find(params[:id])
+    @drink = Drink.find(params[:id]).includes(:likes)
     @user = @drink.user
     @comment = Comment.new
     @comments = @drink.comments.includes(:user).order('created_at DESC')
