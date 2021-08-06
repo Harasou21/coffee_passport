@@ -20,6 +20,11 @@ Rails.application.routes.draw do
       # ユーザーidが含まれてるURlを扱うようになる
     end
   end
+
+  namespace :api, format: 'json' do
+    resources :users, only: [:show]
+  end
+
   get 'drinks/searchingform', to: 'drinks#show_searching_form'
   get '/drinks/searchdrink',  to: 'drinks#search_drink'
   get '/drink/hashtag/:name', to: "drinks#hashtag"
