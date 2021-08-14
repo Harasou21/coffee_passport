@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  namespace :api do
+    get 'likes/index'
+    get 'likes/create'
+    get 'likes/destroy'
+  end
   root to: 'drinks#index'
   get    '/login',   to: 'sessions#new'
   post    '/users/auth/:provider/callback',to: 'sessions#create'
