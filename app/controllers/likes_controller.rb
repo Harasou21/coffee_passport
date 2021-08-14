@@ -4,15 +4,15 @@ class LikesController < ApplicationController
   before_action :set_variables
 
   def like
-    like = current_user.likes.new(drink_id: @drink.id)
+    current_user.likes.new(drink_id: @drink.id).save
     # redirect_to drinks_path
     # jsを用いるので画面遷移は行わない
     # binding.pry
-    like.save
+    #=> like.js.erbに遷移する。
   end
 
   def unlike
-    like = current_user.likes.find_by(drink_id: @drink.id).destroy
+     current_user.likes.find_by(drink_id: @drink.id).destroy
     # binding.pry
   end
 
