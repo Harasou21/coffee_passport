@@ -17,6 +17,8 @@ cd coffee_passport
 docker-compose up --build
 ```
 
+※gitやdockerのインストールは適宜お願いいたします。
+
 
 ※現在ドメインを変更したことにより、SendGridがうまく動いていない状況です！
 ドメイン変更前はうまく動いていました。
