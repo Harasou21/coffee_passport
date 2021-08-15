@@ -45,6 +45,11 @@ Rails.application.routes.draw do
     resources :drinks, only: [:show]
   end
 
+  namespace :api, { format: 'json' } do
+    resources :likes, only: [:like,:unlike]
+  end
+
+
   post '/drinks/:id/trades/new', to: 'trades#create'
   resources :relationships, only: [:create,:destroy]
   post 'like/:drink_id' ,to: 'likes#like', as: 'like'
