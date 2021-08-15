@@ -16,4 +16,8 @@
   <% end %>
 </div>
 
+<script>
+var user = <%= { id: current_user.try(:id) }.to_json.html_safe %>;
+var drink = <%= { id: drink.try(:id) }.to_json.html_safe %>;
+</script>
 
