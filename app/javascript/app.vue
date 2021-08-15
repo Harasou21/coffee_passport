@@ -44,7 +44,8 @@
                 </tr>
             </tbody>
           </table>
-
+              <!-- この部分にいいねボタンを記述 -->
+              <likeButton></likeButton>
         </div>
         <div class="item-delete">
         </div>
@@ -70,9 +71,13 @@
 
 <script>
 import axios from 'axios';
+import likeButton from './packs/components/like/likeButton.vue'
 
 
 export default {
+  components: {
+      likeButton
+  },
   data: function (){
     return{
       drink: "drink"
