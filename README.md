@@ -2,6 +2,22 @@
 
 # Coffee Passport
 
+# 開発環境の立ち上げ方
+
+```
+git clone https://github.com/Harasou21/coffee_passport.git
+```
+
+
+```
+cd coffee_passport
+```
+
+```
+docker-compose up --build
+```
+
+
 ※現在ドメインを変更したことにより、SendGridがうまく動いていない状況です！
 ドメイン変更前はうまく動いていました。
 今はSendGrid様に申請を出している状況です。
