@@ -1,0 +1,1 @@
+json.array!  @likes, :drink_id ,:user_id
