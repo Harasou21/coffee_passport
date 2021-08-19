@@ -46,7 +46,7 @@ Rails.application.routes.draw do
   end
 
   namespace :api, { format: 'json' } do
-    resources :likes, only: [:like,:unlike]
+    resources :likes, only: [:index,:like,:unlike]
   end
 
 

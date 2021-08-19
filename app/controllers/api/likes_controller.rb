@@ -3,6 +3,11 @@ class Api::LikesController < ApplicationController
 
   before_action :set_variables
 
+  def index
+    # その投稿のいいね一覧を取得
+    @like = Like.filter_by_drink(params[:post_id]).select(:id, :user_id, :drink_id)
+  end
+
   def like
     @like = current_user.likes.new(drink_id: @drink.id)
     @like.save
@@ -23,4 +28,9 @@ class Api::LikesController < ApplicationController
   def set_variables
     @drink = Drink.find(params[:drink_id])
   end
+
+  def likes_params
+    params.require(:like).permit(:drink_id)
+  end
+
 end
