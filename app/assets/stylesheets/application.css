@@ -30,7 +30,7 @@ body{
 
 .main-wrapper{
   position: relative;
-  min-height: 1000px;
+  /* min-height: 1000px; */
 }
 
 footer{
