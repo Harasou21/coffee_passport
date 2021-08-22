@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
-  namespace :api do
-    get 'likes/index'
-    get 'likes/create'
-    get 'likes/destroy'
-  end
+
+
   root to: 'drinks#index'
   get    '/login',   to: 'sessions#new'
   post    '/users/auth/:provider/callback',to: 'sessions#create'
@@ -46,7 +43,7 @@ Rails.application.routes.draw do
   end
 
   namespace :api, { format: 'json' } do
-    resources :likes, only: [:index,:like,:unlike]
+    resources :likes, only: [:index, :create, :destroy]
   end
 
 
