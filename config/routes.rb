@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   root to: 'drinks#index'
   get    '/login',   to: 'sessions#new'
   post    '/users/auth/:provider/callback',to: 'sessions#create'
@@ -35,6 +37,16 @@ Rails.application.routes.draw do
     
     resources :trades,only: [:index,:new,:create]
   end
+
+  namespace :api, format: 'json' do
+    resources :drinks, only: [:show]
+  end
+
+  namespace :api, { format: 'json' } do
+    resources :likes, only: [:index, :create, :destroy]
+  end
+
+
   post '/drinks/:id/trades/new', to: 'trades#create'
   resources :relationships, only: [:create,:destroy]
   post 'like/:drink_id' ,to: 'likes#like', as: 'like'

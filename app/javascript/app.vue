@@ -1,67 +1,116 @@
 <template>
 
+<div class='show-main'>
+
+  <div class='item-contents'>
+    <h2 class='title'></h2>
+    <ul class='item-lists'>
+
+      <li class='list'>
+
+        <div class='item-img-content'>
+          <img class= "item-img" v-bind:src="drink.image" >
+
+        </div>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            {{drink.name}} 
+          </h3>
+          <div class='item-price'>
+            <span>{{drink.price}}円<br>(税込み)</span>
+          </div>
+          <div class='item-explain'>
+             {{drink.explain}}
+          </div>
 
 
-<div class="top-explain">
-  <h3 class="top-explain-title">Von Voyage!</h3>
-  <p class="app-concept">Coffee Passportとはあなたが出会ったコーヒーの記録を共有できるサービスです</p>
+          <table class="item-category">
+            <tbody>
+              <tr class="item-region">
+                  <th class="region-title">産地 </th>
+                  <td v-if="drink.region_id" class="region-name">{{drink.region_name}}</td>
+              </tr>
+                <tr class="item-body">
+                  <th class="body-title">コク</th> 
+                  <td v-if="drink.body_id" class="body-name">{{drink.body_name}}</td>
+                </tr>
+                <tr class="item-acidity">
+                    <th class="acidity-title">酸味</th> 
+                    <td v-if="drink.acidity_id" class="acidity-name">{{drink.acidity_name}}</td>
+                </tr>
+                <tr class="item-processing">
+                    <th class="processing-title">加工法</th>
+                     <td v-if="drink.processing_id" class="processing-name">{{drink.processing_name}}</td>
+                </tr>
+            </tbody>
+          </table>
+              <!-- この部分にいいねボタンを記述 -->
+              <likeButton></likeButton>
+        </div>
+        <div class="item-delete">
+        </div>
 
-    <div class="explain-wrapper">
-    <ruby>
-      <h3 class="explain-wrapper-title">出会ったコーヒーをシェアしよう</h3>
-      <rt class="explain-wrapper-title-en">share your favorite coffee</rt>
-    </ruby>
+      </li>
 
+    </ul>
 
-      <p class="explain-wrapper-info">
-      出会ったコーヒーの感想を記録して共有しましょう。
-      その投稿が、素敵なコーヒーを求めてる誰かのヒントになるでしょう。
-      </p>
-      
+    <div class="comment-container">
+      <div id="comments-create">
+        <!-- <%= render partial: 'comments/create', locals: {comment: @comment, drink: @drink} %> -->
+      </div>
     </div>
-    <div class="explain-wrapper">
-    <ruby>
-      <h3 class="explain-wrapper-title">コーヒーを探す旅へ</h3>
-      <rt class="explain-wrapper-title-en">vayage to find coffee</rt>    
-    </ruby>
 
-      <p class="explain-wrapper-info">
-      お気に入りのコーヒーに出会いたいときは、検索してみましょう。
-      コーヒーの名前、コク、酸味、産地、加工法などで検索できます。
-      </p>
-    </div>
-    <div class="explain-wrapper">
-    <ruby>
-      <h3 class="explain-wrapper-title">素敵なコーヒーがあなたの手元に</h3>
-      <rt class="explain-wrapper-title-en">special coffee will come to your house</rt>    
-    </ruby>
+    <div id="comments-index">
+       <!-- <%= render partial: 'comments/index', locals: {comments: @comments,drink: @drink} %> -->
+    </div>  
 
-
-      <p class="explain-wrapper-info">
-        コーヒーを家でも楽しみたいなら、素敵なコーヒーのラインナップを
-        取り揃えておりますので、ぜひお求めください。
-      </p>
-    </div>
-     <div class="explain-wrapper">
-     <ruby>
-      <h3 class="explain-wrapper-title">いいねやコメントで盛り上がろう</h3>
-      <rt class="explain-wrapper-title-en">smash that like button and comment </rt>
-     </ruby>
-
-
-      <p class="explain-wrapper-info">
-        気に入った投稿に「いいね」を押したり、コメントして
-        一杯のコーヒーが生み出すコミュニティに参加しましょう。
-      </p>
-    </div>   
+  </div>
 </div>
 
 </template>
 
 <script>
+import axios from 'axios';
+import likeButton from './packs/components/like/likeButton.vue'
+
+
 export default {
-  setup() {
-    
+  components: {
+      likeButton
   },
+  data: function (){
+    return{
+      drink: "drink"
+    }
+  },
+  mounted () {
+    this.setDrink();
+    // this.setRegion();
+  },
+  methods: {
+    setDrink: function(){
+      axios.get('/api' + location.pathname)
+        .then(response => (
+          this.drink = response.data
+       
+        ))
+    }
+    // setRegion: function(){
+    //   switch(this.drink.region_id){
+    //     case 1:
+    //       this.drink.region.name = "---";
+    //     case 2:
+    //       this.drink.region.name = "マルチリージョン";
+    //     case 3: 
+    //       this.drink.region.name = "ラテンアメリカ";
+    //                 console.log(this.drink.region.name)
+    //     case 4:
+    //       this.drink.region.name = "アフリカ";
+    //     case 5:
+    //       this.drink.region.name = "アジア、太平洋"
+    //   }
+    // }
+  }
 }
+
 </script>

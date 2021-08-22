@@ -1,4 +1,6 @@
 class Drink < ApplicationRecord
+  attr_accessor :region_name ,:acidity_name,:body_name ,:processing_name
+  # json形式でvueの方にカテゴリーを渡すためにカテゴリーの属性を定義
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :user
   has_one :trade
