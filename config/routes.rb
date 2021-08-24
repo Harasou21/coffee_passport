@@ -39,7 +39,7 @@ Rails.application.routes.draw do
   end
 
   namespace :api, format: 'json' do
-    resources :drinks, only: [:show]
+    resources :drinks, only: [:index,:show]
   end
 
   namespace :api, { format: 'json' } do
