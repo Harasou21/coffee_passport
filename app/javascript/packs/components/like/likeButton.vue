@@ -46,6 +46,7 @@ export default {
    created: function(){
      // vueインスタンスの作成、初期化直後に実行される
      this.fetchLikeByDrinkId().then(result =>{
+       console.log(result)
        this.likeList = result
      })
    },
@@ -56,15 +57,14 @@ export default {
         const response = await axios.get('/api/likes',{params: {drink_id:drink.id,user_id: user.id}})
         // await 
         // その投稿のいいね一覧を取得したい
-        if (response.status !== 200){ process.exit()}
         // もし処理が失敗したらプロセスから抜ける(処理をやめる？)
         return response.data
+
 
     },
      registerLike: async function(){
        // rails側のcreateアクションにリクエストするメソッド
        const response = await axios.post('/api/likes',{drink_id: drink.id,user_id: user.id})
-       if (response.status !== 201) {process.exit()}
        this.fetchLikeByDrinkId().then(result => {
         this.likeList = result
         
@@ -74,7 +74,6 @@ export default {
        // rails側のdestroyアクションにリクエストするメソッド
        const likeId = this.findLikeId()
        const response = await axios.delete(`/api/likes/${likeId}`,{params: {drink_id:drink.id,user_id: user.id}})
-       if (response.status !== 200){process.exit()}
        this.likeList = this.likeList.filter(n => n.id !== likeId)
      },
      // ログインユーザーがいいねしているLikeモデルのidを返す

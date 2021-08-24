@@ -1,6 +1,6 @@
 class Api::LikesController < ApplicationController
 
-  before_action :set_variables
+  before_action :set_variables, only: [:create,:destroy]
 
   def index
     # その投稿のいいね一覧を取得
@@ -10,26 +10,24 @@ class Api::LikesController < ApplicationController
   def create
     @like = @user.likes.new(drink_id: @drink.id)
     @like.save
-
     head :created
   end
 
   def destroy
-     @like = @user.likes.find_by(drink_id: @drink.id)
-     @like.destroy
+    @like = @user.likes.find_by(drink_id: @drink.id)
+    @like.destroy
     head :ok
   end
 
   private
 
-  def set_variables
+    def set_variables
+      @user = User.find(params[:user_id])
+      @drink = Drink.find(params[:drink_id])
+    end
 
-    @user = User.find(params[:user_id])
-    @drink = Drink.find(params[:drink_id])
-  end
-
-  def likes_params
-    params.require(:like).permit(:drink_id)
-  end
+    def likes_params
+      params.require(:like).permit(:drink_id)
+    end
 
 end
