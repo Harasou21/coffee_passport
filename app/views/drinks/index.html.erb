@@ -1,5 +1,8 @@
 
 <% provide(:title,"Home")%>
 
-
-<%= render 'drinks_index',drink: @drink, drinks: @drinks,title: @title%>
+<%= javascript_pack_tag 'hello_vue' %>
+<%# <%= render 'drinks_index',drink: @drink, drinks: @drinks,title: @title%> 
+<script>
+var user = <%= { id: current_user.try(:id) }.to_json.html_safe %>;
+</script>
