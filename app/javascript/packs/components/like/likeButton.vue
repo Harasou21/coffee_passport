@@ -24,6 +24,7 @@ import axios from 'axios'
 
 export default {
    props: ["drinkId"],
+   // user.idはdrinks/index.html.erbに定義
    data(){
      return{
        likeList: []
