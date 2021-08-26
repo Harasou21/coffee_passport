@@ -9,8 +9,8 @@
       <li class='list'>
 
         <div class='item-img-content'>
+          <button v-on:click="hide(drink)">戻る</button>
           <img class= "item-img" v-bind:src="drink.image" >
-
         </div>
         <div class='item-info'>
           <h3 class='item-name'>
@@ -45,11 +45,10 @@
             </tbody>
           </table>
               <!-- この部分にいいねボタンを記述 -->
-              <likeButton></likeButton>
+              <likeButton :drinkId=drink.id></likeButton>
         </div>
         <div class="item-delete">
         </div>
-
       </li>
 
     </ul>
@@ -70,31 +69,37 @@
 </template>
 
 <script>
-import axios from 'axios';
-import likeButton from './packs/components/like/likeButton.vue'
 
+import axios from 'axios';
+import likeButton from '../like/likeButton.vue'
 
 export default {
+  props: ['drink'],
   components: {
       likeButton
   },
-  data: function (){
-    return{
-      drink: "drink"
-    }
-  },
-  mounted () {
-    this.setDrink();
-    // this.setRegion();
-  },
   methods: {
-    setDrink: function(){
-      axios.get('/api' + location.pathname)
-        .then(response => (
-          this.drink = response.data
-       
-        ))
+    hide : function (drink) {
+      this.$modal.hide(`display-drink-${drink.id}`);
     }
+  }
+  // data: function (){
+  //   return{
+  //     drink: "drink"
+  //   }
+  // },
+  // mounted () {
+  //   this.setDrink();
+  //   // this.setRegion();
+  // },
+  // methods: {
+  //   setDrink: function(){
+  //     axios.get('/api' + drink.id)
+  //       .then(response => (
+  //         this.drink = response.data
+       
+  //       ))
+  //   },
     // setRegion: function(){
     //   switch(this.drink.region_id){
     //     case 1:
@@ -110,7 +115,7 @@ export default {
     //       this.drink.region.name = "アジア、太平洋"
     //   }
     // }
-  }
 }
 
 </script>
+
