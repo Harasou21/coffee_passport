@@ -176,10 +176,12 @@ https://qiita.com/divclass123/items/479d1f3ac79a579039dd
 
 最近(5/17)will_paginateからpagyにパフォーマンス向上のためにgemを取り替えました。
 
--投稿一覧をvueで記述し、投稿詳細ページもvueで記述してをvue-js-modalによってモーダルウィンドウで表示。
+![モーダルウィンドウ](https://user-images.githubusercontent.com/67535886/131092611-f148cc5a-0b95-4a73-95ff-5e98ce07f8a3.gif)
+
+↑投稿一覧をvueで記述し、投稿詳細ページもvueで記述してをvue-js-modalによってモーダルウィンドウで表示。
 部分SPA化させることができました。
 
-![モーダルウィンドウ](https://user-images.githubusercontent.com/67535886/131092611-f148cc5a-0b95-4a73-95ff-5e98ce07f8a3.gif)
+
 
 [その時に書いた記事](https://qiita.com/divclass123/items/71465f7a6c313a533eeb)
 
