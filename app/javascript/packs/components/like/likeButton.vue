@@ -23,7 +23,8 @@ import axios from 'axios'
 
 
 export default {
-   props: ['user', 'drink'],
+   props: ["drinkId"],
+   // user.idはdrinks/index.html.erbに定義
    data(){
      return{
        likeList: []
@@ -54,7 +55,7 @@ export default {
     fetchLikeByDrinkId: async function(){
        // async function()
        // jsの非同期処理
-        const response = await axios.get('/api/likes',{params: {drink_id:drink.id,user_id: user.id}})
+        const response = await axios.get('/api/likes',{params: {drink_id:this.drinkId,user_id: user.id}})
         // await 
         // その投稿のいいね一覧を取得したい
         // もし処理が失敗したらプロセスから抜ける(処理をやめる？)
@@ -64,7 +65,7 @@ export default {
     },
      registerLike: async function(){
        // rails側のcreateアクションにリクエストするメソッド
-       const response = await axios.post('/api/likes',{drink_id: drink.id,user_id: user.id})
+       const response = await axios.post('/api/likes',{drink_id: this.drinkId,user_id: user.id})
        this.fetchLikeByDrinkId().then(result => {
         this.likeList = result
         
@@ -73,7 +74,7 @@ export default {
      deleteLike: async function(){
        // rails側のdestroyアクションにリクエストするメソッド
        const likeId = this.findLikeId()
-       const response = await axios.delete(`/api/likes/${likeId}`,{params: {drink_id:drink.id,user_id: user.id}})
+       const response = await axios.delete(`/api/likes/${likeId}`,{params: {drink_id: this.drinkId,user_id: user.id}})
        this.likeList = this.likeList.filter(n => n.id !== likeId)
      },
      // ログインユーザーがいいねしているLikeモデルのidを返す

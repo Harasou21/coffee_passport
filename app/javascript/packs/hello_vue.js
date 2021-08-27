@@ -7,7 +7,8 @@
 
 import Vue from 'vue'
 import App from '../app.vue'
-
+import VModal from 'vue-js-modal'
+Vue.use(VModal)
 
 
 document.addEventListener('DOMContentLoaded', () => {

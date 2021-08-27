@@ -1,116 +1,97 @@
 <template>
-
-<div class='show-main'>
-
+  <div class='main'>
+ 
   <div class='item-contents'>
-    <h2 class='title'></h2>
+   
+    <h2 class='title'>タイムライン</h2>
     <ul class='item-lists'>
+        <li v-for="drink in drinks" :key="drink.id" class="list" >
+              <div class="user-info-timeline">
+                  <img class="user-img-timeline" v-bind:src="drink.user_img" > 
+                  <div class="username-timeline">
+                      {{drink.nickname}}
+                  </div>
+              </div>
 
-      <li class='list'>
+            <div class='item-img-content'>
+              <img class= "item-img" v-bind:src="drink.image" >
+            </div>
+            <div class='item-info'>
+              <h3 class="item-name"> 
+                {{drink.name }}
+              </h3>
+              <div class='item-price'>
+                <span>{{ drink.price }}円<br>(税込み)</span>
+              </div>
+              <div class='item-explain'>
+                {{drink.explain}}
+              </div>
+              <div class='item-tag'>
 
-        <div class='item-img-content'>
-          <img class= "item-img" v-bind:src="drink.image" >
+              </div>
+              <div class="like-and-comment">
+                 <likeButton :drinkId=drink.id></likeButton>
+                 <i class="far fa-comment fa-lg"></i>
+                <button v-on:click="show(drink)">詳細を表示</button>
+              </div>
+            </div>
+                <modal v-bind:name="'display-drink-'+drink.id"
+                 height="1000px" 
+                 styles="background-color: bisque">
+                  <drinkShow :drink=drink></drinkShow>
+                </modal>
+            <div v-if="drink.body_id === 2" class="body-light"></div>
+            <div v-else-if="drink.body_id === 3" class="body-medium"></div>
+            <div v-else-if="drink.body_id === 4" class="body-full"></div>
+            <div v-else class="body-nothing"></div>
 
-        </div>
-        <div class='item-info'>
-          <h3 class='item-name'>
-            {{drink.name}} 
-          </h3>
-          <div class='item-price'>
-            <span>{{drink.price}}円<br>(税込み)</span>
-          </div>
-          <div class='item-explain'>
-             {{drink.explain}}
-          </div>
+            <div v-if="drink.acidity_id === 2" class="acidity-low"></div>
+            <div v-else-if="drink.acidity_id === 3" class="acidity-medium"></div>
+            <div v-else-if="drink.acidity_id === 4" class="acidity-high"></div>
+            <div v-else class="acidity-nothing"></div>
+        </li>
+      </ul> 
 
-
-          <table class="item-category">
-            <tbody>
-              <tr class="item-region">
-                  <th class="region-title">産地 </th>
-                  <td v-if="drink.region_id" class="region-name">{{drink.region_name}}</td>
-              </tr>
-                <tr class="item-body">
-                  <th class="body-title">コク</th> 
-                  <td v-if="drink.body_id" class="body-name">{{drink.body_name}}</td>
-                </tr>
-                <tr class="item-acidity">
-                    <th class="acidity-title">酸味</th> 
-                    <td v-if="drink.acidity_id" class="acidity-name">{{drink.acidity_name}}</td>
-                </tr>
-                <tr class="item-processing">
-                    <th class="processing-title">加工法</th>
-                     <td v-if="drink.processing_id" class="processing-name">{{drink.processing_name}}</td>
-                </tr>
-            </tbody>
-          </table>
-              <!-- この部分にいいねボタンを記述 -->
-              <likeButton></likeButton>
-        </div>
-        <div class="item-delete">
-        </div>
-
-      </li>
-
-    </ul>
-
-    <div class="comment-container">
-      <div id="comments-create">
-        <!-- <%= render partial: 'comments/create', locals: {comment: @comment, drink: @drink} %> -->
       </div>
-    </div>
 
-    <div id="comments-index">
-       <!-- <%= render partial: 'comments/index', locals: {comments: @comments,drink: @drink} %> -->
-    </div>  
 
-  </div>
 </div>
-
 </template>
 
 <script>
+
 import axios from 'axios';
-import likeButton from './packs/components/like/likeButton.vue'
+import likeButton from './packs/components/like/likeButton.vue';
+import drinkShow from './packs/components/drinks/show.vue';
 
 
 export default {
   components: {
-      likeButton
+      likeButton,
+      drinkShow
   },
-  data: function (){
-    return{
-      drink: "drink"
+  data: function(){
+    return {
+      drinks: "drinks"
     }
   },
-  mounted () {
+  mounted(){
     this.setDrink();
-    // this.setRegion();
   },
   methods: {
     setDrink: function(){
-      axios.get('/api' + location.pathname)
-        .then(response => (
-          this.drink = response.data
-       
-        ))
+      axios.get('/api/drinks')
+      .then(response =>(
+        this.drinks = response.data
+      ))
+    },
+    show : function(drink) {
+        this.$modal.show(`display-drink-${drink.id}`);
+    },
+    hide : function () {
+      this.$modal.hide('display-drink-show');
     }
-    // setRegion: function(){
-    //   switch(this.drink.region_id){
-    //     case 1:
-    //       this.drink.region.name = "---";
-    //     case 2:
-    //       this.drink.region.name = "マルチリージョン";
-    //     case 3: 
-    //       this.drink.region.name = "ラテンアメリカ";
-    //                 console.log(this.drink.region.name)
-    //     case 4:
-    //       this.drink.region.name = "アフリカ";
-    //     case 5:
-    //       this.drink.region.name = "アジア、太平洋"
-    //   }
-    // }
   }
 }
-
 </script>
+
