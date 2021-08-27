@@ -45,7 +45,7 @@
             </tbody>
           </table>
               <!-- この部分にいいねボタンを記述 -->
-              <likeButton :drinkId=drink.id></likeButton>
+              <!-- <likeButton :drinkId=drink.id></likeButton> -->
         </div>
         <div class="item-delete">
         </div>
@@ -76,7 +76,7 @@ import likeButton from '../like/likeButton.vue'
 export default {
   props: ['drink'],
   components: {
-      likeButton
+      // likeButton
   },
   methods: {
     hide : function (drink) {
