@@ -1,18 +1,4 @@
 <% provide(:title,"Details")%>
-<%= render "likes/like",drink: @drink%>
+<%= render "drinks/drinks",drink: @drink%>
 
-
-<div class="item-contents">
-  <div class="show-main">
-      <div class="comment-container">
-        <div id="comments-create">
-          <%= render partial: 'comments/create', locals: {comment: @comment, drink: @drink} %>
-        </div>
-      </div>
-
-      <div id="comments-index">
-        <%= render partial: 'comments/index', locals: {comments: @comments,drink: @drink} %>
-      </div>  
-  </div>
-</div>
 
