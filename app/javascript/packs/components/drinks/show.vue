@@ -70,9 +70,6 @@
 
 <script>
 
-import axios from 'axios';
-import likeButton from '../like/likeButton.vue'
-
 export default {
   props: ['drink'],
   components: {
@@ -83,38 +80,6 @@ export default {
       this.$modal.hide(`display-drink-${drink.id}`);
     }
   }
-  // data: function (){
-  //   return{
-  //     drink: "drink"
-  //   }
-  // },
-  // mounted () {
-  //   this.setDrink();
-  //   // this.setRegion();
-  // },
-  // methods: {
-  //   setDrink: function(){
-  //     axios.get('/api' + drink.id)
-  //       .then(response => (
-  //         this.drink = response.data
-       
-  //       ))
-  //   },
-    // setRegion: function(){
-    //   switch(this.drink.region_id){
-    //     case 1:
-    //       this.drink.region.name = "---";
-    //     case 2:
-    //       this.drink.region.name = "マルチリージョン";
-    //     case 3: 
-    //       this.drink.region.name = "ラテンアメリカ";
-    //                 console.log(this.drink.region.name)
-    //     case 4:
-    //       this.drink.region.name = "アフリカ";
-    //     case 5:
-    //       this.drink.region.name = "アジア、太平洋"
-    //   }
-    // }
 }
 
 </script>
