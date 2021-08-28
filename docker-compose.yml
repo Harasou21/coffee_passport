@@ -13,9 +13,9 @@ services:
     volumes:
       - mysql-data:/var/lib/mysql
     command: --default-authentication-plugin=mysql_native_password # 認証方式を8系以前のものにする
-  web:
+  web: &web
     build: .
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    command: ./bin/rails s -b 0
     stdin_open: true 
     tty: true
     # この2文を追加でコンテナ内の標準入出力をローカルマシンのターミナルにアタッチする準備が整います。
@@ -26,6 +26,7 @@ services:
     depends_on:
       - db
     environment:
+      WEBPACKER_DEV_SERVER_HOST: webpacker
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       RAILS_MASTER_KEY: ${RAILS_MASTER_KEY}
       SENDGRID_API_KEY: ${SENDGRID_API_KEY}
@@ -45,6 +46,13 @@ services:
     image: selenium/standalone-chrome-debug
     logging:
       driver: none
+  webpacker:
+    <<: *web
+    command: ./bin/webpack-dev-server
+    environment:
+      WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
+    ports:
+      - "3035:3035"
 volumes:
   mysql-data:
     driver: local
