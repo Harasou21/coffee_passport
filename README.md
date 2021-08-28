@@ -105,8 +105,8 @@ docker-compose up --build
   - HTML/CSS
   - JavaScript
   - Vue.js
-    -axios
-    -vue-js-modal
+    - axios
+    - vue-js-modal
   
 - バックエンド
   - Ruby 2.6.5
