@@ -75,7 +75,7 @@ export default {
       drinks: "drinks"
     }
   },
-  mounted(){
+  created(){
     this.setDrink();
   },
   methods: {
