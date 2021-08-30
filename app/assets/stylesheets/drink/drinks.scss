@@ -15,7 +15,7 @@ a {
   flex-direction: column;
   align-items: center;
   
-  padding-right:5%;
+  //padding-right:5%;
   
 }
 
@@ -24,7 +24,7 @@ a {
     //line-height: 1.4;
     font-weight: bold;
     margin-top: 20px;
-    margin-left: 6%;
+    text-align: center;
     font-family:"游教科書体";
     border-bottom: 1px solid maroon;
   }
@@ -42,7 +42,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
+  padding-right:5%;
 }
 
 .item-lists>.list {
@@ -51,6 +51,24 @@ a {
  // background-color: burlywood;
  //height: 50px;
  margin-bottom: 50px;
+}
+
+.playing-button {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.playing-button-on{
+  background-color: aliceblue;
+  color: #3c1900;
+  width: 100px;
+}
+
+
+.playing-button-off{
+  color: aliceblue;
+  background-color: #3c1900;
+  width: 100px;
 }
 
 

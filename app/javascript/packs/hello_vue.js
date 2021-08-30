@@ -8,6 +8,8 @@
 import Vue from 'vue'
 import App from '../app.vue'
 import VModal from 'vue-js-modal'
+import VueYoutube from 'vue-youtube'
+Vue.use(VueYoutube)
 Vue.use(VModal)
 Vue.config.devtools = true;
 

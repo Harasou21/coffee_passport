@@ -1,9 +1,18 @@
 <template>
   <div class='main'>
+      <div class="playing-button">
+        <button class="playing-button-on" @click="pauseVideo" v-if="playing">BGMをOFF</button>
+        <button class="playing-button-off" @click="playVideo" v-else>BGMをON</button>
+      </div>
+     
  
   <div class='item-contents'>
    
     <h2 class='title'>タイムライン</h2>
+    <youtube :video-id="videoId" ref="youtube" @playerVars="playerVars" hidden/>
+
+
+
     <ul class='item-lists'>
         <li v-for="drink in drinks" :key="drink.id" class="list" >
               <div class="user-info-timeline">
@@ -54,7 +63,6 @@
 
       </div>
 
-
 </div>
 </template>
 
@@ -66,17 +74,29 @@ import drinkShow from './packs/components/drinks/show.vue';
 
 
 export default {
+  name: 'player',
+  props: {
+    src: "https://www.youtube.com/watch?v=02azSAMtZWU"
+  },
   components: {
       likeButton,
       drinkShow
   },
   data: function(){
     return {
-      drinks: "drinks"
+      drinks: "drinks",
+      videoId: "QN1uygzp56s",
+      playing: false,
+      playerVars: {
+        autoplay: 1
+      }
     }
   },
   created(){
     this.setDrink();
+  },
+  mounted: function(){
+    this.playVideo();
   },
   methods: {
     setDrink: function(){
@@ -90,7 +110,15 @@ export default {
     },
     hide : function () {
       this.$modal.hide('display-drink-show');
-    }
+    },
+    playVideo(){  // 再生処理
+      this.$refs.youtube.player.playVideo()
+      this.playing = true
+    },
+    pauseVideo(){ // 停止処理
+     this.$refs.youtube.player.pauseVideo()
+      this.playing = false
+    },
   }
 }
 </script>
