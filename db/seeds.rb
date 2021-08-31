@@ -25,7 +25,7 @@ User.create!(
   password: "password",
   password_confirmation: "password",
   activated: true,
-  activated_at: "Time.zone.now"
+  activated_at: "Time.zone.now",
   image: ActiveStorage::Blob.create_and_upload!(io: File.open("app/assets/images/guest.png"),filename: "guest.png")
 )
 
@@ -36,7 +36,7 @@ User.create!(
   password: "password",
   password_confirmation: "password",
   activated: true,
-  activated_at: "Time.zone.now"
+  activated_at: "Time.zone.now",
   image: ActiveStorage::Blob.create_and_upload!(io: File.open("app/assets/images/guest.png"),filename: "guest.png")
 )
 
