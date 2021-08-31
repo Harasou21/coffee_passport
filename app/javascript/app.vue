@@ -16,7 +16,14 @@
     <ul class='item-lists'>
         <li v-for="drink in drinks" :key="drink.id" class="list" >
               <div class="user-info-timeline">
-                  <img class="user-img-timeline" v-bind:src="drink.user_img" > 
+                  <div v-if="drink.user_img">
+                     <img class="user-img-timeline" v-bind:src="drink.user_img" > 
+                  </div>
+                   <div v-else>
+                     <img class="user-img-timeline" src ="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YnJlYXV0aWZ1bCUyMGdpcmx8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"> 
+                  </div>
+
+                 
                   <div class="username-timeline">
                       {{drink.nickname}}
                   </div>
@@ -86,7 +93,7 @@ export default {
     return {
       drinks: "drinks",
       videoId: "QN1uygzp56s",
-      playing: false,
+      playing: true,
       playerVars: {
         autoplay: 1
       }
