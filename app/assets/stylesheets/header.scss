@@ -105,10 +105,16 @@ img.logo{
   
 }
 
+.header-user-name a{
+  color: black;
+}
+
 .header-user-name a:hover, .post a:hover , .buy-form a:hover, .searching-link a:hover{
   color:maroon;
   //background-color: gray;
 }
+
+
 
 .login{
   font-size: 30px;
