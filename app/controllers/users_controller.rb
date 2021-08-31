@@ -91,15 +91,13 @@ class UsersController < ApplicationController
   end
 
   def new_guest
-    user = User.find_or_create_by!(nickname: 'ゲスト様', email: 'guest@example.com') do |user|
+    user = User.find_by(id:5 ,nickname: 'ゲスト様', email: 'guest@example.com') 
       # guest@example.com
       # って登録されたらバリデーション エラーが起こる
       # 先にゲストは登録しておく必要がある
-      user.password = SecureRandom.urlsafe_base64
       # user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
-    end
     log_in user
-    redirect_to user
+    redirect_to root_path
   end
 
   def thanks_for_contacting
