@@ -1,5 +1,8 @@
 json.array! @drinks do |drink|
-  json.user_img  rails_blob_url(drink.user.image)   if drink.user.image
+ #binding.pry
+  if drink.user.image.present?
+    json.user_img  rails_blob_url(drink.user.image)   
+  end
   json.id               drink.id
   json.name             drink.name        
   json.explain          drink.explain
