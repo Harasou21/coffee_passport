@@ -18,21 +18,177 @@ User.create!(
 )
 #ユーザーは差し込めたので一旦コメントアウト
 
-houseblend = Drink.create!(
-  name: "ハウスブレンド",
+User.create!(
+  id: 1,
+  nickname: "はらそう",
+  email: "soccer@gmail.com",
+  password: "password",
+  password_confirmation: "password",
+  activated: true,
+  activated_at: "Time.zone.now"
+  image: ActiveStorage::Blob.create_and_upload!(io: File.open("app/assets/images/guest.png"),filename: "guest.png")
+)
+
+User.create!(
+  id: 2,
+  nickname: "ジェファーソン",
+  email: "socce2r@gmail.com",
+  password: "password",
+  password_confirmation: "password",
+  activated: true,
+  activated_at: "Time.zone.now"
+  image: ActiveStorage::Blob.create_and_upload!(io: File.open("app/assets/images/guest.png"),filename: "guest.png")
+)
+
+User.create!(
+  id: 5,
+  nickname: "ゲスト様",
+  email: "guest@example.com",
+  password: "password",
+  password_confirmation: "password",
+  activated: true,
+  activated_at: "Time.zone.now",
+  image: ActiveStorage::Blob.create_and_upload!(io: File.open("app/assets/images/guest.png"),filename: "guest.png")
+)
+
+
+
+
+
+
+
+Drink.create!(
+  name: "ケニア",
   price: 1050,
-  explain: " #RICH #LIVELY ナッツやココアの味わいが特徴で、スターバックス ローストによって引き出された香りやコクなど、すべてのバランスがよいコーヒー。",
-  user_id: 6,
+  explain: " #RICH #LIVELY ナッツやココアの味わいが特徴で、 ローストによって引き出された香りやコクなど、すべてのバランスがよいコーヒー。",
+  user_id: 5,
   region_id: 3,
   body_id: 3,
   acidity_id: 3,
   processing_id: 2,
-  image: ActiveStorage::Blob.create_and_upload!(io: File.open("app/assets/images/houseblend.jpeg"),filename: "houseblend.jpeg")
- 
+  image: ActiveStorage::Blob.create_and_upload!(io: File.open("app/assets/images/houseblend.jpg"),filename: "houseblend.jpg")
 )
 
-#houseblend.image.attach(io: File.open(Rails.root.join("app/assets/images/houseblend.jpeg")),filename: "houseblend.jpeg")
+Drink.create!(
+  name: "スマトラ",
+  price: 1110,
+  explain: " #コクが有る ハーブのような香りがして、コクがあっておいしい。",
+  user_id: 5,
+  region_id: 3,
+  body_id: 4,
+  acidity_id: 4,
+  processing_id: 2,
+  image: ActiveStorage::Blob.create_and_upload!(io: File.open("app/assets/images/sumatora.jpg"),filename: "sumatora.jpg")
+)
 
+Drink.create!(
+  name: "カプチーノ",
+  price: 1110,
+  explain: " #コクが有る ハーブのような香りがして、コクがあっておいしい。",
+  user_id: 5,
+  region_id: 3,
+  body_id: 3,
+  acidity_id: 3,
+  processing_id: 2,
+  image: ActiveStorage::Blob.create_and_upload!(io: File.open("app/assets/images/cappuccino.jpg"),filename: "cappuccino.jpg")
+)
+
+Drink.create!(
+  name: "ヨーロピアンブレンド",
+  price: 350,
+  explain: " #バランスがいい  非常にバランスが良くてとてもおいしい",
+  user_id: 5,
+  region_id: 2,
+  body_id: 2,
+  acidity_id: 2,
+  processing_id: 2,
+  image: ActiveStorage::Blob.create_and_upload!(io: File.open("app/assets/images/europe.jpg"),filename: "europe.jpg")
+)
+
+
+Drink.create!(
+  name: "ブルーマウンテン",
+  price: 350,
+  explain: " #バランスがいい  非常にバランスが良くてとてもおいしい",
+  user_id: 1,
+  region_id: 2,
+  body_id: 4,
+  acidity_id: 3,
+  processing_id: 2,
+  image: ActiveStorage::Blob.create_and_upload!(io: File.open("app/assets/images/1.jpg"),filename: "1.jpg")
+)
+
+Drink.create!(
+  name: "キリマンジャロ",
+  price: 350,
+  explain: " #バランスがいい  非常にバランスが良くてとてもおいしい",
+  user_id: 2,
+  region_id: 2,
+  body_id: 3,
+  acidity_id: 2,
+  processing_id: 2,
+  image: ActiveStorage::Blob.create_and_upload!(io: File.open("app/assets/images/2.jpg"),filename: "2.jpg")
+)
+
+Drink.create!(
+  name: "マンデリン",
+  price: 350,
+  explain: " #バランスがいい  非常にバランスが良くてとてもおいしい",
+  user_id: 1,
+  region_id: 2,
+  body_id: 3,
+  acidity_id: 4,
+  processing_id: 2,
+  image: ActiveStorage::Blob.create_and_upload!(io: File.open("app/assets/images/3.jpg"),filename: "3.jpg")
+)
+
+Drink.create!(
+  name: "トラジャ",
+  price: 350,
+  explain: " #バランスがいい  非常にバランスが良くてとてもおいしい",
+  user_id: 2,
+  region_id: 1,
+  body_id: 1,
+  acidity_id: 2,
+  processing_id: 2,
+  image: ActiveStorage::Blob.create_and_upload!(io: File.open("app/assets/images/4.jpg"),filename: "4.jpg")
+)
+
+
+houseblend = Drink.create!(
+  name: "ハウスブレンド",
+  price: 1050,
+  explain: " #RICH #LIVELY ナッツやココアの味わいが特徴で、スターバックス ローストによって引き出された香りやコクなど、すべてのバランスがよいコーヒー。",
+  user_id: 5,
+  region_id: 3,
+  body_id: 3,
+  acidity_id: 3,
+  processing_id: 2,
+  image: ActiveStorage::Blob.create_and_upload!(io: File.open("app/assets/images/houseblend.jpg"),filename: "houseblend.jpg")
+)
+
+Relationship.create!(
+  followed_id: 1,
+  follower_id: 5
+)
+
+Relationship.create!(
+  followed_id:5,
+  follower_id:1
+)
+
+Relationship.create!(
+  followed_id:2,
+  follower_id:5
+)
+
+Relationship.create!(
+  followed_id:5,
+  follower_id:2
+)
+
+
+#houseblend.image.attach(io: File.open(Rails.root.join("app/assets/images/houseblend.jpeg")),filename: "houseblend.jpeg")
 
 
 # 複数の書き方はこんな感じ
