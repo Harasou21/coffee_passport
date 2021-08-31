@@ -3,7 +3,7 @@
     <%if user.image.attached?%>
       <%=image_tag user.image.variant(resize: '60x60') ,class: "user-follow-img" %>
     <% else %>
-    <img src="https://instagram.fdel2-2.fna.fbcdn.net/v/t51.2885-19/44884218_345707102882519_2446069589734326272_n.jpg?_nc_ht=instagram.fdel2-2.fna.fbcdn.net&_nc_ohc=s0l7r_rFmQYAX9IB4c9&oh=4d9b567520c4a9e98172a986afa3859b&oe=6028878F&ig_cache_key=YW5vbnltb3VzX3Byb2ZpbGVfcGlj.2" class= "user-follow-img" >
+    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YnJlYXV0aWZ1bCUyMGdpcmx8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" class= "user-follow-img" >
     <% end %>
     <div class="nickname-follow">
        <%=link_to user.nickname,user_path(user.id)%>
