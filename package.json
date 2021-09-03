@@ -11,6 +11,7 @@
     "turbolinks": "^5.2.0",
     "vue": "^2.6.12",
     "vue-axios": "^3.2.4",
+    "vue-carousel": "^0.18.0",
     "vue-eslint-parser": "^7.6.0",
     "vue-js-modal": "^2.0.1",
     "vue-loader": "^15.9.6",
