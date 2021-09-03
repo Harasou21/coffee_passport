@@ -6,19 +6,24 @@
 }
 
 .coffee-gif{
-  width: 100%;
-
+  width: 50%;
+  width: 50%;
+  margin-left: 25%;
 }
 
 .app-title {/*親div*/
   position: relative;/*相対配置*/
   width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   }
 
 .app-text{
   position: absolute;/*絶対配置*/
+  width: 20%;
   top: 25%;
-  left: 10%;
+  left: 35%;
 
 }
 

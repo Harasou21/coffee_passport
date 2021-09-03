@@ -9,8 +9,10 @@ import Vue from 'vue'
 import App from '../app.vue'
 import VModal from 'vue-js-modal'
 import VueYoutube from 'vue-youtube'
+import VueCarousel from 'vue-carousel';
 Vue.use(VueYoutube)
 Vue.use(VModal)
+Vue.use(VueCarousel)
 Vue.config.devtools = true;
 
 document.addEventListener('DOMContentLoaded', () => {
