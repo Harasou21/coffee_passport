@@ -3,7 +3,7 @@
 
 
 <div class="top-explain">
-  <carousel :per-page="1"  autoplay=true  loop=true>
+  <carousel :per-page="1"  :autoplay=true  :loop=true>
     <slide autoplayTimeout=1000>
       <div class="app-title">
           <img class="coffee-gif" :src="require('/public/assets/images/coffee_gif.gif')"> 
@@ -57,8 +57,8 @@
           コーヒーを家でも楽しみたいなら、素敵なコーヒーのラインナップを
           取り揃えておりますので、ぜひお求めください。
         </p>
-          <video :src="require('/public/assets/images/buy.mp4')" autoplay muted> -->
-          </video> 
+          <!-- <video :src="require('/public/assets/images/buy.mp4')" autoplay muted> -->
+
       </div>
     </slide>
 
