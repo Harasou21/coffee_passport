@@ -3,8 +3,8 @@
 
 
 <div class="top-explain">
-  <carousel :per-page="1"  :autoplay=true  :loop=true>
-    <slide autoplayTimeout=1000>
+
+
       <div class="app-title">
           <img class="coffee-gif" :src="require('/public/assets/images/coffee_gif.gif')"> 
         <div class="app-text">
@@ -12,9 +12,9 @@
           <p class="app-concept">Coffee Passportとはあなたが出会ったコーヒーの記録を共有できるサービスです</p>
         </div>
       </div>
-    </slide>
 
-    <slide autoplayTimeout=3000>
+
+
       <div class="explain-wrapper">
       <ruby>
         <h3 class="explain-wrapper-title">出会ったコーヒーをシェアしよう</h3>
@@ -28,10 +28,10 @@
         </p>
         <img class="explain-post-img" :src="require('/public/assets/images/post.png')" >
       </div>
-    </slide>
 
 
-    <slide autoplayTimeout=3000>
+
+
         <div class="explain-wrapper">
         <ruby>
           <h3 class="explain-wrapper-title">コーヒーを探す旅へ</h3>
@@ -45,9 +45,9 @@
           コーヒーの名前、コク、酸味、産地、加工法などで検索できます。
           </p>
         </div>
-    </slide>
 
-    <slide autoplayTimeout=3000>
+
+
       <div class="explain-wrapper">
       <ruby>
         <h3 class="explain-wrapper-title">素敵なコーヒーがあなたの手元に</h3>
@@ -58,13 +58,26 @@
           取り揃えておりますので、ぜひお求めください。
         </p>
           <!-- <video :src="require('/public/assets/images/buy.mp4')" autoplay muted> -->
-
+        <carousel :per-page="1"  :autoplay=true  :loop=true  :autoplayTimeout=1500>
+          <slide>
+             <img class="coffee-gif" :src="require('/public/assets/images/sold_item1.png')"> 
+          </slide>
+          <slide>
+            <img class="coffee-gif" :src="require('/public/assets/images/sold_item2.png')"> 
+          </slide>
+          <slide>
+            <img class="coffee-gif" :src="require('/public/assets/images/sold_item3.png')"> 
+          </slide>
+          <slide>
+             <img class="coffee-gif" :src="require('/public/assets/images/sold_item4.png')"> 
+          </slide>
+        </carousel>
       </div>
-    </slide>
 
 
 
-    <slide>
+
+
         <div class="explain-wrapper">
         <ruby>
           <h3 class="explain-wrapper-title">いいねやコメントで盛り上がろう</h3>
@@ -77,9 +90,9 @@
             一杯のコーヒーが生み出すコミュニティに参加しましょう。
           </p>
         </div>   
-    </slide>
 
-  </carousel>
+
+
 
 </div>
 </template>
