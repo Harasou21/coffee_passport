@@ -15,6 +15,7 @@
 
     <ul class='item-lists'>
         <li v-for="drink in drinks" :key="drink.id" class="list" >
+          <router-link to="/user">
               <div class="user-info-timeline">
                   <div v-if="drink.user_img">
                      <img class="user-img-timeline" v-bind:src="drink.user_img" > 
@@ -28,6 +29,8 @@
                       {{drink.nickname}}
                   </div>
               </div>
+          </router-link>
+ <router-view></router-view>
 
             <div class='item-img-content'>
               <img class= "item-img" v-bind:src="drink.image" >
@@ -87,7 +90,8 @@ export default {
   },
   components: {
       likeButton,
-      drinkShow
+      drinkShow,
+
   },
   data: function(){
     return {

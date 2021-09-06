@@ -5,19 +5,25 @@
 // like app/views/layouts/application.html.erb.
 // All it does is render <div>Hello Vue</div> at the bottom of the page.
 
-import Vue from 'vue'
+import Vue from 'vue/dist/vue.esm.js'
 import App from '../app.vue'
 import VModal from 'vue-js-modal'
 import VueYoutube from 'vue-youtube'
 import VueCarousel from 'vue-carousel';
+import VueRouter from 'vue-router'
+import router from './router/router'
 Vue.use(VueYoutube)
 Vue.use(VModal)
 Vue.use(VueCarousel)
+Vue.use(VueRouter)
+Vue.use(router)
 Vue.config.devtools = true;
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
-    render: h => h(App)
+    render: h => h(App),
+    router: router
   }).$mount()
   document.body.appendChild(app.$el)
 
