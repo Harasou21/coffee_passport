@@ -109,6 +109,7 @@ docker-compose up --build
   - Vue.js
     - axios
     - vue-js-modal
+    - VueRouter
   
 - バックエンド
   - Ruby 2.6.5
@@ -162,7 +163,7 @@ docker-compose up --build
 
 ![contact-vue](https://user-images.githubusercontent.com/67535886/118401403-86f29700-b6a0-11eb-9f9f-10941a9a0da1.gif)
 
-↑Vue.jsとrouter-viewを用いてコンタクトページを部分SPA化
+↑Vue.jsとVueRouterを用いてコンタクトページを部分SPA化
 
 ![hashtag](https://user-images.githubusercontent.com/67535886/118401406-8a861e00-b6a0-11eb-938b-e460a7ecf1eb.gif)
 
