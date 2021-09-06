@@ -2,7 +2,7 @@
   
 <div>
   <div class="top-explain">
-
+    
         <div class="explain-wrapper">
             <img class="" :src="require('/public/assets/images/coffee_gif.gif')"> 
           <div class="explain-wrapper-title">
