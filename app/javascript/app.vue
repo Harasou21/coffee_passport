@@ -93,7 +93,7 @@ export default {
     return {
       drinks: "drinks",
       videoId: "QN1uygzp56s",
-      playing: true,
+      playing: false,
       playerVars: {
         autoplay: 1
       }
@@ -103,7 +103,7 @@ export default {
     this.setDrink();
   },
   mounted: function(){
-    this.playVideo();
+   // this.playVideo();
   },
   methods: {
     setDrink: function(){
