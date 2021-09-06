@@ -12,11 +12,11 @@
     <youtube :video-id="videoId" ref="youtube" @playerVars="playerVars" hidden/>
 
 
-
+ <router-view :user_id="user_id"></router-view>
     <ul class='item-lists'>
-        <li v-for="drink in drinks" :key="drink.id" class="list" >
-          <router-link to="/user">
-              <div class="user-info-timeline">
+        <li v-for="drink in drinks" :key="drink.id"  class="list" >
+          <router-link to="/user" @click.native="getUserId(drink.user_id)">
+              <div class="user-info-timeline" >
                   <div v-if="drink.user_img">
                      <img class="user-img-timeline" v-bind:src="drink.user_img" > 
                   </div>
@@ -30,7 +30,7 @@
                   </div>
               </div>
           </router-link>
- <router-view></router-view>
+
 
             <div class='item-img-content'>
               <img class= "item-img" v-bind:src="drink.image" >
@@ -91,11 +91,11 @@ export default {
   components: {
       likeButton,
       drinkShow,
-
   },
   data: function(){
     return {
       drinks: "drinks",
+      user_id: 0,
       videoId: "QN1uygzp56s",
       playing: false,
       playerVars: {
@@ -130,6 +130,9 @@ export default {
      this.$refs.youtube.player.pauseVideo()
       this.playing = false
     },
+    getUserId(user_id){
+      this.user_id = user_id
+    }
   }
 }
 </script>
