@@ -123,12 +123,7 @@ export default {
     },
     hide: function () {
         this.$modal.hide('display-drink-show');
-    },
-    // filters: {
-    //   userDrink: function(drinks){
-    //     drinks.user_id
-    //   }
-    // }
-}
+    }
+  }
 }
 </script>
