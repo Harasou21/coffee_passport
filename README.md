@@ -1,5 +1,7 @@
 
 
+
+
 # Coffee Passport
 
 # 開発環境の立ち上げ方
@@ -138,7 +140,9 @@ docker-compose up --build
   - Docker/Docker Compose
 
 # ER図
-<img width="686" alt="スクリーンショット 2021-04-12 4 46 44" src="https://user-images.githubusercontent.com/67535886/114318954-35f3fe00-9b4a-11eb-869c-7d2ce49cf98f.png">
+
+<img width="568" alt="スクリーンショット 2021-09-06 14 35 25" src="https://user-images.githubusercontent.com/67535886/132165798-b907a152-1134-4138-9e73-e4d1ea764331.png">
+
 
 # インフラ構成図
 <img width="565" alt="スクリーンショット 2021-07-11 19 25 04" src="https://user-images.githubusercontent.com/67535886/125191509-c80cbf00-e27d-11eb-9d4c-28657e9a7666.png">
