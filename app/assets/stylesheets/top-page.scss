@@ -2,14 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .coffee-gif{
   width: 50%;
-  width: 50%;
   margin-left: 25%;
 }
+
 
 .app-title {/*親div*/
   position: relative;/*相対配置*/
@@ -24,7 +23,6 @@
   width: 20%;
   top: 25%;
   left: 35%;
-
 }
 
 
@@ -56,7 +54,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  text-align: center;
 }
 
 
@@ -79,4 +77,11 @@
   width: 50vh;
   margin: 0 auto 0 auto;
   margin-bottom: 10px;
+}
+
+.sold-item-explain{
+  margin-top: 50px;
+  height: 400px;
+  width: 450px;
+//  display: inline-block;
 }
