@@ -33,7 +33,7 @@ docker-compose up --build
 <img width="500" alt="スクリーンショット 2021-04-12 4 54 44" src="https://user-images.githubusercontent.com/67535886/114319189-4fe21080-9b4b-11eb-8f8c-cc2f48c94305.png">
 
 「コーヒーの旅へ出かけよう！」
-コーヒー好きに向けたアプリで、日々コーヒーの感想を記録し、投稿できたり、検索したり、コーヒーを実際に購入できたりするアプリです。
+コーヒー好きに向けたアプリで、日々コーヒーの感想を記録し、投稿できたり、検索したり、コーヒーを擬似的に購入できたりする部分SPAアプリケーションです。
 
 *アプリURL：http://coffee-passport.net/
 
@@ -150,9 +150,19 @@ docker-compose up --build
 
 # 工夫した場所
 
+
+![モーダルウィンドウ](https://user-images.githubusercontent.com/67535886/131092611-f148cc5a-0b95-4a73-95ff-5e98ce07f8a3.gif)
+
+↑投稿一覧をvueで記述し、投稿詳細ページを表紙させる際に画面遷移させずに、vueで記述してをvue-js-modalによってモーダルウィンドウで表示。
+部分SPA化させることができました。
+
+
+
+[その時に書いた記事](https://qiita.com/divclass123/items/71465f7a6c313a533eeb)
+
 ![contact-vue](https://user-images.githubusercontent.com/67535886/118401403-86f29700-b6a0-11eb-9f9f-10941a9a0da1.gif)
 
-↑Vue.jsを用いてコンタクトページを部分SPA化
+↑Vue.jsとrouter-viewを用いてコンタクトページを部分SPA化
 
 ![hashtag](https://user-images.githubusercontent.com/67535886/118401406-8a861e00-b6a0-11eb-938b-e460a7ecf1eb.gif)
 
@@ -180,14 +190,6 @@ https://qiita.com/divclass123/items/479d1f3ac79a579039dd
 
 最近(5/17)will_paginateからpagyにパフォーマンス向上のためにgemを取り替えました。
 
-![モーダルウィンドウ](https://user-images.githubusercontent.com/67535886/131092611-f148cc5a-0b95-4a73-95ff-5e98ce07f8a3.gif)
-
-↑投稿一覧をvueで記述し、投稿詳細ページもvueで記述してをvue-js-modalによってモーダルウィンドウで表示。
-部分SPA化させることができました。
-
-
-
-[その時に書いた記事](https://qiita.com/divclass123/items/71465f7a6c313a533eeb)
 
 
 
