@@ -18,6 +18,14 @@ Rails.application.configure do
     #ssl: 465,
     #tls: false
   }
+
+
+# publicディレクトリ以下に置かれたあらゆるアセットは
+# アプリケーション、またはWebサーバーによって静的な
+# ファイルとして取り扱われます。
+
+
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
