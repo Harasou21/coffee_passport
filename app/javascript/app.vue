@@ -23,8 +23,6 @@
                    <div v-else>
                      <img class="user-img-timeline" src ="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YnJlYXV0aWZ1bCUyMGdpcmx8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"> 
                   </div>
-
-                 
                   <div class="username-timeline">
                       {{drink.nickname}}
                   </div>
