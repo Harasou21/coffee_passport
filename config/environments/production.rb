@@ -25,7 +25,7 @@ Rails.application.configure do
 # ファイルとして取り扱われます。
 
 
-config.public_file_server.enabled = true
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
