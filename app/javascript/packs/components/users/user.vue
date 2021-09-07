@@ -1,12 +1,5 @@
 <template>
-<div>
-
-   <li v-for="drink in filteredDrinks" :key="drink.id"  class="list" >
-     {{drink.nickname}}の投稿
-     {{drink.user_id}}
-  </li>
-</div>
- <!-- <div class='main'>
+ <div class='main'>
 
      
  
@@ -14,11 +7,10 @@
    
     <h2 class='title'></h2>
  
-
-
+    <router-link to="/" @click.native="showTimeline()" class="back-to-timeline">タイムラインに戻る</router-link>
 
     <ul class='item-lists'>
-        <li v-for="drink in drinks" :key="drink.id"  class="list" >
+        <li v-for="drink in filtredDrinks" :key="drink.id"  class="list" >
           
               <div class="user-info-timeline" >
                   <div v-if="drink.user_img">
@@ -74,10 +66,9 @@
             <div v-else class="acidity-nothing"></div>
         </li>
       </ul> 
-
       </div>
-
-</div> -->
+   
+</div>
 </template>
 
 <script>
@@ -87,6 +78,7 @@ import VModal from 'vue-js-modal'
 import axios from 'axios';
 import likeButton from '../like/likeButton.vue';
 import drinkShow from  '../drinks/show.vue';
+
 Vue.use(VModal)
 
 
@@ -102,11 +94,12 @@ export default {
   },
   data: function(){
     return {
-      filteredDrinks: [],
-      drinks: "drinks"
+      filtredDrinks: [],
+      drinks: "drinks",
+      userName: ""
     }
   },
-  mounted(){
+  created(){
     this.setDrink();
   },
   methods: {
@@ -114,7 +107,7 @@ export default {
       axios.get('/api/drinks')
       .then(response => {
         const drinks = response.data
-        this.filteredDrinks = drinks.filter(drink => 
+        this.filtredDrinks = drinks.filter(drink => 
             drink.user_id === this.user_id)
       })
     },
@@ -122,8 +115,45 @@ export default {
         this.$modal.show(`display-drink-${drink.id}`);
     },
     hide: function () {
-        this.$modal.hide('display-drink-show');
+        this.$modal.hide(`display-drink-${drink.id}`);
+    },
+    showTimeline: function(){
+       document.getElementById("timeline").style.visibility ="visible";
+        document.getElementById("title").style.visibility ="visible";
     }
-  }
+  },
+
 }
 </script>
+
+<style scoped>
+.back-to-timeline{
+  color: white;
+  background-color:#3c1900 ;
+  padding: 5px;
+  border-bottom: solid 4px black;
+  border-radius: 3px;
+  transition: background-color 5s ease-out;
+}
+
+.back-to-timeline:active{
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
+}
+
+.back-to-timeline:hover{
+ background: linear-gradient(270deg, black 0%, maroon 50%, #3c1900  100%);
+
+}
+
+
+
+.back-to-timeline a:visited{
+  color: white;
+  background-color:#3c1900 ;
+  padding: 5px;
+}
+
+</style>
