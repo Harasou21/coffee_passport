@@ -1,5 +1,5 @@
 <template>
-  <div class='main'>
+  <div class='main' >
       <div class="playing-button">
         <button class="playing-button-on" @click="pauseVideo" v-if="playing">BGMをOFF</button>
         <button class="playing-button-off" @click="playVideo" v-else>BGMをON</button>
@@ -7,15 +7,16 @@
      
  
   <div class='item-contents'>
-   
-    <h2 class='title'>タイムライン</h2>
+   <router-view :user_id="user_id"></router-view>
+    <h2 class='title' id="title">タイムライン</h2>
     <youtube :video-id="videoId" ref="youtube" @playerVars="playerVars" hidden/>
 
 
-
-    <ul class='item-lists'>
-        <li v-for="drink in drinks" :key="drink.id" class="list" >
-              <div class="user-info-timeline">
+ 
+    <ul class='item-lists' id="timeline">
+        <li v-for="drink in drinks" :key="drink.id"  class="list" >
+          <router-link to="/user" @click.native="getUserId(drink.user_id)">
+              <div class="user-info-timeline" >
                   <div v-if="drink.user_img">
                      <img class="user-img-timeline" v-bind:src="drink.user_img" > 
                   </div>
@@ -28,6 +29,8 @@
                       {{drink.nickname}}
                   </div>
               </div>
+          </router-link>
+
 
             <div class='item-img-content'>
               <img class= "item-img" v-bind:src="drink.image" >
@@ -87,11 +90,12 @@ export default {
   },
   components: {
       likeButton,
-      drinkShow
+      drinkShow,
   },
   data: function(){
     return {
       drinks: "drinks",
+      user_id: 0,
       videoId: "QN1uygzp56s",
       playing: false,
       playerVars: {
@@ -100,10 +104,11 @@ export default {
     }
   },
   created(){
-    this.setDrink();
+
   },
   mounted: function(){
    // this.playVideo();
+       this.setDrink();
   },
   methods: {
     setDrink: function(){
@@ -126,6 +131,12 @@ export default {
      this.$refs.youtube.player.pauseVideo()
       this.playing = false
     },
+    getUserId(user_id){
+      this.user_id = user_id
+      document.getElementById("timeline").style.visibility ="hidden";
+            document.getElementById("title").style.visibility ="hidden";
+       scrollTo(0, 0);
+    }
   }
 }
 </script>
