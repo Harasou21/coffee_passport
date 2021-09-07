@@ -1,0 +1,3114 @@
+[33mcommit ed042c2e25b2c91bed97c3a0776b594a47a0fab2[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon Aug 30 21:43:42 2021 +0900
+
+    bgm機能を実装
+
+[33mcommit de3d1b64b180efbc0b8fc7a2357b50f76ce72495[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon Aug 30 17:22:02 2021 +0900
+
+    npm install vue-youtubeを実行
+
+[33mcommit db53e613c1de5a95034104af3472704060cf9409[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon Aug 30 16:23:59 2021 +0900
+
+     npm install vue-js-modal --saveを実行
+
+[33mcommit 95ebf63fcc60b3e4a8d440fdb231863033061f9c[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon Aug 30 14:49:00 2021 +0900
+
+    vueのデバックツールを導入
+
+[33mcommit 0567492cd8f703d03ec3ace1045a2a86e1dfbd4c[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat Aug 28 16:06:05 2021 +0900
+
+    コンパイルが遅い問題を解決
+    
+    webpakerコンテナを新たに用意しました。
+
+[33mcommit 902ac3986e3d72f4227004a57504ca7fe597a4b1[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat Aug 28 16:05:39 2021 +0900
+
+    bundle updageを実行
+
+[33mcommit d1fe770e365a140070c6169ca5e9cdc7d00ae52f[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat Aug 28 16:05:29 2021 +0900
+
+    不要な記述削除
+
+[33mcommit 3ee22279de9a56644ebf36fcb8613942b059815a[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Aug 28 14:15:46 2021 +0900
+
+    Update README.md
+
+[33mcommit f91cbf5d31f1cbef2b5f1b6c08e87b0c8b59a640[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Aug 27 16:55:35 2021 +0900
+
+    Update README.md
+
+[33mcommit e8790118064c92a409328a54d7774c994454251c[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Aug 27 16:53:59 2021 +0900
+
+    Update README.md
+
+[33mcommit d0cb7797c2b27e026d2808b6429c6ec4ddaca9ce[m
+Merge: cade5443 0364fe46
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Aug 27 16:15:52 2021 +0900
+
+    Merge pull request #31 from Harasou21/comment-vue.js
+    
+    Comment vue.js
+
+[33mcommit 0364fe4687cdfde4d34ec3ce883eb1e710aa1fba[m
+Merge: b6c57fd2 fc91cadb
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Fri Aug 27 16:13:25 2021 +0900
+
+    Merge branch 'comment-vue.js' of https://github.com/Harasou21/coffee_passport into vue-js-modal
+
+[33mcommit b6c57fd2d57cdc2669451de84b2e7fed270232e1[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Fri Aug 27 16:13:22 2021 +0900
+
+    show.vueはモーダルウィンドウとして活用したので、rails部分は従来のやりかたにもどす
+
+[33mcommit 930905ca01d97525c12d367b2e7bcc5d4a8e0837[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Fri Aug 27 16:12:40 2021 +0900
+
+    モーダルのshow.vueにはいいねボタンを配置しない
+
+[33mcommit fc91cadbe39a8c84f62853036dbda68b1accdf00[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Thu Aug 26 23:45:23 2021 +0900
+
+    Revert "vue-js-modalを表示"
+    
+    This reverts commit 5d2c0fd312bf56a88d41822c6c53f6bd520d35fd.
+
+[33mcommit 5d2c0fd312bf56a88d41822c6c53f6bd520d35fd[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Thu Aug 26 23:45:13 2021 +0900
+
+    vue-js-modalを表示
+
+[33mcommit 5fe705d54191e05e6ff8380a283e95840077eee3[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Thu Aug 26 23:44:59 2021 +0900
+
+    投稿一覧の画像を表示
+
+[33mcommit 3a76058307668a22686dc61cf4627b71247ecbce[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Thu Aug 26 23:44:30 2021 +0900
+
+    vue-js-modalのインポートを記述
+
+[33mcommit 19ecd5d9151ac76fb96953145a2129c8734c875f[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Thu Aug 26 23:44:09 2021 +0900
+
+    データの参照先をコメントアウトでメモ
+
+[33mcommit 673747b5f9613582bfe52ee952336d27a01a155c[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Thu Aug 26 23:43:49 2021 +0900
+
+    app.vueからshow.vueを表示させるので一部編集
+
+[33mcommit 19cdfd78e15490d152294d39c959e983d5f5a9fa[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Thu Aug 26 23:43:24 2021 +0900
+
+    モーダルウィンドウを表示する記述
+
+[33mcommit ec3ed3b622e9d653b523a5baf1ed6487bfb2f095[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Aug 25 05:00:38 2021 +0900
+
+    投稿詳細ページをshow.vueに記述
+    
+    後々、router-viewとかでshow.vueを表示させます
+
+[33mcommit 897b036c81b719f96c8e7991af8e4ad94e0c0ec0[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Aug 25 04:59:36 2021 +0900
+
+    本来は不要だが、コメント部分のviewがどんな感じで作られていたか見たいので、一旦表示
+
+[33mcommit 48e066af259a8ab806e8c8334a91004f5f8ce01c[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Aug 25 04:56:17 2021 +0900
+
+    app.vueを表示し、current_user.idをapp.vueに受け渡す
+
+[33mcommit 8efe43b5b4c07cfcfcf8ae098ce2077efcbb0384[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Aug 25 04:55:16 2021 +0900
+
+    親コンポーネントから投稿のidを受け取るように記述
+
+[33mcommit 1779e4600718290cba3156d6314b4cf5e1396cb8[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Aug 25 04:54:28 2021 +0900
+
+    投稿一覧ページをvueで記述
+
+[33mcommit 9280df2702ff807ee64c4c8e1ce097466b33927a[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Aug 25 04:54:12 2021 +0900
+
+    jbuilderでvueに受け渡すjsonデータを定義
+
+[33mcommit 4badbb3ae8d87f70d8269e45e4fbb6c40620e5bb[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Aug 25 04:53:29 2021 +0900
+
+    api:drink_controllerのindexアクションを定義
+
+[33mcommit a901c1954aec14b0f1753d8a1d7df1edc8f0a788[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Aug 25 04:53:04 2021 +0900
+
+    api/drinks_controllerのindexアクションのルーティングを定義
+
+[33mcommit cade54435b26602e9e4a88e2028387d1b9a6d025[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue Aug 24 22:54:20 2021 +0900
+
+    可読性向上
+
+[33mcommit f9556f6f65e874812451ae15fa3402e20525371c[m
+Merge: 2d429c07 e5a24931
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Aug 22 22:44:33 2021 +0900
+
+    Merge pull request #30 from Harasou21/drinks#show-spa
+    
+    Drinks#show spa
+
+[33mcommit e5a24931a2c6610429a2cbd0ec076f9d6b4b894b[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Aug 22 22:42:12 2021 +0900
+
+    見た目には表示させる必要はないがvueに情報を受け渡すためにhidden
+
+[33mcommit 8ed744bd087f3ae16abe7d9105c21fa2a1bba713[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Aug 22 22:41:33 2021 +0900
+
+    api::likes_controllerのルーティングを記述
+
+[33mcommit 803201608381f6a90546ea9ad1c62e87e245e3e7[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Aug 22 22:40:54 2021 +0900
+
+    CSRF 対策のためにrails-ujsのインストール
+
+[33mcommit 1e6a44ce20c1aef438b27f895f273b08db4eba5b[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Aug 22 22:38:17 2021 +0900
+
+    drink/show.html.erbをvueで記述したので、従来のerbの記述を削除
+
+[33mcommit 93838bbdd60a99e653b7dadfb04ae46184e23738[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Aug 22 22:37:33 2021 +0900
+
+    counter_cacheのメモ
+
+[33mcommit cf84c4a27c158b393de2ac4caf23aa10c3e527cb[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Aug 22 22:37:07 2021 +0900
+
+    likeButton.vueの記述
+
+[33mcommit 7308cb1d684fc32e78ff66489833b3d3745704a6[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Aug 22 22:36:43 2021 +0900
+
+    クロスサイトスクリプト対策の記述
+
+[33mcommit 0b57d1edd3e700da5dcb4cd97c8d75c9a1e8e077[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Aug 22 22:36:19 2021 +0900
+
+    api::likes_controllerの再定義
+
+[33mcommit f87c34fbebcf20280d7d1a9880e3e648514d83a9[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Aug 22 22:36:00 2021 +0900
+
+    不要なCSSを一旦コメントアウト
+
+[33mcommit 618249771f65c0a2b9c11755f410a03b532ce000[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat Aug 21 01:56:18 2021 +0900
+
+    不要なカピバラファイルの削除
+
+[33mcommit c7d5cc16ffa75304e8c21aa8a4eca669d58f7f94[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Thu Aug 19 17:53:17 2021 +0900
+
+    環境変数のサンプルファイルを作成。
+
+[33mcommit 39ee8b862897cb6b9032482f79bdb332bae16a47[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Thu Aug 19 17:45:31 2021 +0900
+
+    api/likes#indexのjsonデータを定義
+
+[33mcommit e242f742fc0c0056fda03f675f61c91d9917e2af[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Thu Aug 19 17:45:13 2021 +0900
+
+    特定の投稿にどんなユーザーのいいねが何個ついてるかのメソッドを定義
+
+[33mcommit 2d429c07480c80dbef46db1379446fac6c7467a1[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Aug 15 21:02:53 2021 +0900
+
+    Update README.md
+
+[33mcommit 0eac2132e575246bc5697c7ffd09f21f4adf0a0d[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Aug 15 21:02:10 2021 +0900
+
+    Update README.md
+
+[33mcommit 51c837e3b2d70b8dbbe3d7bfb6bd01ba57cc8bca[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Aug 15 17:05:06 2021 +0900
+
+    viewファイルからvueの方にjsonデータを送信
+
+[33mcommit feecfaa390c960388b30e4b6390b2b92fcf647c9[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Aug 15 17:04:43 2021 +0900
+
+    likeButtonコンポーネントをapp.vueに表示
+
+[33mcommit ca4d3be6977a2b2fdac94875bfd4c202e0b5f4f1[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Aug 15 15:40:50 2021 +0900
+
+    いいねボタンのコンポーネントを記述
+
+[33mcommit d35ec1d5a60961b2c420397131f2508f9384bcd3[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Aug 15 15:40:12 2021 +0900
+
+    apiモードのルーティングを設定
+
+[33mcommit 810c9e8a7ee1920e91f7e5fe71669d9db06dd138[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Aug 15 15:04:36 2021 +0900
+
+    api/likes_controllerの定義
+
+[33mcommit 52907f28748cef401c2d478d8a3cfc4422f5117d[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Aug 15 15:03:45 2021 +0900
+
+    親子関係が分かる様に記述
+
+[33mcommit c149a1009f7bb84b44b82e00fa1442b6e7ba55fe[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Aug 15 01:13:34 2021 +0900
+
+    メソッドチェーンを使用し、記述量を短く
+
+[33mcommit 66e1a6277b10813fae564dddf26df55e30a4118d[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat Aug 14 23:17:57 2021 +0900
+
+    rails g controller api/likes index create destroy --skip-template-engine --skip-test-framework --skip-assets --skip-helperを実行
+
+[33mcommit 87d4ca46489d5facff784959dc0d35dda7ab85fd[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat Aug 14 23:16:07 2021 +0900
+
+    カテゴリーの際の不要な既述削除
+    
+    冗長なコードのリファクタリングをしました。
+
+[33mcommit 25aa2683a6f6fa46ab6ffeee32bd12b5c02fc196[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat Aug 14 15:22:53 2021 +0900
+
+    カテゴリーを表示
+
+[33mcommit e75f4d1d161b613391cff62e71b7e614a242d6a3[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat Aug 14 14:48:56 2021 +0900
+
+    Api::DrinksControllerにカテゴリーidに応じて、カテゴリー名を付与する処理の既述
+
+[33mcommit c58a68419fdf09c55926e89281b603f546df8306[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat Aug 14 14:37:28 2021 +0900
+
+    json形式でデータを送るので、drink.rbで定義した属性を追加
+
+[33mcommit 105a1de6e1bd27078af52a2a620b8874bc408564[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat Aug 14 14:35:41 2021 +0900
+
+    json形式でvueの方にカテゴリーを渡すためにdrink.rbに格カテゴリーの属性を定義
+
+[33mcommit c1c85d6b34d3fe8fa1cb06729ec9d663f9116347[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Fri Aug 13 17:12:16 2021 +0900
+
+    drinks/show.html.erbにapp.vueを表示させる記述
+
+[33mcommit 26df10c514ad53e2aabb43510752473b6d504615[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Fri Aug 13 17:11:44 2021 +0900
+
+    vueの方に受け渡すデータをjson形式で記述
+
+[33mcommit 4ce54f5ff0dabda97dddb90dcf5184e298285f90[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Fri Aug 13 17:11:13 2021 +0900
+
+    app.vueの不要な記述を削除
+
+[33mcommit d33badde4c6431492835eaf11eed187d458f54c8[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Fri Aug 13 15:37:44 2021 +0900
+
+    jsonフォーマットを記述
+
+[33mcommit 4674ba1acb52cf90cee3e58250deda6a37c279ed[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Aug 8 17:18:38 2021 +0900
+
+    app/views/api/drinks/show.json.jbuilderを実行
+
+[33mcommit 1cbf03094b7c4ca2f43b24bb170f790cde789d9a[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Aug 8 17:18:27 2021 +0900
+
+    rails g controller api/drinksを実行
+
+[33mcommit 079681259eead67e49e13c28b35e68baab64418f[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Aug 8 17:17:50 2021 +0900
+
+    api/drinks#showのルーティングを設定
+
+[33mcommit e1c9b77046d5df1bf3f8e50f33203355d374704f[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Fri Aug 6 16:01:42 2021 +0900
+
+    showに遷移した時にエラーになったので一旦削除
+
+[33mcommit 9a6ffb8084beda25421d7c99ef3f29c5900c8b23[m
+Merge: 6954999a 87a6b171
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Aug 6 15:48:37 2021 +0900
+
+    Merge pull request #29 from Harasou21/solving-N+1
+    
+    Solving n+1
+
+[33mcommit 87a6b171479ad585de4e58cc28055877fed60096[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Fri Aug 6 15:47:34 2021 +0900
+
+    bundle updateを実行
+
+[33mcommit 6b2186d6d9278939e6c198724e917a98850e47af[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Fri Aug 6 15:47:24 2021 +0900
+
+    開発環境の画像保存先をS3からローカルに変更
+
+[33mcommit 5fc9b3f701bf287a980235c5e82c55fa286c742d[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Fri Aug 6 15:46:51 2021 +0900
+
+    N+1問題の解決
+
+[33mcommit 6954999aa77b203d2bbe7f373d53845529b06679[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Aug 3 16:55:16 2021 +0900
+
+    Update README.md
+
+[33mcommit 58d1ac414e9f6682dc3fae48b8072ca345eab564[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Aug 1 16:17:14 2021 +0900
+
+    Update README.md
+
+[33mcommit 1b732f9998d0d9f2bf997bcad1695652cf1c1d75[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Jul 27 22:02:08 2021 +0900
+
+    Update README.md
+
+[33mcommit 6d5b3f9c304d36e95e1800c29e64817446476555[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Jul 27 21:59:58 2021 +0900
+
+    Update README.md
+
+[33mcommit f81607fb7c305c78ae9e0eb4ca9403e374cc237f[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue Jul 27 21:57:31 2021 +0900
+
+    商品一覧ページと、ユーザーの投稿、いいねした投稿のN+1問題の解決
+
+[33mcommit efd72c22cf894c7f0ac5c722b4a3d6a76bca243b[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue Jul 27 16:48:44 2021 +0900
+
+    gem 'bullet'の導入
+
+[33mcommit 2206e6b1b6b9e3ec48d22688f8398dea49978b7c[m
+Merge: 12ac2bda 951ca929
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue Jul 27 16:12:01 2021 +0900
+
+    Merge branch 'master' of https://github.com/Harasou21/coffee_passport
+
+[33mcommit 12ac2bda687ae6902f431930e319b01a97bcfb87[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue Jul 27 16:11:58 2021 +0900
+
+    よくわからんけど一旦コミット
+
+[33mcommit 951ca929ec25dd1001040bcca08ec36c1866e2d4[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Jul 12 12:25:05 2021 +0900
+
+    Update README.md
+
+[33mcommit e7c3ffb6220048e56828ce7e8635e08b5ca89f74[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Jul 11 19:26:12 2021 +0900
+
+    Update README.md
+
+[33mcommit ea30d5036bb25f53ae42bb12f402b9edcf38fc6b[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Jul 4 16:45:45 2021 +0900
+
+    会員登録時のエラー解決
+
+[33mcommit 542efa498dbb1feac6b0d926fa51107e9125e4ca[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Jun 9 20:18:54 2021 +0900
+
+    MYSQL8.0の時はとりあえずこっちにしてみる
+
+[33mcommit e4eca2a9166a3a7052288dd6fc8cded94c9196e5[m
+Merge: 07af34ff 19a9cfd9
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Jun 9 19:48:06 2021 +0900
+
+    Merge branch 'master' of https://github.com/Harasou21/coffee_passport
+
+[33mcommit 07af34fff0c7bc617f55499d90ecc8e17318d081[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Jun 9 19:47:57 2021 +0900
+
+    色々な投稿にラベルを貼る
+
+[33mcommit 19a9cfd9fce425a77e214434eb2a1cd90a18ba80[m
+Merge: a64a256b ad0cb6d7
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Jun 9 19:47:01 2021 +0900
+
+    Merge pull request #28 from Harasou21/coffee-label
+    
+    Coffee label
+
+[33mcommit ad0cb6d72a614a22fcfa46254c16abefb2311771[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Jun 9 19:35:31 2021 +0900
+
+    ラベルのcssを実装
+
+[33mcommit 2ac46e6321646c836f28a7584db7fd61c14d667f[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Jun 9 16:20:29 2021 +0900
+
+    コーヒーのラベルを設定
+
+[33mcommit 868ed50c6f4095e3d9b40a71ed59aa7a70f48ee7[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Jun 9 16:20:03 2021 +0900
+
+    タイムラインのcssをdrinks.seccに移動
+
+[33mcommit ebd30947e4c0626fcdcca90a3fe7135531603406[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Jun 9 16:19:36 2021 +0900
+
+    docker-composeの設定を変更
+    
+    ログを出したいけど、できなかった
+
+[33mcommit 0edd2c65a0320d83714c441dce77223a86a452f3[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Jun 9 16:18:42 2021 +0900
+
+    CSSが崩れるのでコメントアウト
+
+[33mcommit a64a256b4eca170b50a2d5fa087af0a5ffd70bbb[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Jun 6 22:31:50 2021 +0900
+
+    コメントを追加
+
+[33mcommit 25ea761446b859921005efe5170836b6aee553d3[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Jun 6 22:31:31 2021 +0900
+
+    mbind: Operation not permittedを消したかった
+
+[33mcommit 23e18e11a64c0122c6fbfb68b345579165767632[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Jun 6 22:30:57 2021 +0900
+
+    リダイレクト先を変更
+
+[33mcommit 689b25c7c0b29a993f798ebb91d63c4fec6fb940[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Jun 6 22:30:40 2021 +0900
+
+    gemのアップデート
+
+[33mcommit df15ab31fafddb002ebb08a625cc5ee0a6da9b0b[m
+Merge: 1c8dd87a f67b6ffa
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun May 23 17:02:09 2021 +0900
+
+    Merge pull request #27 from Harasou21/sendgrid
+    
+    sendgridの連携が上手くいかないので一旦まーじ
+
+[33mcommit f67b6ffabe3e6e0e8bad51d824a72a3ae8e9bb75[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun May 23 17:01:43 2021 +0900
+
+    sendgridの連携が上手くいかないので一旦まーじ
+
+[33mcommit 1c8dd87a7e202afd6d6783b3b2a96f8fe66a80a1[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Thu May 20 16:36:11 2021 +0900
+
+    Update README.md
+
+[33mcommit 1fdd84ba7b3196bd659ef1543eca499034732e3b[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed May 19 22:22:25 2021 +0900
+
+    コミット
+
+[33mcommit 6a76de5c718a35831f19b51ab55e6c32309ce870[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue May 18 20:51:38 2021 +0900
+
+    Update README.md
+
+[33mcommit 2ad5bb8d07100ea737c08c630e237dd67ea854fb[m
+Merge: 33a0f8ef 6a8a356c
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue May 18 01:13:10 2021 +0900
+
+    Merge pull request #26 from Harasou21/pagy
+    
+    Pagy
+
+[33mcommit 6a8a356cf327abaaf7c3620f6cebceb057f132d4[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue May 18 01:11:29 2021 +0900
+
+    will_oaginateの削除と代替
+
+[33mcommit 33a0f8efbc5429d1f31acc5026bfeed8394da629[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon May 17 23:54:26 2021 +0900
+
+    Update README.md
+
+[33mcommit beba2caedbf0a61b6924797232371b2374ca14fe[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon May 17 23:17:52 2021 +0900
+
+    pagy導入成功！
+
+[33mcommit 2a29502d839402aa2cf77ed4c8820a84baf703b0[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon May 17 22:52:43 2021 +0900
+
+    pagyを読み込む記述
+
+[33mcommit 29568f5af4944d05c150d3cc9ad14d2c0448fa3e[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon May 17 22:52:00 2021 +0900
+
+    gem 'pagy'の導入
+
+[33mcommit 25f8417eb5357d107f7114ee7cfca4152de710f6[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon May 17 00:16:45 2021 +0900
+
+    Update README.md
+
+[33mcommit 75fe9693c058e234732aa31678721494b6da9b9b[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon May 17 00:15:43 2021 +0900
+
+    Update README.md
+
+[33mcommit 4e94b22012a9c90972d222f60c0359abbda90228[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun May 16 23:47:27 2021 +0900
+
+    Update README.md
+
+[33mcommit 067b49d441832bb28844ac7ed44444bf61efd717[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun May 16 16:57:29 2021 +0900
+
+    Update README.md
+
+[33mcommit 41b17b6e1841960bd1c4f9175c3af941c9be1566[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun May 16 15:58:52 2021 +0900
+
+    unicorn.rbの設定を変更
+
+[33mcommit aef56a922c75e50ae9cb4d2981a42113197be5e0[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat May 15 23:06:25 2021 +0900
+
+    手動デプロイしたいから一旦unicorn.rbの設定変更
+
+[33mcommit f494c0c665d30025e8c196eb8abbad8802feddd7[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat May 15 15:16:29 2021 +0900
+
+    設定変更
+
+[33mcommit b2e906479edcecddd4d1e073078689df256209a6[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat May 15 15:14:26 2021 +0900
+
+    production.rbの設定を変更
+
+[33mcommit d7006c5164c4999b1b9a40ad3706c42bfa51b07a[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat May 15 15:11:03 2021 +0900
+
+    database.ymlの編集
+
+[33mcommit e902688c46cfef24c5800039d055221b8ee9c1d3[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat May 15 14:54:38 2021 +0900
+
+    これでどうでしょうか
+
+[33mcommit e2f5b344b68a7b3055489ff9a0ba375be7ef32fa[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat May 15 14:53:47 2021 +0900
+
+    これでお願い
+
+[33mcommit 0683207a9c3aaf24fbd298c03242f360dd9e6999[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat May 15 14:43:42 2021 +0900
+
+    database.ymlの変更
+
+[33mcommit f77f2558d4ae5181906be254eb8a15db834c40d4[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat May 15 13:40:11 2021 +0900
+
+    database.ymlno
+
+[33mcommit d3285d87dee2698fd16f63865af3b81c043dc8fb[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat May 15 13:05:10 2021 +0900
+
+    database.ymlの設定変更。これで繋がるか？
+
+[33mcommit cfd452f0ded01ea16138703ce066876bfa5c6563[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat May 15 12:45:19 2021 +0900
+
+    こんな感じ
+
+[33mcommit a449660f5dba2d1967fbbd179f2abb64aac2a6df[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat May 15 12:44:22 2021 +0900
+
+    unicornの設定変更
+
+[33mcommit 7ae2a890a5884e87571feefd0551c224f170b87d[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat May 15 12:42:23 2021 +0900
+
+    unicorn起動時にエラーが起きたので,unicornの設定を変更
+
+[33mcommit 00788bf711aa2ceb51eab3e33467924598a8f40c[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat May 15 00:08:02 2021 +0900
+
+    やり直し
+
+[33mcommit d4d0da9db1ea65de327e700ff76dd034ff42b978[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Fri May 14 23:57:47 2021 +0900
+
+    Revert "Revert "Revert "docker開発環境のmysqlを8.0にバージョンアップ"""
+    
+    This reverts commit cd0183b3cf50d679d3249c0956a62415c4ec13a1.
+
+[33mcommit cd0183b3cf50d679d3249c0956a62415c4ec13a1[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Fri May 14 23:57:31 2021 +0900
+
+    Revert "Revert "docker開発環境のmysqlを8.0にバージョンアップ""
+    
+    This reverts commit 94debd2c34655c188fdb974032ce76b371326e23.
+
+[33mcommit 94debd2c34655c188fdb974032ce76b371326e23[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Fri May 14 23:57:02 2021 +0900
+
+    Revert "docker開発環境のmysqlを8.0にバージョンアップ"
+    
+    This reverts commit 8e1eaf661a476a72aac2cb3ce45289d4263297b5.
+
+[33mcommit a641389359d17043be39bfb5b25bdb09b2c7791d[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Fri May 14 23:54:23 2021 +0900
+
+    unicorn.rbの設定を変更
+
+[33mcommit 8e1eaf661a476a72aac2cb3ce45289d4263297b5[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue May 11 16:00:42 2021 +0900
+
+    docker開発環境のmysqlを8.0にバージョンアップ
+
+[33mcommit bc689e997cb22307304abbd153aca3b03ac335c7[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue May 11 13:46:55 2021 +0900
+
+    database.ymlの変更
+
+[33mcommit 66f36ca3a5988f93c9a2a572d07bbef8a92c33d0[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue May 11 12:58:46 2021 +0900
+
+    database.ymlの設定変更
+
+[33mcommit 043919d7456f89027bceb0f9a45bd368702b2ea1[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon May 10 13:58:52 2021 +0900
+
+    一旦production.rbの設定を変更
+
+[33mcommit ec7a7f642b3f6ed2df114cfc33b638979160c22e[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon May 10 13:53:45 2021 +0900
+
+    databse.ymlの設定変更
+
+[33mcommit 6853a6dc545f9e32dc036781b19bf59cf137d617[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon May 10 09:19:00 2021 +0900
+
+    database.ymlの変更とdbコンテナ内にファイル作成
+
+[33mcommit e864c3c73f9310e7c08d110e4b56d67c530e1d70[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon May 10 09:00:32 2021 +0900
+
+    database.ymlの設定変更
+
+[33mcommit e4cc198370817601706108380ee0afa960d22929[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon May 10 08:52:10 2021 +0900
+
+    database.ymlの設定変更
+
+[33mcommit 7ed05f462afebb101e9b29c179d2e8ec0529a268[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon May 10 08:47:51 2021 +0900
+
+    database.ymlの編集
+
+[33mcommit 78cc387ccaf6ab376ff7205dba8cfe5aaebff258[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun May 9 12:41:10 2021 +0900
+
+    設定変更
+
+[33mcommit 79b29e8a2749ee882bf029db3803c389d7ed33aa[m
+Merge: 948cfd56 f4ed9067
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun May 9 12:12:50 2021 +0900
+
+    Merge branch 'master' of https://github.com/Harasou21/coffee_passport
+
+[33mcommit 948cfd56211981bd90778cb1b04aa8958fa405c3[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun May 9 12:12:11 2021 +0900
+
+    production.rbの記述を変更
+
+[33mcommit f4ed90672a424aec083703a5027e7e36e2a0a75e[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun May 9 00:34:57 2021 +0900
+
+    Update README.md
+
+[33mcommit 452a87ff4843c719a33e6127378b8fb170d8a47c[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun May 9 00:34:18 2021 +0900
+
+    Update README.md
+
+[33mcommit f7c5ba121b94cf545baa3c5af0fa345a6f37f8b7[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat May 8 12:07:16 2021 +0900
+
+    設定変更
+
+[33mcommit 415320838f7c32e4c9ea60345c7d7e9c12086656[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat May 8 11:54:31 2021 +0900
+
+    重複してる部分を削除
+
+[33mcommit e3245278abeed1efcdfc4b738f6188f7832eaaf9[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat May 8 11:49:19 2021 +0900
+
+    設定変更
+
+[33mcommit 70f40f9f9dc978636e70be6f11c89ab7689cb4d7[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat May 8 11:44:18 2021 +0900
+
+    設定をもとに戻す
+
+[33mcommit 3ce823fed486dfd1ca206a78ca8a2ff46b0a72ec[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat May 8 10:58:38 2021 +0900
+
+    database.ymlのproductinoの設定を変更
+
+[33mcommit 6a824675d962c047e174bb5357f12c049f334660[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat May 8 10:29:15 2021 +0900
+
+    デプロイ時のエラー解決
+
+[33mcommit 15753f2bbdf45537438ed4e5bac9375e3f706ef2[m
+Merge: ff74a3d7 b15e021a
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon May 3 22:56:33 2021 +0900
+
+    Merge branch 'master' of https://github.com/Harasou21/coffee_passport
+
+[33mcommit ff74a3d7521ac1e364e74677c5878f78e7df52dc[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon May 3 22:56:30 2021 +0900
+
+    自動デプロイのためdocker-compose.ymlをignoreから除外
+
+[33mcommit b15e021af6c2788d803b84c493d315a023d95816[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon May 3 18:20:45 2021 +0900
+
+    Update README.md
+
+[33mcommit 908a00dc31eb143f6a486f800fcd0a8fffdecf0e[m
+Merge: 603c54b5 ba37072f
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon May 3 18:01:00 2021 +0900
+
+    Merge branch 'master' of https://github.com/Harasou21/coffee_passport
+
+[33mcommit 603c54b5b7be0ea722041900b26240ebcc03adb2[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon May 3 18:00:57 2021 +0900
+
+    購入の結合テスト
+
+[33mcommit ba37072f4892b443afd978d8edd11d9befbebf3d[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Apr 28 18:41:16 2021 +0900
+
+    Update README.md
+
+[33mcommit 740dbe7d211c770dc4925fdf516ff18493a3d255[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Apr 28 18:38:50 2021 +0900
+
+    Update README.md
+
+[33mcommit 1343a09eb99d18e7a108611657f91320a11c98ab[m
+Merge: 717f9197 4a3bc2ba
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Apr 21 01:14:36 2021 +0900
+
+    Merge pull request #25 from Harasou21/エラーメッセージの日本語化
+    
+    エラーメッセージの日本語化
+
+[33mcommit 4a3bc2ba228d5d352e4fd821c29d8c1190039314[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Apr 21 01:14:11 2021 +0900
+
+    エラーメッセージ の日本語化
+
+[33mcommit 56f409c8549fa22640964d921b5189fc0e6d3a24[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue Apr 20 16:42:52 2021 +0900
+
+    日本語対応の準備
+
+[33mcommit 717f919773c431c06db5d6e16d64d7fc5690838d[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue Apr 20 16:35:29 2021 +0900
+
+    rubocopの実行
+
+[33mcommit f9547107c3758152c5cef18ef33e89cc396f46f8[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue Apr 20 16:18:33 2021 +0900
+
+    ログインしないと購入ページにいけない
+
+[33mcommit 61853c1e47ec67d79232da053d9ac198279818e6[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue Apr 20 16:18:09 2021 +0900
+
+    rubocopの導入
+
+[33mcommit 53ee07871119cfad31ac4f2df61b9a613e0d23fd[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue Apr 20 01:55:26 2021 +0900
+
+    save_and_open_pageで保存されたHTMLファイル
+
+[33mcommit 04ff184ba9b5026acde3d8acfb6932b3221e9cbe[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue Apr 20 01:54:53 2021 +0900
+
+    共通ヘルパーメソッドを記述
+
+[33mcommit 55df31b5be533235127a4ed9b583654699efc3c3[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue Apr 20 01:54:35 2021 +0900
+
+    削除の結合テストの記述
+
+[33mcommit 66cf45fa266db6393949c4d8facf27403f019459[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue Apr 20 01:53:56 2021 +0900
+
+    factory :sold_drink ,class: Drink doを記述
+
+[33mcommit ec05b6d454c6e1b4e9526756ce8eaf363a127b2a[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue Apr 20 01:53:41 2021 +0900
+
+    主にchromeの導入のために設定書き換え
+
+[33mcommit fbee2154905cc36e6538bb09caf788744fac7c1e[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue Apr 20 01:53:05 2021 +0900
+
+    不要な記述削除
+
+[33mcommit 24c0e0dc89241e6ff1be0dfc6ad634b7b4468f83[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue Apr 20 01:52:51 2021 +0900
+
+    save_and_page_openのためにgem導入
+
+[33mcommit 543dd43dc62eaa4a838542f02304329736b71d21[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue Apr 20 01:52:27 2021 +0900
+
+    フォーム特定のためにid付与
+
+[33mcommit 32796ba2f926074d0aa481c777ea696a62d64ce6[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Fri Apr 16 01:03:46 2021 +0900
+
+    drinks_controllerの単体テストの記述
+
+[33mcommit d507a143948c979b54098bf2a82a2b57fd2ecd48[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Fri Apr 16 01:03:09 2021 +0900
+
+    結合テストをするため、docker上でchromeを導入
+
+[33mcommit c654ce5a396b14b38918fb7ef36b33275d05f396[m
+Merge: bceb1aa6 519c76c7
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Thu Apr 15 16:31:55 2021 +0900
+
+    Merge branch 'master' of https://github.com/Harasou21/coffee_passport
+
+[33mcommit bceb1aa6f836ac500cde0f2c761116068a2b5900[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Thu Apr 15 16:31:46 2021 +0900
+
+    質問したいのでコミット
+
+[33mcommit 464294795224b6e1c91400bbcf1810b1183d7fb4[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue Apr 13 22:13:37 2021 +0900
+
+    rspecのmailerテスト機能を使うため
+
+[33mcommit 519c76c70e0903e2a415054d7f9a01257384737f[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Apr 13 22:09:50 2021 +0900
+
+    Update README.md
+
+[33mcommit 081815d3202ea5b6665640f6b7edfac6fee8a1af[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue Apr 13 18:18:53 2021 +0900
+
+    trade_addressの単体テスト
+
+[33mcommit 78ab4811e9e3d24910305beaa57dfc495f61de4d[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue Apr 13 18:17:57 2021 +0900
+
+    drink.rbの単体テスト
+
+[33mcommit 55bd140bb3cd12d5a2a65dcae489c39d14038f6c[m
+Merge: 67c09dc2 edc0b512
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Apr 12 16:15:28 2021 +0900
+
+    Merge pull request #24 from Harasou21/developing-with-vue.js
+    
+    Developing with vue.js
+
+[33mcommit edc0b5123382cd0a2292e542a67a7b27061117b0[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon Apr 12 16:12:19 2021 +0900
+
+    とりあえずコミット
+
+[33mcommit 60a12e6b019f77b1c2eeee60be0d886b6ad0a43e[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon Apr 12 16:00:51 2021 +0900
+
+    トップページを少し改修
+
+[33mcommit 67c09dc2c34e8a08664c78dccfcc982cf2759892[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Apr 12 15:54:08 2021 +0900
+
+    update readMe
+
+[33mcommit 7e7b6735b66b87d100af3e1d281bd002fb65e3a2[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Apr 12 15:53:23 2021 +0900
+
+    update readMe
+
+[33mcommit 7a03b21c9c944823957ccb0648f36a915de78934[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat Apr 10 16:44:40 2021 +0900
+
+    フッターとお問い合わせページのSPA化
+
+[33mcommit 82b20aad702edfa940d88736c9799c6f1d0ea615[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Apr 7 20:39:17 2021 +0900
+
+    上手くいかないコミット
+
+[33mcommit 8dda734a4dea5ad4dc2a1e90d314826fe4eea99c[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Apr 7 20:39:03 2021 +0900
+
+    railsのアプデに伴うgemやdockerの変更
+
+[33mcommit 5c6cd6b9db089912fbf6ad9045c23d644ac5fcc8[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon Apr 5 17:51:39 2021 +0900
+
+    vueの拡張機能を追加
+
+[33mcommit 9c49c4d885b35ef4e7f888762172636eafd80798[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon Apr 5 13:54:21 2021 +0900
+
+    vue.jsの導入
+
+[33mcommit 41ce47e089035dac563164bc8d05b24c188eaac5[m
+Merge: 4f5853e0 5ad588e9
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Mar 31 16:50:37 2021 +0900
+
+    Merge pull request #23 from Harasou21/evolving-buying
+    
+    Evolving buying
+
+[33mcommit 5ad588e99dad4fbcf90c2defa33840d3387f3e9e[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Mar 31 16:47:26 2021 +0900
+
+    フッターの1のズレを修正
+
+[33mcommit 1336992c55f77d0be709052b4f08e8e16c8c8490[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Mar 31 16:47:07 2021 +0900
+
+    Selectedのもじがdrinks/indexだけで表示させるように設定
+
+[33mcommit 2c47daf32aecabeaf1fc57b767788f4ae05625ee[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Mar 31 16:21:05 2021 +0900
+
+    購入ページのアップデート
+    
+    一度購入した場合は、次からその住所がデフォルト値にセットされる
+
+[33mcommit ebde281c9e1cd48e2f6c3b4ee604032b1107ff6f[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Mar 31 16:19:45 2021 +0900
+
+    user_idをaddressesテーブルに保存する処理を記述
+
+[33mcommit 75a0f1a927bfc74988b4abfb1c02cf31329593d2[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Mar 31 16:19:13 2021 +0900
+
+    ユーザーの住所のインスタンスを生成
+
+[33mcommit ce15e95d4e120f584782645a9b6434df98713c60[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Mar 31 16:18:21 2021 +0900
+
+    user.rbとaddress.rbを紐付け
+
+[33mcommit 6493e9a5a0b7c889be642e1f393a8078aeba840b[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Mar 31 16:18:00 2021 +0900
+
+    user_idカラムをaddressesテーブル に追加
+
+[33mcommit a8cba4e0a392702a5fc340e6ea0325ee565e5201[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Wed Mar 31 16:17:14 2021 +0900
+
+    いらないと思うけど、trade.rbにsession_helperを追加
+
+[33mcommit 4f5853e0a3e95b9abc8e1838ed800ac0959398e6[m
+Merge: 3895f010 de98c6ab
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Mar 22 15:33:09 2021 +0900
+
+    Merge pull request #22 from Harasou21/evolving-timeline
+    
+    Evolving timeline
+
+[33mcommit de98c6ab96b70dca3dbcb48c43ffa5f88ad3d0f0[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon Mar 22 15:30:52 2021 +0900
+
+    payjpの環境変数の読み込ませ方の変更
+
+[33mcommit f82e8ee52616bf222dfeefa9025bb281fc333857[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon Mar 22 15:29:43 2021 +0900
+
+    ピックアップ投稿のビューの表紙
+
+[33mcommit d55795af1bf536771ba45650d96596efb8e145cc[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon Mar 22 15:29:08 2021 +0900
+
+    send_action_emailメソッドのデバッグ用のコード記述
+
+[33mcommit 5063d56fed8e5a5fe1d4c398c3b69375d0aa0a00[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon Mar 22 15:28:32 2021 +0900
+
+    seedデータの投入
+
+[33mcommit 2413961e126cc987a04beac28153b3319d12484d[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon Mar 15 15:54:21 2021 +0900
+
+    タイムライン表示の工夫
+
+[33mcommit 3895f01053994d4f725e42fbed8153de5d7e3d10[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Mar 14 14:47:06 2021 +0900
+
+    contact.html.erbの可読性向上
+
+[33mcommit e6f9a77f92daa138551aed2b981850dfd17d6252[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Mar 14 14:13:28 2021 +0900
+
+    メイラー の設定
+
+[33mcommit 1d2459fa5e1f99d3a77a1f236d79203e7ef6b053[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Mar 14 14:13:10 2021 +0900
+
+    Docker開発環境を作成
+
+[33mcommit df0ab8b1809ddd41b03f322fd5f04b675a94742c[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat Mar 13 23:33:23 2021 +0900
+
+    .gitignoreの設定
+
+[33mcommit 2f775548b030229cb4bb37e5267943cee5edea5f[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat Mar 13 23:32:09 2021 +0900
+
+    dotenv-railsを導入
+
+[33mcommit 05e59e099e43cfb5ba09fcdc3d9aef186754e183[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat Mar 13 22:55:24 2021 +0900
+
+    フッターとお問合せに関して
+
+[33mcommit e84318947d784d60de51ba7559c3c737a2138a49[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat Mar 13 22:54:12 2021 +0900
+
+    .gitignoreの設定
+
+[33mcommit 127e81bf466f5e369c44b4494e7d4948339f4952[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat Mar 13 22:49:20 2021 +0900
+
+    Revert "ドッカー開発環境を作成"
+    
+    This reverts commit d234ffcbe4045dd77582140aa26683ac8f5b88dd.
+
+[33mcommit 948a8a6e765fb9f92a04e9692e1a906703fda38d[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat Mar 13 18:44:55 2021 +0900
+
+    ドッカー開発環境を作成
+
+[33mcommit 3de59eee906138b5fa40bd39eee86bc3fee1bb09[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat Mar 13 18:44:09 2021 +0900
+
+    フッターの作成
+
+[33mcommit 1430ca4c42868063c047ae5516020c7ee0b7ed1b[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sat Mar 13 18:43:32 2021 +0900
+
+    Git ignoreの設定
+
+[33mcommit 2be0e3c8529bee4a15b69a383f28689796bb4523[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue Mar 9 06:13:09 2021 +0900
+
+    開発環境をDocker上で構築
+
+[33mcommit 42d9a56332580690200c97120d24052a0ed7fe14[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue Mar 2 17:11:02 2021 +0900
+
+    deploy.rbにマスターキーを読み込ます設定を追加
+
+[33mcommit 861eb339a1bf5f04fe80c3dccc75ab74943abb47[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue Mar 2 17:02:44 2021 +0900
+
+    deploy.rbのsshキーの記述を変更
+
+[33mcommit 9ae9bdc8c9386a6296a0621e3e633839274b1cf2[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Tue Mar 2 13:56:03 2021 +0900
+
+    エラー内容の通りにcapfileを編集
+
+[33mcommit 855f1d833ac77056308d252fa59b2f08ac8c9f6f[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon Mar 1 21:21:29 2021 +0900
+
+    設定変更
+
+[33mcommit 3e4fda1102f1da025b789d50834f6e4d6f79abf1[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon Mar 1 21:07:00 2021 +0900
+
+    Nginxとcapictranoの変更
+
+[33mcommit 98ff585003377407415846f5e3b474da17a4421f[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon Mar 1 18:29:21 2021 +0900
+
+    自動デプロイの設定
+
+[33mcommit 778b53b297a2cf65a9e287442cc37c12306df27b[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Mon Mar 1 13:53:36 2021 +0900
+
+    unicorn.rbの設定変更
+
+[33mcommit e18ef0d5e8c0f6cc7d48bc59181d2ceee1b5dd4b[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Sun Feb 28 23:18:47 2021 +0900
+
+    unicornの設定変更
+
+[33mcommit 1e88f5bba80d8ca75cfe08fe581bf4505ee9d7fa[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Fri Feb 19 16:15:26 2021 +0900
+
+    HTTPS接続を止める
+
+[33mcommit 325f7b4b213f4394a3501c4ed39363ee93aecb45[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Fri Feb 19 16:13:26 2021 +0900
+
+    HTTPS接続
+
+[33mcommit c5523ed74a45dcd071b399f350b7916227aef8aa[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Fri Feb 19 13:39:51 2021 +0900
+
+    文法エラー解消
+
+[33mcommit 159d70f66713488bfb5387844af3394ec465f8d6[m
+Author: harasou21 <harasou41soccer@gmail.com>
+Date:   Fri Feb 19 13:33:13 2021 +0900
+
+    アプリ概要のトップページの作成
+
+[33mcommit f5c49396bc9f5365fe234231482803767d92d6cb[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Feb 2 19:09:58 2021 +0900
+
+    購入履歴の表示を変更
+
+[33mcommit 01fab7802d7f218a88edf1f024ac82ae861ea62e[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Feb 2 18:48:56 2021 +0900
+
+    #の色を変更
+
+[33mcommit 4019858affff50a881c31b20307c68c43204baa0[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Feb 2 17:36:22 2021 +0900
+
+    credentials.yaml.encの記述変更
+
+[33mcommit 1d9d5bce0b58a85f7f023f8271eb16143a26c385[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Feb 2 17:24:29 2021 +0900
+
+    credentials.ymlの記述を変更
+
+[33mcommit 6d52a8b0678b6d8bc9e7ff2a41934f3d75173862[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Feb 2 04:47:18 2021 +0900
+
+    記述変更
+
+[33mcommit 455d67bbe17f017604639154ead6e69aa6d33db0[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Feb 2 04:41:17 2021 +0900
+
+    環境変数の読み取りを変更
+
+[33mcommit f3cea40bdad3b391728afc93b32ccbdd57f5e11e[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Feb 2 04:34:03 2021 +0900
+
+    環境変数の読み取り方法の変更
+
+[33mcommit 01cac7ec59cfef8a74281ccfa7f3e542f86b3d09[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Feb 2 04:23:05 2021 +0900
+
+    payjpの記述を一部変更
+
+[33mcommit 17b7e08b4fb027b91d11f75256073acb5b7f638a[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Feb 2 03:16:19 2021 +0900
+
+    コーヒーの詳細のページに購入リンクを追加
+
+[33mcommit 723c874c3a8b8087394619f0972373535750a40c[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Feb 2 01:47:59 2021 +0900
+
+    サンプルデータの投入
+
+[33mcommit 4600a69f29abb71d5bdf24cf15ec75013f3d24a1[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Jan 31 18:24:50 2021 +0900
+
+    ファビコンの設定
+
+[33mcommit 86d7f5a5baa2542368b197abb854219ee0a6066c[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Jan 31 17:31:35 2021 +0900
+
+    drinkのバリデーション を追加
+
+[33mcommit 1fe739e6bf06cefe64373c559a505daa551f6404[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Jan 31 17:30:10 2021 +0900
+
+    元の記述に変更
+
+[33mcommit 3e98fd599f579a3d53f25259501e927486af5430[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Jan 31 17:23:21 2021 +0900
+
+    構文エラー解決
+
+[33mcommit a4c886e219505afef0595b99884dc6cfe7d25c4f[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Jan 31 17:18:16 2021 +0900
+
+    不要な記述削除
+
+[33mcommit bfe22f919a5da1f3cc28ca9b97a1c05bf93de028[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Jan 31 17:14:30 2021 +0900
+
+    imageのバリデーション
+
+[33mcommit ed663c7832dd2fc7b2cc939bdb821a37634ebaad[m
+Merge: ea7bb69b a0995f43
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Jan 30 22:14:21 2021 +0900
+
+    Merge pull request #20 from Harasou21/サンプルデータの差込
+    
+    サンプルデータの差込
+
+[33mcommit a0995f430878bdf37fe6c2359448a0b2be099e51[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Jan 30 22:10:41 2021 +0900
+
+    ハウスブレンドのサンプルデータを投入
+
+[33mcommit 9b9d64cf33c55b22c1ab7c586e88eeb459163e0a[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Jan 30 21:14:29 2021 +0900
+
+    fakerを導入
+
+[33mcommit ea7bb69bbea6370282c9a13010518adb69f8b7a1[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Jan 30 21:05:00 2021 +0900
+
+    コミット
+
+[33mcommit 697007e95d123867a5e6bcc02037272c244329e8[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Jan 30 02:46:18 2021 +0900
+
+    ユーザーにメールを送る処理を記述
+
+[33mcommit af8bcbadea0277fe05f406921d4430fa191ff307[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Jan 30 02:32:56 2021 +0900
+
+    本番環境のメイラーの設定をsendgridに変更
+
+[33mcommit 8fb25aa9943a3d3f8dc8f85283ebd8bd13296921[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Jan 30 02:22:37 2021 +0900
+
+     不要な記述削除
+
+[33mcommit 7112e653957d012fbaa00f39799610feed87d866[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Jan 30 02:16:37 2021 +0900
+
+    本番環境のメイラーの設定をgmailに変更
+
+[33mcommit 7ee7e5d732d252f4d6728f015e4f507a06098649[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Jan 30 01:58:39 2021 +0900
+
+    本番環境のメイラー設定
+
+[33mcommit 687f4906739535f1a766e413f70fa7f2a09c053c[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Jan 29 18:31:33 2021 +0900
+
+    本番環境の再設定
+
+[33mcommit c22d973b58b0f673b7b30f61fa96a3d6f46c4f5a[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Jan 29 18:08:38 2021 +0900
+
+    環境変数を変えたので、更新する必要ないかもだけど一応
+
+[33mcommit a66addeeaefc5a7dd31a6c7dde5016908ccfe80f[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Jan 29 18:00:28 2021 +0900
+
+    とりあえず
+
+[33mcommit 5fe3c13a02c337eb8c18806a2d7ea27d520dd6c2[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Jan 29 17:57:31 2021 +0900
+
+    再編集
+
+[33mcommit d96a58ef5089d17ccd64e44fe5fc826447ccead7[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Jan 29 17:51:07 2021 +0900
+
+    本番環境のメイラーの設定
+
+[33mcommit 1ff47042852dc1a2c9229004bf5a23e0b9cdceeb[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Jan 27 21:52:40 2021 +0900
+
+    間違えた
+
+[33mcommit e47f61753733183ddd77774bcbb79860f1b972c3[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Jan 27 21:20:10 2021 +0900
+
+    sendgridを使用
+
+[33mcommit fb69c1e5dbf85be4359a801169b48cd740b0b9f4[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Jan 27 21:13:42 2021 +0900
+
+    本番環境メイラーの設定変更
+
+[33mcommit 0134ba45d1db903f82a9cd7e3cd09027e98d3231[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Jan 27 21:07:37 2021 +0900
+
+    メイラーのエラー解決
+
+[33mcommit 0de5e5287800f06de39234fd4ec355f0bbb6d1a6[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Jan 27 19:46:15 2021 +0900
+
+    本番環境のエラーの解決
+
+[33mcommit e76e2cddbadbcde3e77e92d1c85513b293d7711f[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Jan 27 19:43:46 2021 +0900
+
+    本番環境のメイラーの設定の変更
+
+[33mcommit 13f012a327d43b2b931bb325bf12923115f6776a[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Jan 27 19:38:18 2021 +0900
+
+    不要な記述を削除
+
+[33mcommit 3ae9ad6deed637039eacc2786b4c54688031c6f8[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Jan 27 19:36:44 2021 +0900
+
+    本番環境のメイラーにsendgridを使用
+
+[33mcommit 9331b7179ad8e10fa6faa838c50a65bb590df48b[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Jan 27 14:44:30 2021 +0900
+
+    sendgrid
+
+[33mcommit fbe7d920004324cabcf23b7b67188c8981d08e2e[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Jan 27 14:09:59 2021 +0900
+
+    sendgrid
+
+[33mcommit 20db444a33ef00a8893ed297bf17e8624a11224d[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Jan 27 13:57:12 2021 +0900
+
+    sendgrigの登録
+
+[33mcommit 2cd7758c40a893232463f220b258642793657dd5[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Jan 24 20:14:42 2021 +0900
+
+    試し
+
+[33mcommit 3034e94abfc5f89bc8de384efa94069dda0a9f99[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Jan 23 14:17:46 2021 +0900
+
+    メイラーの設定
+
+[33mcommit 4e522339649f715d270f98dcbbd9fecb326d7ac0[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Jan 23 07:06:03 2021 +0900
+
+    本番環境のメイラーの設定
+
+[33mcommit 76bbf40ced0b0b9f713c530fed58cabf027b9780[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Jan 23 06:20:50 2021 +0900
+
+    本番環境メイラーの設定
+
+[33mcommit 4ac7f5bea4e1bf482f13aae11ce40ae01e6c5893[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Jan 23 06:07:55 2021 +0900
+
+    本番環境のメイラーの設定
+
+[33mcommit 1cd3f2d37404ad1d0c9266f2b5c574dc4edfbf5c[m
+Merge: b0d0b83e 9b750694
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Jan 23 05:44:19 2021 +0900
+
+    Merge branch 'master' of https://github.com/Harasou21/coffee_passport
+
+[33mcommit b0d0b83e05e3a8d108c42463c9acad1b9b757e74[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Jan 23 05:44:16 2021 +0900
+
+    本番でもエラー画面を表示する設定
+
+[33mcommit 9b75069427ecd5b017322ce596ca1381d79959f3[m
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Jan 23 03:43:04 2021 +0900
+
+    Update README.md
+
+[33mcommit 0e228fd7fa45265b59efa2b0de4d0c7e8811a307[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Thu Jan 21 14:55:54 2021 +0900
+
+    再編集
+
+[33mcommit 1fb0fe6c42c66de70c8188241c6f15ba546db6d7[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Thu Jan 21 14:33:38 2021 +0900
+
+    本番環境のメイラーの設定
+
+[33mcommit 90d3d3ee90d8bffdd2f388026594ef5da0e8166f[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Thu Jan 21 14:16:56 2021 +0900
+
+    本番環境のメール設定
+
+[33mcommit 8cf23e00a59927a40ca00204bc4aec623a24d85f[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Thu Jan 21 12:22:03 2021 +0900
+
+    本番環境のメイラーの設定
+
+[33mcommit e0f431831e2339e9bf3c0642c7f75efa1bda85d0[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Thu Jan 21 11:36:09 2021 +0900
+
+    色変更
+
+[33mcommit b6ee9993aad1835825b7450ab51a9834c8c9b608[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Thu Jan 21 11:18:26 2021 +0900
+
+    selfを記述
+
+[33mcommit 5b8c99046f98f79a09b0b931a6f487fb2e71051a[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Thu Jan 21 10:55:08 2021 +0900
+
+    不要な記述を削除
+
+[33mcommit 8c3d42c57e9469afa7d10c598f83faddf278b39b[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Jan 20 14:37:08 2021 +0900
+
+    不要な記述を削除
+
+[33mcommit 0dfcf5c01c3a88f8a5e0ceb72b84e84fe189f57c[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Jan 20 14:19:09 2021 +0900
+
+    deploy.rbのcapistranoのバージョンの変更
+
+[33mcommit b70ffe917a5212eed7e078414067a3b15b566356[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Jan 20 14:07:38 2021 +0900
+
+    capistranoの導入
+
+[33mcommit bd69f428f6b1d2528b6074b875347f185efd0668[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Jan 19 16:28:39 2021 +0900
+
+    unicornの再編集
+
+[33mcommit cd2ff6b5b748a13b6ffc34fdd804a83d7b16972b[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Jan 19 10:13:05 2021 +0900
+
+    database.ymlの再編集
+
+[33mcommit d19962433830b035d436c308f3941c52e0f7e302[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Jan 19 09:52:05 2021 +0900
+
+    本番環境のデータベースを設定
+
+[33mcommit 3042cc8f0744905186adef0cff29b5beb809dd4c[m
+Merge: 63d0bd96 ab3a48cb
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Jan 19 09:33:36 2021 +0900
+
+    Merge pull request #19 from Harasou21/AWS-S3
+    
+    Aws s3
+
+[33mcommit ab3a48cba2d529ad7aa77f6cf0c5a58a29c1023f[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Jan 19 09:31:05 2021 +0900
+
+    unicornの設定
+
+[33mcommit 7ec9b71dc52deed9112659cd1b49c950cd321232[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Jan 18 22:37:48 2021 +0900
+
+    ECSを使う設定
+
+[33mcommit 63d0bd96627a7049ba69b95a7b5594eb285d358a[m
+Merge: c7bc61d4 1001aa71
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Jan 18 15:42:44 2021 +0900
+
+    Merge pull request #18 from Harasou21/layout-view2
+    
+    Layout view2
+
+[33mcommit 1001aa7195bfd9614de81b5162ffd1b3fe4a5909[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Jan 18 15:37:36 2021 +0900
+
+    様々なレイアウトを整え
+
+[33mcommit 0f882ca87ecabf6d229bf9fe8753c00f8b0b4281[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Jan 8 19:59:32 2021 +0900
+
+    様々なレイアウトを整え
+
+[33mcommit c7bc61d415a3a3ba7b15f7fc5f2abc524daa141d[m
+Merge: c32f009d 20cc9b48
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Jan 2 16:10:55 2021 +0900
+
+    Merge pull request #17 from Harasou21/buying-coffee
+    
+    Buying coffee
+
+[33mcommit 20cc9b4859d3ec397313cae4bf8b9377a1febd2b[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Jan 2 15:52:34 2021 +0900
+
+    コーヒーの購入履歴の実装
+
+[33mcommit 73aba4d48cd8f8b7d7dc4a1b26af9d91659bda82[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 30 16:20:33 2020 +0900
+
+    フラッシュメッセージの変更
+
+[33mcommit 3fa400ffeebb6112c8b2002602f579482e3b05bb[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 30 16:20:15 2020 +0900
+
+    タイトル付与
+
+[33mcommit 308135b4e03ea2c4b8e178144e3ece77647b43f9[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Dec 29 13:36:58 2020 +0900
+
+    購入ページの実装
+
+[33mcommit 14abdb739d0bcc89f12702af70d6f318ca70436b[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Dec 29 13:36:32 2020 +0900
+
+    購入ボタンのCSS
+
+[33mcommit ef462584412b11924ccff4fd51989da52fe0ebea[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Dec 29 13:36:23 2020 +0900
+
+    商品を購入
+
+[33mcommit c72bcd453808c8321db8e086c187a997d709eb48[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Dec 29 13:36:13 2020 +0900
+
+    誤字修正
+
+[33mcommit 99196076bbd6a94c3f5832ebf5c95371911eea74[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Dec 29 13:36:04 2020 +0900
+
+    管理ユーザーの投稿は表示しない
+
+[33mcommit 062b869f6d86eff81003ad8a8f33f4d1f96f5da2[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Dec 29 11:38:42 2020 +0900
+
+    タイムラインでの商品購入リンクを削除
+
+[33mcommit 102339432425f39613456a044e6238f72f612a65[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Dec 29 11:36:27 2020 +0900
+
+    rails g controller sold_drinksを実行
+
+[33mcommit f07556b4d4839f11ac47b1e02913b995efe83a64[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Dec 29 11:31:28 2020 +0900
+
+    商品購入パス
+
+[33mcommit e5f30879fc5887ff1dd9756303e89e50b2445c65[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Dec 29 11:31:07 2020 +0900
+
+    商品購入後のページに移動するために削除
+
+[33mcommit 55f37c7e000c6a78b601dc3430cb7e9ba1caebee[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Dec 29 11:30:37 2020 +0900
+
+    商品購入後のページ
+
+[33mcommit 0dd7362bcb0c0fd0c6f62aec4f39c2a8f5175638[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Dec 29 11:30:21 2020 +0900
+
+    可読性アップ
+
+[33mcommit c32f009d7ac2973bfcba290c64765f1c3e44d102[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Dec 28 16:32:13 2020 +0900
+
+    フラッシュメッセージに.nowを追加
+
+[33mcommit fa4c7ebc2e5533509e3fddea64034a85e73a98bf[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Dec 28 16:30:10 2020 +0900
+
+    動的なタイトル変更
+
+[33mcommit a68a595f72f7ead63c1a994fa128b29167ca128c[m
+Merge: 09383983 c4e1e541
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Dec 28 09:34:44 2020 +0900
+
+    Merge pull request #14 from Harasou21/account-activation
+    
+    Account activation
+
+[33mcommit c4e1e5416af35f6d5d0e8dadc54a3a331d594db1[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Dec 28 09:22:51 2020 +0900
+
+    ログイン成功時のフラッシュメッセージを表示
+
+[33mcommit 95ebed97c160e0b064c04c265ccf7f503a22de10[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Dec 28 08:22:21 2020 +0900
+
+    current_userがnilになる
+
+[33mcommit 85a2b8199d51c292f94d10e40c0899f299b925ad[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Dec 28 06:01:07 2020 +0900
+
+    名前変更
+
+[33mcommit dbc4cd3715a28b0201c6fc91d727c8a4e5e93a7c[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Dec 27 19:37:31 2020 +0900
+
+    userメイラーの作成
+
+[33mcommit e516f7c415c3381ce6c487b598c474f57c49c15b[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Dec 27 19:37:00 2020 +0900
+
+    ルーティングを作成
+
+[33mcommit dcec08bee3671a22f5f5c058ea47011002101a77[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Dec 27 19:36:34 2020 +0900
+
+    有効化トークンとダイジェストを生成
+
+[33mcommit 1f97f1956f288813fed35caf33d16f478d8d0b5a[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Dec 27 18:28:13 2020 +0900
+
+    rails generate controller AccountActivations　を実行
+
+[33mcommit 09383983d9cc3ae33c52a50ea79338c85fd81905[m
+Merge: b4c01efd 3c292935
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Dec 27 17:53:03 2020 +0900
+
+    Merge pull request #13 from Harasou21/logggedin-by-SNS
+    
+    Logggedin by sns
+
+[33mcommit 3c292935214be43b3f866ba9c7c18b4ac79a2efb[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Dec 27 17:52:00 2020 +0900
+
+    ロゴの削除とヘッダーの背景を変更
+
+[33mcommit 526debf2432434e6f0e5eaca2d22dd6a0f47098a[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Dec 27 17:36:32 2020 +0900
+
+    上手くいかなかったので一旦SNSログインのリンクを無効
+
+[33mcommit e439dad16c089bc31b90107cff2c3bbc6eb27bd1[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Dec 27 17:35:33 2020 +0900
+
+    エラー解決のために色々記述したが前と変化なし
+
+[33mcommit cf2352192edaca98e79659fffee034030d3a81f1[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 25 02:15:56 2020 +0900
+
+    oauth2の導入
+
+[33mcommit 852d031896c107839034f7a10f3fc460b24d6898[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 25 02:15:36 2020 +0900
+
+    SNS認証のバリデーション
+
+[33mcommit 15c21fd1d8038a1b4fb745cb7dbe073ae8fbd73b[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 25 02:15:02 2020 +0900
+
+    SNSログインのためのアクションを編集
+
+[33mcommit 704fefaa52dd67151fa067bbe71c93e62688073c[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 25 02:14:28 2020 +0900
+
+    SNSログインのリンク
+
+[33mcommit f8c33577fe1d8e7a8e29bf28ec7dd0b456c91094[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 25 00:47:16 2020 +0900
+
+    sns認証のためのルーティング
+
+[33mcommit 120a234b861340a8487eae4f4a783078a0611b0c[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 25 00:46:21 2020 +0900
+
+    user.rbとsns_credentialとのアソシエーション
+
+[33mcommit 0a73a1742c3a9cfe59953e4a98d115cb8130ccf0[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 25 00:43:00 2020 +0900
+
+    APIからの情報を保存するテーブルを作成
+
+[33mcommit 2c79d0faa0a7e28d61db67bae956ad2a10317bce[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 25 00:41:43 2020 +0900
+
+    rails g model sns_credential
+    
+    SNS認証とユーザー登録のタイミングが異なる」仕様であるため、SNS認証時にはusersテーブルのレコードを作成することはできません。ゆえに、SNSに関わる別テーブルを用意した方が取り扱いは容易だと考えられます。
+
+[33mcommit 5f4b05648d9a54c56ce2d34fd790e2f3f500f6b7[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 25 00:41:18 2020 +0900
+
+    rails から環境変数を読み込む処理
+
+[33mcommit 21db7f1df3c77acbb9522a7b842e0c77980fb508[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Thu Dec 24 23:23:08 2020 +0900
+
+    アプリ側で環境変数を読み込む設定
+
+[33mcommit aebac3bf27856fa081f5d7e6bc74ac8f15876972[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Thu Dec 24 23:22:51 2020 +0900
+
+    不要なgemの削除
+
+[33mcommit 587d90e173f64882a29350b91b15be15510eac47[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Thu Dec 24 23:09:15 2020 +0900
+
+    SNS認証のためのgemを追加
+
+[33mcommit b4c01efd3b862be0e8c826a183fbc45172d7aa82[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Thu Dec 24 00:38:52 2020 +0900
+
+     色を変更
+
+[33mcommit 666d38afee0190b07e520b8429251f4e8592e25a[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Thu Dec 24 00:34:42 2020 +0900
+
+    レイアウト整え
+
+[33mcommit efaa057a3f5beacf03d2a5aa346b3f9dd6e95875[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 23 23:28:02 2020 +0900
+
+    不正なファイルの削除
+
+[33mcommit 2f2c74237e1a766d45c3cdbf1f554b2a1ecd8eab[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 23 22:51:14 2020 +0900
+
+    herokuデプロイ時のエラー解決のため消去
+
+[33mcommit de173ffcbac931b168dd8677a68badfa1efdba4b[m
+Merge: 3597377b 058cb42d
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 23 22:45:03 2020 +0900
+
+    Merge pull request #12 from Harasou21/liking
+    
+    Liking
+
+[33mcommit 058cb42d0d6b44ea9beba68b186eddcb8b2e2552[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 23 22:42:44 2020 +0900
+
+    不要な記述の削除
+
+[33mcommit b58d15e64b19e54cd42fb52cb76b9f5c1daabf1e[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 23 22:42:35 2020 +0900
+
+    自分がいいねした投稿の表示
+
+[33mcommit f9bf1cabcb6e2baf9d643cde033b564d9415b3b1[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 23 21:08:27 2020 +0900
+
+    .destroyをつけ忘れて￥た
+
+[33mcommit a0d513f6c5ee3b43ea5138f275c0088fb9a6b36b[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 23 20:03:36 2020 +0900
+
+    可読性アップ
+
+[33mcommit 05a7d0a9db7a1803b9d5e87efd5ad75dee5e4e21[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 23 20:00:47 2020 +0900
+
+    いいね機能に必要な実装
+
+[33mcommit 5b05127f365f654166ddf995b92a83b3b1014f66[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Dec 22 16:28:27 2020 +0900
+
+    非同期でいいね、いいね解除するための準備
+
+[33mcommit 628f26ead2cc46438b85968fce6b98f9baba2dbf[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Dec 22 16:21:36 2020 +0900
+
+    ユーザーがいいねした投稿を見れるようなリンクを実装
+
+[33mcommit 31236148ab3052ea208f3919493c8c5a2e1358b1[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Dec 22 16:21:05 2020 +0900
+
+    いいねのルーティングを設定
+
+[33mcommit b10bec96c56f92a23bd0c18067437ec622652dd2[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Dec 22 16:19:35 2020 +0900
+
+    いいねボタンのパーシャルを実装
+
+[33mcommit bffa61369d9225a1aa582e03711e92eac2eef372[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Dec 22 16:19:03 2020 +0900
+
+    destroyアクションで、いいねを外す
+
+[33mcommit 8375a739c88b68248c40197979159e2d78d0049c[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Dec 22 15:43:54 2020 +0900
+
+    いいねボタンを設置
+
+[33mcommit f5b2a9f4c07abed4cdfc82ad427a6ffc3b60daaf[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Dec 22 15:43:45 2020 +0900
+
+    アソシエーションの不備を変更
+
+[33mcommit afe77b7722a2578f386a03ff328f668bb7d50aaf[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Dec 22 15:31:03 2020 +0900
+
+    likes_controllerにcreateアクションを記述
+
+[33mcommit d373184c6ab570aeccec9b4d1b7b4fd339ab3dfa[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Dec 22 15:28:10 2020 +0900
+
+    user.rbにlike_by?メソッドを記述
+
+[33mcommit bfb318ac81c6228dd9ec9752a99add6ecf98319a[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Dec 22 15:23:54 2020 +0900
+
+    rails g model like,contoroller likes実行後、テーブル作成後、アソシエーションを組んだ
+
+[33mcommit ce7898101df4c85c7f3bbbfc541b20eecdc82d55[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Dec 22 15:15:07 2020 +0900
+
+    rateモデル、コントローラー、テーブル削除
+
+[33mcommit 3597377b116ee9a9584d98f6611597d6aca6ea75[m
+Merge: e292f121 547f9f20
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Dec 20 15:16:03 2020 +0900
+
+    Merge pull request #11 from Harasou21/Arranging-layout
+    
+    Arranging layout
+
+[33mcommit 547f9f20f65c31f37a3c0953a011850bb0368ff9[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Dec 20 15:10:26 2020 +0900
+
+    フォロー、アンフォローボタン の配置を変えた
+
+[33mcommit b4cacb50b7b3362a0ffc46be6f5b0bc5b9cf852f[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Dec 20 15:07:02 2020 +0900
+
+    投稿一覧に誰が投稿したか一目でわかるようにした
+
+[33mcommit 4f9559d6605bb5a10dae62b7e7b76b18e7889e63[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Dec 20 15:06:29 2020 +0900
+
+    newアクションをbeforeフィルターに追加
+
+[33mcommit 9930168d4bda6984dcec9fcfa72bbdd5644f9091[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Dec 20 15:06:06 2020 +0900
+
+    userの編集ページのレイアウト
+
+[33mcommit af91583db25bb52fbaa362e3cec13136e15a3828[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Dec 20 15:05:45 2020 +0900
+
+    フォローボタンとフォローしてる、されてるユーザー一覧のレイアウト
+
+[33mcommit 382774813f19e2ad0dc00a074133993d6bf70141[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Dec 20 00:00:44 2020 +0900
+
+    現在いるページに色付け
+
+[33mcommit c1c8a6f87848b89c86789bd8f4b6482fc183784f[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Dec 20 00:00:21 2020 +0900
+
+    ユーザーの詳細ページでのページネーションを表示
+
+[33mcommit b27986ccb3b0c3e0bc5f3a7b809de10939abcd78[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Dec 19 23:00:49 2020 +0900
+
+    検索フォームのレイアウトの整え
+
+[33mcommit 76ab2628279eebfcaee248d19dbdc85c07d5f5f9[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Dec 19 23:00:33 2020 +0900
+
+    viewportの導入
+
+[33mcommit c5a8dbc6f1a881676c026fe020bff4a77f0085fe[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Dec 19 23:00:09 2020 +0900
+
+    最新の投稿を表示
+
+[33mcommit 2ebea4758ca5e154b330472d71dec62c254718dd[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Dec 19 22:59:53 2020 +0900
+
+    プロフィール編集ボタンのレイアウトを整え
+
+[33mcommit a55b9fc5f6066034d8926fb9e394f60ba68e7550[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Dec 19 22:59:14 2020 +0900
+
+    投稿画面のカテゴリーのレイアウトを整え
+
+[33mcommit 3dd78f93671dec35fd186a58ca77701ef70af3d4[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Dec 19 22:58:33 2020 +0900
+
+    コメントのレイアウト整え
+
+[33mcommit 661dfc0ec442595ecbf25f3616705ce9e8e6917a[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Dec 19 22:57:57 2020 +0900
+
+    ファイル消去
+
+[33mcommit 149421803682860b93986488e304871d33f45a1c[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Dec 19 22:57:45 2020 +0900
+
+    ファイルの名前変更
+
+[33mcommit f08763b9a6da71dc791b549c81547fec4c0b74bc[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Dec 19 18:47:11 2020 +0900
+
+    ページネーションとaタグの修正
+
+[33mcommit 07473ac1c6e0c06c5542c6fd67ccf7abe341eace[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Dec 19 18:45:49 2020 +0900
+
+    検索欄のレイアウトの整え
+
+[33mcommit 4790e9a4ba5a343bc712f15694a608c9c9e5c1e7[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Dec 19 14:06:48 2020 +0900
+
+    font awsomeの読み込み
+
+[33mcommit b5c1d4b6681728485d99f4e9dd865585b30fc4f5[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Dec 19 14:02:57 2020 +0900
+
+    drinkディレクトリ にファイル移動
+
+[33mcommit e292f1219d5fb9062d2d0ff5b13805beaf5a5f6b[m
+Merge: 2980df03 9777b4c3
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 18 21:36:38 2020 +0900
+
+    Merge pull request #10 from Harasou21/ページネーション
+    
+    ページネーション
+
+[33mcommit 9777b4c3b9bae00db4cf885a4e8fd7b6cdb41e2a[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 18 21:23:15 2020 +0900
+
+    ページネーションのため、drinks/index.html.erbにwill_pagenateを記述
+
+[33mcommit 07cf8be4e45baa85bfff42be2c60242a769ebe07[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 18 21:21:29 2020 +0900
+
+    ページネーションのため、drinks#indexの記述変更
+
+[33mcommit 8178d7ac03f7b689a8eb247b6924bf755689bdfc[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 18 21:03:11 2020 +0900
+
+    gem install will_paginate,bootstrap-will_paginate
+
+[33mcommit 2980df03c2f1fe631db79e9b5558ea9ba9014199[m
+Merge: eaffce72 91abfe46
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 18 20:49:32 2020 +0900
+
+    Merge pull request #9 from Harasou21/comment
+    
+    Comment
+
+[33mcommit 91abfe46bf50c38ce996465a3e61f094d2b3067e[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 18 20:46:13 2020 +0900
+
+    コメント投稿フォームをコメント表示を実装
+
+[33mcommit 1912796bce5547764f019dbe8773fa1fa78628ca[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 18 20:45:43 2020 +0900
+
+    投稿詳細にコメントを表示させるためにインスタンス変数に値を代入
+
+[33mcommit a6e76d58dbdeaaad1b04f7e0b934e7cfa2806147[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 18 20:45:12 2020 +0900
+
+    comment_contorollerを編集
+
+[33mcommit 919f8a735cbfd50d794e756ea80b9c351ea59038[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 18 20:31:17 2020 +0900
+
+    comment_controllerの処理を記述
+
+[33mcommit 70db89cfe601cd38415528ec1434b33ce0caa132[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 18 20:26:04 2020 +0900
+
+    rails g controller commentsを実行
+
+[33mcommit 03d991db1c377a01f86ac0f4f11973e24865e9cb[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 18 20:20:12 2020 +0900
+
+    commentのルーティングを作成
+
+[33mcommit c0d75b40a579a0ee551730942f0bffb1630db8a9[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 18 20:15:25 2020 +0900
+
+    comment.rbにuser.rbとdrink.rbとアソシエーションを組ませた
+
+[33mcommit 4ed0d3e64bd5b672c6a725a076d8a21a5e8e9a8a[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 18 20:11:56 2020 +0900
+
+    rails g model commetnを実行後、commentテーブルを作成
+
+[33mcommit eaffce7221b598f6bebf08220f5e831d29d933c4[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 18 19:42:48 2020 +0900
+
+    検索結果画面の編集
+
+[33mcommit 295ac7cbc9bbd4f5a5c55f932d5d54c4030ac407[m
+Merge: 974c24db 9564c275
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 18 17:03:51 2020 +0900
+
+    Merge pull request #8 from Harasou21/searching-drink
+    
+    Searching drink
+
+[33mcommit 9564c275fba96f29eb6692fc0a15b031a0889703[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 18 15:57:36 2020 +0900
+
+    検索処理の記述
+
+[33mcommit 03de348ad8795f32ac1c9d866985c6ac1b097783[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 18 15:57:11 2020 +0900
+
+    検索入力フォームの作成
+
+[33mcommit f7d58022c4034bcab1545ba7180fa89422148e9b[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 18 15:56:56 2020 +0900
+
+    検索機能実装のため、ダミーカテゴリーの削除
+
+[33mcommit 3357b3674699ed7a0663fad613352a2a93d90ec8[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 11 20:56:21 2020 +0900
+
+    serch_drinkへのルーティング設定
+
+[33mcommit dc4c0d04aa60bbe8cb1f0159ed353e0210f7e724[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 11 20:46:03 2020 +0900
+
+    ドリンクのactive hashカテゴリー実装時にgit reset
+
+[33mcommit 0e0611090c702ef686daf6c729196dafc35dc252[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 9 20:58:09 2020 +0900
+
+    gem install ransack
+
+[33mcommit 73ca147aacca0e7ba740c3241f96cc1e5036400a[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 9 20:56:10 2020 +0900
+
+    選択したカテゴリの表示
+
+[33mcommit 35e54a72ca76a721ff69b40ad5ea65df37d011f0[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 9 20:42:54 2020 +0900
+
+    コーヒーに関するカテゴリの入力
+
+[33mcommit 5c2658c89af644d214459149a919f2627250fd79[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 9 20:42:27 2020 +0900
+
+    コーヒーに関するカテゴリーのデータ設定
+
+[33mcommit f3bc63623a5736228849fbec32414d8cf0bd3c89[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 9 18:33:38 2020 +0900
+
+    region,body.acidity,processingモデルを作成(--skip-migration)
+
+[33mcommit d9549e270d937327af0c4779d01091f5ead06bc1[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 9 18:33:00 2020 +0900
+
+    追加したカラムを許容
+
+[33mcommit df6f223aea906a33b9b2f895a7a11c1c9775cd91[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 9 18:31:49 2020 +0900
+
+    検索のためのカテゴリーを追加
+
+[33mcommit 974c24dbf0f9753db80ac6df9eb95aba62bdbaa7[m
+Merge: 81ffd8e3 95b9d01c
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 9 17:46:52 2020 +0900
+
+    Merge pull request #7 from Harasou21/following-user
+    
+    Following user
+
+[33mcommit 95b9d01c1b81ce26882d8c5b436d7024ee44b567[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 9 17:41:26 2020 +0900
+
+    imageの表示のバグ解決
+
+[33mcommit 258bc2f42e414740e235c50b479629b65790adfc[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Dec 7 14:44:35 2020 +0900
+
+    following,followerを見れるように実装
+
+[33mcommit 6aca4f44b2bf8ce5f9b1931d7355b2e6347abcd0[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Dec 7 13:31:15 2020 +0900
+
+    before_action :logged_in_userに,:following,:followers追加
+
+[33mcommit 70512b6bafcd2949dd32e357f3c0f2c476552f77[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Dec 7 13:04:06 2020 +0900
+
+    rails g controller Relationships を実行
+
+[33mcommit b0c12a4fe8f1a1d915fd5a0c7d39f8b01f1318f3[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Dec 7 11:40:16 2020 +0900
+
+    following,folllowersアクションの追加
+
+[33mcommit 3b135e3043ae8ec3521d98e4d559b763857e2bb7[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Dec 7 11:34:37 2020 +0900
+
+    ブラウザでの挙動を確かめるための仮のリンク
+
+[33mcommit a27b048648e6e6b1358621ccc4fa9e2e10faba03[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Dec 7 11:33:57 2020 +0900
+
+    _follow.html.erbの処理メモ
+
+[33mcommit 925d0746affdfd5f32065412a6dea181517bf2bd[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Dec 7 11:33:27 2020 +0900
+
+    本人しかプロフィール編集画面を出さないうよう編集
+
+[33mcommit e316f5f2f0ee0efd379c416677f884432993958b[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Dec 7 11:32:45 2020 +0900
+
+    throughtからthroughに変更、エラー修正
+
+[33mcommit 9b33b18d9895868cf3e9a08f090149e011c4ef41[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Dec 7 11:03:13 2020 +0900
+
+    フォロー、アンフォローのルーティング作成
+
+[33mcommit b3abc75519d48dfe331c0cc8897c6cfc776a2bd4[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Dec 7 11:02:39 2020 +0900
+
+    ユーザーをフォローするフォームを作成、
+
+[33mcommit bbfaa9bdd109232b5ca5330334ad0e8880c1a850[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Dec 6 15:34:13 2020 +0900
+
+    フォローする、外す、フォローしてたらtrue返すメソッドを実装
+
+[33mcommit 12773b4677c7428198f310a0027eef46f98884e6[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Dec 6 14:51:21 2020 +0900
+
+    active_relationモデルのアソシエーション
+
+[33mcommit 9382e1b4871f5e6ca722539948a3511065d3d2c3[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Dec 6 14:21:58 2020 +0900
+
+    relationshis テーブルの作成
+
+[33mcommit 81ffd8e3aba06158e7c6fbf7bd2871af2931be72[m
+Merge: 0f221391 4c91167c
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Dec 6 14:08:43 2020 +0900
+
+    Merge pull request #6 from Harasou21/incremental-search
+    
+    tag付け投稿機能と、インクリメンタルサーチの実装
+
+[33mcommit 4c91167c58fec4284a95c26f5395d81a3cc88404[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sun Dec 6 13:54:44 2020 +0900
+
+    tag付け投稿機能と、インクリメンタルサーチの実装
+
+[33mcommit 0f221391308bd8abb7e58e3113166a39b87d93c8[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Sat Dec 5 10:06:57 2020 +0900
+
+    trade_address.rbでbirthdayのバリデーション 追加
+
+[33mcommit 2e9729615ee5d9ee94ee09983aa981ed340b721f[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 4 18:31:58 2020 +0900
+
+    trade_address.rbの移動
+
+[33mcommit 132b2f45a67ce306057be44f160a618dac87d544[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 4 18:31:44 2020 +0900
+
+    formオブジェクトを用いたタグ付き投稿の実装
+
+[33mcommit 20f7de1f75aa8c8b3525e11913c7d4cc9d488a69[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 4 11:04:37 2020 +0900
+
+    tag.rb,drink.rb,drink_tag_relations.rbのアソシエーション
+
+[33mcommit f33d77800333aa5d790b6fff09a1a372e6f2aba6[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 4 10:56:22 2020 +0900
+
+    タグ付け機能のため、tag.rb,drink_tag_relation.rbを作成、各種マイグレーションファイルの作成
+
+[33mcommit ce35cf3f5b2899e98e233a476c58ba073416af31[m
+Merge: f8d07354 b336aa38
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 4 10:29:32 2020 +0900
+
+    Merge pull request #5 from Harasou21/order
+    
+    Order
+
+[33mcommit b336aa382e9df54cbd6fe9c08a86570cb711be24[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Dec 4 10:22:15 2020 +0900
+
+    payjpを用いた購入機能を開発
+
+[33mcommit 8e5727b725a113f2f565bc295ca8c54fdc54751a[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 2 11:48:32 2020 +0900
+
+    jsを読み込む準備
+
+[33mcommit ce2a2f449464644e92abe7397bebcecdc8511c58[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 2 11:48:10 2020 +0900
+
+    ルーティングの追加
+
+[33mcommit 24cd613254b6fee7c81948f2c1f5fd6beccca2b0[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 2 11:47:49 2020 +0900
+
+    ファイル名の変更
+
+[33mcommit d611ee7d5eb6316799366dd084e468943eb8b31a[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 2 11:47:11 2020 +0900
+
+    購入ページへのリンク作成
+
+[33mcommit c5ee80a49dd75db10698cb0476504079da4114e7[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 2 11:46:57 2020 +0900
+
+    リンクの削除
+
+[33mcommit ed8891e3b6b81973055a1635bd51f2e302fcb816[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 2 11:46:37 2020 +0900
+
+    user.rbの可読性アップ
+
+[33mcommit 3170122c6c53901ab2ab4cfe8126cd7d10ce4807[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 2 11:46:19 2020 +0900
+
+    trade_addressrbの作成
+
+[33mcommit f8c6054fdca59ef19e83f145265e3d463248e9cc[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 2 11:45:23 2020 +0900
+
+    trade_addressへバリデーション の移動
+
+[33mcommit c0c20ab7bb8738f41148d8005a114e059dd583d1[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 2 11:44:45 2020 +0900
+
+    tradeコントローラーの購入機能のための記述
+
+[33mcommit 590f377b3eb643d49069f1b64c48854500637877[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Dec 2 11:44:11 2020 +0900
+
+    Update drinks_controller.rb
+
+[33mcommit 2522154465707f646db57f7bfa1cf16425863284[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 30 17:23:01 2020 +0900
+
+    addressとprefectureのアソシエーションに組み直し
+
+[33mcommit 5e0b1ce8932e6e6195787b6dee11e3ee1269d73c[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 30 17:20:37 2020 +0900
+
+    drink.rbとprefecture.rbのアソシエーション
+
+[33mcommit 0ba3e3e409de253ffd02921e44aab6b78c09d21b[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 30 17:17:43 2020 +0900
+
+    active_hashをインストール後prefectureモデル作成
+
+[33mcommit 3bc82ccb265f6b5a337a466934b40f14130779d5[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 30 16:23:07 2020 +0900
+
+    address.rbのバリデーションの記述
+
+[33mcommit 29b42ebdfeb772269a8c37195e5e870ffccb9abd[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 30 15:06:23 2020 +0900
+
+    addressesテーブルのカラムを記述
+
+[33mcommit b145e98e35a3a02f75e9dacf449da58be8cd43c5[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 30 14:44:18 2020 +0900
+
+    購入機能に必要なアソシエーションを設定
+
+[33mcommit f8d073546bee58bd7fb08fe33f755f69aa7eb4e0[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 30 13:23:48 2020 +0900
+
+    create basic layout
+
+[33mcommit fec7d3015a10b92942e064b0d450589583e2f1c5[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Nov 25 10:22:15 2020 +0900
+
+    ロゴをクリックしたらトップページへ
+
+[33mcommit 5cac5dace4e00b3eecf1eb69b922165527d8c27c[m
+Merge: f1cbbd26 c84c6534
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Nov 25 08:56:34 2020 +0900
+
+    Merge pull request #4 from Harasou21/Active-Storage
+    
+    Active storage
+
+[33mcommit c84c6534b34aae7b3d551a913c4dc98f4df7f7a6[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Nov 25 08:55:49 2020 +0900
+
+    drinkの画像の表示
+
+[33mcommit 4c29017cabf0396b40d87a10dee493ff09aa8e47[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Nov 25 08:55:32 2020 +0900
+
+    userの画像の表示
+
+[33mcommit 881075165a838ec73b8c74e12e2fe4a9bd309993[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Nov 25 06:52:37 2020 +0900
+
+    ユーザーの写真を投稿、表示
+
+[33mcommit 7a1894a3b4bf1c62fcd372ab1f252b3ded053dec[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Nov 25 06:37:49 2020 +0900
+
+    画像をusers/show.html.erbに保存
+
+[33mcommit b4f89b90a3472b772e6b1194d95111909fdbd973[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Nov 25 06:37:25 2020 +0900
+
+    drinks,usersのストロングパラメーターの設定
+
+[33mcommit 5b15ada95fc6e0740ff4409c9a8f1eede6226c1a[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Nov 25 06:37:00 2020 +0900
+
+    画像のアソシエーション
+
+[33mcommit abd4219dc0c06c43ed837caf6df9ff1e26c42d34[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Nov 25 06:36:13 2020 +0900
+
+    【MySQL】Mysql2::Error: Specified key was too long; max key length is 767 bytesのエラー解決
+
+[33mcommit 751a65689a2baa4ccefdfc588c5f06e44f0586ee[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Nov 25 06:35:42 2020 +0900
+
+    imageMagic,mini_magick,image_processingの導入
+
+[33mcommit f1cbbd267cb462e1b7225dda56301b8639f9a923[m
+Merge: c5d5435a 2b3d4819
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Nov 25 04:04:52 2020 +0900
+
+    Merge pull request #3 from Harasou21/drink
+    
+    Drink
+
+[33mcommit 2b3d4819270d1858f799a2efea17595f090215ef[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Nov 25 04:01:46 2020 +0900
+
+    各種update
+
+[33mcommit 92efd9ec6183e4658256cbeed1dcf959a970e6b7[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Nov 24 17:27:37 2020 +0900
+
+    ヘッダーの作成
+
+[33mcommit 94409c4cf87b5b00c48faee50e9b955f804a24bb[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Nov 24 17:27:27 2020 +0900
+
+    リンクの遷移先を指定
+
+[33mcommit dfe1ecca5bde4b3be1cf3f20bae9314d27a485a6[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Nov 24 17:26:55 2020 +0900
+
+    子クラスのdependentの削除
+
+[33mcommit 1f67c3f779ee955ad477dccccef5e699a254a898[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Tue Nov 24 17:25:55 2020 +0900
+
+    users,drinksの詳細ページの作成
+
+[33mcommit 42df7822ee9e15fcf0826c6194349c77d09973d0[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 23 18:16:58 2020 +0900
+
+    create destroy action about user
+
+[33mcommit e3f9c95325f3d14d6e77d66a4f8f02ddf0c3a692[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 23 16:10:54 2020 +0900
+
+    update users/show.html
+
+[33mcommit 8f762a438eb55765a26c391e85547acfd24712f3[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 23 16:05:16 2020 +0900
+
+    create show action about user's tweet about coffee
+
+[33mcommit f508455be850ea4147667613284127bbbf56816d[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 23 15:43:55 2020 +0900
+
+    create system which tweet about coffee
+
+[33mcommit 9f0d60526843521e55aa98abf557415ff44c4b62[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 23 15:03:20 2020 +0900
+
+    create simple view of dirinks/new
+
+[33mcommit c1b1421d6e5ee3ffbb0bb007064bc99e31a8179f[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 23 14:59:17 2020 +0900
+
+    add routing about drinks
+
+[33mcommit 158e4dcf7ae9faad41d502930a26e89cffe7aa31[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 23 14:58:23 2020 +0900
+
+    create simple view of drinks/index
+
+[33mcommit 86d6e761a15dad90a4c0d0afb0df0b7117e99a09[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 23 14:58:00 2020 +0900
+
+    add destroy action to users_controller.rb
+
+[33mcommit df557f53d74ae1dd7dfb36546ceea5ca6ca3f509[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 23 14:57:31 2020 +0900
+
+    create drinks_controller system
+
+[33mcommit 67d21a6425423d05fa7154f4d419d4f1f6bd5ebf[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Nov 20 00:19:58 2020 +0900
+
+    create views of drink
+
+[33mcommit 4414655c04fff7c2a0d5fe2f7ec38beda3e9ce91[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Fri Nov 20 00:16:37 2020 +0900
+
+    wrote needed action for drinks_controller
+
+[33mcommit c16bdc19e53d77bba93392c51866dcdbcaf69e0f[m
+Merge: c5d5435a 20208914
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Thu Nov 19 17:17:05 2020 +0900
+
+    Merge branch 'user_signup'
+
+[33mcommit 20208914359d9ed96c1da43a4e68d9103f056012[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Thu Nov 19 17:14:54 2020 +0900
+
+    消えてたビューを書いた
+
+[33mcommit c5d5435a5d13f9bbfeba4a0110006cc3669a0d8a[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Thu Nov 19 16:36:06 2020 +0900
+
+    create drink model and controller
+
+[33mcommit e1a7754f4d10287065e86f9ec5ca12e0ba5d66e5[m
+Merge: 6790a93c a673ee1b
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Nov 18 23:15:08 2020 +0900
+
+    Merge pull request #2 from Harasou21/updating-users
+    
+    Updating users
+
+[33mcommit 6790a93c2aa40c00abd2dbd3733480c4e329402e[m
+Merge: 50b0b212 8da0f00b
+Author: はらそう <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Nov 18 23:13:07 2020 +0900
+
+    Merge pull request #1 from Harasou21/master
+    
+    Master
+
+[33mcommit a673ee1bf3a3db27fa8b25c9c30b02cd3b48c857[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Nov 18 23:09:16 2020 +0900
+
+    implimented frendly forwarding
+
+[33mcommit a47cc7715821ca5c8f3f11581878fdd99011ec91[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Nov 18 21:22:52 2020 +0900
+
+    create correct_user method
+
+[33mcommit c0045ca5f4ed91f05f4a6bb155b90c56ce19f012[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Nov 18 21:09:37 2020 +0900
+
+    logged_in_user method
+
+[33mcommit 583aba5138dfd49f700867448ceb952fef1d72df[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Nov 18 16:48:29 2020 +0900
+
+    create view of users/edit
+
+[33mcommit 10869de7baf4caffdd0d4eb88f26a25b5ce082f3[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Nov 18 16:35:18 2020 +0900
+
+    create before_action which is set_user
+
+[33mcommit 8da0f00b081aae3c99e89fd7628c380354ae5479[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Wed Nov 18 16:26:07 2020 +0900
+
+    wrote method for advanced login
+
+[33mcommit 5e21dc145cf5573e4e6dcd195116c40bad7ef44b[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 16 21:53:57 2020 +0900
+
+    create basic login system
+
+[33mcommit 8b7835e5b935beade996c03f88ca9f5d8b8e918c[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 16 20:11:43 2020 +0900
+
+    wrote sessions/new.html.erb
+
+[33mcommit fc802ebebc029650275c816fa051b94eefae1033[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 16 20:05:09 2020 +0900
+
+    rails g controller Sessions new
+
+[33mcommit 50b0b21210fbe3b39d04fb64d12497a875dc871b[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 16 19:17:21 2020 +0900
+
+    wrote user_model test
+
+[33mcommit aa3800e402b5038bea194643215dfdd50e3b369d[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 16 18:42:27 2020 +0900
+
+    exec  rails g rspec:model user
+
+[33mcommit 046d95f9dba003ba22b22b4cb3ec3bfe2a5eac7a[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 16 18:41:31 2020 +0900
+
+    gem install factory_bot_rails,faker
+
+[33mcommit 1ba7adf7e3ab0b1d4f23d3af2e33bc7e75c93f8c[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 16 18:38:52 2020 +0900
+
+    rails g rspec:install
+
+[33mcommit 875cfb6a52298f65fdb1357e53632710dc868ba0[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 16 18:37:07 2020 +0900
+
+    install rspec-rails
+
+[33mcommit 2cf6f7188291e71155f59063d04a63308b381c40[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 16 17:55:35 2020 +0900
+
+    display error messages in user.rb
+
+[33mcommit 4d231a67e95f93df3596bef0cbcdfe54907f6741[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 16 17:37:40 2020 +0900
+
+    create shared directory
+
+[33mcommit a217c0fd16c7df5f156b13e71d80687cb73d6a9b[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 16 17:35:20 2020 +0900
+
+    create user actenticate
+
+[33mcommit b71a0a08bc9b4beacb97a7a5dc3e9d865077125c[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 16 17:14:47 2020 +0900
+
+    exec rails generate migration add_password_digest_to_users password_digest:string
+
+[33mcommit 1a26bc4aa6e00fe115e882993d90ce083ed9d527[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 16 17:09:56 2020 +0900
+
+    install bcrypt
+
+[33mcommit 1be07756860f21a4b45df1f3b7b4f706e96dee0c[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 16 17:08:53 2020 +0900
+
+    update users_controller,create views of users
+
+[33mcommit a73835e18c8fe40eaeb19ceea9b70e0fa27abd1a[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 16 16:49:51 2020 +0900
+
+    write users/controller's action
+
+[33mcommit 46474bfa4ee2806720c8fa82964bc00739640825[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 16 16:40:59 2020 +0900
+
+    exec rails db:migrate
+
+[33mcommit 1e9b1e35b3af4c354fdb0c5431c92b2fc1bb5ebe[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 16 16:37:47 2020 +0900
+
+    create User model
+
+[33mcommit a5a138032a6c6ef2c3c225b6914369baecaa6d63[m
+Author: Harasou21 <67535886+Harasou21@users.noreply.github.com>
+Date:   Mon Nov 16 16:24:49 2020 +0900
+
+    rails _6.0.0- new coffee_passportの実行
