@@ -1,0 +1,170 @@
+{
+  "app_explain.js": "/packs/js/app_explain-dcac07659cdb00279694.js",
+  "app_explain.js.map": "/packs/js/app_explain-dcac07659cdb00279694.js.map",
+  "application.js": "/packs/js/application-63027a0e66b6905bb451.js",
+  "application.js.map": "/packs/js/application-63027a0e66b6905bb451.js.map",
+  "components/Home.js": "/packs/js/components/Home-717a406236a3ca1a3e8a.js",
+  "components/Home.js.map": "/packs/js/components/Home-717a406236a3ca1a3e8a.js.map",
+  "components/about_coffee_passport.js": "/packs/js/components/about_coffee_passport-275346944fe972a48b90.js",
+  "components/about_coffee_passport.js.map": "/packs/js/components/about_coffee_passport-275346944fe972a48b90.js.map",
+  "components/contact.js": "/packs/js/components/contact-176c3a0641efc1654def.js",
+  "components/contact.js.map": "/packs/js/components/contact-176c3a0641efc1654def.js.map",
+  "components/drinks/show.js": "/packs/js/components/drinks/show-c3210d49acb32ada0ced.js",
+  "components/drinks/show.js.map": "/packs/js/components/drinks/show-c3210d49acb32ada0ced.js.map",
+  "components/footer.js": "/packs/js/components/footer-175580e225e27a4d62f3.js",
+  "components/footer.js.map": "/packs/js/components/footer-175580e225e27a4d62f3.js.map",
+  "components/like/likeButton.js": "/packs/js/components/like/likeButton-49aacdf749f491ca41dc.js",
+  "components/like/likeButton.js.map": "/packs/js/components/like/likeButton-49aacdf749f491ca41dc.js.map",
+  "components/search.js": "/packs/js/components/search-f45c56da935fb708c456.js",
+  "components/search.js.map": "/packs/js/components/search-f45c56da935fb708c456.js.map",
+  "components/static_pages/appExplain.js": "/packs/js/components/static_pages/appExplain-96cd478c3798265149ae.js",
+  "components/static_pages/appExplain.js.map": "/packs/js/components/static_pages/appExplain-96cd478c3798265149ae.js.map",
+  "components/users/user.js": "/packs/js/components/users/user-cbb874e9b0bb64e48181.js",
+  "components/users/user.js.map": "/packs/js/components/users/user-cbb874e9b0bb64e48181.js.map",
+  "entrypoints": {
+    "app_explain": {
+      "js": [
+        "/packs/js/app_explain-dcac07659cdb00279694.js"
+      ],
+      "js.map": [
+        "/packs/js/app_explain-dcac07659cdb00279694.js.map"
+      ]
+    },
+    "application": {
+      "js": [
+        "/packs/js/application-63027a0e66b6905bb451.js"
+      ],
+      "js.map": [
+        "/packs/js/application-63027a0e66b6905bb451.js.map"
+      ]
+    },
+    "components/about_coffee_passport": {
+      "js": [
+        "/packs/js/components/about_coffee_passport-275346944fe972a48b90.js"
+      ],
+      "js.map": [
+        "/packs/js/components/about_coffee_passport-275346944fe972a48b90.js.map"
+      ]
+    },
+    "components/contact": {
+      "js": [
+        "/packs/js/components/contact-176c3a0641efc1654def.js"
+      ],
+      "js.map": [
+        "/packs/js/components/contact-176c3a0641efc1654def.js.map"
+      ]
+    },
+    "components/drinks/show": {
+      "js": [
+        "/packs/js/components/drinks/show-c3210d49acb32ada0ced.js"
+      ],
+      "js.map": [
+        "/packs/js/components/drinks/show-c3210d49acb32ada0ced.js.map"
+      ]
+    },
+    "components/footer": {
+      "js": [
+        "/packs/js/components/footer-175580e225e27a4d62f3.js"
+      ],
+      "js.map": [
+        "/packs/js/components/footer-175580e225e27a4d62f3.js.map"
+      ]
+    },
+    "components/Home": {
+      "js": [
+        "/packs/js/components/Home-717a406236a3ca1a3e8a.js"
+      ],
+      "js.map": [
+        "/packs/js/components/Home-717a406236a3ca1a3e8a.js.map"
+      ]
+    },
+    "components/like/likeButton": {
+      "js": [
+        "/packs/js/components/like/likeButton-49aacdf749f491ca41dc.js"
+      ],
+      "js.map": [
+        "/packs/js/components/like/likeButton-49aacdf749f491ca41dc.js.map"
+      ]
+    },
+    "components/search": {
+      "js": [
+        "/packs/js/components/search-f45c56da935fb708c456.js"
+      ],
+      "js.map": [
+        "/packs/js/components/search-f45c56da935fb708c456.js.map"
+      ]
+    },
+    "components/static_pages/appExplain": {
+      "js": [
+        "/packs/js/components/static_pages/appExplain-96cd478c3798265149ae.js"
+      ],
+      "js.map": [
+        "/packs/js/components/static_pages/appExplain-96cd478c3798265149ae.js.map"
+      ]
+    },
+    "components/users/user": {
+      "js": [
+        "/packs/js/components/users/user-cbb874e9b0bb64e48181.js"
+      ],
+      "js.map": [
+        "/packs/js/components/users/user-cbb874e9b0bb64e48181.js.map"
+      ]
+    },
+    "footer": {
+      "js": [
+        "/packs/js/footer-fc30c9adab4c5841603c.js"
+      ],
+      "js.map": [
+        "/packs/js/footer-fc30c9adab4c5841603c.js.map"
+      ]
+    },
+    "hello_vue": {
+      "js": [
+        "/packs/js/hello_vue-9a22369951afa654227e.js"
+      ],
+      "js.map": [
+        "/packs/js/hello_vue-9a22369951afa654227e.js.map"
+      ]
+    },
+    "preview": {
+      "js": [
+        "/packs/js/preview-18b4fa5ad17f744ae47b.js"
+      ],
+      "js.map": [
+        "/packs/js/preview-18b4fa5ad17f744ae47b.js.map"
+      ]
+    },
+    "router/router": {
+      "js": [
+        "/packs/js/router/router-3f1f25c91dd570a44a03.js"
+      ],
+      "js.map": [
+        "/packs/js/router/router-3f1f25c91dd570a44a03.js.map"
+      ]
+    },
+    "tag": {
+      "js": [
+        "/packs/js/tag-54250371e4881480b023.js"
+      ],
+      "js.map": [
+        "/packs/js/tag-54250371e4881480b023.js.map"
+      ]
+    }
+  },
+  "footer.js": "/packs/js/footer-fc30c9adab4c5841603c.js",
+  "footer.js.map": "/packs/js/footer-fc30c9adab4c5841603c.js.map",
+  "hello_vue.js": "/packs/js/hello_vue-9a22369951afa654227e.js",
+  "hello_vue.js.map": "/packs/js/hello_vue-9a22369951afa654227e.js.map",
+  "media/images/coffee_gif.gif": "/packs/media/images/coffee_gif-2c7fb49d.gif",
+  "media/images/post.png": "/packs/media/images/post-9de5d393.png",
+  "media/images/sold_item1.png": "/packs/media/images/sold_item1-4b5a14d6.png",
+  "media/images/sold_item2.png": "/packs/media/images/sold_item2-fd0ae8c3.png",
+  "media/images/sold_item3.png": "/packs/media/images/sold_item3-49860077.png",
+  "media/images/sold_item4.png": "/packs/media/images/sold_item4-2189bb94.png",
+  "preview.js": "/packs/js/preview-18b4fa5ad17f744ae47b.js",
+  "preview.js.map": "/packs/js/preview-18b4fa5ad17f744ae47b.js.map",
+  "router/router.js": "/packs/js/router/router-3f1f25c91dd570a44a03.js",
+  "router/router.js.map": "/packs/js/router/router-3f1f25c91dd570a44a03.js.map",
+  "tag.js": "/packs/js/tag-54250371e4881480b023.js",
+  "tag.js.map": "/packs/js/tag-54250371e4881480b023.js.map"
+}

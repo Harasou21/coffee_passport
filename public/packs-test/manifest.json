@@ -1,0 +1,114 @@
+{
+  "application.js": "/packs-test/js/application-4113f1ad96723f7c97cd.js",
+  "application.js.map": "/packs-test/js/application-4113f1ad96723f7c97cd.js.map",
+  "components/Home.js": "/packs-test/js/components/Home-78aca33878e32f6fd5e3.js",
+  "components/Home.js.map": "/packs-test/js/components/Home-78aca33878e32f6fd5e3.js.map",
+  "components/about_coffee_passport.js": "/packs-test/js/components/about_coffee_passport-12e0b41659c1fbc83762.js",
+  "components/about_coffee_passport.js.map": "/packs-test/js/components/about_coffee_passport-12e0b41659c1fbc83762.js.map",
+  "components/contact.js": "/packs-test/js/components/contact-76ee4f3028cab93686de.js",
+  "components/contact.js.map": "/packs-test/js/components/contact-76ee4f3028cab93686de.js.map",
+  "components/footer.js": "/packs-test/js/components/footer-94c4a88b8e94b6a76503.js",
+  "components/footer.js.map": "/packs-test/js/components/footer-94c4a88b8e94b6a76503.js.map",
+  "components/search.js": "/packs-test/js/components/search-8261e562cd88c08988dc.js",
+  "components/search.js.map": "/packs-test/js/components/search-8261e562cd88c08988dc.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs-test/js/application-4113f1ad96723f7c97cd.js"
+      ],
+      "js.map": [
+        "/packs-test/js/application-4113f1ad96723f7c97cd.js.map"
+      ]
+    },
+    "components/about_coffee_passport": {
+      "js": [
+        "/packs-test/js/components/about_coffee_passport-12e0b41659c1fbc83762.js"
+      ],
+      "js.map": [
+        "/packs-test/js/components/about_coffee_passport-12e0b41659c1fbc83762.js.map"
+      ]
+    },
+    "components/contact": {
+      "js": [
+        "/packs-test/js/components/contact-76ee4f3028cab93686de.js"
+      ],
+      "js.map": [
+        "/packs-test/js/components/contact-76ee4f3028cab93686de.js.map"
+      ]
+    },
+    "components/footer": {
+      "js": [
+        "/packs-test/js/components/footer-94c4a88b8e94b6a76503.js"
+      ],
+      "js.map": [
+        "/packs-test/js/components/footer-94c4a88b8e94b6a76503.js.map"
+      ]
+    },
+    "components/Home": {
+      "js": [
+        "/packs-test/js/components/Home-78aca33878e32f6fd5e3.js"
+      ],
+      "js.map": [
+        "/packs-test/js/components/Home-78aca33878e32f6fd5e3.js.map"
+      ]
+    },
+    "components/search": {
+      "js": [
+        "/packs-test/js/components/search-8261e562cd88c08988dc.js"
+      ],
+      "js.map": [
+        "/packs-test/js/components/search-8261e562cd88c08988dc.js.map"
+      ]
+    },
+    "footer": {
+      "js": [
+        "/packs-test/js/footer-c1b52f0e268f9a453b2e.js"
+      ],
+      "js.map": [
+        "/packs-test/js/footer-c1b52f0e268f9a453b2e.js.map"
+      ]
+    },
+    "hello_vue": {
+      "js": [
+        "/packs-test/js/hello_vue-8ca6e14d07af6320cfa9.js"
+      ],
+      "js.map": [
+        "/packs-test/js/hello_vue-8ca6e14d07af6320cfa9.js.map"
+      ]
+    },
+    "preview": {
+      "js": [
+        "/packs-test/js/preview-17c65ef5fbaff6aa92f0.js"
+      ],
+      "js.map": [
+        "/packs-test/js/preview-17c65ef5fbaff6aa92f0.js.map"
+      ]
+    },
+    "router/router": {
+      "js": [
+        "/packs-test/js/router/router-d9abdff7da8b690d4c56.js"
+      ],
+      "js.map": [
+        "/packs-test/js/router/router-d9abdff7da8b690d4c56.js.map"
+      ]
+    },
+    "tag": {
+      "js": [
+        "/packs-test/js/tag-1f3b5031c820ff033567.js"
+      ],
+      "js.map": [
+        "/packs-test/js/tag-1f3b5031c820ff033567.js.map"
+      ]
+    }
+  },
+  "footer.js": "/packs-test/js/footer-c1b52f0e268f9a453b2e.js",
+  "footer.js.map": "/packs-test/js/footer-c1b52f0e268f9a453b2e.js.map",
+  "hello_vue.js": "/packs-test/js/hello_vue-8ca6e14d07af6320cfa9.js",
+  "hello_vue.js.map": "/packs-test/js/hello_vue-8ca6e14d07af6320cfa9.js.map",
+  "preview.js": "/packs-test/js/preview-17c65ef5fbaff6aa92f0.js",
+  "preview.js.map": "/packs-test/js/preview-17c65ef5fbaff6aa92f0.js.map",
+  "router/router.js": "/packs-test/js/router/router-d9abdff7da8b690d4c56.js",
+  "router/router.js.map": "/packs-test/js/router/router-d9abdff7da8b690d4c56.js.map",
+  "tag.js": "/packs-test/js/tag-1f3b5031c820ff033567.js",
+  "tag.js.map": "/packs-test/js/tag-1f3b5031c820ff033567.js.map"
+}
