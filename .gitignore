@@ -17,9 +17,9 @@
 /storage/*
 !/storage/.keep
 
-public/assets/express
-public/packs/js
-public/packs/media/images
+
+
+
 
 .byebug_history
 
