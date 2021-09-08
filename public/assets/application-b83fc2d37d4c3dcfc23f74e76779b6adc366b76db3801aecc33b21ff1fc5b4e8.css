@@ -1,0 +1,1796 @@
+/* line 1, /coffee_passport/app/assets/stylesheets/drink/comment.scss */
+.comment-container {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 40px;
+}
+
+/* line 10, /coffee_passport/app/assets/stylesheets/drink/comment.scss */
+.comment-field {
+  margin-right: auto;
+  margin-left: auto;
+  width: 335px;
+}
+
+/* line 16, /coffee_passport/app/assets/stylesheets/drink/comment.scss */
+.submit-comment {
+  margin-top: 20px;
+  margin-left: 120px;
+  height: 50px;
+  width: 100px;
+}
+
+/* line 23, /coffee_passport/app/assets/stylesheets/drink/comment.scss */
+.comment-index {
+  width: 100vh;
+}
+
+/* line 27, /coffee_passport/app/assets/stylesheets/drink/comment.scss */
+div#comments-area.comments a:visited {
+  color: green;
+}
+
+/* line 32, /coffee_passport/app/assets/stylesheets/drink/comment.scss */
+div#comments-area.comments a:hover {
+  color: white;
+}
+
+/* line 36, /coffee_passport/app/assets/stylesheets/drink/comment.scss */
+.comments {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: 7%;
+  width: 400px;
+}
+
+/* line 44, /coffee_passport/app/assets/stylesheets/drink/comment.scss */
+.comment {
+  margin-top: 20px;
+  background-color: white;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 54, /coffee_passport/app/assets/stylesheets/drink/comment.scss */
+.comment-text {
+  width: 80%;
+}
+
+/* line 58, /coffee_passport/app/assets/stylesheets/drink/comment.scss */
+.comment-user-nav {
+  width: 100px;
+}
+
+/* line 62, /coffee_passport/app/assets/stylesheets/drink/comment.scss */
+.comment-user-nav a {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* line 72, /coffee_passport/app/assets/stylesheets/drink/comment.scss */
+.comment-user-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+/* line 78, /coffee_passport/app/assets/stylesheets/drink/comment.scss */
+.comment-user-nickname:hover {
+  color: gray;
+}
+
+/* line 82, /coffee_passport/app/assets/stylesheets/drink/comment.scss */
+.fa-trash-alt {
+  color: black;
+}
+
+/* line 88, /coffee_passport/app/assets/stylesheets/drink/comment.scss */
+.comment-text-and-trash {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* line 93, /coffee_passport/app/assets/stylesheets/drink/comment.scss */
+.fa-trash-alt:visited {
+  color: black;
+}
+@charset "UTF-8";
+/* line 1, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+a {
+  text-decoration: none;
+}
+
+/* 商品一覧 */
+/* line 12, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.item-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 5%;
+}
+
+/* line 22, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.title {
+  font-size: 3vh;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 6%;
+  font-family: "游教科書体";
+  border-bottom: 1px solid maroon;
+}
+
+/* line 32, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.item-contents > .subtitle {
+  font-size: 3vh;
+  margin: 1vh 0;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* line 40, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.item-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* line 48, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.item-lists > .list {
+  width: 37vh;
+  padding: 1vw;
+  margin-bottom: 50px;
+}
+
+/* line 57, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.item-img-content {
+  position: relative;
+}
+
+/* line 61, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.item-img-content:hover {
+  opacity: 50%;
+}
+
+/* line 65, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.item-img {
+  width: 37vh;
+  height: 33vh;
+  border-radius: 2px;
+}
+
+/* line 87, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.item-info {
+  background-color: white;
+  color: black;
+  border-radius: 3px;
+}
+
+/* line 94, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.item-info a {
+  color: black;
+}
+
+/* line 100, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.item-name {
+  font-size: 2.5vh;
+  font-family: Georgia, serif;
+  padding: 5px;
+  border-bottom: 1px solid maroon;
+  width: 90%;
+  margin-left: 5px;
+}
+
+/* line 109, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.item-price {
+  font-size: 1.5vh;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  width: 20%;
+  padding-bottom: 10px;
+}
+
+/* line 118, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.item-explain {
+  min-height: 50px;
+  overflow-x: scroll;
+}
+
+/* line 123, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.item-explain a {
+  border-bottom: 1px solid maroon;
+  width: 20%;
+  color: maroon;
+}
+
+/* line 129, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.item-explain a:hover {
+  color: gray;
+}
+
+/* line 133, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.like-and-comment {
+  display: flex;
+}
+
+/* line 137, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.fa-comment {
+  padding-top: 8px;
+}
+
+/* line 141, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.star-btn {
+  display: flex;
+  align-items: center;
+}
+
+/* line 146, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.star-icon {
+  height: 2vh;
+  width: 2vh;
+  margin-right: 0.5vw;
+}
+
+/* line 152, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.star-count {
+  font-size: 2vh;
+}
+
+/* line 156, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.buy-link {
+  color: maroon;
+}
+
+/* line 160, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.buy-link:visited {
+  color: maroon;
+}
+
+/* line 164, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.buy-link:hover {
+  color: gray;
+}
+
+/* //商品一覧 */
+/* line 175, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.user-info-timeline {
+  background-color: #3c1900;
+  display: flex;
+  justify-content: start;
+  height: 50px;
+  color: aliceblue;
+}
+
+/* line 183, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.user-info-timeline:hover {
+  color: maroon;
+}
+
+/* line 187, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.user-img-timeline {
+  border-radius: 50%;
+  width: 50px;
+}
+
+/* line 192, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.user-img-timeline:hover {
+  opacity: 50%;
+}
+
+/* line 196, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.username-timeline {
+  margin: auto 0 auto 0;
+}
+
+/* line 205, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.body-light {
+  background-color: #3c1900;
+}
+
+/* line 210, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.body-medium {
+  background-color: #3c1900;
+}
+
+/* line 216, /coffee_passport/app/assets/stylesheets/drink/drinks.scss */
+.body-full {
+  background-color: #3c1900;
+}
+@charset "UTF-8";
+/* border-bottom: 1px solid #eee; */
+/* line 5, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.items-sell-contents {
+  background-color: burlywood;
+  font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  opacity: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20;
+  margin-bottom: 20px;
+}
+
+/* line 22, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.items-sell-main {
+  background-color: burlywood;
+  width: 40vw;
+  min-width: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 8%;
+  margin-top: 20;
+  margin-bottom: 20px;
+}
+
+/* line 35, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.items-sell-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 10%;
+  border-bottom: 1px solid maroon;
+  font-family: "游教科書体";
+}
+
+/* 共通 */
+/* line 45, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.indispensable {
+  background: maroon;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* line 55, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.weight-bold-text {
+  font-weight: bold;
+  min-width: 170px;
+  margin-bottom: 10px;
+}
+
+/* /共通 */
+@media screen and (min-width: 500px) {
+  /* line 67, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+  .post-tag {
+    margin-left: 20%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  /* line 73, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+  .post-tag {
+    margin-left: 24%;
+  }
+}
+/* line 79, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+#search-result {
+  margin-left: 10%;
+}
+
+/* line 83, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.child {
+  padding: 2px;
+  border: 1px solid black;
+  background-color: white;
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 92, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.child:hover {
+  background-color: #E0C8B1;
+}
+
+/* 出品画像 */
+/* line 99, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.img-upload {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2vh 0;
+}
+
+/* line 106, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.click-upload {
+  margin: 15px 0;
+  min-width: 250px;
+}
+
+/* line 111, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.click-upload > p {
+  margin-bottom: 15px;
+}
+
+/* line 115, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+#image-list img {
+  width: 150px;
+  height: 150px;
+  margin-top: 10px;
+}
+
+/* /出品画像 */
+/* 商品名と商品説明 */
+/* line 124, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.new-items {
+  padding: 2vh 0;
+}
+
+/* line 128, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.items-text {
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+}
+
+/* line 137, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.items-explain {
+  margin-top: 2vh;
+}
+
+/* /商品名と商品説明 */
+/* line 145, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.price-content {
+  width: 300px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* line 153, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.price-text {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* line 159, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.sell-yen {
+  font-size: 18px;
+}
+
+/* line 163, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.price-input {
+  height: 30px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+/* line 172, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.post-category {
+  margin-left: 50px;
+}
+
+/* line 176, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.post-region,
+.post-body,
+.post-acidity,
+.post-processing {
+  font-weight: bold;
+}
+
+/* line 183, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.post-processing a {
+  color: white;
+}
+
+/* line 187, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.post-processing a:visited {
+  color: white;
+}
+
+/* line 191, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.post-processing a:hover {
+  color: green;
+}
+
+/* 下部ボタン */
+/* line 196, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.sell-btn-contents {
+  width: 100%;
+  text-align: center;
+}
+
+/* line 201, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.sell-btn {
+  background: black;
+  border: 1px solid green;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  margin-bottom: 4vh;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* line 213, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.back-btn {
+  background: black;
+  border: 1px solid #aaa;
+  padding: 15px 35%;
+  text-decoration: none;
+}
+
+/* line 220, /coffee_passport/app/assets/stylesheets/drink/new.scss */
+.back-btn:visited {
+  color: #fff;
+}
+/* line 1, /coffee_passport/app/assets/stylesheets/drink/search.scss */
+.searching-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin-right: 50px;
+  padding-top: 50px;
+}
+
+/* line 10, /coffee_passport/app/assets/stylesheets/drink/search.scss */
+.searching-by-name {
+  margin-left: 140px;
+}
+
+/* line 14, /coffee_passport/app/assets/stylesheets/drink/search.scss */
+.name-label {
+  font-size: large;
+  margin-left: 25px;
+}
+
+/* line 19, /coffee_passport/app/assets/stylesheets/drink/search.scss */
+.searching-by-category {
+  margin-left: 50px;
+}
+
+/* line 23, /coffee_passport/app/assets/stylesheets/drink/search.scss */
+.category-font {
+  text-align: center;
+  font-size: large;
+  margin-left: 40px;
+}
+
+/* line 29, /coffee_passport/app/assets/stylesheets/drink/search.scss */
+.searching-submit-btn {
+  margin-left: 200px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  color: black;
+  display: block;
+}
+
+/* line 37, /coffee_passport/app/assets/stylesheets/drink/search.scss */
+.select-box {
+  width: 70%;
+  margin-left: 50px;
+}
+
+/* line 42, /coffee_passport/app/assets/stylesheets/drink/search.scss */
+.select-box-processing {
+  width: 70%;
+  margin-left: 35px;
+}
+
+/* line 47, /coffee_passport/app/assets/stylesheets/drink/search.scss */
+.select-label {
+  font-size: large;
+  font-weight: bold;
+}
+
+/* line 52, /coffee_passport/app/assets/stylesheets/drink/search.scss */
+.not-found {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* line 57, /coffee_passport/app/assets/stylesheets/drink/search.scss */
+.not-found p {
+  font-weight: bold;
+}
+
+/* line 61, /coffee_passport/app/assets/stylesheets/drink/search.scss */
+.fa-sad-tear {
+  font-size: 100px;
+}
+
+/* line 65, /coffee_passport/app/assets/stylesheets/drink/search.scss */
+.not-found a {
+  padding: 10px;
+}
+
+/* line 70, /coffee_passport/app/assets/stylesheets/drink/search.scss */
+.not-found a:visited {
+  color: black;
+}
+
+/* line 74, /coffee_passport/app/assets/stylesheets/drink/search.scss */
+.not-found a:hover {
+  background-color: maroon;
+  color: white;
+}
+
+/* line 79, /coffee_passport/app/assets/stylesheets/drink/search.scss */
+.root_path {
+  background-color: gray;
+}
+/* line 3, /coffee_passport/app/assets/stylesheets/drink/show.scss */
+.item-explain {
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+/* line 8, /coffee_passport/app/assets/stylesheets/drink/show.scss */
+#text {
+  width: 30px;
+}
+
+/* line 12, /coffee_passport/app/assets/stylesheets/drink/show.scss */
+.region-title, .body-title, .acidity-title, .processing-title {
+  font-weight: 100;
+  color: #ada9a9;
+}
+
+/* line 19, /coffee_passport/app/assets/stylesheets/drink/show.scss */
+.region-name, .body-name, .acidity-name, .processing-name {
+  border-bottom: 1px solid black;
+  margin-left: 10px;
+  padding-left: 20px;
+}
+
+/* line 25, /coffee_passport/app/assets/stylesheets/drink/show.scss */
+.item-delete a {
+  color: maroon;
+}
+
+/* line 29, /coffee_passport/app/assets/stylesheets/drink/show.scss */
+.item-delete a:visited {
+  color: maroon;
+}
+/* line 1, /coffee_passport/app/assets/stylesheets/footer.scss */
+.footer {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  background-color: white;
+  justify-content: space-around;
+}
+
+/* line 11, /coffee_passport/app/assets/stylesheets/footer.scss */
+.footer div {
+  margin-top: 15px;
+  margin-left: 10px;
+  padding: auto 0;
+  font-size: 15px;
+  font-family: cursive;
+}
+
+/* line 19, /coffee_passport/app/assets/stylesheets/footer.scss */
+.footer a {
+  color: black;
+}
+
+/* line 23, /coffee_passport/app/assets/stylesheets/footer.scss */
+.footer a:visited {
+  color: black;
+}
+
+/* line 27, /coffee_passport/app/assets/stylesheets/footer.scss */
+.footer a:hover {
+  color: maroon;
+}
+/* line 3, /coffee_passport/app/assets/stylesheets/header.scss */
+.header {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background-color: white;
+}
+
+/* line 12, /coffee_passport/app/assets/stylesheets/header.scss */
+.header-text {
+  margin-top: 15px;
+  margin-left: 10px;
+  padding: auto 0;
+  font-size: 30px;
+  font-family: cursive;
+}
+
+/* line 22, /coffee_passport/app/assets/stylesheets/header.scss */
+img.logo {
+  width: 60px;
+  height: 60px;
+  padding: 14%;
+  display: block;
+}
+
+/* line 29, /coffee_passport/app/assets/stylesheets/header.scss */
+.user-img {
+  height: 50px;
+  margin-left: 40px;
+  padding-top: 15%;
+}
+
+/* line 35, /coffee_passport/app/assets/stylesheets/header.scss */
+.user-img:hover {
+  opacity: 50%;
+}
+
+/* line 39, /coffee_passport/app/assets/stylesheets/header.scss */
+.header-nav {
+  width: 70vw;
+  font-size: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: black;
+  display: flex;
+  margin-left: 10%;
+}
+
+/* line 52, /coffee_passport/app/assets/stylesheets/header.scss */
+.header-nav a:visited {
+  color: black;
+}
+
+/* line 56, /coffee_passport/app/assets/stylesheets/header.scss */
+.user-menu {
+  width: 50vw;
+  display: flex;
+  margin-left: 5%;
+}
+
+/* line 62, /coffee_passport/app/assets/stylesheets/header.scss */
+.header-user-name, .post, .buy-form, .searching-link {
+  color: black;
+}
+
+/* line 67, /coffee_passport/app/assets/stylesheets/header.scss */
+.post a {
+  display: inline-block;
+  transition: 0.5s;
+  font-size: 20px;
+  font-family: arial;
+  font-weight: bold;
+  color: black;
+}
+
+/* line 77, /coffee_passport/app/assets/stylesheets/header.scss */
+.buy-form a {
+  color: black;
+}
+
+/* line 81, /coffee_passport/app/assets/stylesheets/header.scss */
+.searching-link a {
+  color: black;
+}
+
+/* line 85, /coffee_passport/app/assets/stylesheets/header.scss */
+.post a:hover {
+  transform: scale(1.4);
+}
+
+@media screen and (min-width: 500px) {
+  /* line 95, /coffee_passport/app/assets/stylesheets/header.scss */
+  .header-user-name, .post, .buy-form, .searching-link {
+    margin-left: 3%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  /* line 102, /coffee_passport/app/assets/stylesheets/header.scss */
+  .header-user-name, .post, .buy-form, .searching-link {
+    margin-left: 15%;
+  }
+}
+/* line 108, /coffee_passport/app/assets/stylesheets/header.scss */
+.header-user-name a:hover, .post a:hover, .buy-form a:hover, .searching-link a:hover {
+  color: maroon;
+}
+
+/* line 113, /coffee_passport/app/assets/stylesheets/header.scss */
+.login {
+  font-size: 30px;
+  background-color: black;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c");
+/* line 1, /coffee_passport/app/assets/stylesheets/top-page.scss */
+.top-explain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 8, /coffee_passport/app/assets/stylesheets/top-page.scss */
+.coffee-gif {
+  width: 100%;
+}
+
+/* line 13, /coffee_passport/app/assets/stylesheets/top-page.scss */
+.app-title {
+  /*親div*/
+  position: relative;
+  /*相対配置*/
+  width: 100%;
+}
+
+/* line 18, /coffee_passport/app/assets/stylesheets/top-page.scss */
+.app-text {
+  position: absolute;
+  /*絶対配置*/
+  top: 25%;
+  left: 10%;
+}
+
+/* line 29, /coffee_passport/app/assets/stylesheets/top-page.scss */
+.app-concept {
+  border-bottom: 2px solid white;
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  color: white;
+}
+
+/* line 37, /coffee_passport/app/assets/stylesheets/top-page.scss */
+.top-explain-title {
+  font-family: cursive;
+  font-size: 30px;
+  color: white;
+}
+
+/* line 43, /coffee_passport/app/assets/stylesheets/top-page.scss */
+.explain-post-img {
+  width: 250px;
+  height: 400px;
+}
+
+/* line 48, /coffee_passport/app/assets/stylesheets/top-page.scss */
+.explain-wrapper {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 60, /coffee_passport/app/assets/stylesheets/top-page.scss */
+.explain-wrapper-title {
+  color: maroon;
+  border-bottom: 1px solid black;
+  font-family: "游教科書体";
+}
+
+/* line 66, /coffee_passport/app/assets/stylesheets/top-page.scss */
+.explain-wrapper-title-en {
+  text-align: left;
+  font-size: 20px;
+  font-family: cursive;
+}
+
+/* line 73, /coffee_passport/app/assets/stylesheets/top-page.scss */
+.explain-wrapper-info {
+  width: 50vh;
+  margin: 0 auto 0 auto;
+  margin-bottom: 10px;
+}
+@charset "UTF-8";
+/* line 4, /coffee_passport/app/assets/stylesheets/trades.scss */
+.transaction-contents {
+  width: 100vw;
+  background-color: #E0C8B1;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* line 12, /coffee_passport/app/assets/stylesheets/trades.scss */
+.transaction-main {
+  background-color: #E0C8B1;
+  width: 70vw;
+  min-width: 450px;
+  padding: 10vh 10vw;
+}
+
+/* line 19, /coffee_passport/app/assets/stylesheets/trades.scss */
+.transaction-title-text {
+  text-align: center;
+  border-bottom: 2px solid #f5f5f5;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* 購入内容の表示 */
+/* line 27, /coffee_passport/app/assets/stylesheets/trades.scss */
+.buy-item-info {
+  height: 150px;
+  border-bottom: 2px solid #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 35, /coffee_passport/app/assets/stylesheets/trades.scss */
+.buy-item-img {
+  margin-right: 20px;
+  height: 130px;
+  width: 250px;
+  object-fit: contain;
+}
+
+/* line 42, /coffee_passport/app/assets/stylesheets/trades.scss */
+.buy-item-right-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 47, /coffee_passport/app/assets/stylesheets/trades.scss */
+.buy-item-text {
+  font-size: 20px;
+}
+
+/* line 51, /coffee_passport/app/assets/stylesheets/trades.scss */
+.buy-item-price {
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* line 58, /coffee_passport/app/assets/stylesheets/trades.scss */
+.item-price-text {
+  font-size: 15px;
+  border-bottom: maroon;
+}
+
+/* line 63, /coffee_passport/app/assets/stylesheets/trades.scss */
+.item-price-sub-text {
+  font-size: 12px;
+}
+
+/* /購入内容の表示 */
+/* 支払額の表示 */
+/* line 70, /coffee_passport/app/assets/stylesheets/trades.scss */
+.item-payment {
+  height: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid #f5f5f5;
+  font-weight: bold;
+}
+
+/* line 79, /coffee_passport/app/assets/stylesheets/trades.scss */
+.item-payment-title {
+  font-size: 20px;
+}
+
+/* line 83, /coffee_passport/app/assets/stylesheets/trades.scss */
+.item-payment-price {
+  font-size: 25px;
+}
+
+/* /支払額の表示 */
+/* カード情報の入力 */
+/* line 91, /coffee_passport/app/assets/stylesheets/trades.scss */
+.credit-card-form {
+  border-bottom: 2px solid #f5f5f5;
+  margin-top: 15px;
+  padding-bottom: 30px;
+}
+
+/* line 97, /coffee_passport/app/assets/stylesheets/trades.scss */
+.info-input-haedline {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* line 103, /coffee_passport/app/assets/stylesheets/trades.scss */
+.available-card {
+  display: flex;
+  height: 35px;
+}
+
+/* line 108, /coffee_passport/app/assets/stylesheets/trades.scss */
+.card-logo {
+  width: 40px;
+  margin: 5px 5px;
+}
+
+/* line 113, /coffee_passport/app/assets/stylesheets/trades.scss */
+.input-expiration-date-wrap {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  line-height: 55px;
+}
+
+/* line 120, /coffee_passport/app/assets/stylesheets/trades.scss */
+.input-expiration-date {
+  width: 20%;
+  margin-top: 5px;
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+  line-height: 45px;
+  text-align: center;
+}
+
+/* /カード情報の入力 */
+/* line 137, /coffee_passport/app/assets/stylesheets/trades.scss */
+.user-address {
+  margin-bottom: 10px;
+  border-bottom: 2px solid #f5f5f5;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* line 146, /coffee_passport/app/assets/stylesheets/trades.scss */
+#first_name, #fam_name,
+#first_name_kana, #fam_name_kana {
+  width: 70%;
+  height: 40px;
+}
+
+/* line 152, /coffee_passport/app/assets/stylesheets/trades.scss */
+select#_birthday_1i,
+select#_birthday_2i,
+select#_birthday_3i {
+  margin-top: 50px;
+  width: 70%;
+}
+
+/* 配送先の入力 */
+/* line 165, /coffee_passport/app/assets/stylesheets/trades.scss */
+.shipping-address-form {
+  margin-top: 15px;
+}
+
+/* line 170, /coffee_passport/app/assets/stylesheets/trades.scss */
+.form-any {
+  background: #ccc;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 4px;
+}
+
+/* line 178, /coffee_passport/app/assets/stylesheets/trades.scss */
+.buy-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+/* line 184, /coffee_passport/app/assets/stylesheets/trades.scss */
+.buy-red-btn {
+  width: 100%;
+  background: black;
+  border: 1px solid maroon;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* line 194, /coffee_passport/app/assets/stylesheets/trades.scss */
+.buy-red-btn:hover {
+  background: maroon;
+}
+
+/* line 200, /coffee_passport/app/assets/stylesheets/trades.scss */
+.after-buying {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 207, /coffee_passport/app/assets/stylesheets/trades.scss */
+.fa-plane-departure {
+  font-size: 150px;
+  color: green;
+}
+
+/* line 212, /coffee_passport/app/assets/stylesheets/trades.scss */
+.ridirect-root-after-buying {
+  margin-top: 20px;
+  background-color: white;
+  padding: 10px;
+}
+
+/* line 218, /coffee_passport/app/assets/stylesheets/trades.scss */
+.ridirect-root-after-buying a:visited {
+  color: black;
+}
+
+/* line 222, /coffee_passport/app/assets/stylesheets/trades.scss */
+.ridirect-root-after-buying:hover {
+  background-color: grey;
+}
+/* line 1, /coffee_passport/app/assets/stylesheets/user/config.scss */
+.user-config {
+  margin: 40px auto 0  auto;
+  font-weight: bold;
+  text-align: center;
+  background-color: white;
+  width: 25%;
+  color: gray;
+}
+
+/* line 11, /coffee_passport/app/assets/stylesheets/user/config.scss */
+.user-config a {
+  color: gray;
+}
+
+/* line 15, /coffee_passport/app/assets/stylesheets/user/config.scss */
+.user-config a:visited {
+  color: gray;
+}
+
+/* line 19, /coffee_passport/app/assets/stylesheets/user/config.scss */
+.user-config a:hover {
+  color: red;
+}
+
+/* line 23, /coffee_passport/app/assets/stylesheets/user/config.scss */
+.user-config-child {
+  padding: 5px 0 5px 0;
+  border: 1px solid black;
+}
+/* line 1, /coffee_passport/app/assets/stylesheets/user/contact.scss */
+.contact-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+/* line 9, /coffee_passport/app/assets/stylesheets/user/contact.scss */
+.contact-submit {
+  margin-top: 20px;
+  width: 100px;
+  height: 40px;
+  background-color: maroon;
+  color: white;
+}
+
+/* line 17, /coffee_passport/app/assets/stylesheets/user/contact.scss */
+.contact-submit:hover {
+  background-color: gray;
+}
+
+/* line 21, /coffee_passport/app/assets/stylesheets/user/contact.scss */
+.contact-form label {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 5px;
+}
+
+/* line 27, /coffee_passport/app/assets/stylesheets/user/contact.scss */
+.contact-form input {
+  margin-bottom: 10px;
+}
+/* line 1, /coffee_passport/app/assets/stylesheets/user/follow.scss */
+.follow-btn {
+  margin-left: 10px;
+}
+
+/* line 6, /coffee_passport/app/assets/stylesheets/user/follow.scss */
+input.follow-submit {
+  background-color: maroon;
+  width: 60px;
+  height: 40px;
+  color: white;
+  padding: 2px;
+}
+
+/* line 14, /coffee_passport/app/assets/stylesheets/user/follow.scss */
+input.unfollow-submit {
+  background-color: gray;
+  width: 60px;
+  height: 40px;
+  color: black;
+  padding: 2px;
+}
+
+/* line 22, /coffee_passport/app/assets/stylesheets/user/follow.scss */
+.user-follow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  margin: 40px auto 0 auto;
+  background-color: white;
+  width: 25%;
+  padding: 10px 0 10px 0;
+  border: 1px solid;
+}
+
+/* line 34, /coffee_passport/app/assets/stylesheets/user/follow.scss */
+.user-follow-img {
+  border-radius: 50%;
+  display: flex;
+  width: 50px;
+  height: 50px;
+}
+
+/* line 41, /coffee_passport/app/assets/stylesheets/user/follow.scss */
+.nickname-follow {
+  font-weight: bold;
+}
+
+/* line 45, /coffee_passport/app/assets/stylesheets/user/follow.scss */
+.nickname-follow a:visited {
+  color: green;
+}
+@charset "UTF-8";
+/* line 1, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.registration-main {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  opacity: 90%;
+}
+
+/* line 16, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.slideshow {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 26, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.slideshow2 {
+  width: 100%;
+  height: 1000px;
+  position: relative;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* form-wrapは商品購入画面でも使用しています */
+/* line 36, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.form-wrap {
+  width: 100%;
+  background-color: burlywood;
+  padding-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* line 44, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.form-header {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  font-size: 22px;
+}
+
+/* line 54, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.form-header-text {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f5f5f5;
+  font-weight: bold;
+  font-family: serif;
+  height: 50px;
+}
+
+/* line 62, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.form-group {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+/* line 70, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.form-group:first-child {
+  padding: 0;
+}
+
+/* line 74, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.please-checking {
+  color: maroon;
+}
+
+/* line 78, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.form-text-wrap {
+  width: 100%;
+  height: 20%;
+}
+
+/* line 83, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.form-text {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* line 88, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.input-default {
+  width: 85%;
+  margin-top: 5px;
+  height: 40px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+}
+
+/* line 100, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.info-text {
+  color: #888;
+  font-size: 15px;
+  margin-top: 3px;
+}
+
+/* line 106, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.form-info-header {
+  font-weight: bold;
+}
+
+/* line 110, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.form-info-text {
+  font-size: 15px;
+}
+
+/* line 114, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.input-name-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* line 120, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.input-name {
+  width: 130px;
+  margin: 5px 20px 0 20px;
+  height: 48px;
+  line-height: 30px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 14px;
+  resize: none;
+}
+
+/* line 133, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.input-birth-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 138, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.input-birth-wrap > select {
+  width: 75px;
+  margin-top: 5px;
+  height: 45px;
+  padding-left: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* line 150, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.input-birth-wrap > p {
+  line-height: 60px;
+  padding: 0 5px;
+}
+
+/* line 155, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.form-bottom-text {
+  font-size: 15px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* line 161, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.form-bottom-text:last-child {
+  margin: 0;
+  padding-bottom: 50px;
+}
+
+/* line 166, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.form-bottom-text > span {
+  color: black;
+  cursor: pointer;
+}
+
+/* line 171, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.register-btn {
+  width: 40%;
+  margin-top: 60px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* line 179, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.register-red-btn {
+  width: 100%;
+  background: black;
+  border: 1px solid green;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+/* line 191, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.register-info {
+  margin: 30px 180px 0 0;
+  color: green;
+  text-align: right;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+/* line 199, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.update-title {
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* line 204, /coffee_passport/app/assets/stylesheets/user/form.scss */
+#error_explanation li {
+  color: red;
+}
+
+/* line 209, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.login-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+/* line 215, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.login-red-btn {
+  width: 100%;
+  background: black;
+  border: 1px solid maroon;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* line 226, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.login-red-btn:hover {
+  background-color: maroon;
+}
+
+/* line 230, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.alert-danger {
+  text-align: center;
+  color: maroon;
+}
+
+/* line 235, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.alert-warning {
+  text-align: center;
+  color: red;
+}
+
+/* line 241, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.signin {
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* line 247, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.signin-path {
+  color: green;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+
+/* line 254, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.signin-path:visited {
+  color: green;
+}
+
+/* line 258, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.guest_login {
+  background-color: black;
+  padding: 20px 40px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* line 265, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.guest_login:visited {
+  color: white;
+}
+
+/* line 269, /coffee_passport/app/assets/stylesheets/user/form.scss */
+.guest_login:hover {
+  background-color: maroon;
+}
+/* line 5, /coffee_passport/app/assets/stylesheets/user/likes.scss */
+.iine__button {
+  font-size: 20px;
+  display: inline-block;
+  padding: 0 18px;
+  border-radius: 5px;
+}
+
+/* line 17, /coffee_passport/app/assets/stylesheets/user/likes.scss */
+.fa-heart {
+  color: maroon;
+}
+
+/* line 21, /coffee_passport/app/assets/stylesheets/user/likes.scss */
+.far.fa-heart {
+  color: gray;
+}
+
+
+
+.user-profile{
+  margin-top: 50px;
+  padding-left: 40px;
+  border-radius: 5px;
+} 
+
+.user-profile-img{
+  border-radius: 50%;
+  width: 15%;
+  height: 15%;
+}
+
+.follow-user{
+  display: flex;
+}
+
+.user-account-config{
+  font-size: 30px;
+  width: 5%;
+  height: 5%;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 20px;
+  
+}
+
+.user-account-config a{
+  color: black;
+}
+
+.user-account-config:hover{
+  opacity: 50%;
+}
+
+.user-account-config a:visited{
+  color: black;
+}
+
+#follow_form{
+margin-top: auto;
+margin-bottom: auto;
+margin-left: 10px;
+}
+
+.user-edit{
+  font-size: 15px;
+  background-color:white;
+  
+  width: 160px;
+  text-align: center;
+  margin-left: 10px;
+  margin-bottom:10px;
+
+  border-radius: 5px;
+}
+
+.user-edit:hover{
+  background-color: maroon;
+  color: aliceblue;
+}
+
+.user-edit a{
+  color: black ;
+}
+
+.user-edit a:hover{
+  color: white;
+}
+
+
+.user-info{
+  display: flex;
+  justify-content: space-around;
+  border-bottom:1px solid black ;
+  background-color: white;
+
+}
+
+
+.user-like-post{
+  border-right: 1px solid black;
+  border-left:1px solid black ;
+  padding: 5px;
+}
+
+.user-like-post:hover{
+  background-color:maroon;
+  color: aliceblue;
+}
+
+.user-like-post a:hover{
+  color: white;
+}
+
+.purchase-record{
+  border-right: 1px solid black;
+  border-left:1px solid black ;
+  padding: 5px;
+}
+
+.purchase-record:hover{
+  background-color: maroon;
+  color: aliceblue;
+}
+
+.purchase-record a:hover{
+  color: white;
+}
+
+
+.stats{
+  border-right: 1px solid black;
+  border-left:1px solid black ;
+  padding: 5px;
+}
+
+.stats:hover{
+  background-color: maroon;
+}
+
+.stats a:hover{
+  color: white;
+}
+
+
+.user-info a{
+  color: black;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+ html{
+   height: 100%;
+ }
+
+body{
+  background-color: #E0C8B1; 
+  margin: 0;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+}
+
+.main-wrapper{
+  position: relative;
+  min-height: 1000px;
+}
+
+footer{
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  margin-bottom: -200px;/*フッターの高さと等しいネガティブマージン*/
+}
+
+
+
+a{
+  text-decoration:none;
+
+}
+
+
+
+
+
+li {
+  list-style: none;
+}
+
+.user-img{
+  border-radius: 50%;
+}
+
+
+
+
+
+.pagination {
+  height: 50px;
+  align-items: center;
+  display: flex;
+}
+
+
+
+.pagination * {
+  color: white;
+  text-decoration: none;
+  padding: 10px 10px;
+  font-family: 'Nunito', sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.active{
+  background-color: maroon;
+}
+
+.page a , .disabled{
+  color: black;
+  background-color: white;
+}
+
+textarea{
+
+  outline: none;
+}
+
+input{
+  
+  outline: none;
+}
+
