@@ -47,7 +47,6 @@ export default {
    created: function(){
      // vueインスタンスの作成、初期化直後に実行される
      this.fetchLikeByDrinkId().then(result =>{
-       console.log(result)
        this.likeList = result
      })
    },
@@ -60,7 +59,6 @@ export default {
         // その投稿のいいね一覧を取得したい
         // もし処理が失敗したらプロセスから抜ける(処理をやめる？)
         return response.data
-
 
     },
      registerLike: async function(){
