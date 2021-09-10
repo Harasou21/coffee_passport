@@ -156,10 +156,19 @@ docker-compose up --build
 
 ↑投稿一覧をvueで記述し、投稿詳細ページを表紙させる際に画面遷移させずに、vueで記述してをvue-js-modalによってモーダルウィンドウで表示。
 部分SPA化させることができました。
-
-
-
 [その時に書いた記事](https://qiita.com/divclass123/items/71465f7a6c313a533eeb)
+
+
+
+![users#show](https://user-images.githubusercontent.com/67535886/132538290-9003830a-3399-46b3-8bd2-dd4a38f78e17.gif)
+
+↑投稿一覧ページにおいて、投稿部分のユーザーの名前を押すと、そのユーザーの全投稿を表示できます。
+VueRouterを用いて、動的なページを高速で画面遷移させ、部分SPA化を実現しました。
+
+
+
+
+
 
 ![contact-vue](https://user-images.githubusercontent.com/67535886/118401403-86f29700-b6a0-11eb-9f9f-10941a9a0da1.gif)
 
