@@ -1,6 +1,6 @@
 
 
-
+# アプリURL：http://coffee-passport.net/
 
 # Coffee Passport
 
