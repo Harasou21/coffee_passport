@@ -44,6 +44,7 @@ class User < ApplicationRecord
   # has_many :sns_credentials
   has_one_attached :image
   has_one :address
+  has_one :suggest
 
   before_save { self.email = email.downcase }
   has_secure_password
