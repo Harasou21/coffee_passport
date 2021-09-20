@@ -1,2 +1,0 @@
-class SuggestsController < ApplicationController
-end
