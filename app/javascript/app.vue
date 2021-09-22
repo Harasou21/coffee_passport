@@ -1,12 +1,21 @@
 <template>
-  <div class='main' >
+<div class='main' id="main">
       <div class="playing-button">
         <button class="playing-button-on" @click="pauseVideo" v-if="playing">BGMをOFF</button>
         <button class="playing-button-off" @click="playVideo" v-else>BGMをON</button>
       </div>
+
+
+      
+      <div id="show-suggest" class="show-suggest"  v-if="this.isSuggest">
+        <button @click="showSuggest()">おすすめ商品の表示を許可</button>
+      </div>
+      <div class="show-suggest" v-else>
+        <p>thanks!!</p>
+      </div>
      
  
-  <div class='item-contents'>
+  <div class='item-contents' id="item-contents">
    <router-view :user_id="user_id"></router-view>
     <h2 class='title' id="title">タイムライン</h2>
     <youtube :video-id="videoId" ref="youtube" @playerVars="playerVars" hidden/>
@@ -69,6 +78,15 @@
         </li>
       </ul> 
 
+  </div>
+
+      <div class="pop-up" id="pop-up" v-if="popUpTemplate">
+        <drinkShow :drink="this.drink"></drinkShow>
+        <div class="suggest">
+          <h1 class="suggest-text">このコーヒーを買いますか？</h1>
+          <button @click="transitionForBuy" class="suggest-btn">買う</button>
+          <button @click="hideSuggest" class="hide-suggest-btn">おすすめ商品を以後表示しない</button>
+        </div>
       </div>
 
 </div>
@@ -93,7 +111,10 @@ export default {
   data: function(){
     return {
       drinks: "drinks",
+      drink: "drink",
+      popUpTemplate: false,
       user_id: 0,
+      isSuggest: true,
       videoId: "QN1uygzp56s",
       playing: false,
       playerVars: {
@@ -106,7 +127,8 @@ export default {
   },
   mounted: function(){
    // this.playVideo();
-       this.setDrink();
+    this.setDrink();
+    window.addEventListener('scroll', this.popUp);
   },
   methods: {
     setDrink: function(){
@@ -132,10 +154,61 @@ export default {
     getUserId(user_id){
       this.user_id = user_id
       document.getElementById("timeline").style.visibility ="hidden";
-            document.getElementById("title").style.visibility ="hidden";
-       scrollTo(0, 0);
+      document.getElementById("title").style.visibility ="hidden";
+      scrollTo(0, 0);
+    },
+    popUp(){
+      if( localStorage.getItem('suggest') !== "false" && window.scrollY > 200 && window.scrollY < 800 ){
+        axios.get('/api/drinks/10')
+        .then(response =>(
+          this.drink = response.data
+        ))
+        this.popUpTemplate = true
+        this.isSuggest = true
+        document.getElementById("item-contents").style.opacity = 0.1
+   
+      }else if(window.scrollY> 900 || window.scrollY < 200){
+        this.popUpTemplate = false
+        document.getElementById("item-contents").style.opacity = 1.0
+      }
+    },
+    transitionForBuy(){
+      document.getElementById("buy-path").click()
+    },
+    showSuggest(){
+     localStorage.setItem("suggest",true)
+      this.isSuggest = false
+    },
+    hideSuggest(){
+      this.popUpTemplate = false
+      this.isSuggest = true
+      document.getElementById("item-contents").style.opacity = 1.0
+      document.getElementById("show-suggest").style.opacity = 1.0
+      localStorage.setItem('suggest', false)
     }
   }
 }
+
+
+
 </script>
 
+<style scoped>
+.pop-up{
+  position: absolute;
+  top: 500px;
+}
+
+.suggest{
+  text-align: center;
+}
+
+.suggest-text{
+   
+}
+
+.suggest-btn{
+
+}
+
+</style>
