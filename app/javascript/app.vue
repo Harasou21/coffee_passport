@@ -79,7 +79,6 @@
       </ul> 
 
   </div>
-
       <div class="pop-up" id="pop-up" v-if="popUpTemplate">
         <drinkShow :drink="this.drink"></drinkShow>
         <div class="suggest">
@@ -88,7 +87,6 @@
           <button @click="hideSuggest" class="hide-suggest-btn">おすすめ商品を以後表示しない</button>
         </div>
       </div>
-
 </div>
 </template>
 
