@@ -5,7 +5,11 @@ class TradesController < ApplicationController
     # 購入ページ
 
     @item = Drink.find(params[:drink_id])
-    @order = TradeAddress.new
+
+
+      @order = TradeAddress.new
+
+   
     @user_address = current_user.address
   end
 
@@ -19,10 +23,10 @@ class TradesController < ApplicationController
     @item = Drink.find(params[:drink_id])
     @order = TradeAddress.new(trade_params)
     if @order.valid?
-      pay_item
+     #pay_item
       @order.save
     else
-      render 'index'
+      render 'error'
     end
   end
 

@@ -20,6 +20,7 @@ const pay = () => {
       exp_month: formData.get("exp_month"),
       exp_year: `20${formData.get("exp_year")}`,
     };
+    console.log(card)
     // 入力した内容がカード情報になる
     Payjp.createToken(card,(status,response)=>{
       // カード情報をトークン化,
@@ -29,6 +30,7 @@ const pay = () => {
         // HTTPステータスコードが200のとき、すなわち上手く処理が
         // 上手くいったとき
         const token = response.id;
+        console.log(token)
         // トークンの値を取得することができます
         const renderDom = document. getElementById("charge-form");
         const tokenObj = `<input value=${token} type="hidden" name='token'>`;
