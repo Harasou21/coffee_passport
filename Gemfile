@@ -41,6 +41,7 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
   gem 'bullet'
+  gem 'rails-erd'
 end
 
 group :development do
