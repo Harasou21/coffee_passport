@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_18_063437) do
+ActiveRecord::Schema.define(version: 2021_04_02_083418) do
 
   create_table "active_storage_attachments", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -109,12 +109,13 @@ ActiveRecord::Schema.define(version: 2021_09_18_063437) do
     t.index ["follower_id"], name: "index_relationships_on_follower_id"
   end
 
-  create_table "suggests", charset: "utf8", force: :cascade do |t|
-    t.boolean "suggest", default: true
-    t.bigint "user_id", null: false
+  create_table "sns_credentials", charset: "utf8", force: :cascade do |t|
+    t.string "provider"
+    t.string "uid"
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_suggests_on_user_id"
+    t.index ["user_id"], name: "index_sns_credentials_on_user_id"
   end
 
   create_table "tags", charset: "utf8", force: :cascade do |t|
@@ -151,7 +152,7 @@ ActiveRecord::Schema.define(version: 2021_09_18_063437) do
   add_foreign_key "drink_tag_relations", "drinks"
   add_foreign_key "drink_tag_relations", "tags"
   add_foreign_key "drinks", "users"
-  add_foreign_key "suggests", "users"
+  add_foreign_key "sns_credentials", "users"
   add_foreign_key "trades", "drinks"
   add_foreign_key "trades", "users"
 end
