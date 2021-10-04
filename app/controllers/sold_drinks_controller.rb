@@ -14,11 +14,6 @@ class SoldDrinksController < ApplicationController
 
   def sort_often_purchased_order 
     @admin_user = User.find_by(id: 6)
-    @pagy,@drinks = pagy(@admin_user.drinks.includes(image_attachment: :blob).order(:price))
-    trades = Trade.all
-    @title = 'よく購入されてる順'
-
-    
-    binding.pry
+    @pagy,@drinks = pagy(@admin_user.drinks.includes(image_attachment: :blob).order(trades_count: "DESC"))
   end
 end
