@@ -1,4 +1,7 @@
 <% provide(:title,"Buy")%>
-<%= link_to "安い順","/sort_cheap_order"%>
-<%= link_to "よく購入されてる順","/sort_often_purchased_order"%>
+<div class="sort-buttons">
+  <%= link_to "安い順","/sort_cheap_order",class: "sort-button"%>
+  <%= link_to "よく購入されてる順","/sort_often_purchased_order",class: "sort-button"%>
+</div>
+
 <%= render 'drinks/drinks_index', drink: @drink,drinks: @drinks,title: @title%>
