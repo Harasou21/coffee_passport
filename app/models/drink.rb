@@ -3,7 +3,7 @@ class Drink < ApplicationRecord
   # json形式でvueの方にカテゴリーを渡すためにカテゴリーの属性を定義
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :user
-  has_one :trade
+  has_many :trades
   has_many :drink_tag_relations, dependent: :delete_all
   has_many :tags, through: :drink_tag_relations
   has_many :comments
