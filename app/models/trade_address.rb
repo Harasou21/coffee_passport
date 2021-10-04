@@ -23,7 +23,7 @@ class TradeAddress
     validates :city
     validates :house_num
     validates :phone_num, format: { with: /\A\d{10,11}\z/ }
-   
+    #validates :token
   end
 
   def save

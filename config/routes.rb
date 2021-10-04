@@ -52,5 +52,6 @@ Rails.application.routes.draw do
   delete 'like/:drink_id',to: 'likes#unlike', as: 'unlike'
   resources :account_activations, only: [:edit]
   get '/buy', to: 'sold_drinks#index'
- 
+  get '/sort_cheap_order', to: "sold_drinks#sort_cheap_order"
+  get '/sort_often_purchased_order', to: "sold_drinks#sort_often_purchased_order"
 end
