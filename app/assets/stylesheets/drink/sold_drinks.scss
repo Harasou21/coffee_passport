@@ -1,3 +1,54 @@
 // Place all the styles related to the sold_drinks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.sort-buttons{
+
+  color: white;
+  margin-top: 10px auto;
+  width: 25%;
+  margin: 10px auto;
+}
+
+
+.sort-button{
+  background-color: #3c1900;
+  color: white;
+  display: block;
+  text-align: center;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+
+.sort-button:hover{
+  color: maroon;
+}
+
+.sort-button:visited{
+  background-color: #3c1900;
+  color: white;
+  display: block;
+  text-align: center;
+  margin: 10px;
+}
+
+
+.back-to-buy{
+  background-color: #3c1900;
+  color: white;
+  margin: 10px auto;
+  display: block;
+  width: 25%;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.back-to-buy:hover{
+  color: maroon;
+}
+
+.back-to-buy:visited{
+  background-color: #3c1900;
+  color: white;
+}
