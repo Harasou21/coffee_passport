@@ -100,6 +100,7 @@ docker-compose up --build
 - Vue.jsを用いた、お問い合せページ、アプリ概要ページの高速表示
 - エラーメッセージの日本語化
 - 購入ページで安い順、よく購入されてる順にソートする機能
+- 何回購入したかを表示
 
 # 使用技術一覧
 
@@ -143,6 +144,11 @@ docker-compose up --build
 # ER図
 
 <img width="568" alt="スクリーンショット 2021-09-06 14 35 25" src="https://user-images.githubusercontent.com/67535886/132165798-b907a152-1134-4138-9e73-e4d1ea764331.png">
+
+
+<img width="961" alt="スクリーンショット 2021-10-05 10 23 09" src="https://user-images.githubusercontent.com/67535886/135945841-06f57920-68a2-4819-ad10-c2ae446c833f.png">
+こっちのER図は、rails-erdを用いて作成したER図です。
+
 
 
 # インフラ構成図
