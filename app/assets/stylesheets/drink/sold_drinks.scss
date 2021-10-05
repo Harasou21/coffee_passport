@@ -21,11 +21,12 @@
 }
 
 
-.sort-button:hover{
+.sort-button a:hover{
   color: maroon;
 }
 
-.sort-button:visited{
+
+a.sort-button:visited{
   background-color: #3c1900;
   color: white;
   display: block;
@@ -44,11 +45,11 @@
   text-align: center;
 }
 
-.back-to-buy:hover{
+a.back-to-buy:hover{
   color: maroon;
 }
 
-.back-to-buy:visited{
+a.back-to-buy:visited{
   background-color: #3c1900;
   color: white;
 }
