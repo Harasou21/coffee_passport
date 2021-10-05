@@ -94,6 +94,10 @@
             <%if drink.user.id == 6%>
             <%= link_to "商品を購入する",drink_trades_path(drink.id),class: "buy-link"%>
             <%end%>
+
+            <% if drink.trades_count%>
+              <%= "#{drink.trades_count}回購入されてます。"%>
+            <% end %>
         </li>
       
  
