@@ -18,6 +18,8 @@
    height: 100%;
  }
 
+
+
 body{
   background-color: #E0C8B1; 
   margin: 0;
@@ -31,6 +33,11 @@ body{
 .main-wrapper{
   position: relative;
   /* min-height: 1000px; */
+}
+
+.main-wrapper,
+.main-js{
+  flex-direction: column-reverse;
 }
 
 footer{
