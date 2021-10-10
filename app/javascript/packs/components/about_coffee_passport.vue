@@ -14,7 +14,6 @@
       出会ったコーヒーの感想を記録して共有しましょう。
       その投稿が、素敵なコーヒーを求めてる誰かのヒントになるでしょう。
       </p>
-      <!-- <%= image_tag 'post.png',class: "explain-post-img"%> -->
       
     </div>
     <div class="explain-wrapper">
