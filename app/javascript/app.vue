@@ -1,5 +1,5 @@
 <template>
-<div class='main' id="main">
+<div class='main-js' id="main">
       <div class="playing-button">
         <button class="playing-button-on" @click="pauseVideo" v-if="playing">BGMをOFF</button>
         <button class="playing-button-off" @click="playVideo" v-else>BGMをON</button>
@@ -121,11 +121,11 @@ export default {
     }
   },
   created(){
-
+    this.setDrink();
   },
   mounted: function(){
    // this.playVideo();
-    this.setDrink();
+    
     window.addEventListener('scroll', this.popUp);
   },
   methods: {
@@ -208,5 +208,7 @@ export default {
 .suggest-btn{
 
 }
+
+
 
 </style>
