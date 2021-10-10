@@ -9,6 +9,19 @@ class DrinksController < ApplicationController
   def index
     @user = current_user
 
+    @user.trade_drinks
+    # ユーザーの購入したコーヒーが取得できた
+    # そこからactidity_id,body_idを取得して、
+    # 一番多かったやつを表示
+
+    
+    
+
+
+
+
+    binding.pry
+
     following_ids = 'SELECT followed_id FROM relationships WHERE follower_id = :user_id'
 
     @pagy,@drinks = pagy(Drink.includes(:user ,{image_attachment: :blob})

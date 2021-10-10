@@ -9,6 +9,7 @@ class User < ApplicationRecord
   # u.remember_token的なことができる
   has_many :drinks, dependent: :delete_all
   has_many :trades
+  has_many :trade_drinks, through: :trades, source: :drink
   has_many :comments
   # followerがフォローする
   # followedがフォローされるって大原則
