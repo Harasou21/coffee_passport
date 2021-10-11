@@ -1,8 +1,27 @@
+<script>
+var user = <%= { id: current_user.try(:id) }.to_json.html_safe %>;
+
+</script>
+
+<%= javascript_pack_tag 'hello_vue' %>
 
 <% provide(:title,"Home")%>
 
-<%= javascript_pack_tag 'hello_vue' %>
-<%# <%= render 'drinks_index',drink: @drink, drinks: @drinks,title: @title%> 
-<script>
-var user = <%= { id: current_user.try(:id) }.to_json.html_safe %>;
-</script>
+<div id="rails">
+<div class="suggest-coffee-title">
+  <% case @favorite_body_id 
+    when 2%>
+  浅煎りのコーヒーが好きなあなたに
+  <% when 3%>
+  中煎りのコーヒーが好きなあなたに
+  <% when 4%>
+  深煎りのコーヒーが好きなあなたに
+  <% end %>
+</div>
+<%= render 'drinks_index',drink: @drink, drinks: @drinks,title: @title%> 
+
+
+</div>
+
+
+
