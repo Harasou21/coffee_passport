@@ -7,22 +7,33 @@ var user = <%= { id: current_user.try(:id) }.to_json.html_safe %>;
 
 <% provide(:title,"Home")%>
 
-<div id="rails">
+
   <p class="suggest-coffee-explain">購入履歴に応じておすすめされます</p>
 <div class="suggest-coffee-title">
-  <% case @favorite_body_id 
-    when 2%>
-  浅煎りのコーヒーが好きなあなたに
-  <% when 3%>
-  中煎りのコーヒーが好きなあなたに
-  <% when 4%>
-  深煎りのコーヒーが好きなあなたに
+  <% if @num == 0%>
+    <% case @favorite_body_id 
+      when 2%>
+    浅煎りのコーヒーが好きなあなたに
+    <% when 3%>
+    中煎りのコーヒーが好きなあなたに
+    <% when 4%>
+    深煎りのコーヒーが好きなあなたに
+    <% end %>
+  <% else %>
+    <% case @favorite_acidity_id 
+      when 2%>
+    酸味が少ないのコーヒーが好きなあなたに
+    <% when 3%>
+    ほどよい酸味のコーヒーが好きなあなたに
+    <% when 4%>
+    酸味が強いコーヒーが好きなあなたに
+    <% end %>
   <% end %>
 </div>
 <%= render 'drinks_index',drink: @drink, drinks: @drinks,title: @title%> 
 
 
-</div>
+
 
 <%# ピックアップ投稿 %>
     

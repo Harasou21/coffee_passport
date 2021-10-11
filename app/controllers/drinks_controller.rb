@@ -7,36 +7,50 @@ class DrinksController < ApplicationController
   before_action :create_searching_object, only: [:show_searching_form, :search_drink]
 
   def index
+     # 購入履歴に応じたおすすめのコーヒーや
+     # ランダムに投稿を表示する機能を定義するメソッド
+
     @user = current_user
 
-    @user.trade_drinks
-    # ユーザーの購入したコーヒーが取得できた
-    # そこからactidity_id,body_idを取得して、
-    # 一番多かったやつを表示
-
+    @num = rand(0..1)
+    # 命名が酷いのでなにかいい命名あったらお願いします。
+    # この変数は、ユーザーの好みの酸味もしくは、
+    # コクをできるだけ交互におすすめするために、定義しました。
     
+    drink_body_ids = []
+    drink_acidity_ids = []
+
+    if @user.trade_drinks
+      @user.trade_drinks.each do |drink|
+        drink_body_ids << drink.body_id
+        drink_acidity_ids << drink.acidity_id
+      end
+    end
+
+    @favorite_body_id = drink_body_ids.group_by{|e| e}.max_by{|v| v.size}.first
+    # https://osa.hatenablog.com/entry/2014/12/21/122603
+    # max_byは最大のものを返すMethod
+    # 今回は要素数が最大のものを返す v.sizeで要素数を比較するようにしてる
     
 
-
-
-
-    binding.pry
-
-    following_ids = 'SELECT followed_id FROM relationships WHERE follower_id = :user_id'
-
+    @favorite_acidity_id = drink_acidity_ids.group_by{|e| e}.max_by{|v| v.size}.first
+    
+    if @num == 0
     @pagy,@drinks = pagy(Drink.includes(:user ,{image_attachment: :blob})
-                    .where.not(user_id: 6)
-                    .where("user_id IN (#{following_ids}) OR user_id = :user_id", user_id: @user.id)
+                    .where(body_id: @favorite_body_id)
                     .order('drinks.created_at DESC'))
+    else
+      @pagy,@drinks = pagy(Drink.includes(:user ,{image_attachment: :blob})
+      .where(acidity_id: @favorite_acidity_id)
+      .order('drinks.created_at DESC'))
+    end
 
-    @title = 'Timeline'
+    @title = 'おすすめのコーヒー'
 
     @selected = 'Selected'
 
-   @random_drinks = Drink.includes(:user, {image_attachment: :blob}).order('RAND()').limit(5)
+    @random_drinks = Drink.includes(:user, {image_attachment: :blob}).order('RAND()').limit(5)
 
-   # binding.pry
-    
   end
 
   def show
