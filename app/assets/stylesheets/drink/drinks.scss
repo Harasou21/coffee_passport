@@ -4,6 +4,7 @@ a {
 
 .main {
   //background: burlywood;
+  
 }
 
 
@@ -19,7 +20,8 @@ a {
   
 }
 
-  .title {
+  .title{
+    
     font-size: 3vh;
     //line-height: 1.4;
     font-weight: bold;
@@ -27,6 +29,22 @@ a {
     text-align: center;
     font-family:"游教科書体";
     border-bottom: 1px solid maroon;
+  }
+
+  .suggest-coffee-title{
+    font-size: 3vh;
+    //line-height: 1.4;
+    font-weight: bold;
+    margin: 20px auto 0;
+    text-align: center;
+    font-family:"游教科書体";
+    border-bottom: 1px solid maroon;
+    width: 60%;
+    
+  }
+
+  .suggest-coffee-explain{
+    text-align:center;
   }
 
 .item-contents>.subtitle {

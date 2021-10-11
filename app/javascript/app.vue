@@ -1,5 +1,5 @@
 <template>
-<div class='main' id="main">
+<div ref='mainJs' id="main-js">
       <div class="playing-button">
         <button class="playing-button-on" @click="pauseVideo" v-if="playing">BGMをOFF</button>
         <button class="playing-button-off" @click="playVideo" v-else>BGMをON</button>
@@ -18,6 +18,7 @@
   <div class='item-contents' id="item-contents">
    <router-view :user_id="user_id"></router-view>
     <h2 class='title' id="title">タイムライン</h2>
+    <p>フォローしたユーザーの投稿と、自分の投稿が表示されます</p>
     <youtube :video-id="videoId" ref="youtube" @playerVars="playerVars" hidden/>
 
 
@@ -121,11 +122,11 @@ export default {
     }
   },
   created(){
-
+    this.setDrink();
+   
   },
   mounted: function(){
    // this.playVideo();
-    this.setDrink();
     window.addEventListener('scroll', this.popUp);
   },
   methods: {
@@ -151,8 +152,9 @@ export default {
     },
     getUserId(user_id){
       this.user_id = user_id
-      document.getElementById("timeline").style.visibility ="hidden";
+      document.getElementById("rails").style.visibility ="hidden";
       document.getElementById("title").style.visibility ="hidden";
+      document.getElementById("main-wrapper").style.height = "0px"
       scrollTo(0, 0);
     },
     popUp(){
@@ -208,5 +210,7 @@ export default {
 .suggest-btn{
 
 }
+
+
 
 </style>

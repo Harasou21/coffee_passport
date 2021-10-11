@@ -120,6 +120,9 @@ export default {
     showTimeline: function(){
        document.getElementById("timeline").style.visibility ="visible";
         document.getElementById("title").style.visibility ="visible";
+        location.reload();
+        // トップページはrailsとvueで表示されてるので、
+        // リロードしないとrailsのビューが読み込まれない
     }
   },
 
