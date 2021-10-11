@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     render: h => h(App),
     router: router
   }).$mount()
-  document.body.appendChild(app.$el)
+  document.body.insertBefore(app.$el,document.body.children[1])
 
   console.log(app)
 })
