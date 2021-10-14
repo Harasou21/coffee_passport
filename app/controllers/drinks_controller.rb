@@ -22,17 +22,26 @@ class DrinksController < ApplicationController
 
     if @user.trade_drinks
       @user.trade_drinks.each do |drink|
-        drink_body_ids << drink.body_id
+        drink_body_ids << drink.body_id 
         drink_acidity_ids << drink.acidity_id
       end
 
-      @favorite_body_id = drink_body_ids.group_by{|e| e}.max_by{|v| v.size}.first
+      if drink_body_ids
+        @favorite_body_id = drink_body_ids.group_by{|e| e}.max_by{|v| v.size}.first
+      end
+
+      if drink_acidity_ids
+        
+        @favorite_acidity_id = drink_acidity_ids.group_by{|e| e}.max_by{|v| v.size}.first
+        
+      end
+
       # https://osa.hatenablog.com/entry/2014/12/21/122603
       # max_byは最大のものを返すMethod
       # 今回は要素数が最大のものを返す v.sizeで要素数を比較するようにしてる
       
   
-      @favorite_acidity_id = drink_acidity_ids.group_by{|e| e}.max_by{|v| v.size}.first
+     
     end
 
     
