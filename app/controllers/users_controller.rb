@@ -91,7 +91,7 @@ class UsersController < ApplicationController
   end
 
   def new_guest
-    user = User.find_by(id:5 ,nickname: 'ゲスト様', email: 'guest@example.com') 
+    user = User.find_or_create_by(id:5 ,email: 'guest@example.com') 
       # guest@example.com
       # って登録されたらバリデーション エラーが起こる
       # 先にゲストは登録しておく必要がある
