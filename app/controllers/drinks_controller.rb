@@ -26,15 +26,18 @@ class DrinksController < ApplicationController
         drink_acidity_ids << drink.acidity_id
       end
 
-      unless drink_body_ids = []
+      unless drink_body_ids == []
+
         @favorite_body_id = drink_body_ids.group_by{|e| e}.max_by{|v| v.size}.first
       end
 
-      unless drink_acidity_ids = []
+      unless drink_acidity_ids == []
         
         @favorite_acidity_id = drink_acidity_ids.group_by{|e| e}.max_by{|v| v.size}.first
         
       end
+
+    
 
       # https://osa.hatenablog.com/entry/2014/12/21/122603
       # max_byは最大のものを返すMethod
