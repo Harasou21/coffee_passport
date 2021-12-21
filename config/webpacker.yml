@@ -8,7 +8,6 @@ default: &default
   cache_path: tmp/cache/webpacker
   check_yarn_integrity: false
   webpack_compile_output: true
-  #additional_paths: ['/app/assets/images']
 
   # Additional paths webpack should lookup modules
   # ['app/assets', 'engine/foo/app/assets']
@@ -55,12 +54,7 @@ development:
   compile: true
 
   # Verifies that correct packages and versions are installed by inspecting package.json, yarn.lock, and node_modules
-  check_yarn_integrity: false
-  # js関係の物が常に最新にするようにエラーを出してくれる
-  # だから、時たま
-  #   Your Yarn packages are out of date!
-  # Please run `yarn install` to update.
-  # とエラーメッセージが表示されてた
+  check_yarn_integrity: true
 
   # Reference: https://webpack.js.org/configuration/dev-server/
   dev_server:
