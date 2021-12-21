@@ -25,6 +25,9 @@ COPY Gemfile /ideaFrameworks/Gemfile
 COPY Gemfile.lock /ideaFrameworks/Gemfile.lock
 RUN bundle install
 
+# bin/rails webpacker:install
+# bin/rails webpacker:install:vue
+RUN bin/webpack
 
 COPY start.sh /start.sh
 RUN chmod 744 /start.sh
