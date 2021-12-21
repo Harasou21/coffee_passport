@@ -1,0 +1,12 @@
+build:
+  docker:
+    web: Dockerfile.production
+  config:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_HOST: db
+      WEBPACKER_DEV_SERVER_HOST: webpacker
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      RAILS_MASTER_KEY: ${RAILS_MASTER_KEY}
+      SENDGRID_API_KEY: ${SENDGRID_API_KEY}
+      ADMIN_USER_PASSWORD: ${ADMIN_USER_PASSWORD}
+      MYSQL_HOST: db
