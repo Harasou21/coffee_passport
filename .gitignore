@@ -33,7 +33,6 @@ yarn-debug.log*
 .yarn-integrity
 
 
-/config/database.yml
 .env
 .DS_Store
 /public/packs
