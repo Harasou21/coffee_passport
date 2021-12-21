@@ -12,7 +12,9 @@ require("../card")
 require("./tag")
 require("../slide")
 require('./preview') 
+//= require jquery
 //= require rails-ujs
+//= require jquery_ujs
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
