@@ -177,6 +177,7 @@ docker-compose exec web bin/webpack
 
 # 工夫した場所
 
+## vue-js-modal
 
 ![モーダルウィンドウ](https://user-images.githubusercontent.com/67535886/131092611-f148cc5a-0b95-4a73-95ff-5e98ce07f8a3.gif)
 
@@ -187,6 +188,7 @@ docker-compose exec web bin/webpack
 
 ---------------------------------------------------------------------------------------------
 
+## VueRouter
 
 ![users#show](https://user-images.githubusercontent.com/67535886/132538290-9003830a-3399-46b3-8bd2-dd4a38f78e17.gif)
 
