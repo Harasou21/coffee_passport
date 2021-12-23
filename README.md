@@ -169,6 +169,12 @@ docker-compose exec web bin/webpack
 <img width="565" alt="スクリーンショット 2021-07-11 19 25 04" src="https://user-images.githubusercontent.com/67535886/125191509-c80cbf00-e27d-11eb-9d4c-28657e9a7666.png">
 *develoverではなく、developer
 
+# ドメイン契約の証拠
+
+<img width="788" alt="スクリーンショット 2021-12-23 141255" src="https://user-images.githubusercontent.com/67535886/147191514-4344a1af-07d3-497a-9347-ef0732fb6dec.png">
+
+
+
 # 工夫した場所
 
 
