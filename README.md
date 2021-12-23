@@ -22,6 +22,17 @@ docker-compose up --build
 ※gitやdockerのインストールは適宜お願いいたします。
 
 
+vueファイルが404errorになる場合は
+
+```
+docker-compose exec web bin/webpack
+```
+
+と手動でコンパイルしてあげるといいかもしれません。
+
+一応、docker-composeで自動でコンパイル用のコンテナも作っていますが、、、、
+
+
 ※現在ドメインを変更したことにより、SendGridがうまく動いていない状況です！
 ドメイン変更前はうまく動いていました。
 今はSendGrid様に申請を出している状況です。
