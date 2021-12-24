@@ -1,170 +1,170 @@
 {
-  "app_explain.js": "/packs/js/app_explain-dcac07659cdb00279694.js",
-  "app_explain.js.map": "/packs/js/app_explain-dcac07659cdb00279694.js.map",
-  "application.js": "/packs/js/application-f18991a05c984ed8e6a0.js",
-  "application.js.map": "/packs/js/application-f18991a05c984ed8e6a0.js.map",
-  "components/Home.js": "/packs/js/components/Home-717a406236a3ca1a3e8a.js",
-  "components/Home.js.map": "/packs/js/components/Home-717a406236a3ca1a3e8a.js.map",
-  "components/about_coffee_passport.js": "/packs/js/components/about_coffee_passport-275346944fe972a48b90.js",
-  "components/about_coffee_passport.js.map": "/packs/js/components/about_coffee_passport-275346944fe972a48b90.js.map",
-  "components/contact.js": "/packs/js/components/contact-176c3a0641efc1654def.js",
-  "components/contact.js.map": "/packs/js/components/contact-176c3a0641efc1654def.js.map",
-  "components/drinks/show.js": "/packs/js/components/drinks/show-c3210d49acb32ada0ced.js",
-  "components/drinks/show.js.map": "/packs/js/components/drinks/show-c3210d49acb32ada0ced.js.map",
-  "components/footer.js": "/packs/js/components/footer-175580e225e27a4d62f3.js",
-  "components/footer.js.map": "/packs/js/components/footer-175580e225e27a4d62f3.js.map",
-  "components/like/likeButton.js": "/packs/js/components/like/likeButton-445ac8056520792a44cd.js",
-  "components/like/likeButton.js.map": "/packs/js/components/like/likeButton-445ac8056520792a44cd.js.map",
-  "components/search.js": "/packs/js/components/search-f45c56da935fb708c456.js",
-  "components/search.js.map": "/packs/js/components/search-f45c56da935fb708c456.js.map",
-  "components/static_pages/appExplain.js": "/packs/js/components/static_pages/appExplain-96cd478c3798265149ae.js",
-  "components/static_pages/appExplain.js.map": "/packs/js/components/static_pages/appExplain-96cd478c3798265149ae.js.map",
-  "components/users/user.js": "/packs/js/components/users/user-0e172c9b8a7ee12cdbc0.js",
-  "components/users/user.js.map": "/packs/js/components/users/user-0e172c9b8a7ee12cdbc0.js.map",
+  "app_explain.js": "/packs/js/app_explain-ab69de223286a8f2da65.js",
+  "app_explain.js.map": "/packs/js/app_explain-ab69de223286a8f2da65.js.map",
+  "application.js": "/packs/js/application-e62d8efca55ab23048ce.js",
+  "application.js.map": "/packs/js/application-e62d8efca55ab23048ce.js.map",
+  "components/Home.js": "/packs/js/components/Home-6b2ec368dc1489329d4e.js",
+  "components/Home.js.map": "/packs/js/components/Home-6b2ec368dc1489329d4e.js.map",
+  "components/about_coffee_passport.js": "/packs/js/components/about_coffee_passport-d1a745279d58b8f01751.js",
+  "components/about_coffee_passport.js.map": "/packs/js/components/about_coffee_passport-d1a745279d58b8f01751.js.map",
+  "components/contact.js": "/packs/js/components/contact-f215737f3fd709fe58e0.js",
+  "components/contact.js.map": "/packs/js/components/contact-f215737f3fd709fe58e0.js.map",
+  "components/drinks/show.js": "/packs/js/components/drinks/show-4d01678fd8037929cd34.js",
+  "components/drinks/show.js.map": "/packs/js/components/drinks/show-4d01678fd8037929cd34.js.map",
+  "components/footer.js": "/packs/js/components/footer-dd6f05133700a4a1f5e9.js",
+  "components/footer.js.map": "/packs/js/components/footer-dd6f05133700a4a1f5e9.js.map",
+  "components/like/likeButton.js": "/packs/js/components/like/likeButton-8f81be974b0bfb60d2db.js",
+  "components/like/likeButton.js.map": "/packs/js/components/like/likeButton-8f81be974b0bfb60d2db.js.map",
+  "components/search.js": "/packs/js/components/search-04ad75271cbfa8fa3155.js",
+  "components/search.js.map": "/packs/js/components/search-04ad75271cbfa8fa3155.js.map",
+  "components/static_pages/appExplain.js": "/packs/js/components/static_pages/appExplain-15b1bd1277221ebdb89e.js",
+  "components/static_pages/appExplain.js.map": "/packs/js/components/static_pages/appExplain-15b1bd1277221ebdb89e.js.map",
+  "components/users/user.js": "/packs/js/components/users/user-1b6746eb5545efa470d3.js",
+  "components/users/user.js.map": "/packs/js/components/users/user-1b6746eb5545efa470d3.js.map",
   "entrypoints": {
     "app_explain": {
       "js": [
-        "/packs/js/app_explain-dcac07659cdb00279694.js"
+        "/packs/js/app_explain-ab69de223286a8f2da65.js"
       ],
       "js.map": [
-        "/packs/js/app_explain-dcac07659cdb00279694.js.map"
+        "/packs/js/app_explain-ab69de223286a8f2da65.js.map"
       ]
     },
     "application": {
       "js": [
-        "/packs/js/application-f18991a05c984ed8e6a0.js"
+        "/packs/js/application-e62d8efca55ab23048ce.js"
       ],
       "js.map": [
-        "/packs/js/application-f18991a05c984ed8e6a0.js.map"
+        "/packs/js/application-e62d8efca55ab23048ce.js.map"
       ]
     },
     "components/about_coffee_passport": {
       "js": [
-        "/packs/js/components/about_coffee_passport-275346944fe972a48b90.js"
+        "/packs/js/components/about_coffee_passport-d1a745279d58b8f01751.js"
       ],
       "js.map": [
-        "/packs/js/components/about_coffee_passport-275346944fe972a48b90.js.map"
+        "/packs/js/components/about_coffee_passport-d1a745279d58b8f01751.js.map"
       ]
     },
     "components/contact": {
       "js": [
-        "/packs/js/components/contact-176c3a0641efc1654def.js"
+        "/packs/js/components/contact-f215737f3fd709fe58e0.js"
       ],
       "js.map": [
-        "/packs/js/components/contact-176c3a0641efc1654def.js.map"
+        "/packs/js/components/contact-f215737f3fd709fe58e0.js.map"
       ]
     },
     "components/drinks/show": {
       "js": [
-        "/packs/js/components/drinks/show-c3210d49acb32ada0ced.js"
+        "/packs/js/components/drinks/show-4d01678fd8037929cd34.js"
       ],
       "js.map": [
-        "/packs/js/components/drinks/show-c3210d49acb32ada0ced.js.map"
+        "/packs/js/components/drinks/show-4d01678fd8037929cd34.js.map"
       ]
     },
     "components/footer": {
       "js": [
-        "/packs/js/components/footer-175580e225e27a4d62f3.js"
+        "/packs/js/components/footer-dd6f05133700a4a1f5e9.js"
       ],
       "js.map": [
-        "/packs/js/components/footer-175580e225e27a4d62f3.js.map"
+        "/packs/js/components/footer-dd6f05133700a4a1f5e9.js.map"
       ]
     },
     "components/Home": {
       "js": [
-        "/packs/js/components/Home-717a406236a3ca1a3e8a.js"
+        "/packs/js/components/Home-6b2ec368dc1489329d4e.js"
       ],
       "js.map": [
-        "/packs/js/components/Home-717a406236a3ca1a3e8a.js.map"
+        "/packs/js/components/Home-6b2ec368dc1489329d4e.js.map"
       ]
     },
     "components/like/likeButton": {
       "js": [
-        "/packs/js/components/like/likeButton-445ac8056520792a44cd.js"
+        "/packs/js/components/like/likeButton-8f81be974b0bfb60d2db.js"
       ],
       "js.map": [
-        "/packs/js/components/like/likeButton-445ac8056520792a44cd.js.map"
+        "/packs/js/components/like/likeButton-8f81be974b0bfb60d2db.js.map"
       ]
     },
     "components/search": {
       "js": [
-        "/packs/js/components/search-f45c56da935fb708c456.js"
+        "/packs/js/components/search-04ad75271cbfa8fa3155.js"
       ],
       "js.map": [
-        "/packs/js/components/search-f45c56da935fb708c456.js.map"
+        "/packs/js/components/search-04ad75271cbfa8fa3155.js.map"
       ]
     },
     "components/static_pages/appExplain": {
       "js": [
-        "/packs/js/components/static_pages/appExplain-96cd478c3798265149ae.js"
+        "/packs/js/components/static_pages/appExplain-15b1bd1277221ebdb89e.js"
       ],
       "js.map": [
-        "/packs/js/components/static_pages/appExplain-96cd478c3798265149ae.js.map"
+        "/packs/js/components/static_pages/appExplain-15b1bd1277221ebdb89e.js.map"
       ]
     },
     "components/users/user": {
       "js": [
-        "/packs/js/components/users/user-0e172c9b8a7ee12cdbc0.js"
+        "/packs/js/components/users/user-1b6746eb5545efa470d3.js"
       ],
       "js.map": [
-        "/packs/js/components/users/user-0e172c9b8a7ee12cdbc0.js.map"
+        "/packs/js/components/users/user-1b6746eb5545efa470d3.js.map"
       ]
     },
     "footer": {
       "js": [
-        "/packs/js/footer-624e266d70de1aeeba0a.js"
+        "/packs/js/footer-6019cfb363cd7023cfc6.js"
       ],
       "js.map": [
-        "/packs/js/footer-624e266d70de1aeeba0a.js.map"
+        "/packs/js/footer-6019cfb363cd7023cfc6.js.map"
       ]
     },
     "hello_vue": {
       "js": [
-        "/packs/js/hello_vue-c2d9b184cb1737339fcd.js"
+        "/packs/js/hello_vue-a69683ab66b20beb3eb7.js"
       ],
       "js.map": [
-        "/packs/js/hello_vue-c2d9b184cb1737339fcd.js.map"
+        "/packs/js/hello_vue-a69683ab66b20beb3eb7.js.map"
       ]
     },
     "preview": {
       "js": [
-        "/packs/js/preview-18b4fa5ad17f744ae47b.js"
+        "/packs/js/preview-b13b2c664077c55a9e46.js"
       ],
       "js.map": [
-        "/packs/js/preview-18b4fa5ad17f744ae47b.js.map"
+        "/packs/js/preview-b13b2c664077c55a9e46.js.map"
       ]
     },
     "router/router": {
       "js": [
-        "/packs/js/router/router-d0bad9bf101b162dd342.js"
+        "/packs/js/router/router-dae984e9985c26efcf27.js"
       ],
       "js.map": [
-        "/packs/js/router/router-d0bad9bf101b162dd342.js.map"
+        "/packs/js/router/router-dae984e9985c26efcf27.js.map"
       ]
     },
     "tag": {
       "js": [
-        "/packs/js/tag-54250371e4881480b023.js"
+        "/packs/js/tag-031a5662713230ea54f1.js"
       ],
       "js.map": [
-        "/packs/js/tag-54250371e4881480b023.js.map"
+        "/packs/js/tag-031a5662713230ea54f1.js.map"
       ]
     }
   },
-  "footer.js": "/packs/js/footer-624e266d70de1aeeba0a.js",
-  "footer.js.map": "/packs/js/footer-624e266d70de1aeeba0a.js.map",
-  "hello_vue.js": "/packs/js/hello_vue-c2d9b184cb1737339fcd.js",
-  "hello_vue.js.map": "/packs/js/hello_vue-c2d9b184cb1737339fcd.js.map",
-  "media/images/coffee_gif.gif": "/packs/media/images/coffee_gif-2c7fb49d.gif",
-  "media/images/post.png": "/packs/media/images/post-9de5d393.png",
-  "media/images/sold_item1.png": "/packs/media/images/sold_item1-4b5a14d6.png",
-  "media/images/sold_item2.png": "/packs/media/images/sold_item2-fd0ae8c3.png",
-  "media/images/sold_item3.png": "/packs/media/images/sold_item3-49860077.png",
-  "media/images/sold_item4.png": "/packs/media/images/sold_item4-2189bb94.png",
-  "preview.js": "/packs/js/preview-18b4fa5ad17f744ae47b.js",
-  "preview.js.map": "/packs/js/preview-18b4fa5ad17f744ae47b.js.map",
-  "router/router.js": "/packs/js/router/router-d0bad9bf101b162dd342.js",
-  "router/router.js.map": "/packs/js/router/router-d0bad9bf101b162dd342.js.map",
-  "tag.js": "/packs/js/tag-54250371e4881480b023.js",
-  "tag.js.map": "/packs/js/tag-54250371e4881480b023.js.map"
+  "footer.js": "/packs/js/footer-6019cfb363cd7023cfc6.js",
+  "footer.js.map": "/packs/js/footer-6019cfb363cd7023cfc6.js.map",
+  "hello_vue.js": "/packs/js/hello_vue-a69683ab66b20beb3eb7.js",
+  "hello_vue.js.map": "/packs/js/hello_vue-a69683ab66b20beb3eb7.js.map",
+  "media/images/coffee_gif.gif": "/packs/media/images/coffee_gif-d678c3db.gif",
+  "media/images/post.png": "/packs/media/images/post-eef7a77c.png",
+  "media/images/sold_item1.png": "/packs/media/images/sold_item1-37df37e4.png",
+  "media/images/sold_item2.png": "/packs/media/images/sold_item2-4d76be86.png",
+  "media/images/sold_item3.png": "/packs/media/images/sold_item3-6b06935f.png",
+  "media/images/sold_item4.png": "/packs/media/images/sold_item4-fb614d95.png",
+  "preview.js": "/packs/js/preview-b13b2c664077c55a9e46.js",
+  "preview.js.map": "/packs/js/preview-b13b2c664077c55a9e46.js.map",
+  "router/router.js": "/packs/js/router/router-dae984e9985c26efcf27.js",
+  "router/router.js.map": "/packs/js/router/router-dae984e9985c26efcf27.js.map",
+  "tag.js": "/packs/js/tag-031a5662713230ea54f1.js",
+  "tag.js.map": "/packs/js/tag-031a5662713230ea54f1.js.map"
 }
