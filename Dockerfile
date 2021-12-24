@@ -43,8 +43,9 @@ COPY Gemfile.lock /coffee_passport/Gemfile.lock
 
 RUN bundle install
 RUN yarn upgrade
-RUN yarn upgrade-interactive --latest
-RUN bundle exec rails webpacker:compile
+#RUN yarn upgrade-interactive --latest
+#RUN bundle exec rails webpacker:comp
+RUN yarn install --check-files
 
 # Add a script to be executed every time the container starts.
 COPY entrypoint.sh /usr/bin/
