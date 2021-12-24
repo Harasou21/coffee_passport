@@ -51,7 +51,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-   gem 'rubocop', require: false
+  gem 'rubocop', require: false
 end
 
 group :test do
@@ -78,14 +78,8 @@ gem 'active_hash'
 gem 'payjp'
 gem 'ransack'
 gem "jquery-rails"
-gem 'omniauth-twitter'
-gem 'omniauth-facebook'
-gem 'omniauth-google-oauth2'
-gem 'omniauth-rails_csrf_protection'
-gem 'oauth2'
 gem "aws-sdk-s3", require: false
 gem 'dotenv-rails'
 # rack のアップデートのバグで画像が上手く開いてくれない見たいなので、グレードダウン(近々修正くるらしい)
 gem 'rails-i18n'
 gem 'pagy'
-gem 'sendgrid-ruby'
