@@ -3,7 +3,7 @@ services:
   db:
     image: mysql:8.0.21
     cap_add:
-     - SYS_NICE
+      - SYS_NICE
       # コンテナにLinux機能を追加するオプションのようです。SYS_NICEは、プロセスの優先度(nice値)をあげます。
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
