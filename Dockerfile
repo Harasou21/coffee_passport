@@ -10,6 +10,10 @@ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
 apt-get update && apt-get install -y yarn  && apt-get install -y graphviz
 
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && \
+    apt-get install -y nodejs
+
+
 # chromeの追加
 RUN apt-get update && apt-get install -y unzip && \
     CHROME_DRIVER_VERSION=`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE` && \
@@ -28,19 +32,18 @@ RUN gem install bundler:2.1.4
 
 RUN mkdir /coffee_passport
 WORKDIR /coffee_passport
+COPY . /coffee_passport
 COPY Gemfile /coffee_passport/Gemfile
 COPY Gemfile.lock /coffee_passport/Gemfile.lock
-RUN bundle update rails
-RUN bundle update
-RUN bundle update mimemagic
-RUN bundle update capybara selenium-webdriver
+# RUN bundle update rails
+# RUN bundle update
+# RUN bundle update mimemagic
+# RUN bundle update capybara selenium-webdriver
 #RUN bundle update nokogiri marcel mimemagic
-RUN bundle install
 
-COPY . /coffee_passport
-
-RUN yarn install --check-files
 RUN bundle install
+RUN yarn upgrade
+RUN yarn upgrade-interactive --latest
 RUN bundle exec rails webpacker:compile
 
 # Add a script to be executed every time the container starts.
